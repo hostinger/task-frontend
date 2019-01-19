@@ -5,7 +5,7 @@
         <AppOffer/>
       </div>
       <div class="col-md-6">
-        <AppPrice/>
+        <OfferPrice/>
       </div>
     </div>
   </div>
@@ -13,7 +13,7 @@
 
 <script>
 import AppOffer from './AppOffer.vue'
-import AppPrice from './AppPrice.vue'
+import OfferPrice from './OfferPrice.vue'
 
 export default {
   name: 'HeaderMenu',
@@ -22,7 +22,7 @@ export default {
   },
   components: {
     AppOffer,
-    AppPrice
+    OfferPrice
   }
 }
 </script>

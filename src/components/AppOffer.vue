@@ -4,25 +4,25 @@
     <div class="offer__counter">
       <div class="offer__time-item">
         <span>
-          00
+          {{ timerDisplay.days }}
         </span>
         <p>DAYS</p>
       </div>
       <div class="offer__time-item">
         <span>
-          16
+          {{ timerDisplay.hours }}
         </span>
         <p>HOURS</p>
       </div>
       <div class="offer__time-item">
         <span>
-          18
+          {{ timerDisplay.minutes }}
         </span>
         <p>MINUTES</p>
       </div>
       <div class="offer__time-item">
         <span>
-          29
+          {{ timerDisplay.seconds }}
         </span>
         <p>SECONDS</p>
       </div>
@@ -34,9 +34,79 @@
 <script>
 
 export default {
-  name: 'HeaderMenu',
+  name: 'AppOffer',
   props: {
     msg: String
+  },
+  data: function () {
+    return {
+      timeSet : {
+        'days': 0,
+        'hours': 16,
+        'minutes': 18,
+        'seconds': 29
+      },
+      milisec: 3000,
+      timerDisplay : {
+        'seconds': 0,
+        'minutes': 0,
+        'hours': 0,
+        'days': 0,
+      }
+    }
+  },
+  methods: {
+    timer: function() {
+
+      this.convertToMs();
+      setInterval(function () {
+        this.calcTime();
+      }.bind(this), 1000);
+
+    },
+    calcTime: function() {
+
+      if (this.milisec > 0) {
+        this.milisec -= 1000;
+        this.timerDisplay = this.msToTime(this.milisec);
+      }
+
+    },
+    convertToMs() {
+
+      var secondsMs = this.timeSet.seconds * 1000;
+      var minutesMs = this.timeSet.minutes * (60 * 1000);
+      var hoursMs = this.timeSet.hours * (60 * 60 * 1000);
+      var daysMs = this.timeSet.days * (24 * 60 * 60 * 1000);
+
+      this.milisec = daysMs + hoursMs + minutesMs + secondsMs;
+    },
+    msToTime: function(ms) {
+      var time = {};
+
+      time.seconds = ms / 1000;
+      time.minutes = Math.floor(time.seconds / 60);
+      time.hours = 0;
+      time.days = 0;
+
+      if (time.seconds > 59) {
+        time.seconds = time.seconds % 60;
+        if (time.minutes > 59) {
+          time.hours = Math.floor(time.minutes / 60);
+          time.minutes = time.minutes % 60;
+          if (time.hours > 23) {
+            time.days = Math.floor(time.hours / 24);
+            time.hours = time.hours % 24;
+          }
+        } 
+      
+      }
+
+      return time;
+    }
+  },
+  mounted() {
+    this.timer()
   }
 }
 </script>

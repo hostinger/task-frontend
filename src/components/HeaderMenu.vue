@@ -43,6 +43,10 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+  nav {
+    padding-top: 15px;
+  }
+
   .nav-item {
     position: relative;
   }

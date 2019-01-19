@@ -2,6 +2,7 @@
   <div id="app">
     <!--<img alt="Vue logo" src="./assets/logo.png">-->
     <HeaderMenu/>
+    <AppMain/>
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -9,21 +10,19 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import HeaderMenu from './components/HeaderMenu.vue'
+import AppMain from './components/AppMain.vue'
 
 export default {
   name: 'app',
   components: {
     HeaderMenu,
-    HelloWorld
+    HelloWorld,
+    AppMain
   }
 }
 </script>
 
 <style>
-body  {
-  background: red;
-}
-
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

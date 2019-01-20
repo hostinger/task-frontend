@@ -1,7 +1,7 @@
 const countdown = document.querySelector('.countdown');
 const launchDate = new Date('Jan 24, 2019 13:00:00').getTime();
 
-const intvl = setInterval(() => {
+var intvl = setInterval(() => {
   const now = new Date().getTime();
   const distance = launchDate - now;
   const days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -18,7 +18,7 @@ const intvl = setInterval(() => {
 
   if (distance < 0) {
     clearInterval(intvl);
-    countdown.style.color = '#17a2b8';
+    countdown.style.color = '#f9525c';
     countdown.innerHTML = 'Launched!';
   }
 }, 1000);

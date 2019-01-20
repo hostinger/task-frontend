@@ -1,8 +1,8 @@
 <template>
   <div class="container">
-    <div class="row">
+    <div class="row offer-row">
       <div class="col-md-6">
-        <AppOffer/>
+        <OfferDeal/>
       </div>
       <div class="col-md-6">
         <OfferPrice/>
@@ -12,16 +12,13 @@
 </template>
 
 <script>
-import AppOffer from './AppOffer.vue'
+import OfferDeal from './OfferDeal.vue'
 import OfferPrice from './OfferPrice.vue'
 
 export default {
-  name: 'HeaderMenu',
-  props: {
-    msg: String
-  },
+  name: 'OfferBody',
   components: {
-    AppOffer,
+    OfferDeal,
     OfferPrice
   }
 }
@@ -29,5 +26,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
-  
+  .offer-row {
+    margin-top: 120px;
+  }
 </style>

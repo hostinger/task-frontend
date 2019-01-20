@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // import 'bootstrap/dist/js/bootstrap'
 import 'bootstrap';
@@ -11,8 +14,11 @@ import 'bootstrap/js/dist/tooltip'
 // import 'bootstrap/dist/css/bootstrap.min.css'
 import 'bootstrap/scss/bootstrap.scss'
 
+library.add(faCheck)
+
+Vue.component('font-awesome-icon', FontAwesomeIcon)
+
 // jquery
-//global.$ = $
 global.jQuery = require('jquery');
 var $ = global.jQuery;
 window.$ = $;

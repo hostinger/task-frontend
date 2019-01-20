@@ -19,10 +19,7 @@
 <script>
 
 export default {
-  name: 'OfferPrice',
-  props: {
-    msg: String
-  }
+  name: 'OfferPrice'
 }
 </script>
 
@@ -30,20 +27,35 @@ export default {
 <style lang="scss" scoped>
   .offer-price {
     position: relative;
+    display: inline-block;
     font-weight: 700;
   }
 
   .offer-price__discount {
     position: absolute;
-    top: -20px;
+    top: -65px;
+    left: 53px;
     color: #fff;
     background: #FD9C9C;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 700;
     text-transform: uppercase;
-    padding: 10px 0;
-    width: 170px;
+    text-align: center;
+    padding: 15px 0;
+    width: 140px;
 
-    
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      left: 50%;
+      margin-left: -10px;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: #FD9C9C;
+      transform: rotate(45deg);
+    }
   }
 
   .offer-price__sign,
@@ -54,9 +66,9 @@ export default {
 
   .offer-price__sign {
     position: absolute;
-    top: 110px;
-    left: -40px;
-    font-size: 0.3em;
+    top: 35px;
+    left: -59px;
+    font-size: 0.4em;
   }
 
   .offer-price {
@@ -68,18 +80,19 @@ export default {
     position: relative;
     font-size: 300px;
     font-weight: 700;
+    line-height: 0.7;
 
     .offer-price__cents {
       position: absolute;
-      top: 85px;
-      right: -75px;
-      font-size: 0.35em;
+      top: 20px;
+      right: -90px;
+      font-size: 0.30em;
     }
   }
 
   .offer-price__occurance {
     font-size: 0.6em;
     position: absolute;
-    bottom: 130px;
+    bottom: 35px;
   }
 </style>

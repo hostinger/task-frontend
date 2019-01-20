@@ -34,10 +34,7 @@
 <script>
 
 export default {
-  name: 'AppOffer',
-  props: {
-    msg: String
-  },
+  name: 'OfferDeal',
   data: function () {
     return {
       timeSet : {
@@ -46,7 +43,7 @@ export default {
         'minutes': 18,
         'seconds': 29
       },
-      milisec: 3000,
+      milisec: 0,
       timerDisplay : {
         'seconds': 0,
         'minutes': 0,
@@ -134,6 +131,7 @@ export default {
     width: 335px;
     height: 50px;
     padding: 5px 25px;
+    text-align: center;
 
     &::before {
       content: "";

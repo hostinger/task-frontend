@@ -34,10 +34,7 @@
 
 <script>
 export default {
-  name: 'HeaderMenu',
-  props: {
-    msg: String
-  }
+  name: 'HeaderMenu'
 }
 </script>
 
@@ -54,6 +51,7 @@ export default {
   .navbar-dark .navbar-nav .nav-link {
     color: #fff;
     font-weight: 600;
+    text-align: center;
   }
   
   .sale-badge::before {

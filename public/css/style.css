@@ -2705,6 +2705,9 @@ img.alignleft {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .hostinger_benefits__item_box p {
@@ -2802,6 +2805,11 @@ img.alignleft {
         bottom: 25px;
         left: 15px;
     }
+
+    .hostinger_benefits {
+        padding-top: 60px;
+        padding-bottom: 80px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -2817,6 +2825,11 @@ img.alignleft {
     .header-nav-badge {
         bottom: 40px;
         left: 0px;
+    }
+
+    .hostinger_benefits {
+        padding-top: 60px;
+        padding-bottom: 80px;
     }
 }
 

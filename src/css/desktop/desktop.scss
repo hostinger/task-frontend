@@ -247,6 +247,7 @@
     &__item_box {
         width: 25%;
         display:flex;
+         justify-content: center;
         p {
             font-size:18px;
             color:#ffffff;
@@ -359,6 +360,11 @@
         bottom: 25px;
     left: 15px;
 }
+
+.hostinger_benefits {
+    padding-top:60px;
+    padding-bottom:80px;
+}
 }
 
 @media (max-width: 900px) {
@@ -378,5 +384,10 @@
     .header-nav-badge {
     bottom: 40px;
     left: 0px;
+}
+
+.hostinger_benefits {
+    padding-top:60px;
+    padding-bottom:80px;
 }
 }

@@ -25,6 +25,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+  $discount-color: #FD9C9C;
+
   .offer-price {
     position: relative;
     display: inline-block;
@@ -36,7 +38,7 @@ export default {
     top: -65px;
     left: 53px;
     color: #fff;
-    background: #FD9C9C;
+    background: $discount-color;
     font-size: 18px;
     font-weight: 700;
     text-transform: uppercase;
@@ -53,7 +55,7 @@ export default {
       display: inline-block;
       width: 20px;
       height: 20px;
-      background: #FD9C9C;
+      background: $discount-color;
       transform: rotate(45deg);
     }
   }

@@ -4,7 +4,7 @@
       <div class="col-md-6">
         <OfferDeal/>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 text-center text-md-left">
         <OfferPrice/>
       </div>
     </div>
@@ -28,5 +28,11 @@ export default {
 <style lang="scss" scoped>
   .offer-row {
     margin-top: 120px;
+  }
+
+  @media(max-width: 767.98px) {
+    .offer-row {
+      margin-top: 70px;
+    }
   }
 </style>

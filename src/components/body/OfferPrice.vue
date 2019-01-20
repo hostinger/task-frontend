@@ -95,4 +95,22 @@ export default {
     position: absolute;
     bottom: 35px;
   }
+
+  @media(max-width: 767.98px) {
+    .offer-price__discount {
+      left: 0;
+    }
+
+    .offer-price__number {
+      font-size: 200px;
+    }
+
+    .offer-price__cents {
+      right: -70px;
+    }
+
+    .offer-price__occurance {
+      font-size: 0.5em;
+    }
+  }
 </style>

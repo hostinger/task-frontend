@@ -27,7 +27,18 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
+  footer {
+    margin-top: 70px;
+    padding-bottom: 10px;
+  }
+
   .footer__item {
     text-align: center;
+  }
+
+  @media(max-width: 767.98px) {
+    footer {
+      margin-top: 20px;
+    }
   }
 </style>

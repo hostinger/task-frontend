@@ -192,4 +192,24 @@ export default {
     width: 280px;
     border-radius: 5px;
   }
+
+  @media(max-width: 767.98px) {
+    .offer {
+      margin-bottom: 100px;
+
+      h2 {
+        text-align: center;
+      }
+
+      .offer__counter {
+        margin: 0 auto;
+        width: 295px;
+      }
+
+      .offer__btn {
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
 </style>

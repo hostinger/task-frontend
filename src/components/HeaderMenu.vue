@@ -67,7 +67,7 @@ export default {
 
   @media (max-width: 991.98px) {
     nav {
-      background: rgba(0,0,0,.3);
+      background: rgba(49,53,86,.9);
     }
 
     .sale-badge::before {

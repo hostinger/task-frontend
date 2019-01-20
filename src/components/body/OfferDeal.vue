@@ -10,19 +10,19 @@
       </div>
       <div class="offer__time-item">
         <span>
-          {{ timerDisplay.hours }}
+          {{ timerDisplay.hours || 16 }}
         </span>
         <p>HOURS</p>
       </div>
       <div class="offer__time-item">
         <span>
-          {{ timerDisplay.minutes }}
+          {{ timerDisplay.minutes || 18 }}
         </span>
         <p>MINUTES</p>
       </div>
       <div class="offer__time-item">
         <span>
-          {{ timerDisplay.seconds }}
+          {{ timerDisplay.seconds  || 29 }}
         </span>
         <p>SECONDS</p>
       </div>
@@ -34,7 +34,7 @@
 <script>
 
 export default {
-  name: 'OfferDeal',
+  name: 'offerDeal',
   data: function () {
     return {
       timeSet : {

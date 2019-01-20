@@ -16,7 +16,7 @@ import OfferDeal from './OfferDeal.vue'
 import OfferPrice from './OfferPrice.vue'
 
 export default {
-  name: 'OfferBody',
+  name: 'offerBody',
   components: {
     OfferDeal,
     OfferPrice

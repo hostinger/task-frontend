@@ -34,7 +34,7 @@
 
 <script>
 export default {
-  name: 'HeaderMenu'
+  name: 'headerMenu'
 }
 </script>
 

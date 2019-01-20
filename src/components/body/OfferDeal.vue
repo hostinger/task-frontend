@@ -4,7 +4,7 @@
     <div class="offer__counter">
       <div class="offer__time-item">
         <span>
-          {{ timerDisplay.days }}
+          {{ timerDisplay.days || '00' }}
         </span>
         <p>DAYS</p>
       </div>
@@ -92,7 +92,13 @@ export default {
           time.hours = Math.floor(time.minutes / 60);
           time.minutes = time.minutes % 60;
           if (time.hours > 23) {
-            time.days = Math.floor(time.hours / 24);
+            var timerDays  = Math.floor(time.hours / 24);
+            if (timerDays < 10) {
+              time.days = "0" + timerDays;
+            } else {
+              time.days = timerDays;
+            }
+            
             time.hours = time.hours % 24;
           }
         } 

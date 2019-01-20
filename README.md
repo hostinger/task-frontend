@@ -1,5 +1,5 @@
 # Frontend Developer Task
-## HOW TO
+## How to
 1. npm install
 2. gulp 
 ## Few simple steps

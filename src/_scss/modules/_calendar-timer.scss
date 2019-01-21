@@ -1,0 +1,89 @@
+
+
+.calendar-timer{
+    
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li{
+        float: left;
+        margin-top: 1.25rem;
+        text-align: center;
+
+
+        &:not(:last-child){
+        padding-right: 2.5rem;
+        }
+    }
+
+
+    &__triangle-right{
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-left: 15px solid $mainRed;
+        border-bottom: 10px solid transparent;
+        margin-right: 10px;
+        display: none;
+        margin-top: 1rem;
+
+        @include respond(phone){
+            display: inline-block; 
+        }
+    }
+    &__triangle-left{
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-right: 15px solid $mainRed;
+        border-bottom: 10px solid transparent;
+        margin-left: 10px;
+        
+        display: none;
+        @include respond(phone){
+            display: inline-block;   
+        }
+    }
+    &__holder{
+       display: inline-block;
+       font-size: 1.75rem;
+       font-weight: 700;
+       line-height: 2.5rem;
+       color: $mainWhite;
+    }
+    &__clock{
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+    }
+    &__text{
+        font-size: 12px;
+        line-height: 1.0625rem;
+        text-transform: uppercase;
+    }
+    &__days-hours{
+        padding-left: 3.125rem;
+
+        @include respond(phone){
+            padding-left: 0;
+        }
+    }
+    &__minutes-seconds{
+          &:not(:last-child){
+                padding-left: 4.75rem
+        }
+      
+        
+        @include respond(phone){
+            &:not(:last-child){
+            padding-left: 0;
+        }
+        }
+
+    }
+}
+
+

@@ -1,0 +1,57 @@
+{
+  "name": "web-helper",
+  "version": "1.0.0",
+  "description": "web helper bookmaker,password safe",
+  "main": "index.js",
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "scripts": {
+    "start": "webpack-dev-server --open --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArnasDickus/web-helper.git"
+  },
+  "keywords": [
+    "web",
+    "helper",
+    "safe",
+    "passwords",
+    "bookmark"
+  ],
+  "author": "Arnas Dickus",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-react"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/ArnasDickus/web-helper/issues"
+  },
+  "homepage": "https://github.com/ArnasDickus/web-helper#readme",
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.4.1",
+    "babel-loader": "^8.0.4",
+    "css-loader": "^1.0.1",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "img-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.4.5",
+    "node-sass": "^4.10.0",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^7.1.0",
+    "url-loader": "^1.1.2",
+    "webpack": "^4.26.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {}
+}

@@ -1,0 +1,120 @@
+.main-content{
+    
+   margin-bottom: 80px;;
+
+    &__clearfix{
+        content: "";
+    clear: both;
+    display: table;
+    }
+    &__left-side{
+        margin-top: 6.625rem;
+        float: none;
+        text-align: center;
+        @include respond(tab-port){
+                float: left;
+        }
+   
+    }
+    &__right-side{
+        float: none;
+        margin-top: 40px;
+
+      @include respond(tab-port){
+        float: right;   
+      }
+        
+    }
+    &__main-title{
+        font-size: 2.625rem;
+        line-height: 2.875rem;
+        color: $mainWhite;
+        font-weight: 700;
+    }
+    &__save{
+        margin-right: auto;
+        width: 33%;
+        margin-left: auto;
+    }
+    &__save-banner{
+       color: $mainWhite; 
+       font-weight: 700;
+       font-size: 1.25rem;
+       background-color: $salePink;
+       padding: 10px 30px;
+       text-transform: uppercase;
+       text-align: center;
+
+       @include respond(phone){
+           padding: 10px 1.875rem;
+       }
+    }
+    &__rectangular{
+        position: relative;
+        transform: rotate(45deg);
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-top: -10px;
+        background-color: $salePink;
+        display: none;   
+    }
+    &__price-block{
+        text-align: center;
+        display: none;
+
+        @include respond(tab-port){
+            text-align: none;
+        }
+        @include respond(phone){
+            display:block;
+        }
+    }
+    &__currency{
+        font-size: 6rem;
+        font-weight: 700;
+        line-height: 12.875rem;
+        display: inline-block;
+        color: $mainWhite;
+        position: relative;
+        bottom: 11.25rem;
+
+        @include respond(tab-port){
+            font-size: 9rem;
+        }
+    }
+    &__number{
+        
+        font-size: 23rem;
+        font-weight: 700;
+        line-height: 21.625rem;
+        display: inline-block;
+        color: $mainWhite;
+
+        @include respond(tab-port){
+            font-size: 27rem;
+        }
+    }
+
+    &__price-holder{
+        display: inline-block;
+        color: $mainWhite;
+    }
+    &__cents-holder{
+        position: relative;
+        bottom: 5.3125rem;
+        font-size: 7.1875rem;
+        font-weight: 700;
+        line-height: 10.3125rem;
+
+    }
+    &__unit-holder{
+        position: relative;
+        bottom: 3.125rem;
+        font-size: 4.5rem;
+        line-height: 6.4375rem;
+        font-weight: 600;
+    }
+
+    
+    
+}

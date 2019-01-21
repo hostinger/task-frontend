@@ -1,0 +1,34 @@
+.aside-navigation{
+
+  background-color: #333333;
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+
+
+  &__menu-content{
+    padding-left: 1.25rem;
+    display: none;
+
+  &--is-visible{
+    display: block;
+  }
+
+  }
+
+  ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+
+  }
+  a{
+    padding: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 10px;
+  }
+}

@@ -1,0 +1,42 @@
+.perks {
+    position: relative;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    //top: 400px;
+}
+
+.perks ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.perks li {
+    padding: 0 0.5rem;
+    color: #fff;
+    font-weight: 400px;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.fa-check {
+    color: #7cc576;
+}
+
+@media (max-width: 768px) {
+    .perks {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: -20px;
+    }
+    .perks ul {
+        display: contents;
+    }
+  }

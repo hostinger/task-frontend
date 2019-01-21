@@ -1,0 +1,88 @@
+.container {
+    display: inline-block;
+}
+
+.text {
+    font-weight: 700;
+    font-size: 42px;
+    color: #fff;
+    line-height: 46px;
+    margin-bottom: 10px;
+}
+
+.button {
+    font-size: 22px;
+    padding: 20px 60px;
+    color: #fff;
+    border: none;
+    background-color: #ea5e5b;
+    border-radius: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 600;
+}
+
+.button:hover {
+    background-color: #e83b33;
+}
+
+.percentage {
+    color: #fc5155;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-left: 15px solid #fc5155;
+    border-bottom: 10px solid transparent;
+    margin-right: auto;
+}
+
+.triangle-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 15px solid #fc5155;
+    border-bottom: 10px solid transparent;
+    margin-left: auto;
+}
+
+.timer {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+    height: 100%;
+    width: 80%;
+}
+
+@media (max-width: 768px) {
+    .container {
+      height: 80%;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .text {
+        font-size: 30px;
+        color: #fff;
+        line-height: 35px;
+    }
+    .timer {
+        display: flex;
+        margin-bottom: 20px;
+        align-items: center;
+        height: 100%;
+    }
+    .button {
+        padding: 20px 30px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .triangle-right, .triangle-left {
+        display: none;
+    }
+  }

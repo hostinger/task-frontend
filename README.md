@@ -1,3 +1,40 @@
+# task-frontend
+
+Task-frontend was created for the purpose of getting hired by Hostinger.com. The project is mostly styling website, implementing responsive designs, very light on Javascript. However I was able to add some javascript written in mvc patterns in order to stand out from others.
+
+### Prerequisites
+Node.js
+
+### Installing
+
+A step by step series of examples that tell you how to get a development env running
+Open command prompt in project root folder and type:
+
+```
+npm install
+```
+To deploy live server write:
+```
+npm start
+```
+To build project
+```
+npm build
+```
+## Built With
+* [JAVASCRIPT](https://developer.mozilla.org/bm/docs/Web/JavaScript) - For bundling javascript files.
+* [BABEL](https://github.com/babel/babel) - For writing modern javascript.
+* [WEBPACK](https://github.com/webpack/webpack) - For bundling javascript files.
+* [SCSS](https://sass-lang.com/) - For styling files.
+
+## Authors
+* **Arnas Dickus**
+
+## Acknowledgments
+
+* Thanks to Hostinger.com for providing project files.
+
+
 # Frontend Developer Task
 
 ## Few simple steps
@@ -19,3 +56,5 @@
 
 - Structure!
 - Have fun!
+
+

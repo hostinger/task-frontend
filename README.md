@@ -1,5 +1,10 @@
 # Frontend Developer Task
 
+## Run app
+
+1. npm install
+2. npm start
+
 ## Few simple steps
 
 1. Fork this repo

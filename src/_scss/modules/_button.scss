@@ -1,0 +1,30 @@
+.button{
+    border-radius: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    color: $mainWhite;
+    padding: 20px 60px;
+    background-color: $mainRed;
+    
+    max-width: none;
+        margin-right: auto;
+        margin-left: auto;
+
+    @include respond(tab-port){
+        max-width: 70%;
+        margin-right: 0;
+        margin-left: 0
+    }
+    @include respond(phone){
+        max-width: 50%;
+    }
+    
+   
+    &:hover{
+        background-color: $hoverRed;
+        transition: background-color 0.4s ease-out;
+    }
+}
+a{
+    text-decoration: none;
+}

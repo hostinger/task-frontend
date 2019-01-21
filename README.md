@@ -1,5 +1,7 @@
 # Frontend Developer Task
-
+## How to
+1. npm install
+2. gulp 
 ## Few simple steps
 
 1. Fork this repo

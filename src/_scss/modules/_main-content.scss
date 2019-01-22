@@ -33,8 +33,12 @@
     }
     &__save{
         margin-right: auto;
-        width: 33%;
+        width: 55%;
         margin-left: auto;
+
+        @include respond(phone){
+            width: 33%;
+        }
     }
     &__save-banner{
        color: $mainWhite; 
@@ -60,36 +64,37 @@
     }
     &__price-block{
         text-align: center;
-        display: none;
+        display:block;
 
-        @include respond(tab-port){
-            text-align: none;
-        }
-        @include respond(phone){
-            display:block;
-        }
     }
     &__currency{
-        font-size: 6rem;
+        font-size: 4rem;
         font-weight: 700;
         line-height: 12.875rem;
         display: inline-block;
         color: $mainWhite;
         position: relative;
-        bottom: 11.25rem;
+        bottom: 3.25rem;
 
+        @include respond(phone){
+            font-size: 6rem;
+            bottom: 11.25rem;
+        }
         @include respond(tab-port){
             font-size: 9rem;
         }
     }
     &__number{
         
-        font-size: 23rem;
+        font-size: 10rem;
         font-weight: 700;
         line-height: 21.625rem;
         display: inline-block;
         color: $mainWhite;
 
+        @include respond(phone){
+            font-size: 23rem;
+        }
         @include respond(tab-port){
             font-size: 27rem;
         }
@@ -101,18 +106,36 @@
     }
     &__cents-holder{
         position: relative;
-        bottom: 5.3125rem;
-        font-size: 7.1875rem;
+        top: 4.3125rem;
+        font-size: 4.185rem;
         font-weight: 700;
         line-height: 10.3125rem;
+
+        @include respond(phone){
+            font-size: 7.1875rem;
+            top: -1.6875rem;
+        }
+        @include respond(tap-port){
+            top: 5.3125rem;
+        }
+        @include respond(tab-land){
+            top: -5.6875rem;
+        }
 
     }
     &__unit-holder{
         position: relative;
-        bottom: 3.125rem;
+        top: 0.125rem;
         font-size: 4.5rem;
         line-height: 6.4375rem;
         font-weight: 600;
+
+        @include respond(phone){
+            top: -1.875rem;
+        }
+        @include respond(tap-port){
+            top: 3.125rem;
+        }
     }
 
     

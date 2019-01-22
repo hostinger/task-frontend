@@ -1,5 +1,7 @@
 # task-frontend
 
+[Live Version](https://arnasdickus.github.io/task-frontend/)
+
 Task-frontend was created for the purpose of getting hired by Hostinger.com. The project is mostly styling website, implementing responsive designs, very light on Javascript. However I was able to add some javascript written in mvc patterns in order to stand out from others.
 
 ### Prerequisites

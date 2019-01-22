@@ -4,6 +4,7 @@
 
 - npm install
 - npm run serve
+- [link to live web example!](https://tst11.github.io/hst-build/)
 
 ## Few simple steps
 

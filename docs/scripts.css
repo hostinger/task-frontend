@@ -190,8 +190,11 @@ body {
     font-weight: 700; }
   .main-content__save {
     margin-right: auto;
-    width: 33%;
+    width: 55%;
     margin-left: auto; }
+    @media only screen and (min-width: 22em) {
+      .main-content__save {
+        width: 33%; } }
   .main-content__save-banner {
     color: #FFFFFF;
     font-weight: 700;
@@ -214,30 +217,31 @@ body {
     display: none; }
   .main-content__price-block {
     text-align: center;
-    display: none; }
-    @media only screen and (min-width: 50em) {
-      .main-content__price-block {
-        text-align: none; } }
-    @media only screen and (min-width: 22em) {
-      .main-content__price-block {
-        display: block; } }
+    display: block; }
   .main-content__currency {
-    font-size: 6rem;
+    font-size: 4rem;
     font-weight: 700;
     line-height: 12.875rem;
     display: inline-block;
     color: #FFFFFF;
     position: relative;
-    bottom: 11.25rem; }
+    bottom: 3.25rem; }
+    @media only screen and (min-width: 22em) {
+      .main-content__currency {
+        font-size: 6rem;
+        bottom: 11.25rem; } }
     @media only screen and (min-width: 50em) {
       .main-content__currency {
         font-size: 9rem; } }
   .main-content__number {
-    font-size: 23rem;
+    font-size: 10rem;
     font-weight: 700;
     line-height: 21.625rem;
     display: inline-block;
     color: #FFFFFF; }
+    @media only screen and (min-width: 22em) {
+      .main-content__number {
+        font-size: 23rem; } }
     @media only screen and (min-width: 50em) {
       .main-content__number {
         font-size: 27rem; } }
@@ -246,16 +250,26 @@ body {
     color: #FFFFFF; }
   .main-content__cents-holder {
     position: relative;
-    bottom: 5.3125rem;
-    font-size: 7.1875rem;
+    top: 4.3125rem;
+    font-size: 4.185rem;
     font-weight: 700;
     line-height: 10.3125rem; }
+    @media only screen and (min-width: 22em) {
+      .main-content__cents-holder {
+        font-size: 7.1875rem;
+        top: -1.6875rem; } }
+    @media only screen and (min-width: 66em) {
+      .main-content__cents-holder {
+        top: -5.6875rem; } }
   .main-content__unit-holder {
     position: relative;
-    bottom: 3.125rem;
+    top: 0.125rem;
     font-size: 4.5rem;
     line-height: 6.4375rem;
     font-weight: 600; }
+    @media only screen and (min-width: 22em) {
+      .main-content__unit-holder {
+        top: -1.875rem; } }
 
 .calendar-timer ul {
   list-style-type: none;
@@ -342,7 +356,7 @@ body {
       margin-left: 0; } }
   @media only screen and (min-width: 22em) {
     .button {
-      max-width: 50%; } }
+      max-width: 70%; } }
   .button:hover {
     background-color: #FB1F24;
     -webkit-transition: background-color 0.4s ease-out;

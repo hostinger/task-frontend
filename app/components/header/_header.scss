@@ -1,0 +1,71 @@
+.page-header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0 15px;
+    padding-left: 30px;
+}
+
+
+.logo {
+    align-self: center;
+    display: flex;
+    margin: 15px 0;
+
+    &__big {
+        display: block;
+        width: 150px;
+    }
+}
+
+.header-navigation {
+
+    width: 900px;
+
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        padding-left: 30px;
+        letter-spacing: 1.5px;
+
+        &--active {
+            transform: translateX(0%);
+        }
+    }
+
+    &__sale {
+        color: $nav-sale-color;
+        position: absolute;
+        font-size: 0.7em;
+        top: 20px;
+        font-weight: 600;
+    }
+
+    &__text {
+        color: $heading-color;
+        font-size: 1em;
+        font-weight: 600;
+        text-decoration: none;
+        text-transform: uppercase;
+
+        &:hover {
+            -webkit-gradient: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+            -webkit-mask-image: linear-gradient(-75deg, rgba(0, 0, 0, .6) 30%, #000 50%, rgba(0, 0, 0, .6) 70%);
+            -webkit-mask-size: 200%;
+            animation: shine 2s infinite;
+        }
+
+        @-webkit-keyframes shine {
+            from {
+                -webkit-mask-position: 150%;
+            }
+
+            to {
+                -webkit-mask-position: -50%;
+            }
+        }
+    }
+}

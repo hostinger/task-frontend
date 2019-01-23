@@ -1,0 +1,18 @@
+.start-button {
+    &__now {
+        background-color: $button-color;
+        border: 0;
+        color: $main-text;
+        letter-spacing: -1px;
+        border-radius: 10px;
+        text-transform: uppercase;
+        font-size: 1.6em;
+        padding: 25px 68px;
+        font-weight: 500;
+    }
+
+    &__now:hover {
+        box-shadow: 4px -4px 13px 2px #a06565 inset;
+    }
+
+}

@@ -1,0 +1,47 @@
+.counter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 34px;
+
+    &__triangle {
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-left: 16px solid $button-color;
+        margin-right: 23px;
+    }
+
+    &__clock {
+        display: flex;
+        flex-direction: row;
+    }
+
+    &__time {
+        padding: 16px 26px;
+    }
+
+    &__time-digits {
+        font-size: 1.8em;
+        color: $main-text;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__time-name {
+        font-size: .9em;
+        color: $main-text;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 0;
+    }
+
+    &__triangle-reverse {
+        width: 0;
+        height: 0;
+        border-top: 12px solid transparent;
+        border-bottom: 12px solid transparent;
+        border-right: 16px solid $button-color;
+    }
+}

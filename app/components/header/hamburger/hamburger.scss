@@ -1,0 +1,97 @@
+.burger {
+    display: none;
+
+    & div {
+        background-color: $main-text;
+        margin: 3px;
+        width: 32px;
+        height: 5px;
+        transition: all 0.3s ease;
+    }
+}
+
+
+@media screen and (max-width: 1150px) {
+    .header-navigation {
+        order: 3;
+        width: 30px;
+
+        &__list {
+            align-items: center;
+            background: white;
+            flex-direction: column;
+            font-size: 1.5em;
+            display: none;
+            height: 100%;
+            justify-content: space-around;
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            transition: transform .5s ease-in;
+            width: 100%;
+
+            &--active {
+
+                transform: translateX(0%);
+                display: flex;
+            }
+
+            &-item {
+                opacity: 0;
+            }
+        }
+
+        &__text {
+            color: $hostinger-main;
+            font-weight: 700;
+        }
+
+    }
+
+    .burger {
+        cursor: pointer;
+        display: block;
+        position: absolute;
+        right: 2%;
+    }
+
+    .header-navigation__sale {
+        color: $highlighted-text;
+        top: -18px;
+    }
+
+
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .toggle {
+        div {
+            background-color: $hostinger-main;
+        }
+
+        & .line {
+            &1 {
+                transform: rotate(-45deg) translate(-5px, 6px);
+            }
+
+            &2 {
+                opacity: 0;
+            }
+
+            &3 {
+                transform: rotate(45deg) translate(-5px, -6px);
+            }
+        }
+    }
+}

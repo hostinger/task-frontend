@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800');
+
+body {
+    font-family: 'Open Sans', Helvetica, Arial;
+    font-size: 16px;
+    background: url("../images/background-1.jpg") center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-container {
+    margin: auto;
+    max-width: 1328px;
+
+}
+
+@media screen and (max-width: 600px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+// Imported Styles
+
+@import './app/sass/colors/colors.scss',
+'../components/header/header.scss',
+'../components/content/content.scss',
+'../components/content/start-button/start-button.scss',
+'../components/content/time-counter/time-counter.scss',
+'../components/header/hamburger/hamburger.scss',
+'../components/footer/footer.scss';

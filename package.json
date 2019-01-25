@@ -1,0 +1,28 @@
+{
+  "name": "hostinger-frontend-task",
+  "version": "1.0.0",
+  "description": "Hostinger task for frontend devs",
+  "main": "Gruntfile.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hostinger/task-frontend.git"
+  },
+  "author": "Marius Lastauskas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hostinger/task-frontend/issues"
+  },
+  "homepage": "https://github.com/hostinger/task-frontend#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3",
+    "grunt-contrib-less": "^2.0.0",
+    "grunt-contrib-watch": "^1.1.0",
+    "jit-grunt": "^0.10.0"
+  }
+}

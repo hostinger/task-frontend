@@ -1,0 +1,70 @@
+<div class="wrapper">
+    <header>
+        <a href="#">
+            <img class="logo" src="/assets/logo.svg" alt="Hostinger">
+        </a>
+    </header>
+
+    <nav>
+        <label for="nav-menu-btn" class="fas fa-bars nav-menu-btn-label"></label>
+        <input type="checkbox" class="nav-menu-btn" id="nav-menu-btn">
+        <ul class="nav-menu">
+            <li><a href="#">Web hosting</a></li>
+            <li class="on-sale"><a href="#">Cloud hosting</a></li>
+            <li><a href="#">Vps hosting</a></li>
+            <li><a href="#">Domain checker</a></li>
+            <li><a href="#">Website builder</a></li>
+        </ul>
+    </nav>
+
+    <section class="timer-section">
+        <h1 class="special-offer">New Year Offer</h1>
+        <h1 class="special-offer"><span>82% Off</span> Web Hosting</h1>
+        <div>
+            <img class="timer-bracket left-bracket" src="/assets/right-arrow.svg" alt="Hostinger special offer">
+            <ul class="timer" ng-controller="timerController">
+                <li>
+                    <span class="timer-value">{{daysLeft}}</span>
+                    <span class="timer-dimention">Days</span>
+                </li>
+                <li>
+                    <span class="timer-value">{{hoursLeft}}</span>
+                    <span class="timer-dimention">Hours</span>
+                </li>
+                <li>
+                    <span class="timer-value">{{minutesLeft}}</span>
+                    <span class="timer-dimention">Minutes</span>
+                </li>
+                <li>
+                    <span class="timer-value">{{secondsLeft}}</span>
+                    <span class="timer-dimention">Seconds</span>
+                </li>
+            </ul>
+            <img class="timer-bracket right-bracket" src="/assets/left-arrow.svg" alt="Hostinger special offer">
+        </div>
+        <button class="sale-btn">Get started now</button>
+    </section>
+
+    <section class="price-section">
+        <span class="sale-bubble">Save 82%</span>
+        <span class="price-dollar">1</span>
+        <span class="price-cents">45</span>
+    </section>
+</div>
+
+<footer class="benefits-section">
+    <ul class="benefits-list">
+        <li>
+            <i class="fas fa-check"></i><span>Guaranteed 99.9% Uptime</span>
+        </li>
+        <li>
+            <i class="fas fa-check"></i><span>Superior Speed Performance</span>
+        </li>
+        <li>
+            <i class="fas fa-check"></i><span>24/7 Support Chat</span>
+        </li>
+        <li>
+            <i class="fas fa-check"></i><span>30-Day Money-Back Guarantee</span>
+        </li>
+    </ul>
+</footer>

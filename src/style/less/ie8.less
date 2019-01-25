@@ -1,0 +1,50 @@
+@import "__variables.less";
+
+.benefits-list {
+    text-align: center;
+}
+
+.benefits-section {
+    display: inline-block;
+    text-align: center;  
+}
+
+.price-cents::after {
+    transform: translate(0, 148px);
+}
+
+.sale-bubble {
+    transform: translate(0, 92px);
+}
+
+.sale-bubble::after {
+    bottom: 444px;
+}
+
+@media (max-width: @screen_xxl) {
+    .price-cents {
+        margin-left: -28px;
+    }
+
+    .sale-bubble {
+        transform: translate(0, 72px);
+    }
+    
+    .sale-bubble::after {
+        bottom: 362px;
+    }
+}
+
+@media (max-width: @screen_xs) {
+    .price-cents::after {
+        transform: translate(0, 72px);
+    }
+
+    .sale-bubble {
+        transform: translate(0, 40px);
+    }
+    
+    .sale-bubble::after {
+        bottom: 208px;
+    }
+}

@@ -80,7 +80,7 @@
         @include respond(phone){
             &:not(:last-child){
             padding-left: 0;
-        }
+            }
         }
 
     }

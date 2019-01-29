@@ -1,6 +1,9 @@
-.main-content{
-    
-   margin-bottom: 80px;;
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.landing-section{
+      margin-bottom: 80px;;
 
     &__clearfix{
         content: "";
@@ -137,7 +140,30 @@
             top: 3.125rem;
         }
     }
-
+    &__footer{
+        padding-top: 5.875rem;
+        padding-bottom: 14px;
+        content: "";
+        clear: both;
+        display: table;
     
-    
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+        li{
+            float: left;
+            color: $mainWhite;
+            
+            &:not(:last-child){
+                margin-right: 5px; 
+                
+                @include respond(tab-port){  
+                margin-right: 50px;        
+                }
+            }
+        }
+    }
 }

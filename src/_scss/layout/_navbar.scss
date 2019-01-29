@@ -1,0 +1,28 @@
+.navbar{
+        position: relative;
+        display: none;
+
+        li {
+        float: left;
+        padding-top: 10px;
+
+        &:not(:last-child){
+            padding-right: 1rem;
+        }
+    }
+
+        @include respond(tab-port){                
+               display: inline-block;      
+            }
+    
+    &__on-sale{
+    position: absolute;
+    bottom: 1rem;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 14px;
+    color: $mainOrange;
+    margin-left: 0;
+    padding-left: 0; 
+    }
+}

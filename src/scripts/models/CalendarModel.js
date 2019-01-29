@@ -12,7 +12,7 @@ class CalendarModel{
 
     // Create a new deadline here
     deadline(){
-       let deadline = "2019-1-25";
+       let deadline = "2020-1-25";
 
        return deadline;
     }

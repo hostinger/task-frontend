@@ -1,0 +1,50 @@
+
+.header-section{
+    margin-top: 2.125rem;
+    margin-bottom: 6.25rem;
+
+    @include respond(tab-port){
+        text-align: left;
+    }
+
+    &__logo{
+        max-width: 8.75rem;
+        display: inline-block;
+        margin-right: 0;
+
+        @include respond(tab-land){
+            margin-right: 15.00rem;
+        }
+        @include respond(tab-port){
+          margin-right: 11rem;
+        }
+    }
+    // For SEO
+    &__title{
+        display: none;
+    }
+
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+
+
+    li a {
+    display: block;
+    color: $mainWhite;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+        &:hover{
+                color: $mainHover;
+                transition: color 0.2s ease-out;
+            }
+    }
+}

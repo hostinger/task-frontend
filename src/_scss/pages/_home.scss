@@ -4,29 +4,16 @@
 
 .landing-section{
     
-    &__clearfix{
-        content: "";
-    clear: both;
-    display: table;
-    }
+
     &__left-side{
         margin-top: 6.625rem;
-        float: none;
-        text-align: center;
-        @include respond(tab-port){
-                float: left;
-        }
    
     }
     &__right-side{
-        float: none;
-        margin-top: 40px;
-
-      @include respond(tab-port){
-        float: right;   
-      }
-        
+         position: relative;
+        margin-top: 2.5rem;
     }
+
     &__main-title{
         font-size: 2.625rem;
         line-height: 2.875rem;
@@ -35,71 +22,47 @@
     }
     &__save{
         margin-right: auto;
-        width: 55%;
+         width: 33%;
         margin-left: auto;
-
-        @include respond(phone){
-            width: 33%;
-        }
+        text-align: center;
     }
     &__save-banner{
        color: $mainWhite; 
        font-weight: 700;
        font-size: 1.25rem;
        background-color: $salePink;
-       padding: 10px 30px;
+        padding: 10px 1.875rem;
        text-transform: uppercase;
-       text-align: center;
+       
 
-       @include respond(phone){
-           padding: 10px 1.875rem;
-       }
+
     }
     &__rectangular{
-        position: relative;
+        margin-right: auto;
+        margin-left: auto;
         transform: rotate(45deg);
         width: 1.25rem;
         height: 1.25rem;
         margin-top: -10px;
-        background-color: $salePink;
-        display: none;   
+        background-color: $salePink;  
     }
-    &__price-block{
-        text-align: center;
-        display:block;
 
-    }
     &__currency{
-        font-size: 4rem;
+        font-size: 9rem;
         font-weight: 700;
         line-height: 12.875rem;
         display: inline-block;
         color: $mainWhite;
         position: relative;
-        bottom: 3.25rem;
-
-        @include respond(phone){
-            font-size: 6rem;
-            bottom: 11.25rem;
-        }
-        @include respond(tab-port){
-            font-size: 9rem;
-        }
+        bottom: 11.25rem;
     }
     &__number{
-        
-        font-size: 10rem;
+        font-size: 27rem;
         font-weight: 700;
         line-height: 21.625rem;
         display: inline-block;
         color: $mainWhite;
 
-        @include respond(phone){
-            font-size: 23rem;
-        }
-        @include respond(tab-port){
-            font-size: 27rem;
-        }
     }
 
     &__price-holder{
@@ -108,61 +71,35 @@
     }
     &__cents-holder{
         position: relative;
-        top: 4.3125rem;
-        font-size: 4.185rem;
+        font-size: 7.1875rem;
+        top: -5.6875rem;
         font-weight: 700;
         line-height: 10.3125rem;
 
-        @include respond(phone){
-            font-size: 7.1875rem;
-            top: -1.6875rem;
-        }
-        @include respond(tap-port){
-            top: 5.3125rem;
-        }
-        @include respond(tab-land){
-            top: -5.6875rem;
-        }
+        
 
     }
     &__unit-holder{
         position: relative;
-        top: 0.125rem;
+        top: -1.875rem;
         font-size: 4.5rem;
         line-height: 6.4375rem;
         font-weight: 600;
-
-        @include respond(phone){
-            top: -1.875rem;
-        }
-        @include respond(tap-port){
-            top: 3.125rem;
-        }
     }
     &__footer{
         padding-top: 5.875rem;
         padding-bottom: 14px;
-        content: "";
-        clear: both;
-        display: table;
     
-    ul{
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        overflow: hidden;
-    }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
         li{
             float: left;
             color: $mainWhite;
-            
-            &:not(:last-child){
-                margin-right: 5px; 
-                
-                @include respond(tab-port){  
-                margin-right: 50px;        
-                }
-            }
+            margin-right: 1.875rem;
         }
     }
 }

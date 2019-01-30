@@ -20,9 +20,10 @@ class CalendarController{
         let timeInterval = setInterval(() => {
         let    current =  calendarModel.calculateTime(deadline);
         let    print = calendarView.printClock(current);
-
         if(current.total <= 0){
+
             clearInterval(timeInterval);
+            calendarView.calendarhide();
         }
         }, 1000);      
     }

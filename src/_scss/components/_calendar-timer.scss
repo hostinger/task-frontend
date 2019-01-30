@@ -2,6 +2,9 @@
 
 .calendar-timer{
 
+    &--hide{
+        display: none;
+    }
     ul{
         list-style-type: none;
         margin: 0;

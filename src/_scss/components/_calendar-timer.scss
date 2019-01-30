@@ -9,10 +9,15 @@
         overflow: hidden;
     }
     li{
-        float: left;
+        
         margin-top: 1.25rem;
         text-align: center;  
         padding-right: 2.5rem;
+        float: none;
+        @include respond(phone){
+            float: left;
+        }
+        
     }
     &__triangle-right{
         width: 0;
@@ -21,8 +26,12 @@
         border-left: 15px solid $mainRed;
         border-bottom: 10px solid transparent;
         margin-right: 10px;
-        display: inline-block; 
         margin-top: 1rem;
+        display: none;
+
+        @include respond(phone){
+            display: inline-block;
+        }
         
     }
     &__triangle-left{
@@ -31,7 +40,11 @@
         border-top: 10px solid transparent;
         border-right: 15px solid $mainRed;
         border-bottom: 10px solid transparent;
-        display: inline-block;
+        display: none;
+
+        @include respond(phone){
+            display: inline-block;
+        }
     }
     &__holder{
        font-size: 1.75rem;

@@ -18,8 +18,8 @@
     @if $breakpoint == tablet {
         @media only screen and (min-width: 720px) { @content };     
     }
-    @if $breakpoint == tab-land {
-        @media only screen and (max-width: 66em) { @content };    
+    @if $breakpoint == phone {
+        @media only screen and (min-width: 610px) { @content };    
     }
     @if $breakpoint == big-desktop {
         @media only screen and (max-width: 112.5em) { @content };    

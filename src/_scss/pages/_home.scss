@@ -18,10 +18,15 @@
     }
 
     &__main-title{
-        font-size: 2.625rem;
+           font-size: 32px;
+        
         line-height: 2.875rem;
         color: $mainWhite;
         font-weight: 700;
+        
+        @include respond(phone){
+            font-size: 2.625rem;
+        }
     }
     &__save{
         margin-right: auto;
@@ -51,19 +56,27 @@
     }
 
     &__currency{
-        font-size: 9rem;
+        font-size: 5rem;
         font-weight: 700;
         line-height: 12.875rem;
         display: inline-block;
         color: $mainWhite;
+
+        
+        @include respond(phone){
+            font-size: 9rem;
+        }
     }
     &__number{
-        font-size: 27rem;
+        font-size: 13rem;
         font-weight: 700;
         line-height: 21.625rem;
         display: inline-block;
         color: $mainWhite;
 
+        @include respond(phone){
+            font-size: 27rem;           
+        }
     }
     &__price-block{
         text-align: center;
@@ -74,19 +87,31 @@
         color: $mainWhite;
     }
     &__cents-holder{
-        font-size: 7.1875rem;
+        font-size: 3.1875rem;
         font-weight: 700;
         line-height: 10.3125rem;
+        
+        @include respond(phone){
+            font-size: 7.1875rem;  
+        }
     }
     &__unit-holder{
-        font-size: 4.5rem;
+        font-size: 3.5rem;
         line-height: 6.4375rem;
         font-weight: 600;
+
+        @include respond(phone){
+            font-size: 4.5rem;
+        }
     }
     &__footer{
         padding-top: 5.875rem;
         padding-bottom: 14px;
-    
+        font-size: 15px;
+        
+        @include respond(phone){
+                
+        }
         ul{
             list-style-type: none;
             margin: 0;

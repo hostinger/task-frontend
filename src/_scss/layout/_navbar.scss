@@ -1,6 +1,6 @@
 .navbar{
         position: relative;
-        display: none;
+        display: inline-block;
 
         li {
         float: left;
@@ -11,9 +11,7 @@
         }
     }
 
-        @include respond(tab-port){                
-               display: inline-block;      
-            }
+       
     
     &__on-sale{
     position: absolute;

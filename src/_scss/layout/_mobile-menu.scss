@@ -1,0 +1,63 @@
+
+
+.mobile-menu{
+    margin-top: 2.5rem;
+     overflow: hidden;
+     color: #fff;
+     display: block;
+    display: none;
+    
+
+    position: relative;
+    text-align: right;
+
+    &__button{
+        float: right;
+     
+    }
+    &__items{
+        text-decoration: none;
+        text-align: left;
+        text-transform: uppercase;
+        display: none;
+    }
+    &__items--visible{
+        display: block;
+    }
+    &__list-item{
+        margin-top: 15px;
+        margin-bottom: 10px;
+        
+    }
+    &__link-item{
+        color: $mainWhite;
+        text-decoration: none;
+        font-size: 16px;
+    }
+    &__logo{
+        max-width: 8.75rem;
+        float: left;
+        
+    }
+    &__clearfix{
+            &::after{
+            content: "";
+            display: table;
+            clear: both;
+        }
+    }
+    &__on-sale{
+        display: inline-block;
+        margin-left: 4px;
+        font-size: 10px;
+        font-weight: 600;
+        line-height: 14px;
+        color: $mainOrange;
+        text-transform: uppercase;
+    }
+}
+.fas{
+    font-size: 26px;
+    color: #fff;
+    padding: 3px;
+}

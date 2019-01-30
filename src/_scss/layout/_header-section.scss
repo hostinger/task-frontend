@@ -2,15 +2,14 @@
 .header-section{
     padding-top: 2.125rem;
     padding-bottom: 6.25rem;
+    text-align: left;
 
-    @include respond(tab-port){
-        text-align: left;
-    }
+    
 
     &__logo{
         max-width: 8.75rem;
         display: inline-block;
-        margin-right: 17rem;
+        margin-right: 13rem;
     }
     // For SEO
     &__title{

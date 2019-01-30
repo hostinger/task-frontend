@@ -27,12 +27,9 @@
         border-left: 15px solid $mainRed;
         border-bottom: 10px solid transparent;
         margin-right: 10px;
-        display: none;
+        display: inline-block; 
         margin-top: 1rem;
-
-        @include respond(phone){
-            display: inline-block; 
-        }
+        
     }
     &__triangle-left{
         width: 0;
@@ -41,11 +38,8 @@
         border-right: 15px solid $mainRed;
         border-bottom: 10px solid transparent;
         margin-left: 10px;
-        
-        display: none;
-        @include respond(phone){
-            display: inline-block;   
-        }
+       display: inline-block;
+
     }
     &__holder{
        display: inline-block;

@@ -29,7 +29,7 @@
 
 @mixin respond($breakpoint) {
     @if $breakpoint == laptop {
-        @media only screen and (max-width: 1090px) { @content };    //1090px
+        @media only screen and (min-width: 1090px) { @content };    //1090px
     }
     @if $breakpoint == tab-port {
         @media only screen and (max-width: 50em) { @content };     //800px

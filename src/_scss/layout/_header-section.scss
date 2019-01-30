@@ -1,15 +1,23 @@
 
 .header-section{
     padding-top: 2.125rem;
-    padding-bottom: 6.25rem;
+    padding-bottom: 0;
     text-align: left;
+
+    @include respond(laptop){
+        padding-bottom: 6.25rem;
+    }
 
     
 
     &__logo{
         max-width: 8.75rem;
         display: inline-block;
+        
+        text-align: center;
         margin-right: 13rem;
+
+       
     }
     // For SEO
     &__title{

@@ -1,7 +1,7 @@
 
 
 .calendar-timer{
-        max-width: 80%;
+
     ul{
         list-style-type: none;
         margin: 0;
@@ -38,6 +38,10 @@
        font-weight: 700;
        line-height: 2.5rem;
        color: $mainWhite;
+        display: inline-block;
+       @include respond(laptop){
+           display: block;
+       }
     }
     &__clock{
         font-size: 1.75rem;

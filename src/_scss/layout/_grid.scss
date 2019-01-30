@@ -2,9 +2,7 @@
 
 .row{
 
-    [class*='col-'] {
-        float: left;
-    }
+    
 
 
     &:after{
@@ -19,6 +17,7 @@
     @include respond(laptop){
 
         &__col-6{
+            float: left;
         width: 50%;
         }
     }

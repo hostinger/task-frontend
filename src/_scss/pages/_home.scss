@@ -3,7 +3,10 @@
 // -----------------------------------------------------------------------------
 
 .landing-section{
-    
+        text-align: center;
+    @include respond(laptop){
+        text-align: left;
+    }
 
     &__left-side{
         margin-top: 6.625rem;

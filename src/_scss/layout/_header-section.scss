@@ -2,10 +2,16 @@
 .header-section{
     padding-top: 2.125rem;
     padding-bottom: 0;
-    text-align: left;
+    text-align: center;
+    display: none;
 
     @include respond(laptop){
         padding-bottom: 6.25rem;
+        text-align: left;
+    }
+
+    @include respond(tablet){
+        display: block;
     }
 
     
@@ -15,8 +21,11 @@
         display: inline-block;
         
         text-align: center;
-        margin-right: 13rem;
+        margin-right: 1rem;
 
+    @include respond(laptop){
+        margin-right: 13rem;
+    }
        
     }
     // For SEO

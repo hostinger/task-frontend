@@ -13,15 +13,15 @@
 
 @mixin respond($breakpoint) {
     @if $breakpoint == laptop {
-        @media only screen and (min-width: 1090px) { @content };    //1090px
+        @media only screen and (min-width: 1090px) { @content };    
     }
-    @if $breakpoint == tab-port {
-        @media only screen and (max-width: 50em) { @content };     //800px
+    @if $breakpoint == tablet {
+        @media only screen and (min-width: 720px) { @content };     
     }
     @if $breakpoint == tab-land {
-        @media only screen and (max-width: 66em) { @content };    //1056px
+        @media only screen and (max-width: 66em) { @content };    
     }
     @if $breakpoint == big-desktop {
-        @media only screen and (max-width: 112.5em) { @content };    //1800
+        @media only screen and (max-width: 112.5em) { @content };    
     }
 }

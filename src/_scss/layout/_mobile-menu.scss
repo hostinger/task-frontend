@@ -1,15 +1,16 @@
 
 
 .mobile-menu{
+
     margin-top: 2.5rem;
      overflow: hidden;
      color: #fff;
-     display: block;
-    display: none;
-    
-
+     display: block;    
     position: relative;
-    text-align: right;
+
+    @include respond(tablet){
+        display: none;
+    }
 
     &__button{
         float: right;
@@ -36,7 +37,7 @@
     }
     &__logo{
         max-width: 8.75rem;
-        float: left;
+         float: left;
         
     }
     &__clearfix{

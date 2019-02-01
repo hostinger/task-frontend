@@ -7,10 +7,24 @@ function WhyPickUs() {
   return (
     <React.Fragment>
       <div className="wraper">
-        <div>g</div>
-        <div>a</div>
-        <div>a</div>
-        <div>a</div>
+        <ul className="pickUsUl">
+          <li>
+            <i className="fa fa-check iconCheck" aria-hidden="true" />
+            Guaranteed 99.9% Uptime
+          </li>
+          <li>
+            <i className="fa fa-check iconCheck" aria-hidden="true" /> Superior
+            Speed Performance
+          </li>
+          <li>
+            <i className="fa fa-check iconCheck" aria-hidden="true" /> 24/7
+            Support Chat
+          </li>
+          <li>
+            <i className="fa fa-check iconCheck" aria-hidden="true" /> 30-Day
+            Money-Back Guarantee
+          </li>
+        </ul>
       </div>
     </React.Fragment>
   );

@@ -14,6 +14,10 @@ nav ul li a {
   padding-left: 15px;
 }
 
+.brand-log .logo {
+  max-width: 110px;
+}
+
 .onSaleSpan {
   color: #ffe400 !important;
   font-size: 0.7rem;

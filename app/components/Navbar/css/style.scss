@@ -21,6 +21,10 @@ nav {
 .brand-log {
   float: left;
   padding-left: 15px;
+
+  .logo {
+    max-width: 110px;
+  }
 }
 .onSaleSpan {
   color: $onSaleCol !important;

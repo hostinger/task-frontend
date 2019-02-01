@@ -1,0 +1,183 @@
+$mainFontWeight: 700;
+
+$colors: (
+  white: #fff,
+  colorRed: #ef5350,
+  colorRed-light: lighten(#ef5350, 1%),
+  colorSave-light: lighten(#ff7678, 7%),
+  buttonColor: #fc5155,
+);
+
+@function color($colorName) {
+  @return map-get($colors, $colorName);
+}
+
+*,
+h2 {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#app,
+html {
+  font-family: 'Open Sans', sans-serif;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(../../../../assets/background.jpg);
+  background-size: cover;
+  background-position: center center;
+  height: 100%;
+  background-attachment: fixed;
+  z-index: 99;
+}
+
+.wraper {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: color(white);
+}
+
+.mainPosition {
+  margin-top: 7rem;
+  padding-left: 1rem;
+  padding-right: 2rem;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .mainTextWraper {
+    margin-bottom: 60px;
+    font-size: 20px;
+    text-align: left;
+
+    h4 {
+      font-weight: $mainFontWeight;
+      text-transform: capitalize;
+    }
+
+    .counterWraper {
+      width: 344px;
+      display: flex;
+      justify-content: space-between;
+      margin-top: 1.5rem;
+      font-weight: $mainFontWeight;
+      font-size: 18px;
+
+      .counterInerWraper {
+        width: inherit;
+        display: inherit;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+      }
+
+      .counterTriangleR {
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-left: 13px solid color(colorRed-light);
+        border-bottom: 8px solid transparent;
+        font-size: 1px;
+        padding-right: 2.1rem;
+        margin-top: 0.8rem;
+      }
+
+      .timeWraper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .timeName {
+          text-transform: uppercase;
+          font-size: 0.6rem;
+        }
+      }
+
+      .counterTriangleL {
+        width: 0;
+        height: 0;
+        border-top: 8px solid transparent;
+        border-right: 13px solid color(colorRed-light);
+        border-bottom: 8px solid transparent;
+        font-size: 1px;
+        padding-left: 2rem;
+        margin-top: 0.8rem;
+      }
+    }
+
+    .mainButton {
+      padding: 17px 53px;
+      background-color: color(buttonColor);
+      text-transform: uppercase;
+      border-radius: 6px;
+      text-align: center;
+      font-size: 17px;
+    }
+  }
+}
+
+// MAIN TEXT STYLES
+
+.percentOff {
+  color: color(colorRed-light);
+}
+
+// PRICE STYLES
+
+.priceWraper {
+  font-size: 3.2em;
+  display: flex;
+  color: inherit;
+
+  .priceCurrency {
+    font-size: 2em;
+    font-weight: $mainFontWeight;
+    padding-top: 1rem;
+  }
+
+  .priceMax {
+    font-size: 6em;
+    font-weight: $mainFontWeight;
+    line-height: 0.8em;
+    width: 170px;
+    height: 340px;
+  }
+
+  .priceInnerWraper {
+    display: flex;
+    flex-direction: column;
+    // justify-content: space-around;
+    align-items: flex-start;
+
+    .priceMin {
+      margin-top: 0.6rem;
+      font-size: 1.5em;
+      font-weight: $mainFontWeight;
+    }
+    .priceMonth {
+      margin-top: 0.7rem;
+      padding-left: 0.7rem;
+      font-size: 1.1em;
+      font-weight: 600;
+    }
+  }
+}
+
+.saveFromPrice {
+  margin-left: 6.4rem;
+  width: 140px;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 8px 27px;
+  font-weight: 600;
+  color: #fff;
+  background: color(colorSave-light);
+}
+
+.triangle {
+  background: color(colorSave-light);
+  transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  margin-top: -11px;
+  margin-left: 10.8rem;
+}

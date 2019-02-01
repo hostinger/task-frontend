@@ -1,0 +1,30 @@
+$onSaleCol: #ffe400;
+$voilet_color: #2a2e54;
+
+.wraper {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+nav {
+  ul {
+    li {
+      a {
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.brand-log {
+  float: left;
+  padding-left: 15px;
+}
+.onSaleSpan {
+  color: $onSaleCol !important;
+  font-size: 0.7rem;
+  position: absolute;
+  top: -13px;
+}

@@ -3,10 +3,39 @@
   margin: 0 auto;
 }
 
-nav ul li a {
+nav.Navbar {
+  background-color: transparent;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+nav.Navbar ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+@media (max-width: 770px) {
+  nav.Navbar ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+nav.Navbar ul li a {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.8rem;
+}
+
+@media (max-width: 770px) {
+  nav.Navbar ul li a {
+    font-size: 10px;
+  }
 }
 
 .brand-log {

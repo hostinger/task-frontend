@@ -9,21 +9,16 @@ import logo2 from '../../../assets/logo.svg';
 import './css/style.css';
 
 function Navbar() {
-  const nav = {
-    backgroundColor: 'transparent',
-    boxShadow: 'none',
-  };
-
   return (
     <React.Fragment>
       <div className="wraper">
-        <nav style={nav}>
+        <nav className="Navbar">
           <div>
             <Link to="/" className="brand-log">
               <img src={logo2} alt="hostinger logo" className="logo" />
             </Link>
           </div>
-          <ul className="right">
+          <ul className="">
             <li>
               <Link to="/">web hosting</Link>
             </li>

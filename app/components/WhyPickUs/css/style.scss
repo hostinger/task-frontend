@@ -1,3 +1,11 @@
+$tablet: 770px;
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
 .wraper {
   max-width: 1100px;
   margin: 0 auto;
@@ -5,10 +13,16 @@
   .pickUsUl {
     display: flex;
     justify-content: space-around;
-    margin-top: 5rem;
+    margin-top: 14rem;
+    margin-bottom: 1rem;
+
+    @include tablet {
+      flex-direction: column;
+      align-items: center;
+    }
 
     li {
-      font-size: 0.9rem;
+      font-size: 1.1rem;
     }
   }
 }

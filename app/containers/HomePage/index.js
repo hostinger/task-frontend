@@ -2,6 +2,8 @@ import React from 'react';
 // import { FormattedMessage } from 'react-intl';
 // import messages from './messages';
 import WhyPickUs from '../../components/WhyPickUs';
+import Navbar from '../../components/Navbar';
+import MobileDrawer from '../../components/MobileDrawer';
 import './css/style.css';
 
 /* eslint-disable react/prefer-stateless-function */
@@ -9,6 +11,7 @@ export default class HomePage extends React.PureComponent {
   render() {
     return (
       <React.Fragment>
+        <Navbar />
         <main className="wraper">
           <div className=" mainPosition">
             <div className="mainTextWraper">

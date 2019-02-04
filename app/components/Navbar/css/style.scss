@@ -14,9 +14,61 @@ $tablet: 770px;
   margin: 0 auto;
 }
 
-nav.Navbar {
+.navbar {
   background-color: transparent;
   box-shadow: none;
+  display: flex;
+  @include tablet {
+    background: #6747c7;
+  }
+
+  .flex1 {
+    flex: 1;
+  }
+
+  .mobileMenu {
+    display: none !important;
+
+    @include tablet {
+      display: block !important;
+      font-weight: 600;
+      font-size: 1.5rem;
+    }
+  }
+
+  .nav-listItem-Wraper {
+    @include tablet {
+      display: none !important;
+    }
+  }
+
+  .togle-button {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 55px;
+    width: 60px;
+    margin-left: 1rem;
+    background: #5435b0;
+    border: 1px solid #957fd5 !important;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    display: none;
+    @include tablet {
+      display: flex !important;
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    .hamburger {
+      width: 26px;
+      height: 32px;
+    }
+  }
 
   @include tablet {
     // background-color: #6747c7;
@@ -48,12 +100,45 @@ nav.Navbar {
   }
 }
 
+// MOBILE
+
+.nav-mobile {
+  box-shadow: none;
+  background: #5435b0;
+  height: 100vh;
+  display: none;
+  @include tablet {
+    display: block;
+  }
+
+  .mobile-ul {
+    display: flex;
+    flex-direction: column;
+
+    li a {
+      margin-top: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.onSaleSpanMobile {
+  color: $onSaleCol !important;
+  font-size: 0.7rem;
+}
+
 .brand-log {
   float: left;
   padding-left: 15px;
 
   .logo {
     max-width: 110px;
+
+    @include tablet {
+      max-width: 140px;
+    }
   }
 }
 .onSaleSpan {

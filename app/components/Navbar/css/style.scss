@@ -1,5 +1,12 @@
-$onSaleCol: #ffe400;
-$voilet_color: #2a2e54;
+$colors: (
+  onSaleCol: #ffe400,
+  voilet_color: #2a2e54,
+  hover: lighten(#957fd5, 17%),
+);
+
+@function color($colorName) {
+  @return map-get($colors, $colorName);
+}
 
 $tablet: 770px;
 
@@ -91,7 +98,12 @@ $tablet: 770px;
         font-weight: 600;
         text-transform: uppercase;
         font-size: 0.8rem;
-
+        transition: 0.5s;
+        &:hover {
+          background-color: transparent;
+          color: color(hover);
+          transition: 0.5s;
+        }
         @include tablet {
           font-size: 10px;
         }
@@ -120,12 +132,18 @@ $tablet: 770px;
       font-weight: 700;
       text-transform: uppercase;
       font-size: 1.2rem;
+      transition: 0.3s;
+      &:hover {
+        background-color: transparent;
+        color: color(hover);
+        transition: 0.3s;
+      }
     }
   }
 }
 
 .onSaleSpanMobile {
-  color: $onSaleCol !important;
+  color: color(onSaleCol) !important;
   font-size: 0.7rem;
 }
 
@@ -142,7 +160,7 @@ $tablet: 770px;
   }
 }
 .onSaleSpan {
-  color: $onSaleCol !important;
+  color: color(onSaleCol) !important;
   font-size: 0.7rem;
   position: absolute;
   top: -13px;

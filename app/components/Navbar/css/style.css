@@ -105,6 +105,15 @@
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.8rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.navbar ul li a:hover {
+  background-color: transparent;
+  color: #cbc0ea;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 @media (max-width: 770px) {
@@ -142,6 +151,15 @@
   font-weight: 700;
   text-transform: uppercase;
   font-size: 1.2rem;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.nav-mobile .mobile-ul li a:hover {
+  background-color: transparent;
+  color: #cbc0ea;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .onSaleSpanMobile {

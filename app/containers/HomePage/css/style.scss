@@ -6,6 +6,7 @@ $colors: (
   colorRed-light: lighten(#ef5350, 1%),
   colorSave-light: lighten(#ff7678, 7%),
   buttonColor: #fc5155,
+  danger: #ff4546,
 );
 
 @function color($colorName) {
@@ -63,10 +64,16 @@ html {
     margin-bottom: 60px;
     font-size: 20px;
     text-align: left;
+    @include tablet {
+      text-align: center;
+    }
 
     h4 {
       font-weight: $mainFontWeight;
       text-transform: capitalize;
+      @include tablet {
+        font-size: 4rem;
+      }
     }
 
     .counterWraper {
@@ -76,6 +83,10 @@ html {
       margin-top: 1.5rem;
       font-weight: $mainFontWeight;
       font-size: 1.7rem;
+      @include tablet {
+        font-size: 2rem;
+        margin: 0 auto;
+      }
 
       .counterInerWraper {
         width: inherit;
@@ -126,6 +137,17 @@ html {
       text-align: center;
       font-size: 17px;
       font-weight: 500;
+      transition: 0.2s;
+
+      &:hover {
+        background-color: color(danger);
+        transition: 0.2s;
+      }
+      @include tablet {
+        padding: 22px 60px;
+        font-size: 22px;
+        margin-top: 2rem;
+      }
     }
   }
 }
@@ -147,6 +169,10 @@ html {
     font-size: 2em;
     font-weight: $mainFontWeight;
     padding-top: 1rem;
+
+    @include tablet {
+      font-size: 2.3em;
+    }
   }
 
   .priceMax {
@@ -155,6 +181,13 @@ html {
     line-height: 0.8em;
     width: 170px;
     height: 340px;
+
+    @include tablet {
+      font-size: 9em;
+      height: 380px;
+      width: 220px;
+      margin-bottom: 5rem;
+    }
   }
 
   .priceInnerWraper {
@@ -167,12 +200,20 @@ html {
       margin-top: 0.6rem;
       font-size: 1.5em;
       font-weight: $mainFontWeight;
+      @include tablet {
+        font-size: 1.7em;
+      }
     }
     .priceMonth {
       margin-top: 0.7rem;
       padding-left: 0.7rem;
       font-size: 1.1em;
       font-weight: 600;
+      @include tablet {
+        margin-top: 3rem;
+        padding-left: 1rem;
+        font-size: 1.1em;
+      }
     }
   }
 }
@@ -186,6 +227,12 @@ html {
   font-weight: 600;
   color: #fff;
   background: color(colorSave-light);
+  @include tablet {
+    width: 200px;
+    padding: 18px 44px;
+    font-size: 23px;
+    margin-left: 8.5rem;
+  }
 }
 
 .triangle {
@@ -195,4 +242,7 @@ html {
   height: 20px;
   margin-top: -11px;
   margin-left: 10.8rem;
+  @include tablet {
+    margin-left: 15.5rem;
+  }
 }

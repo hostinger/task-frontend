@@ -56,9 +56,21 @@ html {
   text-align: left;
 }
 
+@media (max-width: 770px) {
+  .mainPosition .mainTextWraper {
+    text-align: center;
+  }
+}
+
 .mainPosition .mainTextWraper h4 {
   font-weight: 700;
   text-transform: capitalize;
+}
+
+@media (max-width: 770px) {
+  .mainPosition .mainTextWraper h4 {
+    font-size: 4rem;
+  }
 }
 
 .mainPosition .mainTextWraper .counterWraper {
@@ -72,6 +84,13 @@ html {
   margin-top: 1.5rem;
   font-weight: 700;
   font-size: 1.7rem;
+}
+
+@media (max-width: 770px) {
+  .mainPosition .mainTextWraper .counterWraper {
+    font-size: 2rem;
+    margin: 0 auto;
+  }
 }
 
 .mainPosition .mainTextWraper .counterWraper .counterInerWraper {
@@ -131,6 +150,22 @@ html {
   text-align: center;
   font-size: 17px;
   font-weight: 500;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.mainPosition .mainTextWraper .mainButton:hover {
+  background-color: #ff4546;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+@media (max-width: 770px) {
+  .mainPosition .mainTextWraper .mainButton {
+    padding: 22px 60px;
+    font-size: 22px;
+    margin-top: 2rem;
+  }
 }
 
 .percentOff {
@@ -151,12 +186,27 @@ html {
   padding-top: 1rem;
 }
 
+@media (max-width: 770px) {
+  .priceWraper .priceCurrency {
+    font-size: 2.3em;
+  }
+}
+
 .priceWraper .priceMax {
   font-size: 6em;
   font-weight: 700;
   line-height: 0.8em;
   width: 170px;
   height: 340px;
+}
+
+@media (max-width: 770px) {
+  .priceWraper .priceMax {
+    font-size: 9em;
+    height: 380px;
+    width: 220px;
+    margin-bottom: 5rem;
+  }
 }
 
 .priceWraper .priceInnerWraper {
@@ -178,11 +228,25 @@ html {
   font-weight: 700;
 }
 
+@media (max-width: 770px) {
+  .priceWraper .priceInnerWraper .priceMin {
+    font-size: 1.7em;
+  }
+}
+
 .priceWraper .priceInnerWraper .priceMonth {
   margin-top: 0.7rem;
   padding-left: 0.7rem;
   font-size: 1.1em;
   font-weight: 600;
+}
+
+@media (max-width: 770px) {
+  .priceWraper .priceInnerWraper .priceMonth {
+    margin-top: 3rem;
+    padding-left: 1rem;
+    font-size: 1.1em;
+  }
 }
 
 .saveFromPrice {
@@ -196,6 +260,15 @@ html {
   background: #ff9a9b;
 }
 
+@media (max-width: 770px) {
+  .saveFromPrice {
+    width: 200px;
+    padding: 18px 44px;
+    font-size: 23px;
+    margin-left: 8.5rem;
+  }
+}
+
 .triangle {
   background: #ff9a9b;
   -webkit-transform: rotate(45deg);
@@ -204,5 +277,11 @@ html {
   height: 20px;
   margin-top: -11px;
   margin-left: 10.8rem;
+}
+
+@media (max-width: 770px) {
+  .triangle {
+    margin-left: 15.5rem;
+  }
 }
 /*# sourceMappingURL=style.css.map */

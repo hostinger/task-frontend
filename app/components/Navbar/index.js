@@ -1,7 +1,6 @@
 /* eslint-disable react/prefer-stateless-function */
 import React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 import logo2 from '../../../assets/logo.svg';
 // import styled from 'styled-components';
 
@@ -14,8 +13,11 @@ class Navbar extends React.Component {
     showMenu: false,
   };
 
+  // showMenu = () => {
+  //   this.setState({ showMenu: !this.state.showMenu });
+  // };
   showMenu = () => {
-    this.setState({ showMenu: !this.state.showMenu });
+    this.setState(prevState => ({ showMenu: !prevState.showMenu }));
   };
 
   render() {

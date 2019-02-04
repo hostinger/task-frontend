@@ -2,7 +2,6 @@ import React from 'react';
 // import { FormattedMessage } from 'react-intl';
 // import messages from './messages';
 import WhyPickUs from '../../components/WhyPickUs';
-import Navbar from '../../components/Navbar';
 import './css/style.css';
 
 /* eslint-disable react/prefer-stateless-function */

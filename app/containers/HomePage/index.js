@@ -1,6 +1,4 @@
 import React from 'react';
-// import { FormattedMessage } from 'react-intl';
-// import messages from './messages';
 import WhyPickUs from '../../components/WhyPickUs';
 import './css/style.css';
 

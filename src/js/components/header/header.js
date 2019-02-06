@@ -5,7 +5,9 @@ class Header extends Component {
     render () {
         return (
             <header className="container header-container">
-                <div>Logo</div>
+                <div>
+                    <img  className="logo" src="/src/styles/assets/logo.png" alt="Logo"/> 
+                </div>
                 <Menu />
                 <div id="nav-icon" className="mobile-menu">
                     <span></span>

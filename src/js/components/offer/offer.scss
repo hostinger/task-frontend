@@ -1,0 +1,31 @@
+$heading: #fff;
+$red-mark: #fc5155;
+
+.offer-container {
+    width: 50%;
+    
+    &__heading {
+        color: $heading;
+        font-size: 40px;
+        font-weight: 800;
+        line-height: 50px;
+        letter-spacing: 1px;
+
+        &--red {
+            color: $red-mark;
+            margin-right: 7px;
+        }
+
+        @media screen and (max-width: 411px) {
+            font-size: 30px;
+            line-height: 40px;
+         }
+    }
+
+    @media screen and (max-width: 768px) {
+        order: 2;
+        padding-bottom: 30px;
+        width: 100%;
+        text-align: center;
+     }
+}

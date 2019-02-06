@@ -1,0 +1,60 @@
+$menu-button: #fff;
+$menu-hover: #efeff5;
+$sale-label: #ffcc00;
+
+.menu-container {
+    text-transform: uppercase; 
+    color: $menu-button;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0;
+    margin: 0;  
+    list-style-type: none; 
+
+    li {
+        cursor: pointer;
+        margin-right: 20px;
+        position: relative;
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+    }
+
+    .menu-link {
+        color: $menu-button;
+        text-decoration: none;
+        transition: .5s;
+
+        &:hover {
+            color: $menu-hover;
+        }
+    }
+
+    @media screen and (max-width: 991px) {
+        background: grey;
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+
+        li {
+            margin-bottom: 15px;
+            margin-right: 0;
+        }
+    }
+}

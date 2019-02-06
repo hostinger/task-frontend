@@ -1,0 +1,88 @@
+$saving-text: #fff;
+$saving-background: #fc5155;
+$price-color: #fff;
+
+
+.price-container {
+    width: 50%;
+
+    @media screen and (max-width: 768px) {
+        order: 1;
+        width: 100%;
+     }
+}
+
+.saving {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.saving-label {
+    color: $saving-text;
+    background: $saving-background;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px 30px;
+    position: relative;
+
+    .arrow-down {
+        position: absolute;
+        bottom: -14px;
+        left: 55px;
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;
+        border-top: 15px solid $saving-background;
+    }
+}
+
+.price-block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $price-color;
+    font-weight: 700;
+    margin-top: -95px;
+
+    &__currency {
+        font-size: 100px;
+
+        @media screen and (max-width: 412px) {
+            font-size: 70px;
+        }
+    }
+
+    &__number {
+        font-size: 300px;
+
+        @media screen and (max-width: 412px) {
+            font-size: 200px;
+        }
+    }
+
+    &__rigth {
+        &--number {
+            font-size: 70px;
+
+            @media screen and (max-width: 412px) {
+                font-size: 50px;
+            }
+        }
+        &--month {
+            font-size: 50px;
+
+            @media screen and (max-width: 412px) {
+                font-size: 30px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 412px) {
+        margin-top: -50px;
+    }
+}
+

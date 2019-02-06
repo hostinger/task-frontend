@@ -1,0 +1,11 @@
+$sale: #ffe400;
+
+.on-sale__label {
+    color: $sale;
+    font-size: 10px;
+    font-weight: 600;
+    position: absolute;
+    left: 0;
+    top: -10px;
+    transition: all ease-in .2s;
+}

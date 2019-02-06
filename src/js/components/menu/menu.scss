@@ -1,6 +1,7 @@
 $menu-button: #fff;
 $menu-hover: #b086ce;
 $sale-label: #ffcc00;
+$mobile-background: #e4e2ff;
 
 .menu-container {
     text-transform: uppercase; 
@@ -8,6 +9,7 @@ $sale-label: #ffcc00;
     font-size: 14px;
     font-weight: 600;
     letter-spacing: 1px;
+    z-index: 2;
 }
 
 .menu {
@@ -41,8 +43,8 @@ $sale-label: #ffcc00;
     }
 
     @media screen and (max-width: 991px) {
-        background: grey;
-        display: none;
+        background: $mobile-background;
+        // display: none;
         position: absolute;
         top: 60px;
         left: 0;
@@ -51,6 +53,7 @@ $sale-label: #ffcc00;
         justify-content: center;
         align-items: center;
         padding: 20px 0;
+
 
         li {
             margin-bottom: 15px;

@@ -1,7 +1,15 @@
+import $ from 'jquery';
 import React, { Component } from 'react';
 import Menu from './menu/menu.js';
 
 class Header extends Component {
+
+    openMenu (element) {
+        $(`#${element}`).toggleClass('open');
+        $('#menu').toggleClass('menu-mobile');
+    };
+
+
     render () {
         return (
             <header className="container header-container">
@@ -9,7 +17,7 @@ class Header extends Component {
                     <img  className="logo" src="/src/styles/assets/logo.png" alt="Logo"/> 
                 </div>
                 <Menu />
-                <div id="nav-icon" className="mobile-menu">
+                <div id="nav-icon" className="menu-hamburger" onClick={() => this.openMenu('nav-icon')}>
                     <span></span>
                     <span></span>
                     <span></span>

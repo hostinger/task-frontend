@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import OnSale from '../onsaleLabel/onsaleLabel.js'
 
 class Menu extends Component {
+
     render () {
         return (
             <nav className="menu-container">
-               <ul className="menu">
+               <ul id="menu" className="menu">
                    <li>
                        <a href="" className="menu-link">
                             Web Hosting

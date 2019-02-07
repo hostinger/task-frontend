@@ -43,21 +43,28 @@ $mobile-background: #e4e2ff;
     }
 
     @media screen and (max-width: 991px) {
-        background: $mobile-background;
-        // display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 20px 0;
-
-
-        li {
-            margin-bottom: 15px;
-            margin-right: 0;
-        }
+        display: none;
     }
+
+    &-mobile {
+        @media screen and (max-width: 991px) {
+            display: flex;
+            background: $mobile-background;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 0;
+    
+            li {
+                margin-bottom: 15px;
+                margin-right: 0;
+            }
+        }
+    }  
 }
+
+

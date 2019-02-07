@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Countdown from '../counter/counter.js';
-import Button from '../button/button.js';
+import Button from '../../button/button.js';
 
 class Offer extends Component {
     render () {

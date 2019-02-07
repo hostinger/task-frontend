@@ -7,13 +7,13 @@
 //main components
 @import '../js/App.scss';
 @import '../js/components/header/header.scss';
-@import '../js/components/menu/menu.scss';
+@import '../js/components/header/menu/menu.scss';
 @import '../js/components/main/main.scss';
-@import '../js/components/offer/offer.scss';
-@import '../js/components/price/price.scss';
+@import '../js/components/main/offer/offer.scss';
+@import '../js/components/main/price/price.scss';
 @import '../js/components/footer/footer.scss';
 
 //components parts
-@import '../js/components/onsaleLabel/onsaleLabel.scss';
-@import '../js/components/counter/counter.scss';
+@import '../js/components/header/onsaleLabel/onsaleLabel.scss';
+@import '../js/components/main/counter/counter.scss';
 @import '../js/components/button/button.scss';

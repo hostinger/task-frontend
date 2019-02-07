@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import Offer from '../offer/offer.js';
-import Price from '../price/price.js';
+import Offer from './offer/offer.js';
+import Price from './price/price.js';
 
 class Main extends Component {
     render () {

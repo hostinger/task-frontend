@@ -3,7 +3,7 @@ $button-text: #fff;
 $button-hover: #cc0000;
 
 @mixin button($color, $background, $hover-background) {
-    color: $color;
+    color: $color!important;
     background: $background;
 
     &:hover {
@@ -14,6 +14,7 @@ $button-hover: #cc0000;
 .button-container {
     width: 100%;
     padding: 20px 0;
+    margin-top: 20px;
 }
 
 .button {
@@ -22,6 +23,5 @@ $button-hover: #cc0000;
     border-radius: 6px;
     text-transform: uppercase;
     text-align: center;
-    border: none;
     cursor: pointer;
 }

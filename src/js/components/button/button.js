@@ -4,11 +4,9 @@ class Button extends Component {
     render () {
         return (
             <div className="button-container">
-                <button className="button">
-                 <a>
+                < a className="button">
                     Get started now
-                 </a>
-                </button>
+                </a>
             </div>
         );
     }

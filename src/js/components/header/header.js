@@ -14,7 +14,7 @@ class Header extends Component {
         return (
             <header className="container header-container">
                 <div>
-                    <a href="/" title="Logo">
+                    <a href="#" title="Logo">
                         <img  className="logo" src="./img/logo.png" alt="Logo"/> 
                     </a>
                 </div>

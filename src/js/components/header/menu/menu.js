@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import OnSale from '../onsaleLabel/onsaleLabel.js'
 
 const navigation = {
     "data" : [

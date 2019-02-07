@@ -1,8 +1,13 @@
 import React, { Component } from 'react';
-import Countdown from '../counter/counter.js';
 import Button from '../../button/button.js';
+import Clock from '../clock/clock.js';
 
 class Offer extends Component {
+    constructor(props) {
+        super(props);
+        this.state = { deadline: 'May, 4, 2019' };
+   }
+
     render () {
         return (
             <div className="offer-container">
@@ -13,7 +18,7 @@ class Offer extends Component {
                     </span> 
                          Web Hosting
                 </h1>
-                <Countdown />
+                <Clock deadline={ this.state.deadline } />
                 <Button />
             </div> 
         );

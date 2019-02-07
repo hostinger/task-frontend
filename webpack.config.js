@@ -1,4 +1,7 @@
+const path = require('path');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 module.exports = {
     module: {
@@ -36,6 +39,13 @@ module.exports = {
       new HtmlWebPackPlugin({
         template: "./src/index.html",
         filename: "./index.html"
-    })
-  ]
+    }),
+      new CopyWebpackPlugin([
+        {
+            from: path.resolve(__dirname, 'src/styles/assets'),
+            to: path.resolve(__dirname, 'dist/img')
+        }
+      ]),
+      new CleanWebpackPlugin([path.join(__dirname, '/dist/*')])
+    ]
 };

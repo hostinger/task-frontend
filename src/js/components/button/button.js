@@ -4,7 +4,7 @@ class Button extends Component {
     render () {
         return (
             <div className="button-container">
-                < a className="button">
+                <a href="/" title="Link to offer" className="button">
                     Get started now
                 </a>
             </div>

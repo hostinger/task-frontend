@@ -8,28 +8,28 @@ class Menu extends Component {
             <nav className="menu-container">
                <ul id="menu" className="menu">
                    <li>
-                       <a href="" className="menu-link">
+                       <a href="/" title="Web Hosting" className="menu-link">
                             Web Hosting
                        </a>
                    </li>
                    <li>
                        <OnSale />
-                       <a href="" className="menu-link">
+                       <a href="/" title="Cloud Hosting" className="menu-link">
                            Cloud Hosting
                        </a>
                    </li>
                    <li>
-                       <a href="" className="menu-link">
+                       <a href="/" title="VPS Hosting" className="menu-link">
                            VPS Hosting
                        </a>
                    </li>
                    <li>
-                       <a href="" className="menu-link">
+                       <a href="/" title="Domain Checker" className="menu-link">
                            Domain Checker
                        </a>
                    </li>
                    <li>
-                       <a href="" className="menu-link">
+                       <a href="/" title="Website Builder" className="menu-link">
                            Website Builder
                        </a>
                    </li>

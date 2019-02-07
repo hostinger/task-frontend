@@ -14,7 +14,9 @@ class Header extends Component {
         return (
             <header className="container header-container">
                 <div>
-                    <img  className="logo" src="./img/logo.png" alt="Logo"/> 
+                    <a href="/" title="Logo">
+                        <img  className="logo" src="./img/logo.png" alt="Logo"/> 
+                    </a>
                 </div>
                 <Menu />
                 <div id="nav-icon" className="menu-hamburger" onClick={() => this.openMenu('nav-icon')}>

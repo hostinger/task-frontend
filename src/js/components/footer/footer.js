@@ -3,15 +3,20 @@ import React, { Component } from 'react';
 const list = {
     "data" : [
       {
+        "id": "0",
         "name": "Guaranteed 99.9% Uptime"
       },
       {
+        "id": "1",
         "name": "Superior Speed Performance"
       },
       {
+        
+        "id": "2",
         "name": "24/7 Support Chat"
       },
       {
+        "id": "3",
         "name": "30-Day Money-Back Guarantee"
       }
     ]

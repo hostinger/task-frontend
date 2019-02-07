@@ -1,22 +1,37 @@
 import React, { Component } from 'react';
 import OnSale from '../onsaleLabel/onsaleLabel.js'
 
-const list = {
+const navigation = {
     "data" : [
       {
-        "name": "Web Hosting"
+        "id": "0",
+        "name": "Web Hosting",
+        "url": "#",
+        "sale": ""
       },
       {
-        "name": "Cloud Hosting"
+        "id": "1",
+        "name": "Cloud Hosting",
+        "url": "#",
+        "sale": "On Sale"
       },
       {
-        "name": "VPS Hosting"
+        "id": "2",
+        "name": "VPS Hosting",
+        "url": "#",
+        "sale": ""
       },
       {
-        "name": "Domain Checker"
+        "id": "3",
+        "name": "Domain Checker",
+        "url": "#",
+        "sale": ""
       },
       {
-        "name": "Website Builder"
+        "id": "4",
+        "name": "Website Builder",
+        "url": "#",
+        "sale": ""
       }
     ]
   }
@@ -27,10 +42,9 @@ const list = {
         {props.items.data.map(item => (
           <React.Fragment key={item.id}>
             <li>
-                <a href="/" title={item.name} className="menu-link">
-                    {item.name}
-                </a>
-            </li>
+                <div className="on-sale__label">{item.sale}</div>
+                <a href="{item.url}" title="{item.name}" className="menu-link">{item.name}</a>
+		    </li>
           </React.Fragment>
         ))}
       </React.Fragment>
@@ -43,8 +57,7 @@ class Menu extends Component {
         return (
             <nav className="menu-container">
                <ul id="menu" className="menu">
-                    <MenuList items={list} />
-                    <OnSale />
+                    <MenuList items={navigation} />
                </ul>
             </nav>  
     

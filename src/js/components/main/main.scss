@@ -1,3 +1,5 @@
+$background: #2e2c40;
+
 .main-container {
     align-items: center;    
     display: flex;
@@ -5,7 +7,8 @@
     padding-top: 50px;
 
     @media screen and (max-width: 768px) {
-       flex-direction: column;
-       justify-content: center;
+        background: transparentize($background, 0.3);
+        flex-direction: column;
+        justify-content: center;
     }
 }

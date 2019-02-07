@@ -42,8 +42,8 @@ const navigation = {
         {props.items.data.map(item => (
           <React.Fragment key={item.id}>
             <li>
-                <div className="on-sale__label">{item.sale}</div>
-                <a href="{item.url}" title="{item.name}" className="menu-link">{item.name}</a>
+                { item.sale? (<div className="on-sale__label">{item.sale}</div>): null }
+                <a href={item.url} title={item.name} className="menu-link">{item.name}</a>
 		    </li>
           </React.Fragment>
         ))}

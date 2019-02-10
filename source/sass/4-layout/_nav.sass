@@ -1,0 +1,81 @@
+.main-nav
+  display: flex
+  li
+    list-style: none
+  li:first-child
+    position: relative
+    margin-right: auto
+  a
+    display: block
+    padding: 10px
+    font-size: 14px
+    font-weight: 700
+    text-transform: uppercase
+    text-decoration: none
+    text-align: center
+    letter-spacing: 1px
+    color: $white
+    cursor: pointer
+    transition: .3s ease-in-out
+  a:hover
+    color: $darker-white
+  span
+    position: absolute
+    top: 10px
+    font-size: 10px
+    color: $yellow
+
+ul.main-nav
+  padding: 0
+
+//Responsive nav styles
+
+.responsive-nav
+ display: flex
+
+li.nav-toggle
+  display: none
+  a
+    i
+      font-size: 40px
+
+@media screen and (max-width: 768px)
+  ul.main-nav
+    position: relative
+    margin: 0
+    padding: 0 15px
+    background: $pale-black
+    transition: left 1s ease-in-out
+
+  .main-nav
+    padding: 0 10px
+    z-index: 1
+    span
+      top: 125px
+    img
+      position: relative
+      top: 6px
+
+  li.nav-toggle
+    display: block
+    z-index: 1
+
+  .responsive-nav
+    display: none
+
+  .responsive-nav.unfold
+    width: 100%
+    display: block
+    position: absolute
+    top: 60px
+    right: 0
+    background: $pale-black
+    border-top: solid 1px white
+
+  .responsive-nav.unfold li
+    display: block
+
+  .responsive-nav.unfold a
+    display: block
+    padding: 40px
+    text-align: center

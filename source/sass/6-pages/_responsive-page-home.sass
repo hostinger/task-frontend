@@ -1,0 +1,83 @@
+//Responsive styles to main containers
+
+@media screen and (max-width: 1100px)
+  #main
+    padding: 0 15px
+  .pricing-double-line-wrapper
+    line-height: 1.5
+
+
+@media screen and (min-width: 1100px)
+  .pricing-double-line-wrapper
+    line-height: 10.3em!important
+
+  .pricing-currency
+    font-size: 7.5em
+
+  .pricing-big-number
+    font-size: 28em
+
+  .pricing-double-line-wrapper
+    line-height: 1.3em
+
+  .pricing-cents
+    font-size: 7em
+
+  .pricing-date
+    font-size: 5.5em
+
+
+@media screen and (max-width: 968px)
+  .main-container
+    margin: 50px 0
+
+
+@media screen and (max-width: 768px)
+  .main-container
+    display: grid
+    top: 0
+    margin: 50px 0
+
+  .left-container-div
+    order: 2
+
+  .right-container-div
+    order: 1
+
+  .left-container-div, .right-container-div
+    width: 90%
+    top: 0
+    text-align: center
+    margin: 10px auto
+
+  .countdown-div
+    padding: 0 10px
+
+  .left-container-div
+    display: grid
+
+  .left-container-countdown
+    display: inline-flex
+    margin: 0 auto
+    padding: 20px 0
+
+
+
+@media screen and (max-width: 480px)
+  .pricing-big-number
+    font-size: 50vw
+
+  .pricing-currency
+    margin-top: -50px
+
+  .price-div
+    line-height: 1
+
+  .left-container-div
+    padding-top: 20px
+
+
+@media screen and (max-width: 340px)
+  .left-container-countdown
+    span
+      font-size: 9px

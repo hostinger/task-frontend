@@ -1,22 +1,16 @@
 # Frontend Developer Task
 
-## Few simple steps
+# Live Version hosted at https://hostinger-frontend-test.000webhostapp.com/
+# To Host Locally type "gulp" in the cli of project's directory.
 
-1. Fork this repo
-2. Prepare pull request and let us know that you are done
+## Built using modern approach of dividing dev environment from the build. All of the source assets are divided into components and then compiled into one file using Gulp. Everything is structured and commented for better readability of the code.
 
-## Few simple requirements
+- HTML5
+- Gulp - Task runner used for compiling from development environment into an actual build on the fly (Browsersync; Sass into CSS; autoprefix for cross browser compatibility; images compression etc.)
+- Sass - CSS pre-processor
+- JS
 
-- Design should be recreated as closely as possible.
-- Design must be responsive. Because we live in our smartphones and we will check with them for sure.
-- Use CSS preprocessor (SCSS preferred).
-- Browser support must be great. All modern browsers plus IE9 and above.
-- Use a Javascript task-runner. Webpack, Grunt or Gulp - it doesn't matter.
-- Do not commit the build, because we are building things on deployment.
-- VueJS, AngularJS or ReactJS would be an advantage
+# Prerequisites
 
-## Few tips
-
-- Structure!
-- Have fun!
-- Hosted DEMO would give some extra points
+- Node.js
+- npm

@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,800');
+
+
+body,
+body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  vertical-align: top;
+  font-family: 'Open Sans',sans-serif;
+}
+
+.price {
+  display: block;
+  width: 320px;
+  //height: calc(240px + 36px); // discount px
+  margin-left: calc((100vw / 2) - 180px );
+  color: white;
+  font-weight: 700;
+
+  .discount {
+    display: block;
+    width: 140px;
+    height: 46px;
+    margin-left: calc((100% / 2) - 70px);
+    margin-bottom: 15px;
+    background-color: #fb9d9e;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    line-height: 46px;
+    font-weight: 400;
+    text-transform: uppercase;
+    position: relative;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+      background: inherit;
+      content: "";
+      position: absolute;
+      left: calc(50% - 10px);
+      bottom: -10px;
+      transform: rotate(45deg);
+    }
+  }
+
+  .halfBox {
+    &__left {
+      display: inline-block;
+      margin-top: 30px;
+      font-size: 100px;
+      text-align: right;
+    }
+
+    &__right {
+      display: inline-block;
+
+      div {
+        display: block;
+        height: 50%;
+      }
+
+      div:first-child {
+        margin-top: 30px;
+        font-size: 70px;
+      }
+
+      div:last-child {
+
+        font-size: 45px;
+        margin: 20px 0 0 10px
+      }
+    }
+  }
+
+  .fullBox {
+    display: inline-block;
+    line-height: 240px;
+    font-size: 280px;
+    text-align: center;
+  }
+}
+@media (min-width: 768px) {
+  .price {
+    margin-left: 0px;
+    float: right;
+  }
+}
+
+@media (min-width: 960px) {
+  .price {
+    width: 400px;
+
+    .halfBox {
+      &__left {
+        font-size: 120px;
+      }
+
+      &__right {
+        div:first-child {
+          font-size: 84px;
+        }
+
+        div:last-child {
+          font-size: 59px;
+          margin: 25px 0 0 20px
+        }
+      }
+    }
+
+    .fullBox {
+      line-height: 288px;
+      font-size: 336px;
+    }
+  }
+}
+
+@media (min-width: 1200px) {
+  .price {
+    width: 490px;
+
+    .halfBox {
+      &__left {
+        font-size: 132px;
+      }
+
+      &__right {
+        div:first-child {
+          margin-top: 5px;
+          font-size: 108px;
+        }
+
+        div:last-child {
+          font-size: 70px;
+          margin: 50px 0 0 20px
+        }
+      }
+    }
+
+    .fullBox {
+      line-height: 318px;
+      font-size: 420px;
+    }
+  }
+}
+
+.yearOffer {
+  display: block;
+  width: auto;
+  padding-top: 80px;
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1px;
+
+  div {
+    padding-bottom: 15px;
+
+    span {
+      color: #f15853;
+    }
+  }
+
+  .btn {
+    display: inline-block;
+    width: 260px;
+    height: 50px;
+    border-radius: 5px;
+    line-height: 50px;
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-align: center;
+    background-color: #f15853;
+    color: white;
+
+  }
+}
+
+@media (min-width : 768px) {
+  .yearOffer {
+    width: 320px;
+    padding-top: 50px;
+
+    .btn {
+      width: 220px;
+      height: 45px;
+      line-height: 45px;
+      font-size: 16px;
+    }
+  }
+}
+@media (min-width : 960px) {
+  .yearOffer {
+    width: 400px;
+    padding-top: 50px;
+    font-size: 32px;
+
+    .btn {
+      width: 250px;
+      height: 50px;
+      line-height: 50px;
+      font-size: 18px;
+    }
+  }
+}
+@media (min-width : 1200px) {
+  .yearOffer {
+    width: 440px;
+    padding-top: 60px;
+    font-size: 38px;
+
+    .btn {
+      width: 320px;
+      height: 65px;
+      line-height: 65px;
+      font-size: 18px;
+    }
+  }
+}
+
+.claims {
+  padding: 40px 0px;
+  font-size: 14px;
+  color: white;
+  div {
+    margin-top: 5px;
+  }
+}
+@media (min-width : 768px) {
+  .claims {
+    display: inline-block;
+    width: 100%;
+    padding: 160px 0px 10px;
+    font-size: 14px;
+    color: white;
+
+    div {
+      display: inline-block;
+      width: 25%;
+      margin-top: 5px;
+      text-align: center;
+    }
+  }
+}

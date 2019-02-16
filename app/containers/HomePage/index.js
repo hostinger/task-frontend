@@ -10,16 +10,19 @@
  */
 
 import React from 'react';
-import { FormattedMessage } from 'react-intl';
-import messages from './messages';
 
+import './style/style.scss';
+import Featured from '../../components/Featured';
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
   render() {
     return (
-      <h1>
-        <FormattedMessage {...messages.header} />
-      </h1>
+      <div>
+        <div className="bg" />
+        <div className="content">
+          <Featured />
+        </div>
+      </div>
     );
   }
 }

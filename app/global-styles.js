@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
   html,
   body {
     height: 100%;
@@ -16,7 +17,7 @@ const GlobalStyle = createGlobalStyle`
   }
 
   #app {
-    background-color: #fafafa;
+    background-color: #ffff;
     min-height: 100%;
     min-width: 100%;
   }

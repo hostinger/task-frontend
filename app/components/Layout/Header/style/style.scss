@@ -1,0 +1,30 @@
+.nav{
+
+    width: 65%;
+    margin: 0 auto;
+    z-index: 1;
+    #empty{
+        flex:3;
+    }
+    a{
+        position: relative;
+        display: block;
+        padding: 10px 0 10px 25px;
+        color: #fff!important;
+        text-transform: uppercase;
+        font-weight: 600;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+
+    .badge{
+        position: absolute;
+        top: -2px;
+        color: #ffe400;
+        font-size: 10px;
+        font-weight: 600;
+        padding-left: 0;
+    }
+    }
+
+  

@@ -1,15 +1,17 @@
+@import '../../../_styles/mixins';
 
-
-.left_col{
-  h4{
+.left_col {
+  h4 {
     font-weight: 700;
     text-transform: capitalize;
     letter-spacing: 1px;
   }
-  #discount{
+
+  #discount {
     color: #ef5855
   }
-  .countdown_item{
+
+  .countdown_item {
     display: flex;
     justify-content: space-between;
     text-align: center;
@@ -19,11 +21,13 @@
     margin-top: 10px;
     margin-bottom: 25px;
   }
-  .countdown_tag{
+
+  .countdown_tag {
     font-size: 0.6rem;
   }
 
-  #custom_btn{
+  #custom_btn {
+    margin-top: 20px;
     padding: 17px 42px;
     background-color: #fc5155;
     text-transform: uppercase;
@@ -31,38 +35,55 @@
     text-align: center;
     font-size: 17px;
     font-weight: 500;
+
   }
 
-  #left_triangle{
+  #left_triangle {
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
     border-left: 13px solid #ef5855;
     border-bottom: 8px solid transparent;
     font-size: 1px;
-    padding-right: 2.1rem;
     margin-top: 1.1rem;
   }
-  #right_triangle{
+
+  #right_triangle {
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
     border-right: 13px solid #ef5855;
     border-bottom: 8px solid transparent;
     font-size: 1px;
-    padding-left: 2rem;
     margin-top: 1.1rem;
-  }
-  .spacing{
-    padding-right: 10px;
   }
 }
 
 
-.right_col{
-    .discount_box{
-      padding-left: 29px;
-      margin-left: 77px;
+
+.right_col {
+
+  #spacing {
+    @include mobile {
+      padding-top: 100px;
+      padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .discount_box{
+        margin-left: 20px;
+      }
+      .triangle{
+        margin-left: 36px;
+      }
+
+    }
+  }
+
+  .discount_box {
+    padding-left: 29px;
+    margin-left: 77px;
     width: 140px;
     text-transform: uppercase;
     font-size: 17px;
@@ -70,29 +91,37 @@
     font-weight: 600;
     color: #fff;
     background: #ff9a9b;
-    }
-    .triangle{
-        background: #ff9a9b;
+  }
+
+  .triangle {
+    background: #ff9a9b;
     transform: rotate(45deg);
     width: 20px;
     height: 20px;
     margin-top: -11px;
     margin-left: 144px;
+  }
+
+  
+
+  .price {
+    font-size: 3.2em;
+    display: flex;
+
+    #currency {
+      font-size: 2em;
+      font-weight: 600;
     }
 
-    .price{
-        font-size: 3.2em;
-        display: flex;
-        #currency{
-          font-size: 2em;
-        }
-
-        #big_number{
-          font-size: 5em;
-          line-height: 0.8em;
-          font-weight: 700;
-        }
-
-        
+    #big_number {
+      font-size: 5em;
+      line-height: 0.8em;
+      font-weight: 700;
     }
+
+    #small_number {
+      font-weight: 600;
+    }
+
+  }
 }

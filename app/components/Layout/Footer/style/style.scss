@@ -1,3 +1,4 @@
+@import '../../../../_styles/mixins';
 
 
 footer{
@@ -10,6 +11,12 @@ footer{
     font-size: 16px;
     font-weight: 400;
     text-align: center;
+
+    @include mobile{
+        position: relative;
+        height: 0px;
+    }
+
     .icon{
         margin-right: 10px;
         color: #7cc576;

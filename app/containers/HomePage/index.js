@@ -12,6 +12,7 @@
 import React from 'react';
 
 import './style/style.scss';
+import Container from 'react-bootstrap/Container';
 import Featured from '../../components/Featured';
 /* eslint-disable react/prefer-stateless-function */
 export default class HomePage extends React.PureComponent {
@@ -20,7 +21,9 @@ export default class HomePage extends React.PureComponent {
       <div>
         <div className="bg" />
         <div className="content">
-          <Featured />
+          <Container fluid>
+            <Featured />
+          </Container>
         </div>
       </div>
     );

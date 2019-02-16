@@ -9,8 +9,8 @@ export default class index extends PureComponent {
     return (
       <div>
         <Container>
-          <Row>
-            <Col md={4} className="left_col">
+          <Row className="justify-content-md-center">
+            <Col xs={12} sm={12} md={4} className="left_col">
               <h4>New Year Offer</h4>
               <h4>
                 <span id="discount">82% OFF </span>
@@ -22,7 +22,8 @@ export default class index extends PureComponent {
                 get started now
               </Button>
             </Col>
-            <Col md={{ span: 4, offset: 4 }} className="right_col">
+            <Col xs={12} sm={12} md={4} />
+            <Col xs={12} sm={12} md={4} className="right_col">
               <Discount />
             </Col>
           </Row>

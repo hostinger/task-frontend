@@ -12,7 +12,7 @@ import Logo from '../../../images/logo.svg';
 import './style/style.scss';
 function Header() {
   return (
-    <Navbar expand="lg" className="nav">
+    <Navbar expand="md" className="nav">
       <Navbar.Brand href="#home">
         <img
           src={Logo}
@@ -23,7 +23,7 @@ function Header() {
       <div id="empty" />
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav className="mr-auto">
+        <Nav pullRight className="mr-auto">
           <Nav.Link href="#link" className="item">
             web hosting
           </Nav.Link>

@@ -1,0 +1,33 @@
+@import "../../../_styles/mixins";
+@import "../../../_styles/colors";
+
+
+#app {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(../../../images/background.jpg);
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+
+  @include mobile {
+    overflow: scroll;
+  }
+}
+
+.content {
+  z-index: 1;
+  margin-top: 250px;
+  color: $white;
+
+  @include mobile {
+    margin-top: 100px;
+    text-align: center;
+  }
+
+  .container {
+    max-width: 1050px;
+  }
+}

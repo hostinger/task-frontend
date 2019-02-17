@@ -1,0 +1,90 @@
+.left_col h4 {
+  font-weight: 700;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.left_col #discount {
+  color: #ef5855;
+}
+
+.left_col .countdown_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 1.7rem;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.left_col .countdown_tag {
+  font-size: 0.6rem;
+}
+
+.left_col #custom_btn {
+  padding: 17px 42px;
+  background-color: #fc5155;
+  text-transform: uppercase;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.left_col #left_triangle {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-left: 13px solid #ef5855;
+  border-bottom: 8px solid transparent;
+  font-size: 1px;
+  padding-right: 2.1rem;
+  margin-top: 1.1rem;
+}
+
+.left_col #right_triangle {
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-right: 13px solid #ef5855;
+  border-bottom: 8px solid transparent;
+  font-size: 1px;
+  padding-left: 2rem;
+  margin-top: 1.1rem;
+}
+
+.left_col .spacing {
+  padding-right: 10px;
+}
+
+.right_col .discount_box {
+  margin-left: 6.4rem;
+  width: 140px;
+  text-transform: uppercase;
+  font-size: 17px;
+  padding: 8px 27px;
+  font-weight: 600;
+  color: #fff;
+  background: #ff9a9b;
+}
+
+.right_col .triangle {
+  background: #ff9a9b;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 20px;
+  height: 20px;
+  margin-top: -11px;
+  margin-left: 10.4rem;
+}
+
+.right_col .price {
+  font-size: 3.2em;
+}
+/*# sourceMappingURL=style.css.map */

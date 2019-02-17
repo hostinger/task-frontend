@@ -1,0 +1,25 @@
+@import '../../../../_styles/mixins';
+@import '../../../../_styles/colors';
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+
+  @include mobile {
+    position: relative;
+    height: 0px;
+  }
+
+  .icon {
+    margin-right: 10px;
+    color: $green;
+  }
+}

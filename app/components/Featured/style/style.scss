@@ -1,0 +1,128 @@
+@import '../../../_styles/mixins';
+@import '../../../_styles/colors';
+.left_col {
+  h4 {
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+  }
+
+  #discount {
+    color: $light_red;
+  }
+
+  .countdown_item {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.7rem;
+    margin-top: 10px;
+    margin-bottom: 25px;
+  }
+
+  .countdown_tag {
+    font-size: 0.6rem;
+  }
+
+  #custom_btn {
+    margin-top: 20px;
+    padding: 17px 42px;
+    background-color: $light_red;
+    text-transform: uppercase;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+
+  }
+
+  #left_triangle {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 13px solid $light_red;
+    border-bottom: 8px solid transparent;
+    font-size: 1px;
+    margin-top: 1.1rem;
+  }
+
+  #right_triangle {
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 13px solid $light_red;
+    border-bottom: 8px solid transparent;
+    font-size: 1px;
+    margin-top: 1.1rem;
+  }
+}
+
+
+
+.right_col {
+
+  #spacing {
+    @include mobile {
+      padding-top: 100px;
+      padding-bottom: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .discount_box {
+        margin-left: 20px;
+      }
+
+      .triangle {
+        margin-left: 25px;
+      }
+
+    }
+  }
+
+  .discount_box {
+    padding-left: 29px;
+    margin-left: 77px;
+    width: 140px;
+    text-transform: uppercase;
+    font-size: 17px;
+    padding: 8px 27px;
+    font-weight: 600;
+    color: $white;
+    background: $light_pink;
+  }
+
+  .triangle {
+    background: $light_pink;
+    transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+    margin-top: -11px;
+    margin-left: 144px;
+  }
+
+
+
+  .price {
+    font-size: 3.2em;
+    display: flex;
+
+    #currency {
+      font-size: 2em;
+      font-weight: 600;
+    }
+
+    #big_number {
+      font-size: 5em;
+      line-height: 0.8em;
+      font-weight: 700;
+    }
+
+    #small_number {
+      font-weight: 600;
+    }
+
+  }
+}

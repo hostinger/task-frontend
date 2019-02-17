@@ -1,0 +1,17 @@
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 1;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  text-align: center;
+}
+
+footer .icon {
+  margin-right: 10px;
+  color: #7cc576;
+}
+/*# sourceMappingURL=style.css.map */

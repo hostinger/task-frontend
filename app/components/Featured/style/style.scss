@@ -1,5 +1,5 @@
 @import '../../../_styles/mixins';
-
+@import '../../../_styles/colors';
 .left_col {
   h4 {
     font-weight: 700;
@@ -8,7 +8,7 @@
   }
 
   #discount {
-    color: #ef5855
+    color: $light_red;
   }
 
   .countdown_item {
@@ -29,7 +29,7 @@
   #custom_btn {
     margin-top: 20px;
     padding: 17px 42px;
-    background-color: #fc5155;
+    background-color: $light_red;
     text-transform: uppercase;
     border-radius: 6px;
     text-align: center;
@@ -42,7 +42,7 @@
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
-    border-left: 13px solid #ef5855;
+    border-left: 13px solid $light_red;
     border-bottom: 8px solid transparent;
     font-size: 1px;
     margin-top: 1.1rem;
@@ -52,7 +52,7 @@
     width: 0;
     height: 0;
     border-top: 8px solid transparent;
-    border-right: 13px solid #ef5855;
+    border-right: 13px solid $light_red;
     border-bottom: 8px solid transparent;
     font-size: 1px;
     margin-top: 1.1rem;
@@ -71,11 +71,12 @@
       flex-direction: column;
       align-items: center;
 
-      .discount_box{
+      .discount_box {
         margin-left: 20px;
       }
-      .triangle{
-        margin-left: 36px;
+
+      .triangle {
+        margin-left: 25px;
       }
 
     }
@@ -89,12 +90,12 @@
     font-size: 17px;
     padding: 8px 27px;
     font-weight: 600;
-    color: #fff;
-    background: #ff9a9b;
+    color: $white;
+    background: $light_pink;
   }
 
   .triangle {
-    background: #ff9a9b;
+    background: $light_pink;
     transform: rotate(45deg);
     width: 20px;
     height: 20px;
@@ -102,7 +103,7 @@
     margin-left: 144px;
   }
 
-  
+
 
   .price {
     font-size: 3.2em;

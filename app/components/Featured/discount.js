@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const Discount = () => (
+const Discount = ({ discount }) => (
   <div id="spacing">
-    <div className="discount_box">save 82%</div>
+    <div className="discount_box">save {discount}%</div>
     <div className="triangle" />
     <div className="price">
       <div id="currency">$</div> <div id="big_number">1</div>
@@ -12,5 +13,9 @@ const Discount = () => (
     </div>
   </div>
 );
+
+Discount.propTypes = {
+  discount: PropTypes.number,
+};
 
 export default Discount;

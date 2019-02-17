@@ -5,8 +5,6 @@
  */
 
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { Container, Row, Col } from 'react-bootstrap';
@@ -38,7 +36,5 @@ function Footer() {
     </footer>
   );
 }
-
-Footer.propTypes = {};
 
 export default Footer;

@@ -5,8 +5,6 @@
  */
 
 import React from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
 import { Navbar, Nav } from 'react-bootstrap';
 import Logo from '../../../images/logo.svg';
 import './style/style.scss';
@@ -23,7 +21,7 @@ function Header() {
       <div id="empty" />
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav pullRight className="mr-auto">
+        <Nav className="mr-auto">
           <Nav.Link href="#link" className="item">
             web hosting
           </Nav.Link>
@@ -45,7 +43,5 @@ function Header() {
     </Navbar>
   );
 }
-
-Header.propTypes = {};
 
 export default Header;

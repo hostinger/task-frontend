@@ -40,7 +40,6 @@ export default class index extends PureComponent {
                 <span id="discount">{this.state.discountStart}% OFF </span>
                 Web Hosting
               </h4>
-
               <Countdown />
               <Button id="custom_btn" variant="danger">
                 get started now

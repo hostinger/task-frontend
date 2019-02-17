@@ -1,6 +1,6 @@
 # qualification_task_hostinger
 
 
-##https://task-front-end.herokuapp.com/
+# https://task-front-end.herokuapp.com/
 
-#Lukas Malinauskas 
+# Lukas Malinauskas 

@@ -4,6 +4,9 @@
 ```
 npm install
 ```
+```
+Change the date of the countdown timer in Banner.vue
+```
 
 ### Compiles and hot-reloads for development
 ```

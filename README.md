@@ -1,9 +1,9 @@
 # Front-End Banner Task by Applicant Lukas Ambrutis
 
 ## Project setup
-```
+
 https://banner-task.000webhostapp.com/
-```
+
 ```
 npm install
 ```

@@ -2,6 +2,9 @@
 
 ## Project setup
 ```
+https://banner-task.000webhostapp.com/
+```
+```
 npm install
 ```
 ```

@@ -161,22 +161,26 @@ export default {
 
 //FIXME: nest the styles so it can be more readable
 
-
+//BACKGROUND
+ .bg {
+    /* The image used */
+    background-image: url("../assets/background.jpg");
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
 // Responsive media queries for different resolutions ~~START~~
 @media (min-width: 1200px) {
   .logo {
     padding-right: 150px !important;
   }
 
-  //TODO: make the background for lower resolutions more readable
 
   .bg {
     /* The image used */
-    background-image: url("../assets/background.jpg");
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: 100% cover;
   }
 }
 @media (min-width: 768px) and (max-width: 1200px) {
@@ -220,12 +224,10 @@ export default {
   }
 
   .bg {
-    /* The image used */
-    background-image: url("../assets/background.jpg");
-    /* Center and scale the image nicely */
+    
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 100% contain;
+    background-size: 100% cover !important;
   }
 }
 
@@ -268,12 +270,7 @@ export default {
   }
 
   .bg {
-    /* The image used */
-    background-image: url("../assets/background.jpg");
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% cover;
+    background-size: 100% cover !important;
   }
   .offer-text {
     margin-bottom: 100px !important;
@@ -332,12 +329,7 @@ export default {
   }
 
   .bg {
-    /* The image used */
-    background-image: url("../assets/background.jpg");
-    /* Center and scale the image nicely */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% cover;
+    background-size: 100% cover !important;
   }
   .offer-text {
     margin-bottom: 100px !important;

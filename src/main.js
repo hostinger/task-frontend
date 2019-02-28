@@ -16,7 +16,7 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 // COUNTDOWN FOR VUE
-import vueAwesomeCountdown from 'vue-awesome-countdown';
+import vueAwesomeCountdown from 'vue-awesome-countdown/src/vue-awesome-countdown.js';
 
 
 Vue.config.productionTip = false;
@@ -28,6 +28,7 @@ Vue.use(vueAwesomeCountdown, 'countdown');
 // ADDING THE ICONS
 library.add(faCheck, faCaretDown, faCaretLeft, faCaretRight);
 Vue.component('font-awesome-icon', FontAwesomeIcon);
+
 
 
 new Vue({

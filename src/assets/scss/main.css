@@ -1,0 +1,183 @@
+@import "https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700,700i,800";
+@import "https://use.fontawesome.com/releases/v5.7.2/css/all.css";
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+.app:before {
+  content: "";
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+  min-height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.35)), url("../img/background.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  background-position: 50%; }
+@media (max-width: 768px) {
+  .app .navbar-light.px-0 {
+    padding: 10px 20px !important; } }
+@media (max-width: 768px) {
+  .app .navbar-light {
+    background-color: #6263b7;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9;
+    margin: 0; } }
+@media (max-width: 768px) {
+  .app .navbar-light .navbar-toggler {
+    background-color: white;
+    border: 1px solid white; } }
+.app .navbar-light .navbar-collapse {
+  padding-top: 10px; }
+  .app .navbar-light .navbar-collapse .nav-item {
+    position: relative; }
+    .app .navbar-light .navbar-collapse .nav-item .badge-on-sale {
+      position: absolute;
+      top: -10px;
+      margin-left: 14px;
+      color: yellow;
+      font-weight: bold;
+      font-size: 11px;
+      text-transform: uppercase; }
+    .app .navbar-light .navbar-collapse .nav-item .nav-link {
+      color: white;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding-left: 15px; }
+      .app .navbar-light .navbar-collapse .nav-item .nav-link:hover {
+        text-decoration: none;
+        color: #f8525b !important; }
+.app .content .countdown-wrapper .time-box {
+  padding: 5px;
+  margin-right: 16px;
+  display: inline-block; }
+  @media (max-width: 424px) {
+    .app .content .countdown-wrapper .time-box {
+      padding: 0;
+      margin: 0; } }
+.app .content .countdown-wrapper .time-box p {
+  margin: 0;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 11px; }
+.app .content .countdown-wrapper .timer {
+  font-weight: bold;
+  font-size: 25px; }
+.app .content .countdown-wrapper .discount-title {
+  font-size: 2.5em;
+  font-weight: 700; }
+  @media (max-width: 424px) {
+    .app .content .countdown-wrapper .discount-title {
+      font-size: 2.2em; } }
+  .app .content .countdown-wrapper .discount-title span {
+    color: #f8525b; }
+.app .content .countdown-wrapper .arrow {
+  margin: 23px 0 0 0; }
+  .app .content .countdown-wrapper .arrow.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 13px solid #f8525b; }
+  .app .content .countdown-wrapper .arrow.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 13px solid #f8525b; }
+.app .content .per-month .inner-wrap {
+  display: flex;
+  justify-content: center; }
+  @media (max-width: 424px) {
+    .app .content .per-month .inner-wrap {
+      font-size: 0.8em; } }
+  .app .content .per-month .inner-wrap .currency {
+    font-size: 7em;
+    margin-top: .2em;
+    font-weight: bold; }
+  .app .content .per-month .inner-wrap .big-number {
+    line-height: 0.8;
+    padding-right: 0;
+    padding-left: 0; }
+    .app .content .per-month .inner-wrap .big-number p {
+      font-size: 23em;
+      font-weight: bold; }
+      @media (max-width: 575px) {
+        .app .content .per-month .inner-wrap .big-number p {
+          font-size: 16em; } }
+    .app .content .per-month .inner-wrap .big-number .discount-tooltip {
+      width: 126px;
+      height: 40px;
+      background-color: #fd9d9d;
+      display: block;
+      line-height: 15px;
+      z-index: 2;
+      overflow: visible;
+      position: absolute;
+      top: -46px;
+      margin-left: 88px; }
+      @media (max-width: 575px) {
+        .app .content .per-month .inner-wrap .big-number .discount-tooltip {
+          top: -54px;
+          margin-left: 41px; } }
+      @media (max-width: 424px) {
+        .app .content .per-month .inner-wrap .big-number .discount-tooltip {
+          margin-left: 20px; } }
+      .app .content .per-month .inner-wrap .big-number .discount-tooltip .discount-square {
+        text-align: center;
+        padding: 13px 0 0 0; }
+        .app .content .per-month .inner-wrap .big-number .discount-tooltip .discount-square #discount-text {
+          font-weight: 600; }
+        .app .content .per-month .inner-wrap .big-number .discount-tooltip .discount-square .arrow-down {
+          width: 0;
+          height: 0;
+          border-left: 14px solid transparent;
+          border-right: 14px solid transparent;
+          border-top: 19px solid #fd9d9d;
+          text-align: center;
+          position: absolute;
+          left: 0;
+          right: 0;
+          margin: auto;
+          top: 37px; }
+  .app .content .per-month .inner-wrap .right-side .small-number {
+    font-size: 6em;
+    margin-top: 25px;
+    margin-left: -8px;
+    font-weight: bold; }
+    @media (max-width: 575px) {
+      .app .content .per-month .inner-wrap .right-side .small-number {
+        font-size: 4em;
+        margin: 0; } }
+  .app .content .per-month .inner-wrap .right-side .month {
+    font-size: 4em;
+    font-weight: 600; }
+.app .footer-links {
+  position: relative;
+  padding: 0;
+  margin: 0; }
+  .app .footer-links li {
+    display: inline-block;
+    padding: 0 19px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 26px; }
+    .app .footer-links li i.fa-check {
+      color: #7cc576; }
+
+/*# sourceMappingURL=main.css.map */

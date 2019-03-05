@@ -5,7 +5,7 @@ import logo from '../assets/img/logo.svg';
 class Header extends Component {
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-light px-0 py-5">
+            <nav className="navbar navbar-expand-custom navbar-expand-lg navbar-light px-0 py-5">
                 <a className="navbar-brand" href="/"><img src={logo} className="App-logo" alt="logo"/></a>
                 <button className="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -20,7 +20,7 @@ class Header extends Component {
                             <a className="nav-link" href="/">Web hosting</a>
                         </li>
                         <li className="nav-item">
-                            <span className="badge-on-sale d-none d-lg-block">On sale</span>
+                            <span className="badge-on-sale d-none d-md-block d-lg-block">On sale</span>
                             <a className="nav-link" href="/">Cloud hosting</a>
                         </li>
                         <li className="nav-item">

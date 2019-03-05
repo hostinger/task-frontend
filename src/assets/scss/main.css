@@ -23,10 +23,15 @@ body {
   -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
   background-position: 50%; }
-@media (max-width: 768px) {
+@media (min-width: 768px) {
+  .app .navbar-light {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start; } }
+@media (max-width: 767px) {
   .app .navbar-light.px-0 {
     padding: 10px 20px !important; } }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .app .navbar-light {
     background-color: #6263b7;
     position: fixed;
@@ -36,30 +41,37 @@ body {
     right: 0;
     z-index: 9;
     margin: 0; } }
+@media (min-width: 768px) {
+  .app .navbar-light .navbar-toggler {
+    display: none; } }
 @media (max-width: 768px) {
   .app .navbar-light .navbar-toggler {
     background-color: white;
     border: 1px solid white; } }
-.app .navbar-light .navbar-collapse {
-  padding-top: 10px; }
-  .app .navbar-light .navbar-collapse .nav-item {
-    position: relative; }
-    .app .navbar-light .navbar-collapse .nav-item .badge-on-sale {
-      position: absolute;
-      top: -10px;
-      margin-left: 14px;
-      color: yellow;
-      font-weight: bold;
-      font-size: 11px;
-      text-transform: uppercase; }
-    .app .navbar-light .navbar-collapse .nav-item .nav-link {
-      color: white;
-      text-transform: uppercase;
-      font-weight: 600;
-      padding-left: 15px; }
-      .app .navbar-light .navbar-collapse .nav-item .nav-link:hover {
-        text-decoration: none;
-        color: #f8525b !important; }
+@media (min-width: 768px) {
+  .app .navbar-light .navbar-collapse {
+    display: flex !important; } }
+@media (min-width: 768px) {
+  .app .navbar-light .navbar-collapse .navbar-nav {
+    flex-direction: row; } }
+.app .navbar-light .navbar-collapse .nav-item {
+  position: relative; }
+  .app .navbar-light .navbar-collapse .nav-item .badge-on-sale {
+    position: absolute;
+    top: -10px;
+    margin-left: 14px;
+    color: yellow;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase; }
+  .app .navbar-light .navbar-collapse .nav-item .nav-link {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-left: 15px; }
+    .app .navbar-light .navbar-collapse .nav-item .nav-link:hover {
+      text-decoration: none;
+      color: #f8525b !important; }
 .app .content .countdown-wrapper .time-box {
   padding: 5px;
   margin-right: 16px;

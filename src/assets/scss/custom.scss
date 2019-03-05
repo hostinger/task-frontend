@@ -30,12 +30,18 @@ body {
     background-position: 50%;
   }
   .navbar-light {
-    @media (max-width: $breakpoint-tablet) {
+    @media (min-width: $breakpoint-tablet) {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+
+    }
+    @media (max-width: $breakpoint-tablet - 1) {
       &.px-0 {
         padding: 10px 20px !important;
       }
     }
-    @media (max-width: $breakpoint-tablet) {
+    @media (max-width: $breakpoint-tablet - 1) {
       background-color: #6263b7;
       position: fixed;
       width: 100%;
@@ -46,13 +52,23 @@ body {
       margin: 0;
     }
     .navbar-toggler {
+      @media (min-width: $breakpoint-tablet) {
+        display: none;
+      }
       @media (max-width: $breakpoint-tablet) {
         background-color: white;
         border: 1px solid white;
       }
     }
     .navbar-collapse {
-      padding-top: 10px;
+      @media (min-width: $breakpoint-tablet) {
+        display: flex !important;
+      }
+      .navbar-nav {
+        @media (min-width: $breakpoint-tablet) {
+          flex-direction: row;
+        }
+      }
       .nav-item {
         position: relative;
         .badge-on-sale {
@@ -142,7 +158,6 @@ body {
         justify-content: center;
         @media (max-width: $mobile - 1) {
           font-size: 0.8em;
-
         }
         .currency {
           font-size: 7em;
@@ -160,7 +175,6 @@ body {
             @media (max-width: $middle-tablet - 1) {
               font-size: 16em;
             }
-
           }
           .discount-tooltip {
             width: 126px;
@@ -179,7 +193,6 @@ body {
             }
             @media (max-width: $mobile - 1) {
               margin-left: 20px;
-
             }
             .discount-square {
               text-align: center;
@@ -200,7 +213,6 @@ body {
                 margin: auto;
                 top: 37px;
               }
-
             }
           }
         }
@@ -215,14 +227,12 @@ body {
               font-size: 4em;
               margin: 0;
             }
-
           }
           .month {
             font-size: 4em;
             font-weight: 600;
           }
         }
-
       }
     }
   }
@@ -244,7 +254,6 @@ body {
 
       }
     }
-
   }
 }
 

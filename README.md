@@ -1,3 +1,5 @@
+[Live Version](http://hostinger-homework.tech)
+
 ### Features
 - 3 breakpoints
 - Adapted to older browsers (IE9 compatible)

@@ -1,3 +1,33 @@
+### Features
+- 3 breakpoints
+- Adapted to older browsers (IE9 compatible)
+- HTML and Scss files contain comments for information
+
+### Prerequisites
+Node.js
+
+### Installation
+```
+npm install gulp
+```
+
+```
+npm i 
+```
+
+```
+gulp watch
+```
+### Built With:
+- Javascript
+- Sass
+- Gulp
+- gulp-clean-css
+- gulp-autoprefixer
+- gulp-babel
+
+----
+
 # Frontend Developer Task
 
 ## Few simple steps

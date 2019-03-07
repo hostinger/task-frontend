@@ -1,5 +1,7 @@
 [Live Version](http://hostinger-homework.tech)
 
+I also built a bonus desktop version with Flexbox for newer browsers: [this repo](https://github.com/mgalkus/task-frontend-flexbox).
+
 ### Features
 - 3 breakpoints
 - Adapted to older browsers (IE9 compatible)

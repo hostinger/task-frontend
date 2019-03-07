@@ -2,6 +2,7 @@
 - 3 breakpoints
 - Adapted to older browsers (IE9 compatible)
 - HTML and Scss files contain comments for information
+- Source assets are divided into components and then compiled into one file using Gulp
 
 ### Prerequisites
 Node.js

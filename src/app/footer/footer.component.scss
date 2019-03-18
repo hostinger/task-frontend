@@ -1,0 +1,145 @@
+$margin: 10px;
+$padding: 10px;
+
+$mobile-s: 320px;
+$galaxy-s5: 360px;
+$mobile-m: 375px;
+$pixel-2: 411px;
+$iphone-6-plus: 414px;
+$mobile-l: 435px;
+$tablet-s: 769px;
+$tablet-l: 992px;
+$laptop-s: 1024px;
+$laptop-m: 1220px;
+$desktop: 1440px;
+
+@mixin mobile-s {
+    @media (max-width: #{$mobile-s}) {
+        @content;
+    }
+}
+
+@mixin galaxy-s5 {
+    @media (max-width: #{$galaxy-s5}) {
+        @content;
+    }
+}
+
+@mixin mobile-m {
+    @media (max-width: #{$mobile-m}) {
+        @content;
+    }
+}
+
+@mixin pixel-2 {
+    @media (max-width: #{$pixel-2}) {
+        @content;
+    }
+}
+
+@mixin iphone-6-plus {
+    @media (max-width: #{$iphone-6-plus}) {
+        @content;
+    }
+}
+
+@mixin mobile-l {
+    @media (max-width: #{$mobile-l}) {
+        @content;
+    }
+}  
+
+@mixin tablet-s {
+    @media (max-width: #{$tablet-s}) {
+        @content;
+    }
+} 
+
+@mixin tablet-l {
+    @media (max-width: #{$tablet-l}) {
+        @content;
+    }
+}
+
+@mixin laptop-s {
+    @media (max-width: #{$laptop-s}) {
+        @content;
+    }
+}
+
+@mixin laptop-m {
+    @media (max-width: #{$laptop-m}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+#footer-wrapper {
+    justify-content: space-between;
+    font-size: 14px;
+    text-transform: capitalize;
+
+    .text-wrapper {
+        display: flex;
+        flex-direction: row;
+        align-items: baseline;
+    
+        #checkmark {
+            display: inline-block;
+            margin-right: 10px;
+            
+            &:after{
+              content: '';
+              display: block;
+              width: 6px;
+              height: 12px;
+              border: solid rgb(63, 190, 38);
+              border-width: 0 3px 3px 0;
+              transform: rotate(45deg);
+            }
+          }
+
+        .footer-text {
+            display: inline-block;
+            white-space: nowrap;
+        }  
+
+        @include laptop-m {
+            font-size: 12px;
+        }
+
+        @include tablet-l {
+            font-size: 11px;
+        }
+
+        @include tablet-s {
+            font-size: 8px;
+        }
+
+        @include mobile-l {
+            font-size: 8px;
+            margin-left: 80px;
+        }
+
+        @include mobile-m {
+            font-size: 8px;
+            margin-left: 60px;
+        }
+
+        @include galaxy-s5 {
+            font-size: 8px;
+            margin-left: 60px;
+        }
+
+        @include mobile-s {
+            font-size: 6px;
+            margin-left: 50px;
+        }
+    }
+    
+}

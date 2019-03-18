@@ -1,0 +1,179 @@
+$margin: 10px;
+$padding: 10px;
+
+$mobile-s: 320px;
+$galaxy-s5: 360px;
+$mobile-m: 375px;
+$mobile-l: 435px;
+$tablet-s: 767px;
+$tablet-l: 992px;
+$laptop-s: 1024px;
+$laptop-m: 1220px;
+$desktop: 1440px;
+
+@mixin mobile-s {
+    @media (max-width: #{$mobile-s}) {
+        @content;
+    }
+}
+
+@mixin galaxy-s5 {
+    @media (max-width: #{$galaxy-s5}) {
+        @content;
+    }
+}
+
+@mixin mobile-m {
+    @media (max-width: #{$mobile-m}) {
+        @content;
+    }
+}
+
+@mixin mobile-l {
+    @media (max-width: #{$mobile-l}) {
+        @content;
+    }
+}  
+
+@mixin tablet-s {
+    @media (max-width: #{$tablet-s}) {
+        @content;
+    }
+} 
+
+@mixin tablet-l {
+    @media (max-width: #{$tablet-l}) {
+        @content;
+    }
+}
+
+@mixin laptop-s {
+    @media (max-width: #{$laptop-s}) {
+        @content;
+    }
+}
+
+@mixin laptop-m {
+    @media (max-width: #{$laptop-m}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+#header-wrapper {
+    #nav-wrapper {
+        @include tablet-l {
+            background-color: rgb(103, 79, 134);
+            width: 100vw;
+            position: absolute;
+            left: 50%;
+            right: 50%;
+            margin-left: -50vw;
+            margin-right: -50vw;
+            z-index: 1;
+        }
+
+        .navbar-brand {
+            #hostinger-logo {
+                max-width: 140px;
+                max-height: 28px;
+                transition: 150ms ease-in;
+              
+                &:hover {
+                    transform: scale(1.05);
+                    transition: 150ms ease-out;
+                }
+            }
+
+            @include tablet-l {
+                margin-top: 0;
+                margin-left: 2 * $margin;
+                margin-bottom: 2 * $margin;
+            }
+        }
+        
+        #navbar-menu__wrapper {
+            #navbar-menu__list {
+                #navbar-menu__item {
+                    background-color: transparent;
+                    border: none !important;
+                    color: hsl(0, 0%, 100%);
+
+                    a {
+                        font-size: 14px;
+                        text-transform: uppercase;
+                        margin-top: 0;
+                        text-decoration: none;
+                        color: hsl(0, 0%, 100%);
+                        transition: 200ms ease-in;
+
+                        &:hover {
+                            color: hsl(0, 6%, 81%);
+                            transition: 200ms ease-out;
+
+                            #navbar-menu__sale-notice {
+                                margin-left: 5px;
+                                transform: scale(1.1);
+                                transition: 200ms ease-out;
+                            }
+                        }
+
+                        #navbar-menu__sale-notice {
+                            color: hsl(59, 100%, 45%);
+                            font-size: 10px;
+                            text-transform: uppercase;
+                            margin: 0 0;
+                            padding: 0 0;
+                            transition: 200ms ease-in;
+
+                            @include laptop-m {
+                                font-size: 9px;
+                                font-weight: 500;
+                            }
+
+                            @include laptop-s {
+                                font-size: 8px;
+                                font-weight: 400;
+                            }
+
+                            @include tablet-l {
+                                font-size: 7px;
+                                font-weight: 300;
+                            }
+                        }
+
+                        @include laptop-m {
+                            font-size: 12px;
+                            font-weight: 500;
+                        }
+
+                        @include laptop-s {
+                            font-size: 12px;
+                            font-weight: 400;
+                        }
+
+                        @include tablet-l {
+                            font-size: 12px;
+                            font-weight: 200;
+                        }
+                    }
+                }
+
+                @include mobile-l {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                @include tablet-s {
+                    display: flex;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}

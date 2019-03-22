@@ -1,4 +1,5 @@
 # Frontend Developer Task
+Hosted version: http://frontendtask.trainedpixels.com/
 
 ## Few simple steps
 

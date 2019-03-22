@@ -58,7 +58,6 @@ export default {
       }
       @include responsive(tablet-land) {transform: translateX(-20%);}
       @include responsive(small-desktop) {transform: translateX(-20%);}
-
       &::after {
         content: " ";
         @include tooltip-triangle-rotate;

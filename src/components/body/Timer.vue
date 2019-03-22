@@ -56,13 +56,18 @@ export default {
       font-size: .8em;
       text-transform: uppercase;
       padding: 20px 60px;
-      @include responsive(tablet-port) {padding: 20px 40px;}
       margin-top: 40px;
       border-radius: 10px;
       font-weight: 600;
       background-color: $color-red;
       border: none;
       color: $color-white;
+      transition: all .3s;
+      cursor: pointer;
+      @include responsive(tablet-port) {padding: 20px 40px;}
+      &:hover {
+        background-color: $color-lightred;
+      }
     }
   }
 </style>

@@ -37,7 +37,6 @@ export default {
   methods: {
     windowSize(evt) {
       this.size = evt.target.innerWidth;
-      console.log(this.size)
     }
   },
   created() {
@@ -46,7 +45,6 @@ export default {
       (navigator.userAgent.indexOf('IEMobile') !== -1);
   },
   beforeMount() {
-    console.log(this.size)
     window.addEventListener('resize', this.windowSize);
   },
   destroyed() {

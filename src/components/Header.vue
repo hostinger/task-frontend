@@ -66,11 +66,14 @@ export default {
         text-transform: uppercase;
         font-weight: 700;
         letter-spacing: 1px;
-        @include responsive(tablet-port) {text-align: center;}
         cursor: pointer;
         transition: all .5s;
+        @include responsive(tablet-port) {text-align: center;}
         &:hover {
           opacity: .6;
+        }
+        &:hover .nav__badge {
+          left: 10%;
         }
       }
       &__badge {
@@ -82,6 +85,8 @@ export default {
         font-weight: 400;
         transform: translateY(40%);
         font-size: 11px;
+        transition: all .6s;
+        transition-delay: .2s;
         @include responsive(tablet-port) {
           transform: translateY(-100%);
           top: 0;

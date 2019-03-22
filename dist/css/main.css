@@ -1,0 +1,320 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+h1,
+a,
+p,
+button {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-decoration: none; }
+
+.countdown-arrow-left, .countdown-arrow-right, .bubble-bottom {
+  width: 0;
+  height: 0;
+  border-left: .9rem solid transparent;
+  border-right: .9rem solid transparent;
+  border-top: 1rem solid #fd9c9c; }
+
+.nav-container, .logo-container, .nav-link-container, .nav-item, .hero, .offer-container-left, .countdown-container, .bottom-text-container {
+  display: flex;
+  align-items: center;
+  align-content: center; }
+
+nav {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  padding: 1rem 1rem; }
+
+.nav-container {
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1100px; }
+
+.nav-container a {
+  padding: 1rem 0.5rem;
+  font-size: 0.9rem;
+  text-align: center; }
+
+.nav-item {
+  position: relative; }
+
+.cloud-hosting::before {
+  content: "ON SALE";
+  color: #ffe400;
+  position: absolute;
+  top: 0.2rem;
+  font-size: 0.7rem; }
+
+.nav-item-box {
+  display: none;
+  width: 100%;
+  top: -5rem;
+  left: 0;
+  height: 5rem;
+  background-color: #fc5055;
+  position: absolute;
+  animation-name: nav-item-box;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards; }
+
+@keyframes nav-item-box {
+  from {
+    top: -5rem;
+    opacity: 0; }
+  to {
+    top: -1rem;
+    opacity: 1;
+    z-index: -1; } }
+
+.burger-icon {
+  margin: 1rem 0.5rem;
+  display: none; }
+
+#modal {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  z-index: 3;
+  background-color: #6747c7;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: modal-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards; }
+
+@keyframes modal-animation {
+  from {
+    top: -20rem;
+    opacity: 0; }
+  to {
+    top: 0rem;
+    opacity: 1; } }
+
+#modal a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin: 1rem;
+  padding: .5rem;
+  border: solid white; }
+
+#modal a:hover,
+#modal a:active {
+  background-color: #fc5055;
+  border: solid #fc5055; }
+
+.close-icon-container {
+  width: 100%; }
+
+.close-icon {
+  width: 3rem;
+  display: block;
+  margin: auto; }
+
+@media only screen and (max-width: 670px) {
+  .nav-link-container {
+    display: none; }
+  .burger-icon {
+    display: block; } }
+
+.hero {
+  justify-content: space-around;
+  flex-wrap: wrap;
+  z-index: 1;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background: url("../img/background(reduced-dark).jpg");
+  background-size: cover;
+  padding: 0rem 6rem; }
+
+.offer-container-left {
+  flex-wrap: wrap;
+  max-width: 550px; }
+
+.offer-heading {
+  font-size: 3rem;
+  line-height: 4rem; }
+  .offer-heading span {
+    color: #fc5055; }
+
+.countdown-container {
+  width: 500px;
+  justify-content: space-between;
+  padding: 1.5rem 0rem; }
+
+.countdown-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  line-height: 2rem; }
+
+.countdown-name {
+  font-size: 0.9rem;
+  font-weight: bold; }
+
+#countdown-0-message {
+  display: none;
+  font-size: 2rem; }
+
+.countdown-arrow-left {
+  transform: rotate(-90deg);
+  border-top-color: #fc5055; }
+
+.countdown-arrow-right {
+  transform: rotate(90deg);
+  border-top-color: #fc5055; }
+
+.countdown-container p {
+  text-align: center; }
+
+#countdown-button {
+  background-color: #fc5055;
+  font-size: 1.5rem;
+  width: 370px;
+  font-weight: bolder;
+  padding: 1.2rem 0rem;
+  border-radius: 0.5rem;
+  border: none; }
+
+#countdown-button:hover {
+  background-color: #fd9c9c;
+  cursor: pointer; }
+
+#countdown-button:disabled {
+  background-color: #fd9c9c;
+  cursor: not-allowed; }
+
+.offer-container-right {
+  position: relative; }
+
+.bubble-container {
+  position: absolute;
+  top: -3rem;
+  left: 5rem; }
+
+.text-bubble {
+  margin: auto;
+  font-size: 1.2rem;
+  font-weight: bold;
+  background-color: #fd9c9c;
+  text-align: center;
+  padding: 1rem 1.5rem;
+  width: 200px; }
+
+.bubble-bottom {
+  margin: auto; }
+
+.number-1 {
+  font-size: 25rem;
+  width: 400px;
+  text-align: center;
+  line-height: 20rem; }
+
+.number-usd {
+  position: absolute;
+  font-size: 9rem;
+  left: 2rem;
+  top: 1rem; }
+
+.number-45 {
+  position: absolute;
+  font-size: 8rem;
+  top: 0rem;
+  right: -1rem; }
+
+.number-month {
+  position: absolute;
+  font-size: 5rem;
+  bottom: 0rem;
+  right: -2rem; }
+
+.stuff-in-bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%; }
+
+.bottom-text-container {
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  max-width: 1100px;
+  padding-bottom: 1rem; }
+
+.bottom-text {
+  letter-spacing: 0px;
+  padding: 0rem 1rem;
+  margin-top: 0.2rem;
+  font-weight: 400; }
+
+.bottom-text::before {
+  content: url("../img/tick.svg");
+  padding-right: 0.3rem; }
+
+@media only screen and (max-width: 1150px) {
+  .offer-container-left {
+    max-width: 350px;
+    justify-content: center; }
+  .offer-heading {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    text-align: center; }
+  .countdown-container {
+    width: 340px; }
+  #countdown-button {
+    width: 300px;
+    font-size: 1.2rem; }
+  #countdown-0-message {
+    font-size: 1.5rem; }
+  .offer-container-right {
+    width: 280px; }
+  .bubble-container {
+    top: -2.5rem; }
+  .text-bubble {
+    width: 150px; }
+  .number-1 {
+    width: 280px;
+    font-size: 20rem; }
+  .number-usd {
+    font-size: 7rem;
+    left: 0rem;
+    top: 1rem; }
+  .number-45 {
+    font-size: 5rem;
+    top: 1rem;
+    right: 0rem; }
+  .number-month {
+    font-size: 3rem;
+    bottom: 1rem;
+    right: 0rem; }
+  .bottom-text-container {
+    justify-content: center; } }
+
+@media only screen and (max-width: 850px) {
+  .hero {
+    padding: 0rem 1rem;
+    min-height: 650px; } }
+
+@media only screen and (max-width: 690px) {
+  .countdown-container {
+    width: 320px; }
+  .countdown-name {
+    font-size: 0.8rem; }
+  .countdown-number {
+    font-size: 2.4rem; }
+  .hero {
+    min-height: 900px;
+    justify-content: center; }
+  .offer-container-right {
+    margin-top: 3rem;
+    margin-bottom: 3rem; } }

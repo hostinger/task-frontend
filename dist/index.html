@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Hostinger task</title>
+</head>
+<body>
+
+
+<!-- NAVBAR ---------------------------------------- -->
+
+    <nav>
+        <div class="nav-container">
+                <a class="logo-container" href="#"><img src="img/logo.svg" alt="logo"></a>
+        <div class="nav-link-container">
+            <div onmouseover="box1()" onmouseout="box1None()" class="nav-item">
+                <a href="#">WEB HOSTING
+                     </a>
+                     <div id="box1" class="nav-item-box"></div>
+            </div>
+            <div onmouseover="box2()" onmouseout="box2None()" class="nav-item">
+                    <a href="#" class="cloud-hosting">CLOUD HOSTING</a>
+                    <div id="box2" class="nav-item-box"></div>
+            </div>
+
+            <div onmouseover="box3()" onmouseout="box3None()" class="nav-item">
+                    <a href="#" >VPS HOSTING</a>
+                    <div id="box3" class="nav-item-box"></div>
+            </div>
+            <div onmouseover="box4()" onmouseout="box4None()" class="nav-item">
+                    <a href="#">DOMAIN CHECKER</a>
+                    <div id="box4" class="nav-item-box"></div>
+            </div>
+            <div onmouseover="box5()" onmouseout="box5None()" class="nav-item">
+                    <a href="#">WEBSITE BUILDER</a>
+                    <div id="box5" class="nav-item-box"></div>
+            </div>
+        </div>
+        <img class="burger-icon" onclick="openModal()" src="img/burger.svg" alt="burger-icon">
+    </div>
+        </nav>
+
+  <!-- NAVBAR MODAL ------ -->
+
+  <div id="modal">
+        <div>
+            <div class="close-icon-container">
+                <img class="close-icon" onclick="closeModal()" src="img/cross.svg" alt="cross">
+            </div>
+            <a href="#">WEB HOSTING</a>
+            <a href="#">CLOUD HOSTING</a>
+            <a href="#">VPS HOSTING</a>
+            <a href="#">DOMAIN CHECKER</a>
+            <a href="#">WEBSITE BUILDER</a>
+        </div>
+    </div>     
+
+<!-- HERO ------------------------------------------ -->
+
+    <section class="hero">
+        <div class="offer-container-left">
+            <h1 class="offer-heading">New Year Offer <br> <span>82% OFF</span> Web Hosting</h1>
+            <div class="countdown-container">
+                <div class="countdown-arrow-left"></div>
+                <div class="countdown-item">
+                    <p class="countdown-number" id="days"></p>
+                    <p class="countdown-name">DAYS</p>
+                </div>
+                <div class="countdown-item">
+                    <p class="countdown-number" id="hours"></p>
+                    <p class="countdown-name">HOURS</p>
+                </div>
+                <div class="countdown-item">
+                    <p class="countdown-number" id="minutes"></p>
+                    <p class="countdown-name">MINUTES</p>
+                </div>
+                <div class="countdown-item">
+                    <p class="countdown-number" id="seconds"></p>
+                    <p class="countdown-name">SECONDS</p>
+                </div>  
+                <p id="countdown-0-message">OOPS, TOO LATE..</p>
+                <div class="countdown-arrow-right"></div>
+            </div>
+        <button id="countdown-button">GET STARTED NOW</button>
+    </div>
+    
+<!-- FANCY OFFER VISUAL -->
+
+<div class="offer-container-right">
+        <div class="bubble-container">
+            <p class="text-bubble">SAVE 82%</p>
+            <div class="bubble-bottom"></div>
+        </div>
+
+            <p class="number-1">1</p>
+            <p class="number-usd">$</p>
+            <p class="number-45">45</p>
+            <p class="number-month">/mo</p>
+    </div>
+
+    <!-- BOTTOM STUFF -->
+    
+    <div class="stuff-in-bottom">
+        <div class="bottom-text-container">
+            <p class="bottom-text">Guaranteed 99.9% Uptime</p>
+            <p class="bottom-text">Superior Speed Performance</p>
+            <p class="bottom-text">24/7 Support Chat</p>
+            <p class="bottom-text">30-Day Money-Back Guarantee</p>
+        </div> 
+                   
+        </section>
+
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

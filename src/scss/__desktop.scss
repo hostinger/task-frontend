@@ -1,0 +1,25 @@
+@media screen and (min-width: $desktop-min-width) {
+
+  .services {
+    display: flex;
+    align-items: center;
+
+    &__logo-link {
+    }
+    &__link-block {
+      margin-left: auto;
+    }
+  }
+
+  .offer {
+    display: flex;
+    align-items: center;
+  }
+
+
+  .quality {
+    display: flex;
+    justify-content: space-around;
+  }
+
+}

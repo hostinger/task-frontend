@@ -1,0 +1,299 @@
+/*------------------------------------*\
+  #SECTION- normalise
+\*------------------------------------*/
+*, *::after, *::before {
+  box-sizing: border-box; }
+
+body, button, p, h1, h2, h3, h4, h5, h6, ul {
+  padding: 0;
+  margin: 0; }
+
+a {
+  text-decoration: none; }
+
+/*------------------------------------*\
+  #SECTION- functions
+\*------------------------------------*/
+/*------------------------------------*\
+  #SECTION- variables
+\*------------------------------------*/
+/*------------------------------------*\
+  #SECTION- Color scheme
+\*------------------------------------*/
+/* un-used */
+/*------------------------------------*\
+  #SECTION- generic
+\*------------------------------------*/
+.wrapper-inner-width {
+  max-width: 900px; }
+
+.center-margins {
+  margin: auto; }
+
+/* floats use only for IE */
+.flt-r-IE {
+  float: right; }
+
+.flt-l-IE {
+  float: left; }
+
+.clr-fix {
+  clear: both; }
+
+/* custom checkmark */
+.custom-checkmark {
+  position: relative; }
+  .custom-checkmark::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    border-bottom: solid 3px #79c86e;
+    border-right: solid 3px #79c86e;
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 5px;
+    left: -20px; }
+
+/*------------------------------------*\
+  #SECTION- page parts
+\*------------------------------------*/
+.hostinger-ad-outer {
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px; }
+
+.hostinger-ad-inner {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px 0; }
+
+/* for IE and overlapping properties with others */
+.services__logo-img {
+  height: 30px; }
+.services__link {
+  position: relative;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  margin: 0 10px;
+  letter-spacing: 1px;
+  transition: all 80ms; }
+  .services__link--on-sale:before {
+    content: 'ON SALE';
+    position: absolute;
+    left: 0;
+    bottom: 100%;
+    color: yellow;
+    font-size: 8px;
+    font-weight: 600; }
+  .services__link:hover {
+    color: lightgray; }
+
+.offer {
+  white-space: nowrap;
+  position: relative; }
+  .offer-left {
+    width: 50%;
+    position: relative;
+    bottom: 50px;
+    display: inline-block; }
+  .offer__title {
+    font-size: 36px;
+    font-weight: 700; }
+    .offer__title--emphasis {
+      color: #fc5055; }
+  .offer__timer-block {
+    padding: 20px 0; }
+  .offer__triangle {
+    display: inline-block;
+    transform: translateY(50%);
+    width: 10px;
+    border-top: solid 10px transparent;
+    border-bottom: solid 10px transparent; }
+    .offer__triangle--left {
+      border-left: solid 10px #fc5055; }
+    .offer__triangle--right {
+      border-right: solid 10px #fc5055; }
+  .offer__timer-numbers {
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0 24px; }
+    .offer__timer-numbers::before {
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px; }
+    .offer__timer-numbers--days::before {
+      content: "DAYS"; }
+    .offer__timer-numbers--hours::before {
+      content: "HOURS"; }
+    .offer__timer-numbers--minutes::before {
+      content: "MINUTES"; }
+    .offer__timer-numbers--seconds::before {
+      content: "SECONDS"; }
+  .offer__btn {
+    padding: 20px 40px;
+    color: white;
+    background-color: #fc5055;
+    border: none;
+    display: block;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 30px 0;
+    transition: background-color 200ms; }
+    .offer__btn:hover {
+      background-color: #fc9c9c; }
+  .offer-right {
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    text-align: right; }
+  .offer__discount-pointer {
+    background-color: #fc9c9c;
+    padding: 10px 20px;
+    position: absolute;
+    top: 30px;
+    right: 30%;
+    transform: translateX(50%);
+    font-weight: 600;
+    font-size: 18px; }
+    .offer__discount-pointer::before {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: calc(50% -  10px);
+      width: 0;
+      height: 0;
+      border-top: solid 10px #fc9c9c;
+      border-left: solid 10px transparent;
+      border-right: solid 10px transparent; }
+  .offer__int-cur-block {
+    white-space: nowrap;
+    display: inline-block; }
+  .offer__currencry {
+    font-size: 120px;
+    font-weight: bold;
+    position: relative;
+    top: -100px; }
+  .offer__integers {
+    font-size: 300px;
+    font-weight: bold;
+    position: relative; }
+  .offer__cent-perd-block {
+    display: inline-block; }
+  .offer__cents {
+    font-size: 90px;
+    font-weight: bold;
+    position: relative;
+    top: -40px;
+    left: -40px; }
+  .offer__period {
+    font-size: 65px;
+    font-weight: 600;
+    position: relative;
+    top: -30px;
+    right: 10px; }
+
+.quality {
+  padding: 5px 0;
+  text-align: center; }
+  .quality__item {
+    font-size: 14px;
+    position: relative;
+    font-weight: 400;
+    margin: 0 20px;
+    white-space: nowrap; }
+
+/*------------------------------------*\
+  #SECTION- Media Queries
+\*------------------------------------*/
+@supports (width: 10px) {
+  .flt-r-IE {
+    float: none; }
+
+  .flt-l-IE {
+    float: none; }
+
+  .offer-left {
+    position: static; } }
+@media screen and (max-width: 899px) {
+  .flt-r-IE {
+    float: none; }
+
+  .flt-l-IE {
+    float: none; }
+
+  .offer-left {
+    position: static; }
+
+  .wrapper-inner-width {
+    width: 100%; }
+
+  .hostinger-ad-outer {
+    padding: 0; }
+
+  .hostinger-ad-inner {
+    text-align: center; }
+
+  .services__logo-link {
+    display: block; }
+  .services__link {
+    display: block;
+    padding: 10px 0;
+    margin: 0; }
+    .services__link--on-sale:before {
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0; }
+    .services__link:hover {
+      color: white;
+      background-color: #fc9c9c; }
+
+  .offer {
+    white-space: normal;
+    margin-top: 40px; }
+    .offer-left {
+      position: static;
+      width: auto;
+      display: block; }
+    .offer__timer-numbers {
+      margin: 0 18px; }
+    .offer__btn {
+      display: inline-block; }
+    .offer-right {
+      width: auto;
+      display: block;
+      text-align: center; }
+    .offer__discount-pointer {
+      top: 20px; }
+
+  .quality {
+    /*display: table;
+    margin: auto;*/ }
+    .quality__item {
+      line-height: 2;
+      display: block; } }
+@media screen and (min-width: 900px) {
+  .services {
+    display: flex;
+    align-items: center; }
+    .services__link-block {
+      margin-left: auto; }
+
+  .offer {
+    display: flex;
+    align-items: center; }
+
+  .quality {
+    display: flex;
+    justify-content: space-around; } }
+
+/*# sourceMappingURL=style.css.map */

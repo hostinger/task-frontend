@@ -1,0 +1,16 @@
+// undoing changes that were made because of IE
+@supports (width: 10px) {
+  .flt-r-IE {
+    float: none;
+  }
+  .flt-l-IE {
+    float: none;
+  }
+
+  .offer {
+
+    &-left {
+      position: static;
+    }
+  }
+}

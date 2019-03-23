@@ -1,0 +1,120 @@
+
+/* @supports - to exclude all IE */
+//@supports (width: 10px) {
+  @media screen and (max-width: $modile-max-width) {
+
+
+    // TODO: make into mixin;
+    .flt-r-IE {
+      float: none;
+    }
+    .flt-l-IE {
+      float: none;
+    }
+
+    .offer {
+
+      &-left {
+        position: static;
+      }
+    }
+
+
+
+
+
+
+
+
+    .wrapper-inner-width {
+      width: 100%;
+    }
+
+    .hostinger-ad-outer {
+      padding: 0;
+    }
+
+    .hostinger-ad-inner {
+      text-align: center;
+      //padding: 20px;
+    }
+
+
+    .services {
+      &__logo-link {
+        display: block;
+      }
+      &__link {
+        display: block;
+        padding: 10px 0;
+        margin: 0;
+
+        &--on-sale:before {
+          left: 50%;
+          transform: translateX(-50%);
+          top: 0;
+        }
+
+        &:hover {
+          color: color(primary);
+          background-color: color(secondary--pale);
+        }
+      }
+    }
+
+
+    .offer {
+      white-space: normal;
+      margin-top: 40px;
+      &-left {
+        position: static;
+        width: auto;
+        display: block;
+      }
+        &__timer-numbers {
+          margin: 0 18px;
+        }
+        &__btn {
+          display: inline-block;
+        }
+      &-right {
+        width: auto;
+        display: block;
+        text-align: center;
+      }
+        &__discount-pointer {
+          top: 20px;
+        }
+    }
+
+
+
+    .quality {
+
+
+      &__item {
+        line-height: 2;
+
+        /* custom checkmark */
+        &::before {
+        }
+        /* forces elements to be one per line,
+           needed for ::before checkmark to work properly
+        */
+        
+        &::after {
+          content: '';
+          display: block;
+        }
+      }
+    }
+
+
+
+
+
+
+
+
+  }
+//}

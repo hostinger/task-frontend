@@ -1,0 +1,318 @@
+/*------------------------------------*\
+  #SECTION- normalise
+\*------------------------------------*/
+
+@import "__resets.scss";
+
+
+
+
+
+/*------------------------------------*\
+  #SECTION- functions
+\*------------------------------------*/
+@import "__functions.scss";
+
+
+
+
+
+/*------------------------------------*\
+  #SECTION- variables
+\*------------------------------------*/
+
+$modile-max-width: 899px;
+$desktop-min-width: 900px;
+
+
+
+
+
+/*------------------------------------*\
+  #SECTION- Color scheme
+\*------------------------------------*/
+
+/* un-used */
+$colors: (
+    primary: white,
+    secondary: rgb(252,80,85),
+    secondary--pale: rgb(252,156,156),
+    tertiary: yellow,
+    checkmark: rgb(121,200,110),
+);
+
+
+
+
+
+/*------------------------------------*\
+  #SECTION- generic
+\*------------------------------------*/
+
+.wrapper-inner-width {
+  //width: 900px;
+  max-width: 900px;
+}
+.center-margins {
+  margin: auto;
+}
+/* floats use only for IE */
+.flt-r-IE {
+  float: right;
+}
+.flt-l-IE {
+  float: left;
+}
+.clr-fix {
+  clear: both;
+}
+
+/* custom checkmark */
+.custom-checkmark {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 12px;
+    $border-width: 3px;
+    border-bottom: solid #{$border-width} color(checkmark);
+    border-right: solid #{$border-width} color(checkmark);
+    transform: rotate(45deg);
+    position: absolute;
+    bottom: 5px;
+    left: -20px;
+  }
+}
+
+
+
+
+/*------------------------------------*\
+  #SECTION- page parts
+\*------------------------------------*/
+
+.hostinger-ad-outer {
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 0 20px;
+}
+
+.hostinger-ad-inner {
+  color: color(primary);
+  font-family: 'Open Sans', sans-serif;
+  padding: 20px 0;
+}
+
+
+/* for IE and overlapping properties with others */
+.services {
+  &__logo-link {
+  }
+  &__logo-img {
+    height: 30px;
+  }
+
+  &__link {
+    position: relative;
+    color: color(primary);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 600;
+    margin: 0 10px;
+    letter-spacing: 1px;
+    transition: all 80ms;
+
+    &--on-sale:before {
+      content: 'ON SALE';
+      position: absolute;
+      left: 0;
+      bottom: 100%;
+      color: color(tertiary);
+      font-size: 8px;
+      font-weight: 600;
+    }
+
+    &:hover {
+      color: lightgray;
+
+    }
+  }
+}
+
+.offer {
+  white-space: nowrap;
+  position: relative;
+
+  &-left {
+    width: 50%;
+    position: relative;
+    bottom: 50px;
+    display: inline-block;
+  }
+    &__title {
+      font-size: 36px;
+      font-weight: 700;
+
+      &--emphasis {
+        color: color(secondary);
+      }
+    }
+
+    &__timer-block {
+      padding: 20px 0;
+    }
+    $timer-triangle-height: 10px;
+    &__triangle {
+      display: inline-block;
+      transform: translateY(50%);
+      width: $timer-triangle-height;
+      border-top: solid $timer-triangle-height transparent;
+      border-bottom: solid $timer-triangle-height transparent;
+
+      &--left {
+        border-left: solid $timer-triangle-height color(secondary);
+      }
+      &--right {
+        border-right: solid $timer-triangle-height color(secondary);
+      }
+    }
+    &__timer-numbers {
+      position: relative;
+      font-size: 28px;
+      font-weight: bold;
+      margin: 0 24px;
+
+      &::before {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 12px;
+      }
+      &--days::before {
+        content: "DAYS";
+      }
+      &--hours::before {
+        content: "HOURS";
+      }
+      &--minutes::before {
+        content: "MINUTES";
+      }
+      &--seconds::before {
+        content: "SECONDS";
+      }
+    }
+
+    &__btn {
+      padding: 20px 40px;
+      color: color(primary);
+      background-color: color(secondary);
+      border: none;
+      display: block;
+      border-radius: 5px;
+      font-size: 18px;
+      font-weight: 400;
+      letter-spacing: 1px;
+      margin: 30px 0;
+      transition: background-color 200ms;
+
+      &:hover {
+        background-color: color(secondary--pale);
+      }
+    }
+
+
+  &-right {
+    width: 50%;
+    position: relative;
+    display: inline-block;
+    text-align: right;
+  }
+    &__discount-pointer {
+      background-color: color(secondary--pale);
+      padding: 10px 20px;
+      position: absolute;
+      top: 30px;
+      right: 30%;
+      transform: translateX(50%);
+      font-weight: 600;
+      font-size: 18px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 100%;
+        $triangle-width: 10px;
+        left: calc(50% -  #{$triangle-width});
+
+        width: 0;
+        height: 0;
+        border-top: solid $triangle-width color(secondary--pale);
+        border-left: solid $triangle-width transparent;
+        border-right: solid $triangle-width transparent;
+      }
+    }
+    &__int-cur-block {
+      white-space: nowrap;
+      display: inline-block;
+    }
+    &__currencry {
+      font-size: 120px;
+      font-weight: bold;
+      position: relative;
+      top: -100px;
+    }
+    &__integers {
+      font-size: 300px;
+      font-weight: bold;
+      position: relative;
+    }
+    &__cent-perd-block {
+      display: inline-block;
+    }
+    &__cents {
+      font-size: 90px;
+      font-weight: bold;
+      position: relative;
+      top: -40px;
+      left: -40px;
+    }
+    &__period {
+      font-size: 65px;
+      font-weight: 600;
+      position: relative;
+      top: -30px;
+      right: 10px;
+    }
+
+}
+
+.quality {
+
+  padding: 5px 0;
+  text-align: center;
+
+  &__item {
+    font-size: 14px;
+    position: relative;
+    font-weight: 400;
+    margin: 0 20px;
+    white-space: nowrap;
+  }
+}
+
+
+
+
+
+/*------------------------------------*\
+  #SECTION- Media Queries
+\*------------------------------------*/
+
+@import "__undoing-IE-specific-changes.scss";
+@import "__mobile.scss";
+@import "__desktop.scss";

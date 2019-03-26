@@ -1,0 +1,19 @@
+.benefits{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .benefit .fa-check{
+        color: $color__green;
+        font-size: 1.5rem;
+        margin-right: 1rem;
+    }
+}

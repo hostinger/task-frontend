@@ -1,0 +1,123 @@
+
+
+.menu{
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+.navbar{
+    position: relative; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    backface-visibility: hidden;
+    z-index: 5;
+    @media screen and (max-width: 768px){
+        // position: absolute;
+        // top: 0;
+        // left: 0;
+        display: block;
+        width: 100%;
+        background: $color__pink-light;
+        padding: 10px 0;
+    }
+
+    &-toggle{
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        font-size: 24px;
+        display: none;
+        cursor: pointer;
+        @media screen and (max-width: 768px){
+            display: block;
+        }
+    }
+    &-nav{  
+        display: flex;
+        margin-left: auto;
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            width: 100%;
+            padding-top: 50px;
+            padding-bottom: 15px;
+            position: absolute;
+            background: $color__pink-dark;
+            top: 43px;       
+        }   
+    }
+
+    .navbar-brand{
+        max-width: 140px;
+        display: block;
+        @media screen and (max-width: 768px){
+            margin-left: 10px;
+            max-width: 115px;
+        }
+    }
+    .nav-item{
+        position: relative;
+        @media screen and (max-width: 768px){
+            width: 100%;
+    
+        }
+    }
+    .nav-item a{
+        display: block;
+        padding: 10px 0 10px 25px;
+        color: $color__white;
+        text-decoration: none;
+        transition: all .3s;
+        text-transform: uppercase;
+        font-weight: 600;
+        text-align: center;
+        font-size: $font-size__nav;
+        letter-spacing: 1px;
+        
+        @media screen and (max-width: 1200px){
+            font-size: 1.2rem;
+        }
+        @media screen and (max-width: 768px){
+            font-size: 16px;
+            padding: 16px 20px;
+            text-align: left;
+        }
+
+        &:hover{
+            opacity: .6;
+        }
+        &:active{
+            color: $color__white;
+        }
+    }
+
+    .on-sale:before{
+        position: absolute;
+        width: 100px;
+        top: 0px;
+        left: 26px; 
+        content: "on sale";
+        text-transform: uppercase;
+        color: $color__yellow;
+        font-weight: 600;
+        @media screen and (max-width: 992px){
+            left: 50px;
+        }
+        @media screen and (max-width: 768px){
+            left: 170px;
+            top: 22px; 
+        }
+    }
+}
+
+@media screen and (max-width: 768px){
+    .hide{
+        display: none;
+    }
+    .container{
+        max-width: 100%;
+    }
+}
+

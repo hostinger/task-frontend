@@ -1,0 +1,21 @@
+.btn-banner{
+    display: inline-block;
+    background: $color__red;
+    padding: 25px 45px;
+    font-size: 22px;
+    font-weight: 700;
+    border-radius: 6px;
+    color: white;
+    text-transform: uppercase;
+    border: none;
+    text-align: center;
+    transition: 0.3s;
+    @media screen and (max-width: 400px){
+        font-size: 18px;
+    }
+
+    &:hover{
+        background:#cc4046;
+        cursor: pointer;
+    }
+}

@@ -1,0 +1,159 @@
+/* Making backgorund image darker*/
+
+.ie-blend-div{
+    background: url(../img/bg.jpg);
+    background-size: cover;
+}
+#section-main{
+    background: rgba(0, 0, 0, 0.089)
+
+}
+
+
+/*  Navigation */
+.navbar-brand{
+    float: left;
+    max-width: 20%;
+}
+.navbar-nav{
+    float: right;
+    width: 80%;
+}
+.nav-item{
+    float: left;
+    width: 19%;
+}
+.navbar .on-sale:before{
+    left: 35px;
+}
+@media (max-width: 992px){
+    .navbar .on-sale:before{
+        left: 44px;
+    }
+}
+@media (max-width: 768px){
+    .navbar .on-sale:before{
+        left: 170px;
+    }
+}
+
+
+/* BANNER */
+.banner .banner-left{
+    float: left;
+    max-width: 50%;
+}
+.timer{
+    display: inline-block;
+    position: relative;
+    padding: 0 20px;
+}
+    .time{
+        width: 60px;
+        margin: 0 5px;
+    }
+    .fa-caret-right{
+        position: absolute;
+        top: 10px;
+        left: 0;
+        margin-right: 10px;
+    }
+    .fa-caret-left{
+        position: absolute;
+        top: 10px;
+        right: 0;
+    }
+
+
+.banner-right{
+    float: right;
+    max-width: 50%;
+}
+.banner-right__currency{
+    float: left;
+}
+.banner-right__lgnum{
+    float: left;
+}
+.banner-right__col{
+    float: left;
+}
+
+
+
+/* BENEFITS */
+.benefits{
+    width: 100%;
+}
+.benefit{
+    float:left;
+    width: 25%;
+}
+
+@media (max-width: 768px){
+    .container{
+        width: 100%;
+    }
+    .navbar-nav{
+        width: 100%;
+    }
+    .banner{
+        margin-top: 40px;
+        transform: scaleY(-1);
+    }
+    .banner .banner-left{
+        float: none;
+        display: block;
+        max-width: 500px;
+        margin: 0 auto;
+        text-align: center;
+        transform: scaleY(-1);
+    }
+    .banner .banner-right{
+        float: none;
+        display: block;
+        max-width: 300px;
+        margin: 20px auto;
+        font-size: 90px;
+        background: green;
+        transform: scaleY(-1) translateY(-200px) translateX(20px);
+    }
+
+    .timer{
+        display: block;
+        width: 340px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 656px){
+    .banner .banner-right{
+        font-size: 80px;
+    }
+    .benefit{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+}
+@media (max-width: 400px){
+   
+    .timer{
+        width: 280px;
+    }
+    .timer .time{
+        width: 45px;
+        padding: 0;
+        margin: 0 5px;
+    }
+}
+
+.clearfix {
+    /* overflow: auto; */
+  }
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

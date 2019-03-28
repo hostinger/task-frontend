@@ -1,0 +1,458 @@
+@import "../../sass/mixins";
+@import "../../sass/typography";
+
+.banner {
+  background-image: linear-gradient(rgba(black, 0.3), rgba(black, 0.3)),
+    url("../../assets/images/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: scaleX(-1);
+  height: 83rem;
+  color: white;
+  width: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+
+  @include mq("tablet") {
+    height: 108rem;
+  }
+  @include mq("iphone-plus") {
+    height: 122rem;
+  }
+  @include mq("IPhoneX") {
+    height: 100rem;
+  }
+  @include mq("iphone") {
+    height: 120rem;
+  }
+
+  &__wrapper {
+    &-left {
+      margin-left: 8rem;
+      margin-bottom: 1.2rem;
+      @include mq("desktop-medium") {
+        margin-left: 6rem;
+      }
+
+      @include mq("tablet-wide") {
+        margin-left: 5rem;
+      }
+
+      @include mq("tablet") {
+        text-align: center;
+        margin-top: 14rem;
+        margin-left: 0;
+      }
+      @include mq("iphone-plus") {
+        margin-top: 20rem;
+      }
+      @include mq("iphone") {
+        margin-top: 16rem;
+      }
+    }
+
+    &-right {
+      margin-right: 15rem;
+
+      @include mq("desktop-wide") {
+        margin-right: 10rem;
+      }
+      @include mq("desktop-medium") {
+        margin-right: 6rem;
+      }
+      @include mq("tablet-wide") {
+        margin-right: 5rem;
+      }
+      @include mq("tablet-medium") {
+        margin-right: 4rem;
+      }
+      @include mq("tablet-small") {
+        margin-right: 3rem;
+      }
+      @include mq("tablet") {
+        margin-right: 1rem;
+        text-align: center;
+        margin-top: 10rem;
+      }
+      @include mq("iphone-plus") {
+        margin-top: 20rem;
+      }
+      @include mq("iphone") {
+        margin-top: 20rem;
+      }
+    }
+  }
+}
+
+.slogan {
+  & h1 {
+    font-size: 4.8rem;
+
+    @include mq("desktop-wide") {
+      font-size: 4.5rem;
+    }
+    @include mq("desktop-medium") {
+      font-size: 4.2rem;
+    }
+    @include mq("tablet-wide") {
+      font-size: 4rem;
+    }
+    @include mq("tablet-medium") {
+      font-size: 3.8rem;
+    }
+    @include mq("tablet-small") {
+      font-size: 3.5rem;
+    }
+    @include mq("IPhoneX") {
+      font-size: 3rem;
+    }
+    @include mq("iphone-small") {
+      font-size: 2.6rem;
+    }
+
+    & > span {
+      color: #fe4f57;
+      text-transform: uppercase;
+    }
+    backface-visibility: hidden;
+  }
+}
+
+.countdown {
+  font-weight: 600;
+  display: flex;
+  text-transform: uppercase;
+  @include mq("IPhoneX") {
+    justify-content: center;
+  }
+
+  &__wrapper {
+    display: flex;
+
+    &-box {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0 1.7rem;
+      line-height: 1.5;
+      margin-top: 1rem;
+
+      @include mq("desktop-medium") {
+        margin: 0 1.6rem;
+      }
+      @include mq("tablet-wide") {
+        margin: 0 1.4rem;
+      }
+      @include mq("IPhoneX") {
+        margin: 0 0.8rem;
+      }
+      @include mq("iphone") {
+        margin: 0 0.4rem;
+      }
+      @include mq("iphone-small") {
+        margin: 0 0.4rem;
+      }
+
+      &__label {
+        font-size: 1.4rem;
+        font-weight: 700;
+      }
+
+      &__time {
+        font-size: 3.2rem;
+        font-weight: 700;
+        letter-spacing: 1px;
+
+        @include mq("desktop-wide") {
+          font-size: 3rem;
+        }
+        @include mq("desktop-medium") {
+          font-size: 2.8rem;
+        }
+        @include mq("tablet-wide") {
+          font-size: 3rem;
+        }
+        @include mq("iphone-small") {
+          font-size: 2.5rem;
+        }
+      }
+    }
+  }
+}
+
+.button {
+  width: 35rem;
+  border: none;
+  color: #fff;
+  background-color: #fe4f57;
+  font-size: 2.4rem;
+  letter-spacing: 0.7px;
+  font-weight: 600;
+
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  margin-top: 4rem;
+  transition: opacity 0.1s ease-out;
+  padding: 2rem 0;
+
+  @include mq("screen-wide") {
+    font-size: 2.4rem;
+  }
+  @include mq("IPhoneX") {
+    width: 30rem;
+    padding: 1.5rem 0;
+    font-size: 2rem;
+  }
+  @include mq("iphone-small") {
+    width: 25rem;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+.Play_l {
+  width: 2.5rem;
+  height: 3rem;
+  fill: #fe4f57;
+  display: flex;
+  align-self: center;
+}
+.Play_r {
+  width: 2.5rem;
+  transform: rotate(-180deg);
+  height: 3rem;
+  fill: #fe4f57;
+  display: flex;
+  align-self: center;
+}
+
+.price {
+  &__wrapper {
+    display: flex;
+    justify-content: center;
+
+    &-left {
+      display: flex;
+
+      &-currency {
+        font-size: 17rem;
+        font-weight: 600;
+
+        @include mq("screen-wide") {
+          font-size: 16rem;
+        }
+        @include mq("screen-medium") {
+          font-size: 15rem;
+        }
+        @include mq("screen") {
+          font-size: 14.5rem;
+        }
+        @include mq("desktop-wide") {
+          font-size: 12rem;
+          width: 6rem;
+        }
+        @include mq("desktop-medium") {
+          font-size: 10rem;
+          width: 5rem;
+        }
+        @include mq("tablet-medium") {
+          font-size: 8rem;
+          width: 3rem;
+        }
+        @include mq("tablet-small") {
+          width: 3rem;
+        }
+      }
+
+      &-bignumber {
+        font-size: 48rem;
+        line-height: 0.8;
+        font-weight: 700;
+
+        @include mq("screen-wide") {
+          font-size: 45rem;
+          width: 24rem;
+        }
+        @include mq("screen-medium") {
+          font-size: 44rem;
+          width: 23rem;
+        }
+        @include mq("screen") {
+          font-size: 43.5rem;
+          width: 22rem;
+        }
+        @include mq("desktop-wide") {
+          font-size: 42rem;
+          width: 21rem;
+        }
+        @include mq("desktop-medium") {
+          font-size: 40rem;
+          width: 20rem;
+        }
+        @include mq("tablet-medium") {
+          font-size: 38rem;
+          width: 18rem;
+        }
+        @include mq("tablet-small") {
+          font-size: 34rem;
+          width: 16rem;
+        }
+        @include mq("IPhoneX") {
+          font-size: 30rem;
+          width: 14rem;
+        }
+      }
+    }
+
+    &-right {
+      line-height: 0.8;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      &-cents {
+        font-size: 13rem;
+        font-weight: 700;
+
+        @include mq("screen-wide") {
+          font-size: 13rem;
+        }
+        @include mq("screen-medium") {
+          font-size: 12rem;
+        }
+        @include mq("screen") {
+          font-size: 11.5rem;
+        }
+        @include mq("desktop-wide") {
+          font-size: 10rem;
+        }
+        @include mq("desktop-medium") {
+          font-size: 8rem;
+        }
+      }
+      &-mo {
+        font-weight: 600;
+        font-size: 9rem;
+
+        @include mq("screen-wide") {
+          font-size: 8rem;
+        }
+        @include mq("screen-medium") {
+          font-size: 7rem;
+        }
+        @include mq("screen") {
+          font-size: 6.5rem;
+        }
+        @include mq("desktop-wide") {
+          font-size: 6rem;
+        }
+        @include mq("desktop-medium") {
+          font-size: 5.5rem;
+        }
+      }
+    }
+  }
+}
+
+.bottom {
+  position: absolute;
+  width: 100%;
+  top: 76rem;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  transform: scaleX(-1);
+
+  @include mq("tablet") {
+    top: 90rem;
+  }
+  @include mq("iphone-plus") {
+    top: 105rem;
+  }
+  @include mq("IPhoneX") {
+    top: 83rem;
+  }
+  @include mq("iphone") {
+    top: 103rem;
+  }
+
+  & .container {
+    width: 100%;
+
+    & ul {
+      display: flex;
+      justify-content: space-evenly;
+      width: 100%;
+
+      @include mq("tablet") {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      list-style: none;
+      & li {
+        font-size: 2rem;
+        @include mq("desktop-medium") {
+          font-size: 1.8rem;
+        }
+        @include mq("tablet-wide") {
+          font-size: 1.6rem;
+        }
+        @include mq("tablet-medium") {
+          font-size: 1.5rem;
+        }
+        @include mq("tablet-small") {
+          font-size: 1.4rem;
+        }
+        @include mq("tablet") {
+          padding-top: 0.5rem;
+        }
+
+        & i {
+          font-weight: 900;
+        }
+      }
+    }
+  }
+}
+
+.container {
+  transform: scaleX(-1);
+}
+
+.fa-check {
+  color: #7fc473;
+}
+
+
+.clip{
+  background-color: #fd9c9c;
+  position: absolute;
+  width: 12rem;
+  height: 5rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 2rem;
+  text-align: center;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 60% 75%, 50% 94%, 40% 75%, 0% 75%);
+  margin-left: 12rem;
+  padding-top: 1rem;
+  margin-bottom: -1rem;
+  transform: translateY(-4rem);
+  
+  @include mq("desktop-medium") {
+    font-size: 1.6rem;
+    margin-left: 10rem;
+  }
+  @include mq("tablet-small") {
+    font-size: 1.6rem;
+    margin-left: 8rem;
+  }
+  @include mq("tablet") {
+    display: none;
+  }
+}

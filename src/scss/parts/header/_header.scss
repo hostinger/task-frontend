@@ -1,0 +1,15 @@
+@import './nav.scss';
+@import './promotion.scss';
+@import './benefits.scss';
+
+.header {
+  height: 100vh;
+  background: url('../../src/assets/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.header-container {
+  width: 70%;
+  margin: auto;
+  padding: 0 1.5em;
+}

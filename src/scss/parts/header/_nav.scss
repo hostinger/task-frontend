@@ -1,0 +1,40 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4em 0;
+  align-items: center;
+
+  &__brand-logo {
+    max-width: 10em;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+
+    &-item {
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase;
+      margin-left: 2em;
+
+      .on-sale {
+        position: absolute;
+        top: -1.2em;
+        left: 0;
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 0.05rem;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+}

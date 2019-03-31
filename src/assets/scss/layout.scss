@@ -265,3 +265,55 @@
   }
 }
 
+@media only screen and (max-width: 480px) {
+  .Main {
+    .left {
+      margin: 0;
+
+      .countdown {
+        width: 300px;
+
+        .timer {
+
+          .days::before {
+            font-size: 0.5rem;
+          }
+
+          .hours::before {
+            font-size: 0.5rem;
+            left: -0.1rem;
+          }
+
+          .mins::before {
+            font-size: 0.5rem;
+            left: -0.1rem;
+          }
+
+          .secs::before {
+            font-size: 0.5rem;
+            left: -0.1rem;
+          }
+
+        }
+      }
+
+      .btn {
+        width: 10rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  .Footer {
+    font-size: 0.6rem;
+
+    .nav-item {
+      padding: 0;
+
+      .nav-link {
+        padding: 0;
+      }
+    }
+  }
+}
+

@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/style.css">
   <title>Hostinger Front-end</title>
 </head>
+
 <body>
-  <p>test</p> 
+  <header class="header">
+    <div class="header-container">
+      <div class="nav">
+        <div class="nav__brand">
+          <img src="./assets/logo.png" alt="Hostinger Logo" class="nav__brand-logo">
+        </div>
+        <!-- <input type="checkbox" id="nav-toggle" class="nav__toggle"> -->
+        <nav>
+          <ul class="nav__list">
+            <li class="nav__list-item">
+              <a href="#" class="nav__link"> web hosting </a>
+            </li>
+            <li class="nav__list-item">
+              <a href="#" class="nav__link"> cloud hosting <span class="on-sale"> on sale </span></a>
+            </li>
+            <li class="nav__list-item">
+              <a href="#" class="nav__link"> vps hosting </a>
+            </li>
+            <li class="nav__list-item">
+              <a href="#" class="nav__link"> domain checker </a>
+            </li>
+            <li class="nav__list-item nav__list-item--last">
+              <a href="#" class="nav__link"> website builder </a>
+            </li>
+          </ul>
+        </nav>
+        <!-- <label for="nav-toggle" class="nav__toggle-label">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </label> -->
+      </div>
+
+      <div class="promotion-container">
+        <section class="offer">
+          <h1 class="offer__title"> new year offer
+            <span class="offer__title--red"> 82% off </span>
+            web hosting
+          </h1>
+          <div class="offer__countdown"> time </div>
+          <a href="#" class="offer__button" > get started now </a>
+        </section>
+        <section class="price">
+          <div class="price__currency"> $ </div>
+          <div class="price__dollar"> 1 </div>
+          <div class="price__cents"> 45 </div>
+          <div class="price__period"> /mo </div>
+        </section>
+      </div>
+
+      <div class="benefits-container">
+        <ul class="benefits">
+          <li class="benefit__item">
+            <i class="fas fa-check"></i>
+            guaranteed 99.9% uptime
+          </li>
+          <li class="benefit__item">
+            <i class="fas fa-check"></i>
+            superior speed performance
+          </li>
+          <li class="benefit__item">
+            <i class="fas fa-check"></i>
+            24/7 support chat
+          </li>
+          <li class="benefit__item">
+            <i class="fas fa-check"></i>
+            30-day money-back guarantee
+          </li>
+        </ul>
+      </div>
+    </div>
+  </header>
+
 </body>
+
 </html>

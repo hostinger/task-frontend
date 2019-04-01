@@ -1,9 +1,7 @@
 @import './nav.scss';
 @import './promotion.scss';
 @import './benefits.scss';
-@import './laptop.scss';
-@import './tablet.scss';
-@import './mobile.scss';
+@import './responsive-nav.scss';
 
 .header {
   height: auto;
@@ -11,10 +9,4 @@
   background-color: rgba( $black, .3);
   background-blend-mode: color;
   background-size: cover;
-}
-
-.header-container {
-  width: 70%;
-  margin: auto;
-  padding: 0 1.5em;
 }

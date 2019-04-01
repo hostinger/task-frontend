@@ -18,6 +18,7 @@
       position: relative;
       display: inline-block;
       text-transform: uppercase;
+      text-align: center;
       margin-left: 2em;
 
       .on-sale {
@@ -36,7 +37,6 @@
     font-weight: 600;
     font-size: 1.1em;
     letter-spacing: 0.05rem;
-    white-space: nowrap;
     cursor: pointer;
   }
 }

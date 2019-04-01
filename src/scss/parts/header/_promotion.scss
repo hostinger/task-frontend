@@ -1,2 +1,8 @@
 @import './offer.scss';
 @import './price.scss';
+
+.promotion-container {
+  margin: 6em auto 15em;
+  display: flex;
+  flex-wrap: wrap;
+}

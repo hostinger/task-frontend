@@ -1,3 +1,55 @@
 .price {
-  background: lightyellow;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__currency {
+    color: $white;
+    padding-left: 0.4em;
+    font-size: 12em;
+    font-weight: 700;
+    position: absolute;
+    left: 0;
+    line-height: 2.5em;
+    height: 100%;
+  }
+
+  &__dollar {
+    font-family: 'Open-sans', sans-serif;
+    color: $white;
+    font-size: 35em;
+    font-weight: 700;
+    position: absolute;
+    // padding-right: 0.1em;
+    height: 100%;
+  }
+
+  &__cents {
+    color: $white;
+    font-size: 10em;
+    font-weight: 700;
+    padding-left: 0.4em;
+    line-height: 2.5em;
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  &__period {
+    color: $white;
+    font-size: 6em;
+    font-weight: 600;
+    padding-left: 1em;
+    line-height: 2.5em;
+    width: 40%;
+    height: 50%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
 }

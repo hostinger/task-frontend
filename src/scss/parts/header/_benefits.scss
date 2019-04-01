@@ -1,3 +1,27 @@
-.benefits {
-  background: lightpink;
+.benefits-container {
+  width: 100%;
+}
+.benefit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+
+  &__item {
+    color: $white;
+    font-size: 1.4em;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    display: inline-block;
+    text-transform: capitalize;
+    // margin-left: 2em;
+    margin:auto;
+    white-space: nowrap;
+
+    .fa-check {
+      color: $green;
+      margin-right: 0.3em;
+      margin-bottom: 0.5em;
+    }
+  }
 }

@@ -1,10 +1,15 @@
 @import './nav.scss';
 @import './promotion.scss';
 @import './benefits.scss';
+@import './laptop.scss';
+@import './tablet.scss';
+@import './mobile.scss';
 
 .header {
-  height: 100vh;
+  height: auto;
   background: url('../../src/assets/background.jpg') no-repeat center center fixed;
+  background-color: rgba( $black, .3);
+  background-blend-mode: color;
   background-size: cover;
 }
 

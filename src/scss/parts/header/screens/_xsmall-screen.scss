@@ -1,4 +1,4 @@
-@media only screen and (min-width: 551px) and (max-width: 768px) {
+@media only screen and (max-width: 550px) {
   .header-container {
     max-width: 100%;
     margin: auto;
@@ -6,13 +6,13 @@
     .offer, .price {
       width: 90%;
       margin: auto;
-      font-size: 0.5rem;
+      font-size: 0.4rem;
     }
 
     .price {
       order: 1;
-      padding: 0 10em;
-      max-width: 500px;
+      padding: 0 2em;
+      max-width: 300px;
     }
 
     .offer {

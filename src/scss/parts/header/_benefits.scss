@@ -2,6 +2,7 @@
   width: 100%;
 }
 .benefit {
+  padding: 2em 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -9,7 +10,7 @@
 
   &__item {
     color: $white;
-    font-size: 1.4em;
+    font-size: 1.35em;
     font-weight: 600;
     letter-spacing: 0.05em;
     display: inline-block;

@@ -7,6 +7,11 @@
 
   &__brand-logo {
     max-width: 12em;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
   }
 
   &__list {
@@ -20,6 +25,10 @@
       text-transform: uppercase;
       text-align: center;
       margin-left: 2em;
+
+      &:hover {
+        opacity: 0.7;
+      }
 
       .on-sale {
         color: $yellow;

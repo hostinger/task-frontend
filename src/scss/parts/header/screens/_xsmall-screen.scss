@@ -3,6 +3,10 @@
     max-width: 100%;
     margin: auto;
 
+    .promotion-container {
+      margin: 5em 0;
+    }
+
     .offer, .price {
       width: 90%;
       margin: auto;
@@ -18,6 +22,10 @@
     .offer {
       order: 2;
       text-align: center;
+
+      &__countdown {
+        margin: 1em auto 3em;
+      }
     }
   }
 }

@@ -17,6 +17,34 @@
   &__countdown {
     margin: 1em 0 3.5em 0;
     font-size: 2em;
+    display: flex;
+    color: $white;
+    align-items: center;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    justify-content: space-between;
+    width: 90%;
+
+    .offer__arrow--left {
+      width: 0;
+      height: 0;
+      border-top: 0.6em solid transparent;
+      border-left: 0.8em solid $red-text;
+      border-bottom: 0.6em solid transparent;
+    }
+
+    .offer__arrow--right {
+      width: 0;
+      height: 0;
+      border-top: 0.6em solid transparent;
+      border-right: 0.8em solid $red-text;
+      border-bottom: 0.6em solid transparent;
+    }
+  }
+
+  &__text {
+    font-size: .5em;
   }
 
   &__button {
@@ -29,5 +57,9 @@
     text-transform: uppercase;
     padding: 1.1em 3em;
     border-radius: 0.2em;
+
+    &:hover {
+      background: salmon;
+    }
   }
 }

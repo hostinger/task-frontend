@@ -50,13 +50,20 @@
             <span class="offer__title--red"> 82% off </span>
             web hosting
           </h1>
-          <div class="offer__countdown"> time </div>
-          <a href="#" class="offer__button" > get started now </a>
+          <div class="offer__countdown">
+            <div class="offer__arrow--left"></div>
+            <div class="days"></div>
+            <div class="hours"></div>
+            <div class="minutes"></div>
+            <div class="seconds"></div>
+            <div class="offer__arrow--right"></div>
+          </div>
+          <a href="#" class="offer__button"> get started now </a>
         </section>
         <section class="price">
           <div class="left-wrapper">
             <div class="price__currency"> $ </div>
-            <div class="price__dollar"> 1 </div>
+            <div class="price__dollar"><span class="rectangle"></span> 1 </div>
           </div>
           <div class="right-wrapper">
             <div class="price__cents"> 45 </div>
@@ -87,6 +94,8 @@
       </div>
     </div>
   </header>
+
+  <script src="./script/countdown.js" charset="utf-8"></script>
 
 </body>
 

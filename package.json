@@ -1,0 +1,20 @@
+{
+  "name": "task-frontend",
+  "version": "1.0.0",
+  "description": "Hostinger frontend task",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdvinasBa/task-frontend.git"
+  },
+  "keywords": [],
+  "author": "edvinasba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdvinasBa/task-frontend/issues"
+  },
+  "homepage": "https://github.com/EdvinasBa/task-frontend#readme"
+}

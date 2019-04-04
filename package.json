@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Hostinger frontend task",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "dev": "parcel project/index.html",
+    "build": "parcel build project/index.html --public-url ./"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EdvinasBa/task-frontend.git"

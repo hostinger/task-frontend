@@ -1,6 +1,6 @@
 .offer {
   width: 50%;
-  padding: 4em 0;
+  padding: 1em 0 5em 0;
   margin: auto;
 
   &__title {
@@ -16,16 +16,16 @@
   }
 
   &__countdown {
-    margin: 1em 0 3.5em 0;
+    margin: 0 0 2.5em 0;
     font-size: 2em;
     display: flex;
     color: $white;
     align-items: center;
     text-align: center;
     font-weight: 700;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     justify-content: space-between;
-    width: 90%;
+    width: 80%;
 
     .offer__arrow--left {
       width: 0;

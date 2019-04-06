@@ -1,0 +1,40 @@
+/** New year banner **/
+
+.benefit-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+
+  @media screen and (max-width: map-get($breakpoints, 'medium')) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+
+    @media screen and (max-width: map-get($breakpoints, 'medium')) {
+      margin-bottom: 1em;
+    }
+
+    &:not(:last-child) {
+      margin-right: 1em;
+    }
+
+    &::before {
+      content: "";
+      height: 1em;
+      width: 1em;
+      margin-right: 0.5em;
+      background: url("/assets/images/checkmark.svg") no-repeat center;
+    }
+  }
+
+  &__checkmark {
+    height: 1em;
+    margin-right: 0.5em;
+  }
+}

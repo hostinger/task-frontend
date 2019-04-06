@@ -1,5 +1,36 @@
-@import "./base/normalize";
+/** Abstracts **/
+@import "./abstracts/variables";
+@import "./abstracts/mixins";
 
-h1 {
-  color: red;
+/** Base **/
+@import "./base/normalize";
+@import "./base/typography";
+
+/** Components **/
+@import "./components/nav-main";
+@import "./components/banner-ny";
+@import "./components/benefit-list";
+@import "./components/triangle";
+@import "./components/buttons";
+@import "./components/tooltips";
+
+/** Layouts **/
+
+.container {
+  max-width: 115rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @media screen and (max-width: map-get($breakpoints,"medium")) {
+    max-width: 70rem;
+  }
+
+  &-fixed {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+  }
 }

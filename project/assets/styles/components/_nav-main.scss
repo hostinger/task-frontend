@@ -1,0 +1,81 @@
+/** Main navigation component **/
+.nav-main {
+  display: flex;
+  align-items: center;
+  padding: 1.2em 0;
+  width: 100%;
+
+  @media screen and (max-width: map-get($breakpoints,"medium")) {
+    background: $hostinger-primary;
+  }
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-right: auto;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      flex: 0 0 100%;
+    }
+  }
+
+  &__toggle {
+    display: none;
+    margin-left: auto;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      display: block;
+    }
+  }
+
+  &__links {
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      background: $hostinger-primary;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      // z-index: 100;
+      // &::after {
+      //   content: '';
+      //   background: rgba(0,0,0,0.3);
+      //   height: 100%;
+      //   display: block;
+      //   position: fixed;
+      //   top: 0;
+      //   bottom: 0;
+      //   width: 100%;
+      //   z-index: 1;
+      // }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 2em;
+    color: $text-light;
+    white-space: nowrap;
+    @include link-transition;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      display: block;
+      margin: 3rem 2rem;
+      width: 100%;
+    }
+
+    &:hover {
+      color: darken($text-light, $hover-darken-amount);
+    }
+  }
+
+  &__badge {
+    color: #ffe400;
+    position: absolute;
+    bottom: 1.5em;
+    font-size: 1rem;
+    left: 0;
+  }
+}

@@ -1,0 +1,142 @@
+/** New year banner **/
+
+.banner-ny {
+  &__background {
+    color: $text-light;
+    padding: 17rem 0 1rem;
+    background: url("/assets/images/background-edited.jpg") no-repeat center;
+    background-size: cover;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      padding: 15rem 0 1rem;
+    }
+
+    .benefit-list {
+      margin-top: 16rem;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      flex-direction: column;
+    }
+  }
+
+  &__offer {
+    flex: 0 0 48%;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      order: 2;
+    }
+
+    &-title {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.5;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        text-align: center;
+      }
+    }
+
+    &-timer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 27em;
+      font-weight: 600;
+
+      &-num {
+        font-size: 3rem;
+        margin-bottom: 0.2em;
+        font-weight: 700;
+      }
+
+      &-text,
+      &-num {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    &-btn {
+      font-size: 2.2rem;
+      margin: 2em 0 0;
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    flex: 0 0 48%;
+    display: flex;
+    line-height: 1;
+    position: relative;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      order: 1;
+    }
+
+    &-price {
+      font-size: 37rem;
+      position: relative;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        font-size: 35rem;
+      }
+    }
+
+    &-save {
+      font-size: 2rem;
+      transform: translate(3.8em, -1.3em);
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        transform: translateX(3.4em, -1.3em);
+      }
+    }
+
+    &-currency {
+      font-size: 14rem;
+      margin-top: 0.6em;
+      margin-left: auto;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        font-size: 12.5rem;
+        margin-right: -0.15em;
+      }
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-cent {
+      margin-top: 0.8em;
+      font-size: 8.5rem;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        font-size: 7rem;
+      }
+    }
+
+    &-mo {
+      font-size: 6rem;
+      margin-left: 0.2em;
+      margin-bottom: 1.2em;
+      font-weight: 600;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        font-size: 4.5rem;
+      }
+    }
+  }
+}

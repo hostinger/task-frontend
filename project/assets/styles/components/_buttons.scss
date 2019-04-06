@@ -1,0 +1,21 @@
+.button {
+    display: block;
+    padding: 2rem 6rem;
+    cursor: pointer;
+    background: $hostinger-accent;
+    border: none;
+    border-radius: 6px;
+    color: $text-light;
+    font-weight: 600;
+    white-space: nowrap;
+    @include link-transition;
+
+    @media screen and (max-width:  map-get($breakpoints, 'medium')) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &:hover {
+        background: darken($hostinger-accent, $hover-darken-amount);
+    }
+}

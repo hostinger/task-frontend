@@ -20,6 +20,7 @@
   "homepage": "https://github.com/EdvinasBa/task-frontend#readme",
   "devDependencies": {
     "parcel-bundler": "^1.12.3",
+    "parcel-plugin-clean-dist": "0.0.6",
     "sass": "^1.17.4"
   }
 }

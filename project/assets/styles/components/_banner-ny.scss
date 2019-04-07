@@ -4,7 +4,7 @@
   &__background {
     color: $text-light;
     padding: 17rem 0 1rem;
-    background: url("/assets/images/background-edited.jpg") no-repeat center;
+    background: url("/assets/images/background-edited-compressed.jpg") no-repeat center;
     background-size: cover;
 
     @media screen and (max-width: map-get($breakpoints,"medium")) {

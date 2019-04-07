@@ -1,5 +1,7 @@
 /** Main navigation component **/
 .nav-main {
+  $menuTransition: transform 0.2s ease-out;
+
   display: flex;
   align-items: center;
   padding: 1.2em 0;
@@ -22,6 +24,17 @@
   &__toggle {
     display: none;
     margin-left: auto;
+    border: none;
+    background: transparent;
+
+    > span {
+      display: block;
+      width: 2rem;
+      height: 0.3rem;
+      margin: 0.4rem;
+      border-radius: 0.1rem;
+      background: white;
+    }
 
     @media screen and (max-width: map-get($breakpoints,"medium")) {
       display: block;
@@ -35,18 +48,16 @@
       left: 0;
       right: 0;
       top: 100%;
-      // z-index: 100;
-      // &::after {
-      //   content: '';
-      //   background: rgba(0,0,0,0.3);
-      //   height: 100%;
-      //   display: block;
-      //   position: fixed;
-      //   top: 0;
-      //   bottom: 0;
-      //   width: 100%;
-      //   z-index: 1;
-      // }
+      transition: $menuTransition;
+      height: 100vh;
+
+      &:not(.is-active) {
+        transform: translateX(-100%);
+
+        > .nav-main__link {
+          transform: translateX(-150%);
+        }
+      }
     }
   }
 
@@ -64,6 +75,7 @@
       display: block;
       margin: 3rem 2rem;
       width: 100%;
+      transition: $menuTransition;
     }
 
     &:hover {

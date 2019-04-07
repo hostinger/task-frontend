@@ -44,6 +44,7 @@
 
       @media screen and (max-width: map-get($breakpoints,"medium")) {
         text-align: center;
+        font-size: 3.5rem;
       }
     }
 
@@ -58,6 +59,16 @@
         font-size: 3rem;
         margin-bottom: 0.2em;
         font-weight: 700;
+
+        @media screen and (max-width: map-get($breakpoints,"medium")) {
+          font-size: 2.5rem;
+        }
+      }
+
+      &-text {
+        @media screen and (max-width: map-get($breakpoints,"medium")) {
+          font-size: 1rem;
+        }
       }
 
       &-text,
@@ -70,6 +81,10 @@
     &-btn {
       font-size: 2.2rem;
       margin: 2em 0 0;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        font-size: 1.8rem;
+      }
     }
   }
 
@@ -79,17 +94,19 @@
     display: flex;
     line-height: 1;
     position: relative;
+    font-size: 1rem;
 
     @media screen and (max-width: map-get($breakpoints,"medium")) {
       order: 1;
+      font-size: 0.8rem;
     }
 
     &-price {
-      font-size: 37rem;
+      font-size: 37em;
       position: relative;
 
       @media screen and (max-width: map-get($breakpoints,"medium")) {
-        font-size: 35rem;
+        font-size: 35em;
       }
     }
 
@@ -98,19 +115,15 @@
       transform: translate(3.8em, -1.3em);
 
       @media screen and (max-width: map-get($breakpoints,"medium")) {
-        transform: translateX(3.4em, -1.3em);
+        font-size: 1.5rem;
+        transform: translate(3em, -1.3em);
       }
     }
 
     &-currency {
-      font-size: 14rem;
+      font-size: 14em;
       margin-top: 0.6em;
       margin-left: auto;
-
-      @media screen and (max-width: map-get($breakpoints,"medium")) {
-        font-size: 12.5rem;
-        margin-right: -0.15em;
-      }
     }
 
     &-right {
@@ -121,22 +134,14 @@
 
     &-cent {
       margin-top: 0.8em;
-      font-size: 8.5rem;
-
-      @media screen and (max-width: map-get($breakpoints,"medium")) {
-        font-size: 7rem;
-      }
+      font-size: 8.5em;
     }
 
     &-mo {
-      font-size: 6rem;
+      font-size: 6em;
       margin-left: 0.2em;
       margin-bottom: 1.2em;
       font-weight: 600;
-
-      @media screen and (max-width: map-get($breakpoints,"medium")) {
-        font-size: 4.5rem;
-      }
     }
   }
 }

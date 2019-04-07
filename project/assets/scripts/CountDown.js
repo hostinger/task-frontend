@@ -40,8 +40,6 @@ export class CountDown {
 
       const distance = this.futureDate - currentDate;
 
-      console.log(currentDate.toISOString());
-      console.log(this.futureDate.toISOString());
       if (distance < 0) {
         return;
       }

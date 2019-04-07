@@ -1,6 +1,6 @@
 /** Main navigation component **/
 .nav-main {
-  $menuTransition: transform 0.2s ease-out;
+  $menuTransition: transform 0.3s ease-out;
 
   display: flex;
   align-items: center;
@@ -48,8 +48,11 @@
       left: 0;
       right: 0;
       top: 100%;
-      transition: $menuTransition;
       height: 100vh;
+
+      &.is-active {
+        transition: $menuTransition;
+      }
 
       &:not(.is-active) {
         transform: translateX(-100%);

@@ -1,5 +1,5 @@
 import './otherImports';
-import { CountDown } from "./Coutndown";
+import { CountDown } from "./CountDown";
 
 document.addEventListener('DOMContentLoaded', () => {
     const nyCounter = new CountDown(

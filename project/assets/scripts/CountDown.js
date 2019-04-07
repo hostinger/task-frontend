@@ -49,10 +49,10 @@ export class CountDown {
       const countHour = countMinute * 60;
       const countDay = countHour * 24;
 
-      const daysLeft =    Math.floor(distance / countDay);
-      const hoursLeft =   Math.floor((distance % countDay) / countHour);
-      const minutesLeft = Math.floor((distance % countHour) / countMinute);
-      const secondsLeft = Math.floor((distance % countMinute) / countSecond);
+      const daysLeft =    ("0" + Math.floor(distance / countDay)).slice(-2);
+      const hoursLeft =   ("0" + Math.floor((distance % countDay) / countHour)).slice(-2);
+      const minutesLeft = ("0" + Math.floor((distance % countHour) / countMinute)).slice(-2);
+      const secondsLeft = ("0" + Math.floor((distance % countMinute) / countSecond)).slice(-2);
 
 
       daysContainer.textContent = daysLeft;

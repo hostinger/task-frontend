@@ -119,7 +119,8 @@
 
     &-save {
       font-size: 2rem;
-      transform: translate(3.8em, -1.3em);
+      transform: translate(3.8em, -2em);
+      left: 0;
 
       @media screen and (max-width: map-get($breakpoints,"medium")) {
         font-size: 1.5rem;

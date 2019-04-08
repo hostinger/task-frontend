@@ -119,9 +119,8 @@
 
     &-save {
       font-size: 2rem;
-      right: 0;
-      bottom: 100%;
-
+      right: -1em;
+      bottom: calc(100% - 1em);
       @media screen and (max-width: map-get($breakpoints,"medium")) {
         font-size: 1.5rem;
       }

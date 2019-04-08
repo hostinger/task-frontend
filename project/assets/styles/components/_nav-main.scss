@@ -10,6 +10,7 @@
 
   @media screen and (max-width: map-get($breakpoints,"medium")) {
     background: $hostinger-primary;
+    padding: 1.2em 1em;
   }
 
   &__controls {

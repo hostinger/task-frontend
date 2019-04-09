@@ -83,8 +83,9 @@ function watch() {
         }
     });
     gulp.watch(src + '/scss/**/*.scss', css);
-    gulp.watch(src + '/*.html').on('change', browserSync.reload);
-    gulp.watch(src + '/js/**/*.scss', css).on('change', browserSync.reload);
+    gulp.watch(src + '/*.html', html).on('change', browserSync.reload);
+    gulp.watch(src + '/assets/images/**/*.*', images);
+    //gulp.watch(src + '/js/**/*.js').on('change', browserSync.reload);
 }
 
 const build = gulp.series(gulp.parallel(css, images, html));

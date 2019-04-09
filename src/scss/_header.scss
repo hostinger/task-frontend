@@ -43,7 +43,101 @@
                 }
             }
         }
+
+        @media only screen and (max-width: 1150px) {
+            display: none;
+        }
     }
+
+    &__mobile-nav {
+        visibility: hidden;
+    }
+
+    &__mobile-nav-holder {
+        visibility: hidden;
+        position: absolute;
+        background-color: #fff;
+        height: 60vh;
+        width: calc(100vw - 4%);
+        border-radius: 5px;
+        top: 10%;
+        left: 2%;
+        z-index: 999;
+        opacity: 0;
+        transition: all 0.3s ease-in-out;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            width: 100%;
+            text-align: center;
+
+            li {
+                a {
+                    font-size: 25px;
+                    letter-spacing: 0;
+                    line-height: 35px;
+                    text-decoration: none;
+                    color: #43414f;
+                    transform: color 0.2s ease-in-out;
+
+                    &:hover {
+                        color: #393741;
+                    }
+                }
+            }
+        }
+    }
+
+    &__mobile-close {
+        color: black;
+        font-weight: 700;
+        width: 100%;
+        text-align: right;
+    }
+
+    &__mobile-close-button {
+        border: none;
+        background: transparent;
+        color: #000;
+        cursor: pointer;
+        padding-right: 15px;
+        padding-top: 10px;
+        appearance: none;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    @media only screen and (max-width: 1150px) {
+        &__mobile-nav {
+            visibility: visible;
+            display: inline-block;
+            border: none;
+            margin-left: auto;
+            background: transparent;
+            color: #ffffff;
+            cursor: pointer;
+            appearance: none;
+
+            span {
+                display: block;
+                width: 25px;
+                height: 4px;
+                margin: 4px;
+                border-radius: 3px;
+                background: #fff;
+            }
+        }
+
+        &_mobile-nav-holder {
+            position: absolute;
+            background-color: white;
+            height: 500px;
+            width: 500px;
+            padding: 10px;
+        }
+    }
+
     &__nav-badge {
         position: absolute;
         top: -2px;

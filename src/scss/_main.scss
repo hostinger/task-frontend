@@ -2,6 +2,7 @@ html,
 body {
     margin: 0 auto;
     height: 100%;
+    width: 100%;
     font-family: 'Open Sans', sans-serif;
     font-size: 14px;
 }
@@ -10,4 +11,8 @@ body {
     width: 1110px;
     padding: 0 15px;
     margin: auto;
+
+    @media only screen and (max-width: 1150px) {
+        width: calc(100% - 30px);
+    }
 }

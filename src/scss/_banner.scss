@@ -2,23 +2,265 @@
     position: relative;
     color: #fff;
     font-weight: 600;
-    padding: 70px 0 0 0;
+    padding-top: 70px;
+    min-height: 625px;
+
+    @media only screen and (max-width: 1150px) {
+        min-height: 525px;
+    }
+
+    @media only screen and (max-width: 1052px) {
+        min-height: 560px;
+    }
+
+    @media only screen and (max-width: 845px) {
+        min-height: 830px;
+    }
 
     &::before {
         position: absolute;
         content: '';
+        background: url('../images/background-fliped.jpg') center;
         background-repeat: no-repeat;
-        background: url('../images/background.jpg') center, linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
-        transform: scaleX(-1);
+        // flip with css
+        //transform: scaleX(-1);
         height: 100%;
         width: 100%;
         background-size: cover;
-        z-index: -2;
-        padding: 150px 0;
+        z-index: -1;
+        padding: 0;
         top: -80px;
         background-blend-mode: overlay;
     }
 
     &__content-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-content: stretch;
+        align-items: center;
+
+        @media only screen and (max-width: 1150px) {
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 845px) {
+            flex-direction: column;
+        }
+    }
+
+    &__offer {
+        flex: 0 0 52%;
+
+        @media only screen and (max-width: 1150px) {
+            flex: initial;
+        }
+    }
+
+    &__offer-title {
+        font-size: 42px;
+
+        &--red {
+            text-transform: uppercase;
+            color: #ee545b;
+        }
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 30px;
+        }
+
+        @media only screen and (max-width: 845px) {
+            text-align: center;
+        }
+    }
+
+    &__timer {
+        display: flex;
+        align-items: center;
+        width: 100%;
+
+        @media only screen and (max-width: 845px) {
+            justify-content: center;
+        }
+    }
+
+    &__time-block {
+        padding-left: 35px;
+
+        @media only screen and (max-width: 1150px) {
+            padding-left: 18px;
+        }
+    }
+
+    &__timer-value {
+        display: block;
+        text-align: center;
+        font-weight: 900;
+
+        &--number {
+            font-size: 28px;
+            @media only screen and (max-width: 1150px) {
+                font-size: 18px;
+            }
+        }
+        &--word {
+            text-transform: uppercase;
+            @media only screen and (max-width: 1150px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__button {
+        display: block;
+        font-size: 22px;
+        text-transform: uppercase;
+        margin: 50px 0 0;
+        padding: 21px 50px;
+        cursor: pointer;
+        background: #ee545b;
+        border: none;
+        border-radius: 6px;
+        color: #fff;
+        font-weight: 400;
+        white-space: nowrap;
+        transition: background 0.3s ease-in-out;
+
+        &:hover {
+            background: #e9262f;
+        }
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 18px;
+            margin: 50px 0 0;
+            padding: 17px 30px;
+        }
+
+        @media only screen and (max-width: 845px) {
+            width: 100%;
+        }
+    }
+
+    &__offer-price {
+        font-weight: 700;
+        display: flex;
+        flex: 0 0 48%;
+        justify-content: flex-end;
+        line-height: 1;
+
+        @media only screen and (max-width: 1150px) {
+            flex: initial;
+            padding-left: 120px;
+        }
+
+        @media only screen and (max-width: 845px) {
+            order: -1;
+            padding-left: 0;
+        }
+    }
+
+    &__offer-currency {
+        font-size: 12em;
+        margin-top: 100px;
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 8em;
+            margin-top: 60px;
+        }
+    }
+
+    &__offer-big-number {
+        font-size: 32em;
+        position: relative;
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 20em;
+        }
+    }
+
+    &__save {
+        position: absolute;
+        text-align: center;
+        padding: 14px 25px;
+        white-space: nowrap;
+        background: #f59a9e;
+        font-weight: 600;
+        font-size: 25px;
+        right: -10px;
+        bottom: calc(100% - 1em);
+        text-transform: uppercase;
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 16px;
+            right: -15px;
+        }
+
+        &:after {
+            content: '';
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            display: block;
+            position: absolute;
+            border-left: 0.7em solid transparent;
+            border-right: 0.7em solid transparent;
+            border-top: 0.7em solid #f59a9e;
+        }
+    }
+
+    &__offer-price-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__offer-right-cent {
+        margin-top: 55px;
+        font-size: 9em;
+
+        @media only screen and (max-width: 1150px) {
+            margin-top: 45px;
+            font-size: 7em;
+        }
+    }
+
+    &__offer-right-mo {
+        margin-bottom: 55px;
+        font-size: 6em;
+
+        @media only screen and (max-width: 1150px) {
+            margin-top: 0;
+            font-size: 4em;
+        }
+    }
+
+    &__advantages {
+        margin-top: 65px;
+
+        ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media only screen and (max-width: 1052px) {
+                flex-direction: column;
+            }
+
+            li {
+                font-size: 17px;
+
+                @media only screen and (max-width: 1052px) {
+                    padding: 5px 0;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1150px) {
+            margin-top: 130px;
+        }
+        @media only screen and (max-width: 1052px) {
+            margin-top: 50px;
+        }
     }
 }

@@ -1,0 +1,35 @@
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-color: transparent #ee545c transparent #ee545c;
+
+    &__left {
+        border-width: 10px 16px 10px 0;
+        padding-left: 35px;
+        @media only screen and (max-width: 1150px) {
+            padding-left: 18px;
+        }
+    }
+    &__right {
+        border-width: 10px 0 10px 16px;
+    }
+}
+
+.checkmark {
+    display: inline-block;
+    margin-right: 15px;
+
+    &:after {
+        content: '';
+        display: block;
+        width: 5px;
+        height: 12px;
+        border: solid #7cc576;
+        border-width: 0 4px 4px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        border-radius: 2px;
+    }
+}

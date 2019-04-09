@@ -1,2 +1,13 @@
+html,
 body {
+    margin: 0 auto;
+    height: 100%;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+}
+
+.container {
+    width: 1110px;
+    padding: 0 15px;
+    margin: auto;
 }

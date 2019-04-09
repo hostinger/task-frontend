@@ -1,5 +1,24 @@
 .banner {
-    background-size: cover;
-    background-repeat: no-repeat;
-    background: url('./assets/images/background.jpg') center;
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    padding: 70px 0 0 0;
+
+    &::before {
+        position: absolute;
+        content: '';
+        background-repeat: no-repeat;
+        background: url('../images/background.jpg') center, linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+        transform: scaleX(-1);
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        z-index: -2;
+        padding: 150px 0;
+        top: -80px;
+        background-blend-mode: overlay;
+    }
+
+    &__content-wrapper {
+    }
 }

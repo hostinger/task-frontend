@@ -82,7 +82,7 @@ function watch() {
             baseDir: dest
         }
     });
-    gulp.watch(src + '/scss/styles.scss', css);
+    gulp.watch(src + '/scss/**/*.scss', css);
     gulp.watch(src + '/*.html', html).on('change', browserSync.reload);
     gulp.watch(src + '/assets/images/**/*.*', images);
     //gulp.watch(src + '/js/**/*.js').on('change', browserSync.reload);

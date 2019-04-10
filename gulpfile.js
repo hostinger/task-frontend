@@ -8,6 +8,7 @@ const postcss = require('gulp-postcss');
 const imagemin = require('gulp-imagemin');
 const newer = require('gulp-newer');
 const imageminMozjpeg = require('imagemin-mozjpeg');
+const responsive = require('gulp-responsive');
 
 // constants
 const src = './src';
@@ -61,6 +62,23 @@ function images() {
             .src(src + '/assets/images/**/*')
             // check not to compress again
             .pipe(newer(dest + '/assets/images'))
+            .pipe(
+                responsive(
+                    {
+                        'background*.jpg': {
+                            width: 1980,
+                            rename: { suffix: '-1980' }
+                        },
+                        'logo.png': {
+                            width: 140,
+                            height: 28
+                        }
+                    },
+                    {
+                        errorOnUnusedImage: false
+                    }
+                )
+            )
             .pipe(
                 imagemin([
                     // gif

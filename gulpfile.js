@@ -75,7 +75,8 @@ function images() {
                         }
                     },
                     {
-                        errorOnUnusedImage: false
+                        errorOnUnusedImage: false,
+                        passThroughUnused: true
                     }
                 )
             )
@@ -114,7 +115,7 @@ function watch() {
     gulp.watch(src + '/scss/**/*.scss', css);
     gulp.watch(src + '/*.html', html).on('change', browserSync.reload);
     gulp.watch(src + '/assets/images/**/*.*', images);
-    gulp.watch(src + '/js/**/*.js').on('change', browserSync.reload);
+    gulp.watch(src + '/js/**/*.js', js).on('change', browserSync.reload);
 }
 
 const build = gulp.series(gulp.parallel(images, css, html, js));

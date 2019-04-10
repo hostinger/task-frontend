@@ -1,9 +1,9 @@
 .banner {
-    position: relative;
-    color: #fff;
+    color: $white;
     font-weight: 600;
-    padding-top: 70px;
     min-height: 625px;
+    padding-top: 70px;
+    position: relative;
 
     @media only screen and (max-width: 1150px) {
         min-height: 525px;
@@ -18,25 +18,24 @@
     }
 
     &::before {
-        position: absolute;
-        content: '';
         background: url('../images/background-fliped-1980.jpeg') center;
         background-repeat: no-repeat;
-        // flip with css
-        //transform: scaleX(-1);
-        height: 100%;
-        width: 100%;
         background-size: cover;
-        z-index: -1;
+        content: '';
+        height: 100%;
         padding: 0;
+        position: absolute;
         top: -80px;
+        width: 100%;
+        z-index: -1;
     }
 
     &__content-wrapper {
+        align-items: center;
         display: flex;
         flex-wrap: wrap;
+
         align-content: stretch;
-        align-items: center;
 
         @media only screen and (max-width: 1150px) {
             justify-content: center;
@@ -59,8 +58,8 @@
         font-size: 42px;
 
         &--red {
+            color: $main-red;
             text-transform: uppercase;
-            color: #ee545b;
         }
 
         @media only screen and (max-width: 1150px) {
@@ -73,8 +72,8 @@
     }
 
     &__timer {
-        display: flex;
         align-items: center;
+        display: flex;
         width: 100%;
 
         @media only screen and (max-width: 845px) {
@@ -92,57 +91,29 @@
 
     &__timer-value {
         display: block;
-        text-align: center;
         font-weight: 900;
+        text-align: center;
 
         &--number {
             font-size: 28px;
+
             @media only screen and (max-width: 1150px) {
                 font-size: 18px;
             }
         }
         &--word {
             text-transform: uppercase;
+
             @media only screen and (max-width: 1150px) {
                 font-size: 12px;
             }
         }
     }
 
-    &__button {
-        display: block;
-        font-size: 22px;
-        text-transform: uppercase;
-        margin: 50px 0 0;
-        padding: 21px 50px;
-        cursor: pointer;
-        background: #ee545b;
-        border: none;
-        border-radius: 6px;
-        color: #fff;
-        font-weight: 400;
-        white-space: nowrap;
-        transition: background 0.3s ease-in-out;
-
-        &:hover {
-            background: #e9262f;
-        }
-
-        @media only screen and (max-width: 1150px) {
-            font-size: 18px;
-            margin: 50px 0 0;
-            padding: 17px 30px;
-        }
-
-        @media only screen and (max-width: 845px) {
-            width: 100%;
-        }
-    }
-
     &__offer-price {
-        font-weight: 700;
         display: flex;
         flex: 0 0 48%;
+        font-weight: 700;
         justify-content: flex-end;
         line-height: 1;
 
@@ -152,8 +123,9 @@
         }
 
         @media only screen and (max-width: 845px) {
-            order: -1;
             padding-left: 0;
+
+            order: -1;
         }
     }
 
@@ -176,36 +148,6 @@
         }
     }
 
-    &__save {
-        position: absolute;
-        text-align: center;
-        padding: 14px 25px;
-        white-space: nowrap;
-        background: #f59a9e;
-        font-weight: 600;
-        font-size: 25px;
-        right: -10px;
-        bottom: calc(100% - 1em);
-        text-transform: uppercase;
-
-        @media only screen and (max-width: 1150px) {
-            font-size: 16px;
-            right: -15px;
-        }
-
-        &:after {
-            content: '';
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            display: block;
-            position: absolute;
-            border-left: 0.7em solid transparent;
-            border-right: 0.7em solid transparent;
-            border-top: 0.7em solid #f59a9e;
-        }
-    }
-
     &__offer-price-right {
         display: flex;
         flex-direction: column;
@@ -213,22 +155,22 @@
     }
 
     &__offer-right-cent {
-        margin-top: 55px;
         font-size: 9em;
+        margin-top: 55px;
 
         @media only screen and (max-width: 1150px) {
-            margin-top: 45px;
             font-size: 7em;
+            margin-top: 45px;
         }
     }
 
     &__offer-right-mo {
-        margin-bottom: 55px;
         font-size: 6em;
+        margin-bottom: 55px;
 
         @media only screen and (max-width: 1150px) {
-            margin-top: 0;
             font-size: 4em;
+            margin-top: 0;
         }
     }
 
@@ -236,11 +178,11 @@
         margin-top: 65px;
 
         ul {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
             list-style: none;
             padding: 0;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
 
             @media only screen and (max-width: 1052px) {
                 flex-direction: column;

@@ -24,6 +24,17 @@ function html() {
     );
 }
 
+// copy js files to destination folder
+function js() {
+    return (
+        gulp
+            .src(src + '/**/*.js')
+            .pipe(gulp.dest(dest))
+            // stream to all browsers
+            .pipe(browserSync.stream())
+    );
+}
+
 // compile scss into css
 function css() {
     // my scss file
@@ -85,12 +96,13 @@ function watch() {
     gulp.watch(src + '/scss/**/*.scss', css);
     gulp.watch(src + '/*.html', html).on('change', browserSync.reload);
     gulp.watch(src + '/assets/images/**/*.*', images);
-    //gulp.watch(src + '/js/**/*.js').on('change', browserSync.reload);
+    gulp.watch(src + '/js/**/*.js').on('change', browserSync.reload);
 }
 
-const build = gulp.series(gulp.parallel(css, images, html));
+const build = gulp.series(gulp.parallel(images, css, html, js));
 
 exports.html = html;
+exports.js = js;
 exports.css = css;
 exports.images = images;
 exports.watch = watch;

@@ -5,8 +5,13 @@
     padding-bottom: 20px;
     padding-top: 20px;
 
+    &__logo {
+        z-index: 1;
+    }
+
     &__navigation {
         width: 100%;
+        z-index: 1;
 
         ul {
             align-items: center;
@@ -48,6 +53,7 @@
 
     &__mobile-nav {
         visibility: hidden;
+        z-index: 1;
     }
 
     &__mobile-nav-holder {

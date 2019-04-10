@@ -1,20 +1,16 @@
 .banner {
-    color: $white;
+    color: #ffffff;
     font-weight: 600;
-    min-height: 625px;
-    padding-top: 70px;
+    min-height: 550px;
+    padding-top: 150px;
     position: relative;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
 
     @media only screen and (max-width: 1150px) {
-        min-height: 525px;
-    }
-
-    @media only screen and (max-width: 1052px) {
-        min-height: 560px;
-    }
-
-    @media only screen and (max-width: 845px) {
-        min-height: 830px;
+        min-height: 450px;
     }
 
     &::before {
@@ -23,9 +19,9 @@
         background-size: cover;
         content: '';
         height: 100%;
+        margin-top: -150px;
         padding: 0;
         position: absolute;
-        top: -80px;
         width: 100%;
         z-index: -1;
     }

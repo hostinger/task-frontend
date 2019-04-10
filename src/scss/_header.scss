@@ -82,6 +82,7 @@
     &__mobile-nav-holder {
         background-color: $white;
         border-radius: 5px;
+        display: none;
         left: 2%;
         min-height: 60vh;
         opacity: 0;
@@ -118,6 +119,10 @@
                     }
                 }
             }
+        }
+
+        @media only screen and (max-width: 1150px) {
+            display: initial;
         }
     }
 

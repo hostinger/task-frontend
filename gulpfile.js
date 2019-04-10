@@ -85,7 +85,7 @@ function images() {
                     imagemin.gifsicle({ interlaced: true }),
                     // jpg
                     imageminMozjpeg({
-                        quality: 50
+                        quality: 80
                     }),
                     // png
                     imagemin.optipng({ optimizationLevel: 5 }),

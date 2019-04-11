@@ -8,8 +8,7 @@ const minutes = document.getElementById('minutes');
 const seconds = document.getElementById('seconds');
 // Time calculations
 const now = new Date();
-const daysToAdd = 3;
-const countDownDate = now.setDate(now.getDate() + daysToAdd);
+const daysToAdd = 590000;
 
 // Print values to times DOM elements
 function printCounterValues(distance) {
@@ -60,6 +59,8 @@ const timer = setInterval(function() {
         // }
 
         // Find the distance between now and the count down date
+        const countDownDate = new Date();
+        countDownDate.setTime(now.getTime() + daysToAdd);
         const distance = countDownDate.getTime() - now.getTime();
 
         // Print values

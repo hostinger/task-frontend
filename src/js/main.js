@@ -9,6 +9,9 @@ const seconds = document.getElementById('seconds');
 // Time
 const now = new Date();
 const timeToAdd = 590000;
+// Save last visit time to local storage
+if (!localStorage.getItem('lastVisitTime'))
+    localStorage.setItem('lastVisitTime', Math.round(now.getTime() / 1000 * 1000));
 
 // Print values to times DOM elements
 function printCounterValues(distance) {
@@ -23,14 +26,13 @@ function printCounterValues(distance) {
 function getLastVisit() {
     let diff = now.getTime() - localStorage.getItem('lastVisitTime');
     diff = Math.round(diff / 1000 * 1000);
+    // Save last visit time to local storage
+    localStorage.setItem('lastVisitTime', Math.round(new Date().getTime() / 1000 * 1000));
 
     return diff;
 }
 
 const timer = setInterval(function() {
-    // Save last visit time to local storage
-    localStorage.setItem('lastVisitTime', Math.round(now.getTime() / 1000 * 1000));
-
     if (localStorage.getItem('distance') > 0) {
         // Get time left from local storage
         const distance = localStorage.getItem('distance');

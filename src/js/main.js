@@ -28,6 +28,9 @@ function getLastVisit() {
 }
 
 const timer = setInterval(function() {
+    // Save last visit time to local storage
+    localStorage.setItem('lastVisitTime', Math.round(now.getTime() / 1000 * 1000));
+
     if (localStorage.getItem('distance') > 0) {
         // Get time left from local storage
         const distance = localStorage.getItem('distance');
@@ -69,8 +72,6 @@ const timer = setInterval(function() {
         // Set initial value for local storage
         localStorage.setItem('distance', distance);
     }
-    // Save last visit time to local storage
-    localStorage.setItem('lastVisitTime', Math.round(now.getTime() / 1000 * 1000));
 }, 1000);
 
 ///////////////////////////

@@ -1,11 +1,17 @@
 ////////////////////////
 //////Countdown timer
 ////////////////////////
+// DOM elements
 const days = document.getElementById('days');
 const hours = document.getElementById('hours');
 const minutes = document.getElementById('minutes');
 const seconds = document.getElementById('seconds');
+// Time calculations
+const now = new Date();
+const daysToAdd = 3;
+const countDownDate = now.setDate(now.getDate() + daysToAdd);
 
+// Print values to times DOM elements
 function printCounterValues(distance) {
     // Time calculations for days, hours, minutes and seconds
     days.innerHTML = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -14,18 +20,37 @@ function printCounterValues(distance) {
     seconds.innerHTML = Math.floor((distance % (1000 * 60)) / 1000);
 }
 
+// Calculate time between visits
+function getLastVisit() {
+    let diff = now.getTime() - localStorage.getItem('lastVisitTime');
+    diff = Math.round(diff / 1000 * 1000);
+
+    return diff;
+}
+
 const timer = setInterval(function() {
     if (localStorage.getItem('distance') > 0) {
+        // Get time left from local storage
         const distance = localStorage.getItem('distance');
+        // Get how long ago last visit was
+        const diff = getLastVisit();
 
-        // Print values
-        printCounterValues(distance);
-
-        // Find the distance between now and the count down date
-        const newTime = distance - 1000;
-
-        // Set new value for local storage
-        localStorage.setItem('distance', newTime);
+        if (diff > 1000) {
+            // Run only if visitor was here later than 1s ago
+            // Calculate new time
+            const newTime = distance - diff;
+            // Print values
+            printCounterValues(newTime);
+            // Save new time to local storage
+            localStorage.setItem('distance', newTime);
+        } else {
+            // Print values
+            printCounterValues(distance);
+            // Calculate new time
+            const newTime = distance - 1000;
+            // Set new value for local storage
+            localStorage.setItem('distance', newTime);
+        }
     } else {
         // else if (localStorage.getItem('distance') == 0) {
         //     days.innerHTML = 'PA';
@@ -33,15 +58,9 @@ const timer = setInterval(function() {
         //     minutes.innerHTML = 'BAI';
         //     seconds.innerHTML = 'GĖ';
         // }
-        const countDownDate = new Date();
-        const daysToAdd = 3;
-        countDownDate.setDate(countDownDate.getDate() + daysToAdd);
-
-        // Get todays date and time
-        const now = new Date().getTime();
 
         // Find the distance between now and the count down date
-        const distance = countDownDate.getTime() - now;
+        const distance = countDownDate.getTime() - now.getTime();
 
         // Print values
         printCounterValues(distance);
@@ -49,6 +68,8 @@ const timer = setInterval(function() {
         // Set initial value for local storage
         localStorage.setItem('distance', distance);
     }
+    // Save last visit time to local storage
+    localStorage.setItem('lastVisitTime', Math.round(now.getTime() / 1000 * 1000));
 }, 1000);
 
 ///////////////////////////

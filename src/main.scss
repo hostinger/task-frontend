@@ -1,6 +1,18 @@
 @import 'style/reset';
 @import 'style/general';
 
-@import 'components/layout/header/header';
-
 @import 'components/pages/home/home';
+@import 'components/pages/not-found/not-found';
+
+@import 'components/layout/header/header';
+@import 'components/layout/header/desktop-menu/desktop-menu';
+@import 'components/layout/header/mobile-menu/mobile-menu';
+@import 'components/layout/header/navigation/navigation';
+@import 'components/layout/section-hero/section-hero';
+@import 'components/layout/section-hero/promo-pic/promo-pic';
+@import 'components/layout/section-hero/promo-info/promo-info';
+@import 'components/layout/section-hero/advantage-list/advantage-list';
+
+@import 'components/common/promo-tag/promo-tag';
+@import 'components/common/button/button';
+@import 'components/common/count-down/count-down';

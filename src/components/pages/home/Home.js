@@ -1,13 +1,12 @@
 import React from 'react';
+import SectionHero from "../../layout/section-hero/Section-hero";
 
-class Home extends React.Component {
-    render() {
-        return (
-            <main>
-                Home
-            </main>
-        )
-    }
-}
+const Home = (props) => {
+    return (
+        <div className="home">
+            <SectionHero/>
+        </div>
+    )
+};
 
 export default Home

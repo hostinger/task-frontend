@@ -1,0 +1,45 @@
+
+.desktop-menu {
+  height: 80px;
+  background: transparent;
+  box-sizing: border-box;
+  &__logo {
+    float: left;
+    line-height: 80px;
+  }
+  &__image {
+    vertical-align: middle;
+    height: 30px;
+  }
+  &__navigation {
+    float: right;
+    vertical-align: middle;
+    line-height: 80px;
+  }
+}
+
+//Media Queries
+
+@media (max-width: 1070px) {
+  .desktop-menu {
+    &__image {
+      height: 25px;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .desktop-menu {
+    &__image {
+      height: 22px;
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .desktop-menu {
+    display: none;
+  }
+}
+
+

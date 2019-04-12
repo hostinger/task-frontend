@@ -1,4 +1,40 @@
-main{
-  min-height: calc(100vh - 100px);
-  background: lightgray;
+body{
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
 }
+
+.container{
+  max-width: 1270px;
+  height: 100%;
+  margin: 0 auto;
+}
+@media (max-width: 1350px) {
+  .container{
+    max-width: 1000px;
+  }
+}
+
+@media (max-width: 1070px) {
+  .container{
+    max-width: 870px;
+  }
+}
+
+@media (max-width: 900px) {
+  .container{
+    padding: 0 30px;
+  }
+}
+
+@media (max-width: 750px) {
+  .container{
+    padding: 0 20px;
+  }
+}
+
+$host-red: #fa5258;
+$host-pink: #fb9d9e;
+
+
+
+

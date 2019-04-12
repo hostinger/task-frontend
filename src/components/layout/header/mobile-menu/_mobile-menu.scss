@@ -1,0 +1,56 @@
+.mobile-menu-opened {
+  display: none;
+}
+
+.mobile-menu-closed {
+  display: none;
+}
+
+@media (max-width: 770px) {
+  .mobile-menu-opened {
+    display: block;
+    height: 100vh;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    &__close-icon {
+      text-align: right;
+      cursor: pointer;
+      font-size: 20px;
+    }
+    &__menu {
+      display: block;
+      margin-left: 20%;
+    }
+    &__logo {
+      line-height: 80px;
+    }
+  }
+  .mobile-menu-closed {
+    display: block;
+      height: 80px;
+      background: transparent;
+      box-sizing: border-box;
+    &__logo {
+      display: inline-block;
+      line-height: 80px;
+      vertical-align: middle;
+      float: left;
+    }
+    &__image{
+      height: 30px;
+    }
+    &__burger {
+      height: 30px;
+      display: inline-block;
+      line-height: 80px;
+      vertical-align: middle;
+      float: right;
+      margin-top: 20px;
+    }
+  }
+}

@@ -1,0 +1,20 @@
+.tooltip {
+  background: $color--light-red;
+  border-radius: 2px;
+  display: inline-block;
+  padding: 10px 20px;
+  position: relative;
+  text-transform: uppercase;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 98%;
+    left: 50%;
+    width: 0;
+    transform: translateX(-50%);
+    height: 0;
+    border-top: solid 25px $color--light-red;
+    border-left: solid 25px transparent;
+    border-right: solid 25px transparent;
+  }
+}

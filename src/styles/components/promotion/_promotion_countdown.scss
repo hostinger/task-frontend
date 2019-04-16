@@ -1,0 +1,39 @@
+.promotion-countdown {
+  display: inline-block;
+  margin: 20px 0;
+  
+  > span,
+  > div {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .countdown-icon {
+    background-image: url('../public/assets/icons/countdown-icon.svg');
+    background-size: contain;
+    height: 20px;
+    width: 20px;
+
+    &.left {
+      -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      transform: rotate(180deg);
+    }
+  }
+
+  .countdown-timer {
+    > div {
+      display: inline-block;
+      margin: 0 7px;
+      text-align: center;
+      @include mq($from: tablet) {
+        margin: 0 20px;
+      }
+    } 
+
+    .timer-key {
+      font-size: 0.5em;
+      text-transform: uppercase;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.page {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1400px;
+  @include mq($from: tablet) {
+    height: 100%;
+    padding: 10px 10px 31px;
+  }
+}

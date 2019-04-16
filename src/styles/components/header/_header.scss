@@ -1,0 +1,44 @@
+//Use separate file for main_menu.
+@import './main_menu';
+
+.header {
+  background-color: $color--hostinger;
+  text-align: center;
+  padding: 20px 0;
+  @include mq($from: tablet) {
+    //Using transperant, as IE11 does not support 'unset'.
+    background-color: transparent;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-top: 30px;
+  }
+  
+  .logo {
+    background-image: url('../public/assets/images/logo.svg');
+    cursor: pointer;
+    width: 150px;
+    height: 30px;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .mobile-menu-toggle {
+    background-image: url('../public/assets/icons/burger.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    height: 30px;
+    margin-left: 40px;
+    vertical-align: middle;
+    width: 30px;
+    @include mq($from: tablet) {
+      display: none;
+    }
+
+    &.close {
+      background-image: url('../public/assets/icons/close.svg');
+    }
+  }
+}

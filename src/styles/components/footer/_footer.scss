@@ -1,0 +1,38 @@
+.footer {
+  font-size: 0.9em;
+  text-align: center;
+  margin-top: 50px;
+  @include mq($from: ipad) {
+    bottom: 0;
+    height: 31px;
+    position: fixed;
+    left: 0;
+    right: 0;
+  }
+
+  &-item {
+    color: $color--white;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 10px;
+    @include mq($from: ipad) {
+      display: inline-block;
+      margin-right: 40px;
+    }
+  }
+
+  &-icon,
+  &-text {
+    vertical-align: middle;
+  }
+
+  &-icon {
+    background-image: url('../public/assets/icons/checked.svg');
+    background-size: cover;
+    background-position: center;
+    height: 15px;
+    display: inline-block;
+    margin-right: 7px;
+    width: 15px;
+  }
+}

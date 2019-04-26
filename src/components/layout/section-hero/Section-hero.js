@@ -6,7 +6,7 @@ import PromoPic from "../../layout/section-hero/promo-pic/Promo-pic";
 import AdvantageList from "../../layout/section-hero/advantage-list/Advantage-list";
 
 import photo from '../../../assets/background-flipc.jpg'
-import Button from "../../common/button/Button";
+
 
 class SectionHero extends React.Component {
     render() {
@@ -15,19 +15,15 @@ class SectionHero extends React.Component {
                 <Header/>
                 <div className="section-hero__main">
                     <div className="container">
-                        <div className="section-hero__side-container section-hero__side-container--right">
-                            <PromoPic/>
+                        <div className="section-hero__wrapper">
+                            <div className="section-hero__side-container section-hero__side-container--right">
+                                <PromoPic/>
+                            </div>
+                            <div className="section-hero__side-container section-hero__side-container--left">
+                                <PromoInfo/>
+                            </div>
+                            <div className="clearfix"></div>
                         </div>
-                        <div className="section-hero__side-container section-hero__side-container--left">
-                            <PromoInfo/>
-                            <Button
-                                label='get started now'
-                            />
-                        </div>
-                    </div>
-                </div>
-                <div className="section-hero__footer">
-                    <div className="container">
                         <AdvantageList/>
                     </div>
                 </div>

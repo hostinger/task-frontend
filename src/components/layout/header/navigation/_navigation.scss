@@ -6,67 +6,37 @@
   }
   &__promo-message {
     position: absolute;
-    top: -15px;
-    left: 32px;
-    font-size: 12px;
+    top: -1rem;
+    left: 2rem;
+    font-size: 0.75em;
     font-weight: 700;
     color: #f7d949;
     text-transform: uppercase;
     cursor: pointer;
   }
   &__item {
-    font-size: 15px;
-    letter-spacing: 1.3px;
+    font-size: 1.05rem;
     font-weight: 600;
     color: #ffffff;
     text-transform: uppercase;
     cursor: pointer;
-    padding-left: 32px;
+    padding-left: 1.85rem;
     &:hover{
-      color: lightcoral;
-    }
-
-  }
-}
-
-@media (max-width: 1070px) {
-  .desktop-menu .navigation {
-    &__promo-message {
-      font-size: 12px;
-    }
-    &__item {
-      font-size: 14px;
-      letter-spacing: 1.3px;
-      padding-left: 15px;
-    }
-  }
-}
-
-@media (max-width: 900px) {
-  .desktop-menu .navigation{
-    &__item {
-      font-size: 12px;
-      letter-spacing: 1px;
-      padding-left: 10px;
-    }
-    &__promo-message {
-      top: -15px;
-      left: 10px;
+      color: $host-pink;
     }
   }
 }
 
 .mobile-menu-opened .navigation {
-
   &__item-container {
     position: relative;
-    line-height: 45px;
+    line-height: 6rem;
   }
   &__promo-message {
     position: absolute;
-    top: -15px;
-    left: 32px;
-    font-size: 12px;
+    top: -40%;
+    left: 0;
+    font-size: 1.8rem;
     font-weight: 700;
     color: #f7d949;
     text-transform: uppercase;
@@ -74,16 +44,27 @@
   }
   &__item {
     display: block;
-    line-height: 45px;
-    font-size: 15px;
-    letter-spacing: 1.3px;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    letter-spacing: 0.5rem;
     font-weight: 600;
     color: #ffffff;
     text-transform: uppercase;
     cursor: pointer;
-    padding-left: 32px;
     &:hover{
-      color: lightcoral;
+      color: $host-pink;
+    }
+  }
+  @media only screen and (orientation: landscape) {
+    &__item-container {
+      line-height: 4rem;
+    }
+    &__promo-message {
+      font-size: 1.5rem;
+    }
+    &__item {
+      line-height: 4rem;
+      font-size: 2rem;
     }
   }
 }

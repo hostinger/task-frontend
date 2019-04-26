@@ -1,128 +1,53 @@
 
 .section-hero {
+  &--home-page {
+    height: 46.25rem;
+    background: #4d2f92 center no-repeat;
+    background-size: cover;
+  }
   &__main {
     display: block;
-    padding-top: 130px;
-    height: 450px;
+  }
+  &__wrapper{
+    margin-top: 6rem;
+    width: 100%;
+    .clearfix:after{
+      content: '';
+      display: table;
+      clear: both;
+    }
   }
   &__side-container {
     width: 50%;
     &--left {
       float: left;
+      vertical-align: bottom;
     }
     &--right {
       float: right;
     }
   }
-
-  &--home-page {
-    height: 700px;
-    background-color: #4d2f92;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 }
 
-@media (max-width: 900px) {
-  @media only screen and (orientation: landscape) {
-    body {
-      .section-hero {
-        &__main {
-          display: block;
-          padding-top: 30px;
-          height: 200px;
-        }
-        &--home-page {
-          height: 100vh;
-        }
-      }
+@media (max-width: 950px) {
+  .section-hero {
+    &__wrapper {
+      margin-top: 2rem;
     }
   }
 }
 
 @media (max-width: 770px) {
   .section-hero {
-    &__main {
-      height: calc(100vh - 130px);
-      padding-top: 50px;
-    }
-    &__side-container {
-      width: 100%;
-      height: calc((100vh - 130px) / 2);
+    &__wrapper {
+      margin-top: 4rem;
     }
     &--home-page {
-      height: 100vh;
-    }
-  }
-  @media only screen and (orientation: landscape) {
-    body {
-      .section-hero {
-        &__main {
-          display: block;
-          padding-top: 20px;
-        }
-        &__side-container {
-          width: 50%;
-          &--left {
-            float: left;
-          }
-          &--right {
-            float: right;
-          }
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 450px) {
-  .section-hero {
-    &__main {
-      padding-top: 50px;
-    }
-  }
-  @media only screen and (orientation: landscape) {
-    .section-hero {
-      &__main {
-        padding-top: 10px;
-      }
-      &__side-container {
-        &--right {
-          display: none;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 350px) {
-  .section-hero {
-    &__main {
-      padding-top: 20px;
-    }
-  }
-}
-
-@media (max-width: 300px) {
-  .section-hero {
-    &__main {
-      padding-top: 10px;
+      height: 70rem;
     }
     &__side-container {
-      &--right {
-        display: none;
-      }
+      display: block;
+      width: 100%;
     }
   }
 }
-
-
-
-
-
-
-
-
-
-

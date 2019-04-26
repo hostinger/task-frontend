@@ -1,3 +1,4 @@
+
 .mobile-menu-opened {
   display: none;
 }
@@ -6,13 +7,13 @@
   display: none;
 }
 
-@media (max-width: 770px) {
+@media (max-width: 950px) {
   .mobile-menu-opened {
     display: block;
     height: 100vh;
     width: 100%;
     background: rgba(0, 0, 0, 0.9);
-    padding: 20px;
+    padding: 4rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -20,37 +21,43 @@
     &__close-icon {
       text-align: right;
       cursor: pointer;
-      font-size: 20px;
+      font-size: 3rem;
     }
     &__menu {
       display: block;
       margin-left: 20%;
     }
     &__logo {
-      line-height: 80px;
+      float: left;
+      line-height: 5rem;
     }
   }
   .mobile-menu-closed {
     display: block;
-      height: 80px;
-      background: transparent;
-      box-sizing: border-box;
+    height: 8rem;
+    background: transparent;
     &__logo {
       display: inline-block;
-      line-height: 80px;
       vertical-align: middle;
       float: left;
+      padding: 2.5rem 0;
     }
-    &__image{
-      height: 30px;
+    &__image {
+      height: 3rem;
+      line-height: 8rem;
+      vertical-align: middle;
     }
     &__burger {
-      height: 30px;
-      display: inline-block;
-      line-height: 80px;
-      vertical-align: middle;
+      height: 3rem;
+      line-height: 8rem;
       float: right;
-      margin-top: 20px;
+      display: inline-block;
+      padding: 2.5rem 0;
     }
   }
 }
+
+
+
+
+

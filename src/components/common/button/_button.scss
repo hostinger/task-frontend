@@ -1,13 +1,28 @@
 .btn {
-  width: 360px;
-  height: 80px;
   border: none;
   border-radius: 7px;
   background-color: #f95259;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 600;
   text-transform: uppercase;
+  padding: 1em 2.8em;
+
+  @media (max-width: 1000px) {
+    font-size: 20px;
+    @media only screen and (orientation: landscape) {
+   font-size: 18px;
+    }
+  }
+  @media (max-width: 600px) {
+    @media only screen and (orientation: landscape) {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 450px) {
+    font-size: 14px;
+  }
+
   &:hover {
    background: #d5464d;
   }
@@ -15,46 +30,8 @@
     transform: translateY(1px);
   }
   &:focus {
-    outline: 0
-  }
-}
-
-@media (max-width: 900px) {
-  .btn {
-    width: 330px;
-    height: 70px;
-    font-size: 20px;
+    outline: 0;
   }
 }
 
 
-@media (max-width: 770px) {
-  .btn {
-    margin: 30px calc((100% - 330px)/2);
-  }
-  @media only screen and (orientation: landscape) {
-    .btn {
-      margin: 10px calc((100% - 240px)/2);
-      width: 250px;
-      height: 60px;
-      font-size: 20px;
-    }
-  }
-}
-
-@media (max-width: 450px) {
-  .btn {
-    width: 280px;
-    height: 60px;
-    margin: 30px calc((100% - 280px)/2);
-    font-size: 18px;
-  }
-  @media only screen and (orientation: landscape) {
-    .btn {
-      margin: 10px calc((100% - 140px)/2);
-      width: 150px;
-      height: 30px;
-      font-size: 12px;
-    }
-  }
-}

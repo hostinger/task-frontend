@@ -1,22 +1,19 @@
 .tag{
   font-weight: 600;
-  font-size: 22px;
+  font-size: 1.3rem;
   text-transform: uppercase;
  text-align: center;
-  vertical-align: middle;
-  line-height: 55px;
   &__rectangle{
-    width: 170px;
-    height: 55px;
+    padding: 1rem 2rem;
     background-color: $host-pink;
     border-radius: 1px;
   }
   &__triangle-down{
     width: 0;
     height: 0;
-    border-left: 15px solid transparent;
-    border-right: 15px solid transparent;
-    border-top: 15px solid $host-pink;
-    margin: 0 75px;
+    border-left: 0.7rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-top: 0.7rem solid $host-pink;
+    margin: auto;
   }
 }

@@ -1,12 +1,12 @@
 
-.notFound{
+.notFound {
   background: #6c5d75;
-  &__content{
-    min-height: calc(100vh - 80px);
-  }
-  &__message{
+  min-height: 100vh;
+
+  &__message {
     font-size: 48px;
-    margin: 20vh auto;
+    margin: auto;
+    padding: 40vh 0;
     text-align: center;
   }
 }

@@ -54,6 +54,9 @@ class Clock extends React.Component {
 export default Clock
 
 
+// ---alternative, but does not work with EI9------
+
+
 // import React from 'react';
 // import Countdown, {zeroPad} from 'react-countdown-now';
 //

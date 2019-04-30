@@ -1,15 +1,18 @@
-.desktop-menu .navigation {
-  float: right;
-  &__item-container {
-    position: relative;
+.desktop-menu__navigation .navigation {
+  &__wrapper {
+    float: right;
     display: inline-block;
+    vertical-align: middle;
+    line-height: 5rem;
+    position: relative;
   }
   &__promo-message {
     position: absolute;
     top: -1rem;
-    left: 2rem;
-    font-size: 0.75em;
-    font-weight: 700;
+    left: 11rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
     color: #f7d949;
     text-transform: uppercase;
     cursor: pointer;
@@ -21,55 +24,87 @@
     text-transform: uppercase;
     cursor: pointer;
     padding-left: 1.85rem;
-    &:hover{
+    &:hover {
       color: $host-pink;
+    }
+  }
+  &__burger {
+    display: none;
+  }
+
+  @media (max-width: 770px) {
+    &__wrapper {
+      display: none;
+    }
+    &__burger {
+      display: inline-block;
+      float: right;
+      line-height: 6rem;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      &:focus {
+        outline: 0;
+      }
+    }
+    &__image {
+      height: 3rem;
+      line-height: 6rem;
+      vertical-align: middle;
     }
   }
 }
 
-.mobile-menu-opened .navigation {
-  &__item-container {
-    position: relative;
-    line-height: 6rem;
+.menu-modal__navigation .navigation {
+  display: none;
+  &__wrapper {
+    display: block;
+    margin-left: 7rem;
   }
   &__promo-message {
-    position: absolute;
-    top: -40%;
-    left: 0;
-    font-size: 1.8rem;
-    font-weight: 700;
+    top: 16rem;
+    left: 8rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.05rem;
+    font-weight: 600;
     color: #f7d949;
+    position: absolute;
     text-transform: uppercase;
-    cursor: pointer;
   }
   &__item {
     display: block;
     line-height: 6rem;
-    font-size: 2.5rem;
+    font-size: 3rem;
     letter-spacing: 0.5rem;
-    font-weight: 600;
-    color: #ffffff;
-    text-transform: uppercase;
     cursor: pointer;
-    &:hover{
+    &:hover {
       color: $host-pink;
     }
   }
+  &__burger {
+    display: none;
+  }
   @media only screen and (orientation: landscape) {
-    &__item-container {
-      line-height: 4rem;
+    &__item {
+      line-height: 3.6rem;
+      font-size: 2rem;
+      letter-spacing: 0.5rem;
+      cursor: pointer;
+      &:hover {
+        color: $host-pink;
+      }
     }
     &__promo-message {
-      font-size: 1.5rem;
-    }
-    &__item {
-      line-height: 4rem;
-      font-size: 2rem;
+      top: 11rem;
+      left: 8rem;
+      font-size: 1.1rem;
+      letter-spacing: 0.05rem;
+      font-weight: 600;
+      color: #f7d949;
+      position: absolute;
+      text-transform: uppercase;
     }
   }
 }
-
-
-
-
-

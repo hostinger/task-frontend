@@ -1,15 +1,11 @@
 
 .section-hero {
-  &--home-page {
     height: 46.25rem;
     background: #4d2f92 center no-repeat;
     background-size: cover;
-  }
-  &__main {
     display: block;
-  }
   &__wrapper{
-    margin-top: 6rem;
+    padding-top: 11rem;
     width: 100%;
     .clearfix:after{
       content: '';
@@ -32,18 +28,16 @@
 @media (max-width: 950px) {
   .section-hero {
     &__wrapper {
-      margin-top: 2rem;
+      padding-top: 7rem;
     }
   }
 }
 
 @media (max-width: 770px) {
   .section-hero {
+    height: 70rem;
     &__wrapper {
-      margin-top: 4rem;
-    }
-    &--home-page {
-      height: 70rem;
+      padding-top: 9rem;
     }
     &__side-container {
       display: block;

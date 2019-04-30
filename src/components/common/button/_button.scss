@@ -7,6 +7,8 @@
   font-weight: 600;
   text-transform: uppercase;
   padding: 1em 2.8em;
+  cursor: pointer;
+  user-select: none;
 
   @media (max-width: 1000px) {
     font-size: 20px;

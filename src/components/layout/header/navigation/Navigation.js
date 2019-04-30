@@ -1,23 +1,35 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 
+import burger from '../../../../assets/burger.svg';
 
 
-function Navigation(props) {
+const Navigation = (props) => {
+    const tabs = ['web hosting', 'cloud hosting', 'vps hosting', 'domain checker', 'website builder'];
+
+    const nav = tabs.map((tab) => {
+        return (
+            <Link to={`./${tab.replace(" ", "-")}`}
+                  onClick={props.close}
+                  className="navigation__item"
+                  key={tab}>
+                {tab}
+            </Link>
+        )
+    });
+
+
     return (
-        <nav className={props.className}>
-            <Link key="1" className='navigation__item' to='#' >web hosting</Link>
-            <div className='navigation__item-container'>
-                <p className="navigation__promo-message">on sale</p>
-                <Link key="2" className='navigation__item' to='#'>cloud hosting</Link>
+        <nav className={props.name}>
+            <div className="navigation__wrapper">
+                {nav}
+                <Link to={`./cloud-hosting`} className="navigation__promo-message">on sale</Link>
             </div>
-            <Link key="3" className='navigation__item' to='#'>vps hosting</Link>
-            <Link key="4" className='navigation__item' to='#'>domain checker</Link>
-            <Link key="5" className='navigation__item' to='#'>website builder</Link>
+            <button type="button" className="navigation__burger" onClick={props.open}>
+                <img className='navigation__image' src={burger} alt="menu"/>
+            </button>
         </nav>
     )
-}
+};
 
-export default Navigation
-
-
+export default Navigation;

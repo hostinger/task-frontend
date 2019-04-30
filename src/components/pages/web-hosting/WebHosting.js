@@ -1,13 +1,13 @@
 import React from 'react';
 
-const NotFound = (props) => {
+const WebHosting = (props) => {
     return (
         <div className="notFound">
             <div className="container">
-                <h1 className="notFound__message">Page not found</h1>
+                <h1 className="notFound__message">Web hosting</h1>
             </div>
         </div>
     )
 };
 
-export default NotFound
+export default WebHosting

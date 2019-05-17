@@ -1,5 +1,6 @@
 /* Font sizes */
-$font-family__body: "Calibri";
+$font-family__body: "Calibri", "Candara", "Segoe", "Segoe UI", "Optima", "Arial",
+  "sans-serif";
 $font-family__icons: "Font Awesome 5 Free" !default;
 
 $font-size__header: 0.8rem;
@@ -7,6 +8,7 @@ $font-size__header: 0.8rem;
 /* Colors */
 $color__text-body: $color__white;
 $color__text-discount: $color__red;
+$color__tick: $color__green;
 
 /* Margins */
 $margin__headerMenu: 10px;

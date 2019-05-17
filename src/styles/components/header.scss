@@ -1,0 +1,35 @@
+.contentHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.topnav {
+  overflow: hidden;
+}
+
+.topnav div {
+  float: right;
+}
+
+.topnav a {
+  padding: 1em 1em 1em 1em;
+  white-space: nowrap;
+  text-transform: uppercase;
+  float: left;
+  display: block;
+}
+
+.topnav a.icon {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  .topnav div a {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}

@@ -1,4 +1,6 @@
 .container__background {
+  background-image: url("../../../assets/background.jpg");
+  background-size: cover;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -8,6 +10,6 @@
 .container__content {
   position: relative;
   margin: 0 auto;
-  width: 60%;
+  width: 70%;
   height: 100%;
 }

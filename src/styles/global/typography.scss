@@ -14,9 +14,20 @@
     color: $color__red;
   }
 
-  .countdown__text-words {
-    text-transform: uppercase;
-    font-size: $font-size__countdown-text;
+  .countdown {
+    &__text-words {
+      text-transform: uppercase;
+      font-size: $font-size__countdown-text;
+    }
+
+    &__text-numbers {
+      font-size: $font-size__countdown-numbers;
+    }
+
+    &__icons i {
+      color: $color__red;
+      font-size: $font-size__countdown-numbers;
+    }
   }
 
   #button__getstarted {
@@ -25,20 +36,20 @@
     color: $color__white;
   }
 
-  .countdown__text-numbers {
-    font-size: $font-size__countdown-numbers;
-  }
-
-  .countdown__icons i {
-    color: $color__light-red;
-    font-size: $font-size__countdown-numbers;
-  }
-
   header a {
     font-size: $font-size__header;
   }
 
   footer a i {
     color: $color__tick;
+  }
+
+  #arrow-box {
+    background: $color__light-red;
+    font-size: $font-size__dialog;
+
+    &:after {
+      border-top-color: $color__light-red;
+    }
   }
 }

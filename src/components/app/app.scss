@@ -1,6 +1,6 @@
 .container__background {
   background-image: url("../../../assets/background.jpg");
-  background-position-y: -160px;
+  // background-position-y: -160px;
   background-size: cover;
   display: flex;
   flex-direction: column;
@@ -15,7 +15,6 @@
 
 .container__darken {
   background-color: rgba(0, 0, 0, 0.5);
-  margin: 0 auto;
   width: 100%;
   height: 100%;
   -webkit-transform: scaleX(-1);

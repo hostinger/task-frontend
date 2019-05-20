@@ -20,17 +20,10 @@ aside {
   }
 }
 
-$font_dollar: 20rem;
-$font_cents: $font_dollar * 0.3;
-$font_month: $font_dollar * 0.2;
-$font_currency: $font_dollar * 0.3;
-$font_dialog: $font_dollar * 0.1;
-
 .price {
   &__dialog {
     grid-column-start: 2;
     grid-row-start: 1;
-    font-size: $font_dialog;
     align-self: start;
   }
 
@@ -39,27 +32,23 @@ $font_dialog: $font_dollar * 0.1;
     grid-column-end: 2;
     grid-row-start: 1;
     grid-row-end: 3;
-    font-size: $font_dollar;
     justify-self: center;
   }
 
   &__cents {
     grid-column-start: 3;
     grid-row-start: 1;
-    font-size: $font_cents;
     align-self: end;
   }
 
   &__month {
     grid-column-start: 3;
     grid-row-start: 2;
-    font-size: $font_month;
   }
 
   &__currency {
     grid-column-start: 1;
     grid-row-start: 1;
-    font-size: $font_currency;
     justify-self: end;
     align-self: end;
   }

@@ -52,4 +52,26 @@
       border-top-color: $color__light-red;
     }
   }
+
+  #price {
+    &__dollar {
+      font-size: $font-size__price-dollar;
+    }
+
+    &__cents {
+      font-size: $font-size__price-cents;
+    }
+
+    &__month {
+      font-size: $font-size__price-month;
+    }
+
+    &__currency {
+      font-size: $font-size__price-currency;
+    }
+
+    &__dialog {
+      font-size: $font-size__price-dialog;
+    }
+  }
 }

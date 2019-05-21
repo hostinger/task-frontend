@@ -8,6 +8,10 @@ I also built a bonus desktop version with Flexbox for newer browsers: [this repo
 - HTML and Scss files contain comments for information
 - Source assets are divided into components and then compiled into one file using Gulp
 
+### Down sides
+- Responsive layout works badly on landscape mobiles
+- Images not optimized, no lazy load
+
 ### Prerequisites
 Node.js
 
@@ -24,7 +28,7 @@ npm i
 gulp watch
 ```
 ### Built With:
-- Javascript
+- Vanilla Js
 - Sass
 - Gulp
 - gulp-clean-css

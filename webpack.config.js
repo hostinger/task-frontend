@@ -36,23 +36,16 @@ module.exports = {
         ]
       },
       {
-        test: /\.svg$/,
+        test: /\.(png|jp(e*)g|svg)$/,
         use: [
           {
-            loader: "babel-loader"
-          },
-          {
-            loader: "react-svg-loader",
+            loader: "url-loader",
             options: {
-              jsx: true
+              limit: 4000,
+              name: "images/[hash]-[name].[ext]"
             }
           }
         ]
-      },
-      {
-        test: /\.(png|jpg)$/,
-        exclude: /node_modules/,
-        loader: "url-loader"
       }
     ]
   },

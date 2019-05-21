@@ -1,3 +1,5 @@
+This is a take-home challenge from a company named Hostinger (their task description below).
+
 [Live Version](https://martynas-hostinger.000webhostapp.com)
 
 I also built a bonus desktop version with Flexbox for newer browsers: [this repo](https://github.com/mgalkus/task-frontend-flexbox).

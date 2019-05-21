@@ -38,6 +38,17 @@ nav {
   }
 }
 
+.menu__tagged {
+  position: relative;
+}
+
+.menu__tagged_tag {
+  position: absolute;
+  font-size: 0.8em;
+  color: #ebe03e;
+  top: -0.4rem;
+  left: 0.5rem;
+}
 @media only screen and (min-width: 1200px) {
   .menu {
     align-self: center;
@@ -51,7 +62,7 @@ nav {
 
   .nav_toggle:checked ~ {
     & .menu {
-      background: rgba(16, 18, 30, 0.9);
+      background: rgba(16, 18, 30, 0.8);
 
       display: grid;
       grid-column-start: 1;
@@ -60,10 +71,15 @@ nav {
       justify-self: end;
 
       position: absolute;
+
+      a {
+        width: 12rem;
+        text-align: right;
+      }
     }
 
     & .burger_menu {
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(16, 18, 30, 0.8);
     }
   }
 
@@ -78,6 +94,10 @@ nav {
   }
 
   .menu {
+    display: none;
+  }
+
+  .menu__tagged_tag {
     display: none;
   }
 }

@@ -19,7 +19,10 @@ const Header = () => (
           </a>
           <div className={styles.menu}>
             <a>Web Hosting</a>
-            <a>Cloud Hosting</a>
+            <a className={styles.menu__tagged}>
+              <span>Cloud Hosting</span>
+              <span className={styles.menu__tagged_tag}>on sale</span>
+            </a>
             <a>VPS Hosting</a>
             <a>Domain Checker</a>
             <a>Website Builder</a>

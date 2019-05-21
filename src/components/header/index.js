@@ -15,7 +15,7 @@ const Header = () => (
             <i className="fas fa-bars" />
           </label>
           <a className={styles.logo}>
-            <img src="../../assets/logo.svg" />
+            <img src="../../assets/logo.png" alt="logo" />
           </a>
           <div className={styles.menu}>
             <a>Web Hosting</a>

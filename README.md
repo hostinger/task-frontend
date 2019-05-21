@@ -2,7 +2,7 @@
 
 ## Demo on firebase
 
-https://hostinger-app.firebaseapp.com/
+https://hostinger-demo.firebaseapp.com/
 
 ## Run app on computer
 

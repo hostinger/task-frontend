@@ -16,13 +16,16 @@ nav {
 }
 
 .logo {
-  padding: 0.5rem;
-  padding-top: 0.95rem;
+  padding-top: 0.4rem;
 
   grid-column: 1;
   grid-row: 1;
   justify-self: start;
   align-self: center;
+
+  img {
+    height: 2.2rem;
+  }
 }
 
 .menu {

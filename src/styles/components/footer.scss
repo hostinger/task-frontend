@@ -1,8 +1,5 @@
 footer {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  height: auto;
 }
 
 a {
@@ -31,7 +28,7 @@ $menuItems: (Item1, Item2, Item3, Item4);
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .contentFooter {
     grid-template-areas:
       "Item1"

@@ -1,0 +1,43 @@
+.priceBox{
+    width: 100%;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    
+}
+.curency{
+    color: #fff;
+    font-size: 8em;
+    font-weight: 700;
+    padding-top: 1.5em;
+}
+.bigPrice{
+    color: #fff;
+    font-size: 20em;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+}
+.centBox{
+    display: inline-block;
+    padding-top: 0em;
+    .cents{
+        color: #fff;
+        font-size: 6em;
+        font-weight: 700;
+        padding-top: 2em;
+        display: inline-block;
+        vertical-align: middle;
+        h1{
+            margin-bottom: 30px;
+        }
+    }
+    .period{
+        color: #fff;
+        font-size: 4em;
+        font-weight: 700;
+        // padding-top: -1.8em;
+        // padding-left: .2em;
+        display: inline-block;
+        vertical-align: top;
+    }
+}

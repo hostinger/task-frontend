@@ -1,0 +1,23 @@
+.time_holder{
+    display: flex;
+    justify-content: center;
+    box-align: center;
+    flex-direction: column;
+    min-width: 4em;
+    margin: 0 auto;
+    color: #fff;
+    text-align: center;
+    .text{
+        font-size: 1.4em;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+    }
+    .value{
+        font-size: 3.87em;
+        margin: 20px;
+        margin-bottom: -5px;
+        font-weight: 700;
+        
+    }
+}

@@ -1,0 +1,26 @@
+.sticker{
+    background-color: #fd9c9c;
+    font-size: 2em;
+    position: absolute;
+    padding: 13px 30px;
+    display: inline-block;
+    top: 80px;
+    left: -150px;
+    z-index: 2;
+    p{
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1.5px;
+    }
+    .arrow {
+        background-color: #fd9c9c;
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        bottom: -15px;
+        left: 65px;
+        z-index: 1;
+        transform: rotateZ(-45deg);
+    }
+
+}

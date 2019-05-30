@@ -35,9 +35,29 @@
         color: #fff;
         font-size: 4em;
         font-weight: 700;
-        // padding-top: -1.8em;
-        // padding-left: .2em;
         display: inline-block;
         vertical-align: top;
+    }
+}
+@media screen and (max-width: 1024px) {
+    .curency{
+        font-size: 4em;
+        display: inline-block;
+        width: 23%;
+    }
+    .bigPrice{
+        font-size: 10em;
+        display: inline-block;
+        width: 40%;
+    }
+    .centBox{
+        display: inline-block;
+        width: 37%;
+        .cents{
+            font-size: 3em;
+        }
+        .period{
+            font-size: 2em;
+        }
     }
 }

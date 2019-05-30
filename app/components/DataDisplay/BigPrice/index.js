@@ -5,11 +5,7 @@
  */
 
 import React, { memo } from 'react';
-// import PropTypes from 'prop-types';
-// import styled from 'styled-components';
-// import { FormattedMessage } from 'react-intl';
 import Typography from '../Typography/Loadable';
-// import messages from './messages';
 import style from './style.scss';
 import Sticker from '../Sticker/Loadable';
 

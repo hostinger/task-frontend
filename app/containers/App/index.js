@@ -9,20 +9,17 @@
 
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-
 import HomePage from 'containers/HomePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
-
 import GlobalStyle from '../../global-styles';
 import style from './style.scss';
 import NavMenu from '../../components/Navigation/Menus/Loadable';
 import { brand, menu } from '../MockData/MenuData';
-// import BigPrice from '../../components/DataDisplay/BigPrice/Loadable';
 
 export default function App() {
   return (
     <div>
-      <div className={`${style.content} container`}>
+      <div className={`${style.content} `}>
         <NavMenu className={style.navigation} brand={brand} menuList={menu} />
       </div>
       <div className={`${style.bg} `}>

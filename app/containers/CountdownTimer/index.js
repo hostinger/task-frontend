@@ -59,7 +59,8 @@ export function CountdownTimer(prop) {
   ];
 
   return (
-    <div>
+    <div className="new-timer ">
+      <div className="new-timer__triangle-left" />
       <div className="new-timer__holder ">
         {timer.map((time, index) => (
           <TimeHolder
@@ -69,6 +70,7 @@ export function CountdownTimer(prop) {
           />
         ))}
       </div>
+      <div className="new-timer__triangle-right" />
     </div>
   );
 }

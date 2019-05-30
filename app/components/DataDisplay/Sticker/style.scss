@@ -1,6 +1,8 @@
+$sticker-primary-color: #fd9c9c;
+$white-color: #fff;
 .sticker{
-    background-color: #fd9c9c;
-    font-size: 2em;
+    background-color: $sticker-primary-color;
+    font-size: calc(14px + (26 - 20) * ((100vw - 300px) / (1600 - 300)));
     position: absolute;
     padding: 13px 30px;
     display: inline-block;
@@ -8,12 +10,12 @@
     left: -150px;
     z-index: 2;
     p{
-        color: #fff;
+        color: $white-color;
         text-transform: uppercase;
         letter-spacing: 1.5px;
     }
     .arrow {
-        background-color: #fd9c9c;
+        background-color: $sticker-primary-color;
         position: absolute;
         width: 30px;
         height: 30px;
@@ -23,4 +25,9 @@
         transform: rotateZ(-45deg);
     }
 
+}
+@media screen and (max-width: 1024px) {
+    .sticker{
+        top: 0px;
+    }
 }

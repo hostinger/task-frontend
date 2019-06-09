@@ -1,0 +1,18 @@
+@import "./styles/variables/all";
+@import "./styles/global/all";
+
+:global {
+  html,
+  body {
+    margin: 0 auto;
+    height: 100%;
+  }
+
+  #root {
+    height: 100%;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+}

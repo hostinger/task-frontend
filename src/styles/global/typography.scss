@@ -1,0 +1,76 @@
+:global {
+  body {
+    font-family: $font-family__body;
+    color: $color__text-body;
+  }
+
+  h1 {
+    font-size: $font-size__h1;
+    margin: 0;
+  }
+
+  .highlight {
+    color: $color__red;
+  }
+
+  .countdown {
+    &__text-words {
+      text-transform: uppercase;
+      font-size: $font-size__countdown-text;
+    }
+
+    &__text-numbers {
+      font-size: $font-size__countdown-numbers;
+    }
+
+    &__icons i {
+      color: $color__red;
+      font-size: $font-size__countdown-numbers;
+    }
+  }
+
+  #button__getstarted {
+    text-transform: uppercase;
+    background-color: $color__red;
+    color: $color__white;
+  }
+
+  header a {
+    font-size: $font-size__header;
+  }
+
+  footer a i {
+    color: $color__tick;
+  }
+
+  #arrow-box {
+    background: $color__light-red;
+    font-size: $font-size__dialog;
+
+    &:after {
+      border-top-color: $color__light-red;
+    }
+  }
+
+  #price {
+    &__dollar {
+      font-size: $font-size__price-dollar;
+    }
+
+    &__cents {
+      font-size: $font-size__price-cents;
+    }
+
+    &__month {
+      font-size: $font-size__price-month;
+    }
+
+    &__currency {
+      font-size: $font-size__price-currency;
+    }
+
+    &__dialog {
+      font-size: $font-size__price-dialog;
+    }
+  }
+}

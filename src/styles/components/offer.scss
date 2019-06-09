@@ -1,0 +1,20 @@
+.countdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.countdown__text {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.button__getstarted {
+  height: 50px;
+  width: 250px;
+  border: 0;
+  border-radius: 5px;
+}

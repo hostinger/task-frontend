@@ -1,0 +1,39 @@
+footer {
+  width: 100%;
+}
+
+a {
+  padding-bottom: 0.25em;
+  margin: 0 auto;
+}
+
+$menuItems: (Item1, Item2, Item3, Item4);
+@for $i from 1 through length($menuItems) {
+  .menu#{$i} {
+    grid-area: #{i};
+  }
+}
+
+.contentFooter {
+  display: grid;
+  grid-template-areas: "Item1 Item2 Item3 Item4";
+  overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+  .contentFooter {
+    grid-template-areas:
+      "Item1 Item2"
+      "Item3 Item4";
+  }
+}
+
+@media (max-width: 600px) {
+  .contentFooter {
+    grid-template-areas:
+      "Item1"
+      "Item2"
+      "Item3"
+      "Item4";
+  }
+}

@@ -1,0 +1,61 @@
+
+.promo-pic {
+  width: 90%;
+  height: 28rem;
+  margin-left: 4rem;
+  position: relative;
+  font-size: 1rem;
+  @media (max-width: 1350px) {
+    font-size: 0.9rem;
+  }
+  @media (max-width: 900px) {
+    font-size: 0.8rem;
+  }
+  @media (max-width: 850px) {
+    font-size: 0.89rem;
+  }
+  @media (max-width: 770px) {
+    width: 60%;
+    margin: auto;
+    text-align: center;
+  }
+  @media (max-width: 580px) {
+    width: 70%;
+  }
+  @media (max-width: 400px) {
+    width: 85%;
+  }
+
+  &__currency {
+    display: inline-block;
+    font-size: 10em;
+    font-weight: 700;
+    vertical-align: top;
+    padding-top: 0.6em;
+  }
+  &__dollars {
+    display: inline-block;
+    font-size: 28em;
+    font-weight: 700;
+    vertical-align: top;
+  }
+  &__wrapper{
+    display: inline-block;
+    vertical-align: top;
+    padding-top: 5em;
+  }
+  &__cents {
+    font-size: 8em;
+    font-weight: 700;
+    margin-bottom: 0.6em;
+  }
+  &__term {
+    font-size: 4.7em;
+    font-weight: 600;
+  }
+  &__tag {
+    position: absolute;
+    top: -5%;
+    left: 35%;
+  }
+}

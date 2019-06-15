@@ -1,0 +1,19 @@
+.tag{
+  font-weight: 600;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+ text-align: center;
+  &__rectangle{
+    padding: 1rem 2rem;
+    background-color: $host-pink;
+    border-radius: 1px;
+  }
+  &__triangle-down{
+    width: 0;
+    height: 0;
+    border-left: 0.7rem solid transparent;
+    border-right: 0.7rem solid transparent;
+    border-top: 0.7rem solid $host-pink;
+    margin: auto;
+  }
+}

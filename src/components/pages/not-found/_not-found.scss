@@ -1,0 +1,12 @@
+
+.notFound {
+  background: #6c5d75;
+  min-height: 100vh;
+
+  &__message {
+    font-size: 48px;
+    margin: auto;
+    padding: 40vh 0;
+    text-align: center;
+  }
+}

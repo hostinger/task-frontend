@@ -1,0 +1,35 @@
+.advantageList {
+  width: 100%;
+  margin-top: 5rem;
+  text-align: center;
+  &__item {
+    padding: 0.5rem 0;
+    display: inline-block;
+    margin-right: 3.1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .icon {
+    display: inline-block;
+    height: 1rem;
+    margin-right: 0.6rem;
+  }
+}
+
+@media (max-width: 1250px) {
+  .advantageList {
+    &__item {
+      font-size: 1rem;
+      margin-right: 1.2rem;
+    }
+  }
+}
+@media (max-width: 950px) {
+  .advantageList {
+    display: none;
+  }
+}

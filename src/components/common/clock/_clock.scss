@@ -1,0 +1,22 @@
+.countDown{
+  &__wrapper{
+    display: inline-block;
+    margin-right: 3em;
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+  &__number{
+    margin-bottom: 0.3em;
+    font-size: 2em;
+    font-weight: 700;
+    text-align: center;
+
+  }
+  &__label{
+    font-size: 0.75em;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,39 @@
+.btn {
+  border: none;
+  border-radius: 7px;
+  background-color: #f95259;
+  color: #ffffff;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1em 2.8em;
+  cursor: pointer;
+  user-select: none;
+
+  @media (max-width: 1000px) {
+    font-size: 20px;
+    @media only screen and (orientation: landscape) {
+   font-size: 18px;
+    }
+  }
+  @media (max-width: 600px) {
+    @media only screen and (orientation: landscape) {
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 450px) {
+    font-size: 14px;
+  }
+
+  &:hover {
+   background: #d5464d;
+  }
+  &:active {
+    transform: translateY(1px);
+  }
+  &:focus {
+    outline: 0;
+  }
+}
+
+

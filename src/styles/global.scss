@@ -1,0 +1,9 @@
+$red-light: rgb(252,80,85);
+$green-light: rgb(124,198,118);
+$pink-light: rgb(253,156,156);
+
+@media (min-width: 1200px) {
+	.container {
+    	max-width: 1140px;
+	}
+}

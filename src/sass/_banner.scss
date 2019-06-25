@@ -106,12 +106,15 @@
 }
 
 .hostinger__benefits {
-  padding-top: 150px;
+  padding-top: 50px;
   display:flex;
   justify-content:space-between;
   flex-wrap: wrap;
   @media(max-width:1200px){
     padding-top: 50px;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   &-item {
     display: flex;

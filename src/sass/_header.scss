@@ -1,0 +1,87 @@
+header {
+  position:relative;
+  display:block;
+  width:100%;
+  background:transparent;
+  color:$white;
+  height: 75px;
+  padding: 40px 0px 0px;
+
+  a {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1rem;
+    letter-spacing: .1rem;
+    line-height: 2.4rem;
+    font-weight: 500;
+    transition:all .4s;
+    &:hover{
+      opacity:0.75;
+    }
+  }
+  .hostinger__logo{
+    
+    position: absolute;
+    top:50%; left: 15px;
+    @include translateY(-50%);
+    img {
+      max-width: 140px;
+    }
+  }
+  .hostinger__menu {
+    margin-left: 250px;
+    position:absolute;
+    top:50%; left: unset;
+    right: 15px;
+    @include translateY(-50%);
+    @media(max-width:1200px) {
+      left: unset;
+      right: 15px;
+    }
+   
+    ul {
+      .hostinger__menu-i{
+        display:none;
+        @media(max-width:1200px) {
+          display:block!important;
+        }
+      }
+      li{
+      list-style-type: none;
+      display: inline-block;
+      margin-left:1rem;
+      @media(max-width:1200px) {
+        display:none;
+      }
+    }
+      li &:hover {
+        color:$white;
+        opacity:0.75;
+        text-transform: none;
+
+      }
+      a span {
+        color: #FFC800;
+        position: absolute;
+        transform: translate(0, -50px);
+        font-size: 10px!important;
+        letter-spacing: 0;
+        line-height: 2.4rem;
+        display:flex;
+        font-weight:600;
+        
+      }
+    }
+  }
+
+  nav,
+  nav ul,
+  nav ul li {
+    margin: 0;
+    padding: 0;
+    margin-left:1rem;
+
+  }
+
+
+}

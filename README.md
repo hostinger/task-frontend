@@ -1,29 +1,5 @@
-# task-frontend
+Task completed using Vue.js, scss and webpack.
 
-## Project setup
-```
-npm install
-```
+Hosted site: https://ggvidas.github.io/task-frontend/public/index.html
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Project can be run with webpack using npm run dev or without, using npm run serve.

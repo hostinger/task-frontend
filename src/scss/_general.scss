@@ -1,0 +1,49 @@
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+a,
+p,
+button {
+  color: white;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+// PRIMARY COLORS
+
+$white: #ffffff;
+$dark-pink: #fc5055;
+$light-pink: #fd9c9c;
+$purple: #6747c7;
+$yellow: #ffe400;
+
+%triangle-downwards {
+    width: 0;
+    height: 0;
+    border-left: .9rem solid transparent;
+    border-right: .9rem solid transparent;
+    border-top: 1rem solid $light-pink;
+}
+
+%default-flex {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+%font-default {
+    color: $white;
+    font-weight: bold;
+}
+
+
+

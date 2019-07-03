@@ -1,0 +1,137 @@
+
+// NAVBAR -------------------------------------------------------------
+
+nav {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  padding: 1rem 1rem;
+}
+.nav-container {
+  @extend %default-flex;
+  justify-content: space-between;
+  margin: auto;
+  max-width: 1100px;
+}
+
+.nav-container a {
+  padding: 1rem 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.logo-container {
+  @extend %default-flex;
+}
+
+.nav-link-container {
+  @extend %default-flex;
+}
+
+.nav-item {
+  @extend %default-flex;
+  position: relative;
+}
+
+.cloud-hosting::before {
+  content: "ON SALE";
+  color: #ffe400;
+  position: absolute;
+  top: 0.2rem;
+  font-size: 0.7rem;
+}
+
+.nav-item-box {
+  display: none;
+  width: 100%;
+  top: -5rem;
+  left: 0;
+  height: 5rem;
+  background-color: $dark-pink;
+  position: absolute;
+  animation-name: nav-item-box;
+  animation-duration: 0.2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nav-item-box {
+  from {
+    top: -5rem;
+    opacity: 0;
+  }
+  to {
+    top: -1rem;
+    opacity: 1;
+    z-index: -1;
+  }
+}
+
+.burger-icon {
+  margin: 1rem 0.5rem; //mixin for navbar items
+  display: none;
+  }
+
+// NAVBAR MODAL -------------------------------------------
+
+
+#modal {
+  width: 100%;
+  height: 100vh;
+  display: none;
+  position: fixed;
+  z-index: 3;
+  background-color: #6747c7;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  animation-name: modal-animation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes modal-animation {
+  from {
+  top: -20rem;
+  opacity: 0;
+  }
+  to {
+  top: 0rem;
+  opacity: 1;
+  }
+}
+
+#modal {
+ a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    margin: 1rem;
+    padding: .5rem;
+    border: solid white;
+  }
+  a:hover,
+  a:active {
+    background-color: $dark-pink;
+    border: solid $dark-pink;
+  }
+}
+  
+  .close-icon-container {
+    width: 100%;
+  }
+
+  .close-icon {
+    width: 3rem;
+    display: block;
+    margin: auto;
+  }
+
+@media only screen and (max-width: 670px) {
+  .nav-link-container {
+      display: none;
+    }
+    .burger-icon {
+      display: block;
+    }
+}

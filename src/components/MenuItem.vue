@@ -1,6 +1,7 @@
 <template>
   <div class="menu-item">
-    <a :href="url">{{ name }}</a>
+    <div class="sale" v-if="onSale">On sale</div>
+    <a class="link" :href="url">{{ name }}</a>
   </div>
 </template>
 
@@ -25,4 +26,30 @@ export default {
 </script>
 
 <style lang="scss">
+.menu-item {
+  padding: 0 1vw;
+  min-height: 56px;
+  font-size: 100%;
+}
+%menu-text {
+  text-transform: uppercase;
+  color: $white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-family: 'H','Trebuchet MS',Helvetica;
+  font-weight: 1000;
+  letter-spacing: .1em;
+  line-height: 56px;
+}
+.link {
+  @extend %menu-text;
+}
+.sale {
+  @extend %menu-text;
+  color: $yellow;
+  position: absolute;
+  margin-top: 0.5rem;
+  font-size: 0.7rem;
+  line-height: 0.7rem;
+}
 </style>

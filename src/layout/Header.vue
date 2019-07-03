@@ -2,10 +2,10 @@
   <div class="header">
     <Logo></Logo>
     <div class="menu">
-      <template v-for="(item, index) in menuItems">
+      <template v-for="(item, index) in menu">
         <MenuItem
           :name="item.name"
-          :onSale="item.onSale"
+          :onSale="item.name === saleItem"
           :url="item.url"
           :key="index"
         ></MenuItem>
@@ -24,19 +24,25 @@ export default {
     Logo,
     MenuItem
   },
-  data() {
-    return {
-      menuItems: [
-        { name: 'Web hosting', onSale: false, url: '#' },
-        { name: 'Cloud hosting', onSale: true, url: '#' },
-        { name: 'VPS hosting', onSale: false, url: '#' },
-        { name: 'Domain Checker', onSale: false, url: '#' },
-        { name: 'Website builder', onSale: false, url: '#' },
-      ]
-    }
+  props: {
+    menu: {
+      type: Array,
+      required: true
+    },
+    saleItem: String
   }
 }
 </script>
 
 <style lang="scss">
+.header, .menu {
+  display: flex;
+  flex-direction: row;
+}
+.header {
+  max-width: 70vw;
+  padding: 10px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
 </style>

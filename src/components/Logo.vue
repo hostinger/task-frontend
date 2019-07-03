@@ -15,5 +15,6 @@ export default {
   background-size: contain;
   height: 28px;
   width: 140px;
+  margin: 12px 0px 16px;
 }
 </style>

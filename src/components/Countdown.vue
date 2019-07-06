@@ -46,18 +46,14 @@ export default {
   margin-right: 30%;
 }
 .countdown {
-  display: flex;
-  flex-direction: row;
-  font-family: $mainFont;
+  @include flex(row, space-between);
   color: $white;
   font-weight: 700;
-  justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
 }
 .number {
-  display: flex;
-  flex-direction: column;
+  @include flex(column, space-between);
   font-size: 2rem;
   text-align: center;
 }

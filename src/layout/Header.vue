@@ -37,14 +37,9 @@ export default {
 
 <style lang="scss">
 .header, .menu {
-  display: flex;
-  flex-direction: row;
+  @include flex(row, space-between);
 }
 .header {
-  max-width: 70vw;
-  padding: 10px;
-  margin: 0 auto;
-  justify-content: space-between;
-  width: 100%
+  @include center(70vw, 10px);
 }
 </style>

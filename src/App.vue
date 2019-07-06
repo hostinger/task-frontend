@@ -85,12 +85,12 @@ body, html {
   margin: 0px;
 }
 #app {
+  @include flex(column, space-between);
+  font-family: $mainFont;
   background-color: $white;
   background-image: url('assets/background.jpg');
   background-size: cover;
+  background-position: center;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 </style>

@@ -14,7 +14,6 @@ export default {
 
 <style lang="scss">
 .offer {
-  font-family: $mainFont;
   color: $white;
   font-weight: 700;
   font-size: 3rem;

@@ -26,17 +26,14 @@ export default {
 
 <style lang="scss">
 .price {
-  display: flex;
-  flex-direction: column;
+  @include flex(column, center);
   align-content: center;
-  font-family: $mainFont;
   color: $white;
   font-weight: 700;
   font-size: 3rem;
 }
 .price-container {
-  display: flex;
-  flex-direction: row;
+  @include flex(row, center);
 }
 .price-discount {
   background: $pink;
@@ -70,10 +67,8 @@ export default {
   line-height: 30rem;
 }
 .cents-container {
-  display: flex;
-  flex-direction: column;
+  @include flex(column, space-between);
   font-size: 10rem;
-  justify-content: space-between;
   padding: 2rem;
 }
 .rate {

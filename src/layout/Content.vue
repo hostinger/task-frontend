@@ -62,21 +62,14 @@ export default {
 
 <style lang="scss">
 .content {
-  display: flex;
-  flex-direction: row;
-  max-width: 70vw;
-  width: 100%;
-  padding: 10vh 0;
-  margin: 0 auto;
-  justify-content: space-between;
+  @include flex(row, space-between);
+  @include center(70vw, 10px);
   align-items: center;
   flex-grow: 1;
 }
 .section {
+  @include flex(column, center);
   flex-grow: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   max-width: 50%;
   height: 100%;
 }

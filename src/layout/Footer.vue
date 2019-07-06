@@ -24,21 +24,14 @@ export default {
 
 <style lang="scss">
 .footer {
-  display: flex;
-  flex-direction: row;
-  max-width: 70vw;
-  padding: 10px;
-  margin: 0 auto;
-  justify-content: space-between;
-  width: 100%;
-  font-family: $mainFont;
+  @include flex(row, space-between);
+  @include center(70vw, 10px);
   color: $white;
   font-size: 1.3rem;
   font-weight: 500;
 }
 .footer-item {
-  display: flex;
-  flex-direction: row;
+  @include flex(row, space-between);
 }
 .check {
   margin-right: 1rem;

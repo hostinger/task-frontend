@@ -28,6 +28,12 @@ export default {
   padding: 0 1vw;
   min-height: 56px;
   font-size: 100%;
+  @media (max-width: 1500px) {
+    padding: 0 0.5vw;
+  }
+  @media (max-width: 900px) {
+    min-height: 2rem;
+  }
 }
 %menu-text {
   text-transform: uppercase;
@@ -40,6 +46,9 @@ export default {
 }
 .link {
   @extend %menu-text;
+  @media (max-width: 900px) {
+    line-height: 2rem;
+  }
 }
 .sale {
   @extend %menu-text;
@@ -48,5 +57,8 @@ export default {
   margin-top: 0.5rem;
   font-size: 0.7rem;
   line-height: 0.7rem;
+  @media (max-width: 900px) {
+    position: relative;
+  }
 }
 </style>

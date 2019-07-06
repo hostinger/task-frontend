@@ -56,7 +56,7 @@ export default {
   border-top-color: $pink;
   border-bottom: 0;
   margin-left: -0.562em;
-  margin-bottom: -0.562em;
+  margin-bottom: -0.540em;
 }
 .dollar-sign {
   font-size: 10rem;

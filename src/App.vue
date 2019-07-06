@@ -1,6 +1,11 @@
 <template>
   <div id="app">
-    <Header :menu="menu" :saleItem="sale.item"></Header>
+    <Header
+      :menu="menu"
+      :saleItem="sale.item"
+      :windowWidth="windowWidth"
+    >
+    </Header>
     <Content :sale="sale"></Content>
     <Footer :footer="footer"></Footer>
   </div>
@@ -43,12 +48,19 @@ export default {
         'Superior Speed Performance',
         '24/7 Support Chat',
         '30-Day Money-Back Guarantee'
-      ]
+      ],
+      windowWidth: window.innerWidth
     }
   },
   mounted () {
     setInterval(this.incrementTime, 1000);
+    this.incrementTime();
     this.sale.discount = this.calculateDiscount();
+    this.$nextTick(() => {
+      window.addEventListener('resize', () => {
+        this.windowWidth = window.innerWidth
+      });
+    });
   },
   methods: {
     incrementTime() {
@@ -83,6 +95,14 @@ body, html {
   height: 100%;
   min-height: 100%;
   margin: 0px;
+  font-size: 100%;
+  @media (max-width: 1250px) {
+    font-size: 90%;
+  }
+  @media (max-width: 1150px) {
+    font-size: 80%;
+    height: auto;
+  }
 }
 #app {
   @include flex(column, space-between);

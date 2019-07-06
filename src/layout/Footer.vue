@@ -29,9 +29,13 @@ export default {
   color: $white;
   font-size: 1.3rem;
   font-weight: 500;
+  @media (max-width: 900px) {
+    @include flex(column, space-between);
+  }
 }
 .footer-item {
-  @include flex(row, space-between);
+  @include flex(row, center);
+  padding: 0.5em 0;
 }
 .check {
   margin-right: 1rem;

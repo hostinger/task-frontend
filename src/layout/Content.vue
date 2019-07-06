@@ -66,11 +66,18 @@ export default {
   @include center(70vw, 10px);
   align-items: center;
   flex-grow: 1;
+  @media (max-width: 900px){
+    @include flex(column, space-between);
+  }
 }
 .section {
   @include flex(column, center);
   flex-grow: 1;
   max-width: 50%;
   height: 100%;
+  @media (max-width: 900px){
+    max-width: 100%;
+    margin: 4rem 0;
+  }
 }
 </style>

@@ -41,7 +41,7 @@ export default {
 .price-discount {
   background: $pink;
   position: relative;
-  padding: 1rem 2rem;
+  padding: 0.8rem 2rem;
   text-align: center;
   font-size: 1.5rem;
   text-transform: uppercase;

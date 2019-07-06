@@ -15,7 +15,7 @@ export default {
   background-color: $primary;
   border: none;
   border-radius: 5px;
-  padding: 1rem 3rem;
+  padding: 1.1rem 3rem;
   font-family: $mainFont;
   font-weight: 700;
   font-size: 1.5rem;

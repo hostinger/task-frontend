@@ -2,18 +2,22 @@
   <div id="app">
     <Header :menu="menu" :saleItem="sale.item"></Header>
     <Content :sale="sale"></Content>
+    <Footer :footer="footer"></Footer>
   </div>
 </template>
 
 <script>
 import Header from './layout/Header';
 import Content from './layout/Content';
-import moment from 'moment'
+import Footer from './layout/Footer';
+import moment from 'moment';
+
 export default {
   name: 'app',
   components: {
     Header,
-    Content
+    Content,
+    Footer
   },
   data() {
     return {
@@ -33,7 +37,13 @@ export default {
         endDate: [2019, 6, 25],
         discount: 0,
         diff: { days: 0, hours: 0, minutes: 0, seconds: 0 }
-      }
+      },
+      footer: [
+        'Guaranteed 99.9% Uptime',
+        'Superior Speed Performance',
+        '24/7 Support Chat',
+        '30-Day Money-Back Guarantee'
+      ]
     }
   },
   mounted () {
@@ -69,15 +79,16 @@ export default {
 </script>
 
 <style lang="scss">
-body {
-  height: 100vh;
+body, html {
+  height: 100%;
+  min-height: 100%;
   margin: 0px;
 }
 #app {
   background-color: $white;
   background-image: url('assets/background.jpg');
   background-size: cover;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;

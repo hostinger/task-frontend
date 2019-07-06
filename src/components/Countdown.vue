@@ -53,6 +53,7 @@ export default {
   font-weight: 700;
   justify-content: space-between;
   align-items: center;
+  padding: 2rem 0;
 }
 .number {
   display: flex;

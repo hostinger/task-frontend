@@ -53,7 +53,7 @@ export default {
     cents() {
       const priceArray = this.sale.salePrice.toString().split('.');
       return priceArray.length === 2 ?
-        priceArray[1].length === 2 ?  priceArray[1] : priceArray[1] + 0
+        priceArray[1].length === 2 ?  priceArray[1] : priceArray[1] + '0'
         : "00";
     }
   }
@@ -76,7 +76,7 @@ export default {
   flex-grow: 1;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   max-width: 50%;
   height: 100%;
 }

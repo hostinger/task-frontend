@@ -1,16 +1,19 @@
 <template>
   <div id="app">
     <Header :menu="menu" :saleItem="sale.item"></Header>
+    <Content :sale="sale"></Content>
   </div>
 </template>
 
 <script>
 import Header from './layout/Header';
-
+import Content from './layout/Content';
+import moment from 'moment'
 export default {
   name: 'app',
   components: {
-    Header
+    Header,
+    Content
   },
   data() {
     return {
@@ -25,19 +28,39 @@ export default {
         item: 'Web Hosting',
         originalPrice: 8,
         salePrice: 1.45,
-        endDate: 1563047530532
+        endDate: [2019, 6, 25],
+        discount: 0,
+        diff: { days: 0, hours: 0, minutes: 0, seconds: 0 }
       }
     }
   },
-  computed: {
-    saleComputed() {
-      const discount = Math.round(
+  mounted () {
+    setInterval(this.incrementTime, 1000);
+    this.sale.discount = this.calculateDiscount();
+  },
+  methods: {
+    incrementTime() {
+      const now = moment();
+      const end = moment(this.sale.endDate);
+      const diffDays = end.diff(now, 'days');
+      const diffHours =  end.diff(now, 'hours');
+      const diffMinutes = end.diff(now, 'minutes');
+      const diffSeconds = end.diff(now, 'seconds');
+      const diff = {
+        days: this.padWithZero(diffDays),
+        hours: this.padWithZero(diffHours - diffDays * 24),
+        minutes: this.padWithZero(diffMinutes - diffHours * 60),
+        seconds: this.padWithZero(diffSeconds - diffMinutes * 60)
+      }
+      this.sale.diff = diff;
+    },
+    calculateDiscount() {
+      return Math.round(
         100 - (this.sale.salePrice / this.sale.originalPrice * 100)
       );
-      return {
-        discount,
-        ...this.sale
-      }
+    },
+    padWithZero(number) {
+      return number < 10 ? '0' + number.toString() : number.toString();
     }
   }
 }

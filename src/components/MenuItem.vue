@@ -34,7 +34,7 @@ export default {
   color: $white;
   text-decoration: none;
   font-size: 1rem;
-  font-family: 'H','Trebuchet MS',Helvetica;
+  font-family: $mainFont;
   font-weight: 1000;
   letter-spacing: .1em;
   line-height: 56px;

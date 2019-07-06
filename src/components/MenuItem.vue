@@ -1,7 +1,9 @@
 <template>
   <div class="menu-item">
     <div class="sale" v-if="onSale">On sale</div>
-    <a class="link" :href="url">{{ name }}</a>
+    <a class="link" :href="url">
+      <slot></slot>
+    </a>
   </div>
 </template>
 
@@ -9,10 +11,6 @@
 export default {
   name: 'MenuItem',
   props: {
-    name: {
-      type: String,
-      required: true
-    },
     onSale: {
       type: Boolean,
       default: false

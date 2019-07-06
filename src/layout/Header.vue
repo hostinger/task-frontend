@@ -4,11 +4,12 @@
     <div class="menu">
       <template v-for="(item, index) in menu">
         <MenuItem
-          :name="item.name"
           :onSale="item.name === saleItem"
           :url="item.url"
           :key="index"
-        ></MenuItem>
+        >
+          {{item.name}}
+        </MenuItem>
       </template>
     </div>
   </div>

@@ -25,7 +25,9 @@ export default {
         { name: 'Website Builder', url: '#' },
       ],
       sale: {
+        offer: 'New Year Offer',
         item: 'Web Hosting',
+        cta: 'Get started now',
         originalPrice: 8,
         salePrice: 1.45,
         endDate: [2019, 6, 25],
@@ -76,5 +78,8 @@ body {
   background-image: url('assets/background.jpg');
   background-size: cover;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 </style>

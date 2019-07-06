@@ -45,5 +45,6 @@ export default {
   padding: 10px;
   margin: 0 auto;
   justify-content: space-between;
+  width: 100%
 }
 </style>

@@ -43,13 +43,14 @@ export default {
   @extend %triangle;
   border-width: 15.0px 15.0px 15.0px 0;
 	border-color: transparent $primary transparent transparent;
+  margin-right: 30%;
 }
 .countdown {
   display: flex;
   flex-direction: row;
   font-family: $mainFont;
   color: $white;
-  font-weight: bold;
+  font-weight: 700;
   justify-content: space-between;
   align-items: center;
 }

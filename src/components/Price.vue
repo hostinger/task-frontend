@@ -61,15 +61,26 @@ export default {
 .dollar-sign {
   font-size: 10rem;
   line-height: 20rem;
+  @media (max-width: 900px){
+    font-size: 6rem;
+  }
 }
 .dollars {
   font-size: 35rem;
   line-height: 30rem;
+  @media (max-width: 900px){
+    font-size: 22rem;
+    line-height: 20rem;
+  }
 }
 .cents-container {
   @include flex(column, space-between);
   font-size: 10rem;
   padding: 2rem;
+  @media (max-width: 900px){
+    font-size: 8rem;
+    padding: 1rem;
+  }
 }
 .rate {
   font-weight: 600;

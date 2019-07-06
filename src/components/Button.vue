@@ -21,5 +21,9 @@ export default {
   color: $white;
   text-transform: uppercase;
   max-width: 50%;
+  @media (max-width: 900px){
+    max-width: 80%;
+  }
 }
+
 </style>

@@ -78,6 +78,7 @@ export default {
   @media (max-width: 900px){
     max-width: 100%;
     margin: 4rem 0;
+    align-items: center;
   }
 }
 </style>

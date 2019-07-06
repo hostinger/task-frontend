@@ -1,7 +1,7 @@
 <template>
   <div class="header">
     <Logo></Logo>
-    <div class="menu" v-if="windowWidth > 900 || menuOpen">
+    <div class="menu" v-if="!isMobile || menuOpen">
       <template v-for="(item, index) in menu">
         <MenuItem
           :onSale="item.name === saleItem"
@@ -13,7 +13,7 @@
       </template>
     </div>
     <div class="menu-mobile"
-      v-if="windowWidth <=900"
+      v-if="isMobile"
       @click="menuOpen = !menuOpen"
     >
       <div class="hamburger"></div>
@@ -37,8 +37,8 @@ export default {
       required: true
     },
     saleItem: String,
-    windowWidth: {
-      type: Number,
+    isMobile: {
+      type: Boolean,
       required: true
     }
   },

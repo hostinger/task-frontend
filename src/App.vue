@@ -3,7 +3,7 @@
     <Header
       :menu="menu"
       :saleItem="sale.item"
-      :windowWidth="windowWidth"
+      :isMobile="isMobile"
     >
     </Header>
     <Content :sale="sale"></Content>
@@ -49,7 +49,7 @@ export default {
         '24/7 Support Chat',
         '30-Day Money-Back Guarantee'
       ],
-      windowWidth: window.innerWidth
+      isMobile: window.innerWidth <= 900
     }
   },
   mounted () {
@@ -58,7 +58,7 @@ export default {
     this.sale.discount = this.calculateDiscount();
     this.$nextTick(() => {
       window.addEventListener('resize', () => {
-        this.windowWidth = window.innerWidth
+        this.isMobile = window.innerWidth <= 900;
       });
     });
   },

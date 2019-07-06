@@ -44,6 +44,9 @@ export default {
   border-width: 15.0px 15.0px 15.0px 0;
 	border-color: transparent $primary transparent transparent;
   margin-right: 30%;
+  @media (max-width: 900px) {
+    margin-right: 0;
+  }
 }
 .countdown {
   @include flex(row, space-between);
@@ -51,6 +54,7 @@ export default {
   font-weight: 700;
   align-items: center;
   padding: 2rem 0;
+  min-width: 100%;
 }
 .number {
   @include flex(column, space-between);

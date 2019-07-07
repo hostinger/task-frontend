@@ -1,5 +1,9 @@
 # task-frontend
 
+## Live page
+
+https://domasb.github.io/hostinger-task/
+
 ## Project setup
 ```
 npm install

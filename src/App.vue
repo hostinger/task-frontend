@@ -12,17 +12,14 @@
 </template>
 
 <script>
-import Header from './layout/Header';
-import Content from './layout/Content';
-import Footer from './layout/Footer';
 import moment from 'moment';
 
 export default {
   name: 'app',
   components: {
-    Header,
-    Content,
-    Footer
+    Header: () => import('./layout/Header'),
+    Content: () => import('./layout/Content'),
+    Footer: () => import('./layout/Footer')
   },
   data() {
     return {

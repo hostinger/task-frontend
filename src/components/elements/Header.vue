@@ -9,32 +9,23 @@
 			<nav>
 				<ul class="nav-menu">
 					<li>
+						<router-link to="/" v-html="`web hosting`">
+						</router-link>
+					</li>
+					<li>
 						<div class="promotion">
-							<p>on sale</p>
+							<p v-html="`on sale`"></p>
 						</div>
-						<router-link to="/">
-							web hosting
-						</router-link>
+						<router-link to="/" v-html="`cloud hosting`"></router-link>
 					</li>
 					<li>
-						<router-link to="/">
-							cloud hosting
-						</router-link>
+						<router-link to="/" v-html="`vps hosting`"></router-link>
 					</li>
 					<li>
-						<router-link to="/">
-							vps hosting
-						</router-link>
+						<router-link to="/" v-html="`	domain checker`"></router-link>
 					</li>
 					<li>
-						<router-link to="/">
-							domain checker
-						</router-link>
-					</li>
-					<li>
-						<router-link to="/">
-							website builder
-						</router-link>
+						<router-link to="/" v-html="`website builder`"></router-link>
 					</li>
 				</ul>
 			</nav>
@@ -51,20 +42,44 @@
 </script>
 
 <style scoped lang="scss">
+	header {
+		padding: 65px 0;
+	}
+
 	.logo {
 		display: inline-block;
 	}
 
-	li {
-		a {
-			color: $white;
-			text-decoration: none;
+	nav {
+		float: right;
+		//width: 80%;
+	}
+
+	.nav-menu {
+		@include flex(space-between, initial);
+		li {
+			padding-right: 20px;
+			position: relative;
+			&:last-of-type {
+				padding-right: 0;
+			}
+			&:hover{
+				opacity: 0.6;
+				transition: opacity 0.5s;
+			}
+			a {
+				@include font($font, 16px, $white);
+				text-decoration: none;
+				text-transform: uppercase;
+			}
+		}
+		.promotion {
+			position: absolute;
+			top: -18px;
 			text-transform: uppercase;
+			@include font($font, 12px, $yellow);
 		}
 	}
 
-	nav {
-		float: right;
-	}
 
 </style>

@@ -3,7 +3,7 @@
 		<div class="container">
 			<div class="logo">
 				<router-link to="/">
-					<img src="../../assets/images/logo.svg" alt="logo">
+					<img src="../assets/images/logo.svg" alt="logo">
 				</router-link>
 			</div>
 			<nav>
@@ -29,7 +29,6 @@
 					</li>
 				</ul>
 			</nav>
-
 		</div>
 	</header>
 
@@ -43,16 +42,19 @@
 
 <style scoped lang="scss">
 	header {
-		padding: 65px 0;
+		padding: 50px 0;
 	}
 
 	.logo {
 		display: inline-block;
+
+		img {
+			border: none;
+		}
 	}
 
 	nav {
 		float: right;
-		//width: 80%;
 	}
 
 	.nav-menu {
@@ -63,8 +65,8 @@
 			&:last-of-type {
 				padding-right: 0;
 			}
-			&:hover{
-				opacity: 0.6;
+			&:hover {
+				@include opacity(0.6);
 				transition: opacity 0.5s;
 			}
 			a {

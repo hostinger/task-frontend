@@ -5,7 +5,10 @@
 *{
   margin: 0;
   padding: 0;
-  font-family: $font;
+}
+.col-md-6{
+  width: 49%;
+  display: inline-block;
 }
 ul{
   padding-left: 0;

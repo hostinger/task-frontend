@@ -14,7 +14,8 @@ module.exports = {
         test: /\.css$/,
         use: [
           'vue-style-loader',
-          'css-loader'
+          'css-loader',
+	        'postcss-loader'
         ],
       },
       {
@@ -22,7 +23,8 @@ module.exports = {
         use: [
           'vue-style-loader',
           'css-loader',
-          'sass-loader'
+          'sass-loader',
+	        'postcss-loader'
         ],
       },
       {
@@ -45,6 +47,7 @@ module.exports = {
               'vue-style-loader',
               'css-loader',
               'sass-loader',
+	            'postcss-loader',
               {
                 loader: 'sass-resources-loader',
                 options: {

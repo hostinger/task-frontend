@@ -155,7 +155,9 @@
 
 	@media only screen and (max-width: $mobile-md) {
 		main {
-			padding-top: 15px;
+			.container{
+				padding-top: 15px;
+			}
 			.col-md-6 {
 				&:first-of-type {
 					order: 2;
@@ -163,7 +165,6 @@
 				}
 				&:last-of-type {
 					order: 1;
-					margin-bottom: 20px;
 				}
 			}
 		}

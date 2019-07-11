@@ -54,7 +54,7 @@ export default {
   },
   components: {
     Navigation,
-    Sale
+    Sale,
   }
 }
 </script>
@@ -67,9 +67,11 @@ export default {
   text-align: center;
   color: #2c3e50;
 }
-.bg-img {
-  background: url('./assets/background.jpg');
-  object-fit: cover;
+.card-img {
+  transform: scaleX(-1);
+}
+.text-white {
+  background: #000 !important;
 }
 .all {
   width: 100%;

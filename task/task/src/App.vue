@@ -9,13 +9,14 @@
         <Navigation v-bind:nav="nav" />
         <Sale />
       </div>
-
+      <Footer />      
   </div>
 </template>
 
 <script>
 import Navigation from './components/Navigation';
 import Sale from './components/Sale';
+import Footer from './components/Footer';
 
 export default {
   name: 'app',
@@ -53,6 +54,7 @@ export default {
   components: {
     Navigation,
     Sale,
+    Footer
   }
 }
 </script>
@@ -64,6 +66,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   position: relative;
+  height: 100vh;
 }
 .bg-img {
   background: url("/src/assets/background.jpg");

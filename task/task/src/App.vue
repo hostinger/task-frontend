@@ -1,16 +1,14 @@
 <template>
   <div id="app">
-     <b-card
-        overlay
-        img-src="/src/assets/background.jpg"
-        img-alt="Card Image"
-        text-variant="white"
-      >
-        <div class="container">
-          <Navigation v-bind:nav="nav" />
-          <Sale />
-        </div>
-      </b-card>
+     
+      <!-- <div class="dark-overlay"></div> -->
+      <div class="bg-img">
+        <div class="img-overlay"></div>
+      </div>
+      <div class="container">
+        <Navigation v-bind:nav="nav" />
+        <Sale />
+      </div>
 
   </div>
 </template>
@@ -64,17 +62,26 @@ export default {
   font-family: "-apple-system","BlinkMacSystemFont","Segoe UI","Roboto","Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
+  position: relative;
 }
-.card-img {
+.bg-img {
+  background: url("/src/assets/background.jpg");
+  background-size: cover;
+  background-position: 50%;
+  min-height: 100vh;
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   transform: scaleX(-1);
 }
-.text-white {
-  background: #000 !important;
-}
-.all {
-  width: 100%;
+.img-overlay {
+  background: rgba(0,0,0,0.4);
   height: 100%;
+  width: auto;
 }
 </style>

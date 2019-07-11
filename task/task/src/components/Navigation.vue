@@ -38,7 +38,7 @@ export default {
         font-weight: 700;
     }
     .navbar { 
-        padding: 0;
+        padding: 20px 0;
     }
     .on-sale {
         position: absolute;
@@ -50,7 +50,8 @@ export default {
     .bg-info {
         background-color: transparent !important;
     }
-
+    .clearfix {
+    }
     @media only screen and (max-width: 600px) {
         .ml-auto {
             background-color: #fff;

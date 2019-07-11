@@ -45,7 +45,7 @@ export default {
         flex-wrap: wrap;
     }
     .flex-item {
-        margin: 5px 0; 
+        margin: 5px; 
     }
     .icon {
         color: #7cc678;

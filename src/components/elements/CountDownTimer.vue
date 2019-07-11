@@ -17,6 +17,7 @@
 			<span>seconds</span>
 		</div>
 	</div>
+
 </template>
 
 <script>
@@ -30,7 +31,8 @@
 				hours: "",
 				minutes: "",
 				seconds: "",
-				timer: ""
+				timer: "",
+				message: ""
 			}
 
 		},
@@ -61,7 +63,7 @@
 			},
 
 			countDownCounter() {
-				setInterval(() => {
+				this.timer = setInterval(() => {
 					let now = new Date().getTime();
 					this.deadlineInt = new Date(this.timeEnds).getTime();
 					this.diff = this.deadlineInt - now;
@@ -71,13 +73,15 @@
 					this.countSeconds()
 				}, 1000);
 			},
-
-			stopTimer() {
-
-
-			}
-
 		},
+		watch: {
+			seconds() {
+				if (this.seconds <= 0) {
+					clearInterval(this.timer);
+				}
+			}
+		}
+
 	}
 </script>
 
@@ -112,6 +116,46 @@
 		&:after {
 			border-width: 10px 20px 10px 0;
 			border-color: transparent $red transparent transparent;
+		}
+	}
+
+	@media only screen and (max-width: $mobile) {
+		.timer {
+			.item {
+				padding-right: 10px;
+				font-size: 14px;
+				&:first-of-type {
+					padding-left: 10px;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: $mobile-md) {
+		.timer {
+			text-align: center;
+		}
+	}
+
+	@media only screen and (max-width: $mobile-sm) {
+		.timer {
+			.item {
+				padding-right: 5px;
+				&:first-of-type {
+					padding-left: 5px;
+				}
+			}
+		}
+	}
+
+	@media only screen and (max-width: $mobile-xs) {
+		.timer {
+			.item {
+				padding-right: 0;
+				&:first-of-type {
+					padding-left: 0;
+				}
+			}
 		}
 	}
 

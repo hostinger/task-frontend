@@ -42,5 +42,26 @@
 			}
 		}
 	}
+	@media only screen and (max-width: $tablet){
+		footer{
+			li{
+				padding-right: 30px;
+			}
+		}
+	}
+	@media only screen and (max-width: $mobile){
+		footer{
+			li{
+				width: 100%;
+				padding: 5px 0;
+				text-align: center;
+			}
+		}
+	}
+	@media only screen and (max-width: $mobile-md){
+		footer{
+			font-size: 14px;
+		}
+	}
 
 </style>

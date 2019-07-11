@@ -28,7 +28,14 @@
 						<router-link to="/" v-html="`website builder`"></router-link>
 					</li>
 				</ul>
+
 			</nav>
+			<div class="menu-btn hide mobile-show" @click="showMenu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+
 		</div>
 	</header>
 
@@ -36,18 +43,28 @@
 
 <script>
 	export default {
-		name: "Header"
+		name: "Header",
+		methods: {
+			showMenu() {
+				const menu = document.querySelector(".nav-menu");
+				const btn = document.querySelector(".menu-btn");
+				menu.classList.toggle("show");
+				btn.classList.toggle("change")
+			}
+		}
 	}
 </script>
 
 <style scoped lang="scss">
 	header {
 		padding: 50px 0;
+		.container{
+			position: relative;
+		}
 	}
 
 	.logo {
 		display: inline-block;
-
 		img {
 			border: none;
 		}
@@ -55,6 +72,33 @@
 
 	nav {
 		float: right;
+
+	}
+
+	.menu-btn {
+		position: absolute;
+		right: 15px;
+		top: 0px;
+		text-align: center;
+		cursor: pointer;
+		.bar1, .bar2, .bar3 {
+			width: 26px;
+			height: 3px;
+			background-color: $white;
+			margin: 6px 0;
+			transition: 0.4s;
+		}
+		&.change {
+			.bar1 {
+				transform: rotate(-45deg) translate(-8px, 5px);
+			}
+			.bar2 {
+				opacity: 0;
+			}
+			.bar3 {
+				transform: rotate(45deg) translate(-7px, -5px);
+			}
+		}
 	}
 
 	.nav-menu {
@@ -80,6 +124,34 @@
 			top: -18px;
 			text-transform: uppercase;
 			@include font($font, 12px, $yellow);
+		}
+	}
+
+	@media only screen and (max-width: $mobile) {
+		nav {
+			float: initial;
+			position: relative;
+		}
+		.nav-menu {
+			display: none;
+			width: 100%;
+			background-color: $white;
+			border-radius: 5px;
+			position: absolute;
+			z-index: 9;
+			top: 20px;
+			li {
+				display: block;
+				text-align: center;
+				padding: 10px 0;
+				a {
+					color: $purple;
+				}
+			}
+			.promotion {
+				width: 100%;
+				top: -8px;
+			}
 		}
 	}
 

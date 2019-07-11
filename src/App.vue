@@ -1,7 +1,6 @@
 <template>
 	<div id="app">
-		<div class="background">
-		</div>
+		<app-background></app-background>
 		<app-header></app-header>
 		<router-view></router-view>
 		<app-footer></app-footer>
@@ -11,12 +10,14 @@
 <script>
 	import Header from './components/Header'
 	import Footer from './components/Footer'
+	import Background from './components/elements/Background'
 
 	export default {
 		name: 'app',
 		components: {
 			appHeader: Header,
 			appFooter: Footer,
+			appBackground: Background
 		}
 	}
 </script>
@@ -26,16 +27,15 @@
 		height: 100vh;
 		position: relative;
 	}
-	.background {
-		background-image: url("../src/assets/images/background.jpg");
-		background-repeat: no-repeat;
-		background-size: cover;
-		position: absolute;
-		height: 100vh;
-		width: 100%;
-		display: block;
-		background-position: 50%;
-		transform: scaleX(-1);
-		z-index: -1;
+
+	@media only screen and (max-width: $mobile-xs){
+		#app{
+			height: 115vh;
+		}
+	}
+	@media only screen and (max-width: $mobile) and (max-height: $mobile-sm){
+		#app{
+			height: 200vh;
+		}
 	}
 </style>

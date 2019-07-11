@@ -7,13 +7,27 @@
   padding: 0;
 }
 .col-md-6{
-  width: 49%;
-  display: inline-block;
+
 }
 ul{
   padding-left: 0;
   li{
     list-style: none;
     display: inline-block;
+  }
+}
+.show{
+  display: inline-block !important;
+}
+.hide{
+  display: none;
+}
+
+@media only screen and (max-width: $mobile) {
+  .mobile-show{
+    display: block;
+  }
+  .mobile-hide{
+    display: none;
   }
 }

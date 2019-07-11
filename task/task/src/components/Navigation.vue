@@ -1,19 +1,19 @@
 <template>
     <div class="clearfix">
-        <b-navbar toggleable="lg" type="transparent" variant="info">
+        <b-navbar toggleable="lg" type="dark" variant="info">
             <b-navbar-brand href="#">
                 <img src="/src/assets/logo.svg" alt="Hostinger">
             </b-navbar-brand>
-
             <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-
             <b-collapse id="nav-collapse" is-nav>
-            <b-navbar-nav class="ml-auto">
-                <b-nav-item text="Lang" right v-bind:key="item.id" v-for="item in nav">{{item.title}} <span v-if="item.onSale" class="on-sale">On Sale</span></b-nav-item>
-            </b-navbar-nav>
+                <b-navbar-nav class="ml-auto"> 
+                    <div class="nav-item" v-bind:key="item.id" v-for="item in nav">
+                        <span v-if="item.onSale" class="on-sale">On Sale</span>
+                        <b-nav-item href="#">{{item.title}}</b-nav-item>
+                    </div>
+                </b-navbar-nav>
             </b-collapse>
         </b-navbar>
-
     </div>
 </template>
 
@@ -28,9 +28,8 @@ export default {
 </script>
 
 <style scoped lang="scss">
-    .nav-item:hover {
-        opacity: 0.8;
-        transition: opacity 0.1s ease-in-out;
+    .nav-item {
+        position: relative;
     }
     .nav-link {
         color: #fff;
@@ -41,24 +40,33 @@ export default {
         padding: 20px 0;
     }
     .on-sale {
+        text-transform: uppercase;
         position: absolute;
-        margin: -8px -100px;
         color: #ffc800;
+        top: 0px;
+        left: 7px;
         font-weight: 700;
         font-size: 0.7rem;
     }
+    
     .bg-info {
         background-color: transparent !important;
     }
-    .clearfix {
-    }
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: 991px) {
         .ml-auto {
-            background-color: #fff;
-            opacity: 0.8;
             .nav-link {
-                color: #333;
+                color: #fff;
             }
+        }
+        .navbar-nav {
+            background: rgba(0,0,0,.2);
+            padding: 10px;
+        }
+        .on-sale { 
+            left: 0px;
+        }
+        .navbar-toggler {
+            border: none;
         }
     }
     

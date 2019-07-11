@@ -36,7 +36,7 @@ export default {
                 {
                     id:3,
                     title: "Vps Hosting",
-                    onSale: false,
+                    onSale: true,
                 },
                 {
                     id:4,

@@ -19,8 +19,8 @@ export default {
      return {
         offer: {
             price: {
-                discount: 22,
-                dollars: 80,
+                discount: 82,
+                dollars: 8,
                 cents: 6
             },
             days: 20,

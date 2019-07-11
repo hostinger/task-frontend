@@ -1,7 +1,7 @@
 <template>
     <div class="row padding">
         <div class="col-md-6">
-            <h1 class="padding">New Year Offer <br><span style="color:#fd5052">{{discount}}% OFF</span> Web Hosting</h1>
+            <h1 class="padding">New Year Offer <br><span style="color:#fd5052">{{price.discount}}% OFF</span> Web Hosting</h1>
             <div class="countdown">
                 <div class="arrow-to-right"></div>
                 <div class="days"><div>{{days}}</div><div class="countdown-text">days</div></div>
@@ -12,7 +12,17 @@
             </div>
             <b-button variant="primary" class="get-started">Get Started Now</b-button>
         </div>
-        <div class="col-md-6"></div>
+        <div class="col-md-6">
+            <div class="dollar-sign">
+                <span>$</span>
+            </div>
+            <div class="discount-price">
+                <div class="discount-bubble"><span class="discount">Save {{price.discount}}%</span></div>
+                <div class="dollars">{{price.dollars}}</div>
+                <div class="cents">{{price.cents}}</div>
+                <div class="a-month">/mo</div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -21,7 +31,11 @@ export default {
  name: "Sale",
  data() {
      return {
-         discount: 82,
+         price: {
+             discount: 82,
+             dollars: 8,
+             cents: 5
+         },
          days: 20,
          hours: 0,
          minutes: 0,
@@ -40,15 +54,71 @@ export default {
             this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
         }, 1000);
+     },
+     calculateDiscount() {
+        const totalPrice = (this.price.dollars * 100 + this.price.cents) * (1 - this.price.discount * 0.01);
+        this.price.dollars = Math.floor(totalPrice / 100);
+        this.price.cents = Math.floor(totalPrice % 100);
      }
  },
  beforeMount(){
-     this.countDown()
+     this.countDown(),
+     this.calculateDiscount()
  }
 }
 </script>
 
 <style scoped lang="scss">
+    .discount {
+        position: inherit;
+        bottom: 217px;
+        text-transform: uppercase;
+    }
+    .discount-bubble {
+        text-align: center;
+        position: relative;
+        background: #fd5052;
+        max-width: 100px;
+        max-height: 25px;
+        opacity: 0.8;
+    }
+
+    .discount-bubble:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 0;
+        border: 20px solid transparent;
+        border-top-color: #fd5052;
+        border-bottom: 0;
+        margin-left: -20px;
+        margin-bottom: -20px;
+    }
+    .a-month {
+        font-size: 3rem;
+        position: absolute;
+        left: 170px;
+        top: 105px;
+    }
+    .cents {
+        font-size: 4rem;
+        position: absolute;
+        left: 170px;
+        top: 35px;
+    }
+    .dollars {
+        font-size: 9rem;
+        position: absolute;
+        left: 85px;
+        top: 0;
+    }
+    .dollar-sign {
+        font-size: 9rem;
+        float: left;
+        position: relative;
+    }
     .padding {
         padding: 3rem 0 0 0;
     }

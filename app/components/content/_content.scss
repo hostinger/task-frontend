@@ -1,0 +1,122 @@
+.content-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 0 168px 0;
+}
+
+.counter-block {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 65px 10px 10px 23px;
+
+    &__heading {
+        font-size: 3em;
+        font-weight: 700;
+        color: $heading-color;
+        line-height: 1.7em;
+        margin-top: -4px;
+        margin-bottom: -4px;
+
+        span {
+            color: #fc5155;
+        }
+    }
+}
+
+.price-block {
+    display: flex;
+    flex-direction: column;
+
+    &__discount {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__discount-baloon {
+        display: flex;
+        width: 144px;
+        background-color: $sale-balloon;
+        color: $main-text;
+        font-weight: 600;
+        font-size: 1.5em;
+        text-align: center;
+        padding: 10px 15px;
+        justify-content: center;
+    }
+
+    &__triangle {
+        width: 0;
+        height: 0;
+        border-left: 18px solid transparent;
+        border-right: 18px solid transparent;
+        border-top: 18px solid $sale-balloon;
+    }
+
+    &__cost {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+    }
+
+    &__dollar {
+        display: flex;
+        color: $heading-color;
+        font-size: 10em;
+        font-weight: 700;
+        align-items: flex-start;
+        padding-top: 36px;
+    }
+
+    &__number {
+        color: $heading-color;
+        font-size: 31em;
+        font-weight: 700;
+        line-height: 345px;
+        padding-top: 20px;
+    }
+
+    &__aside {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-right: 58px;
+    }
+
+    &__cents {
+        display: flex;
+        color: $heading-color;
+        font-size: 8em;
+        font-weight: 700;
+        align-items: center;
+        padding-bottom: 33px;
+    }
+
+    &__month {
+        color: $heading-color;
+        font-size: 5em;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .content-block {
+        flex-direction: column;
+    }
+
+    .counter-block {
+        margin-bottom: 80px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .price-block__aside {
+        padding: 0;
+    }
+}

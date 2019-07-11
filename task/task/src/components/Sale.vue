@@ -1,8 +1,8 @@
 <template>
-    <div class="row sale">
+    <b-row align-v="center" class="sale">
         <Offer v-bind:offer="offer" />
         <Pricing v-bind:offer="offer" />
-    </div>
+    </b-row>
 </template>
 
 <script>
@@ -19,8 +19,8 @@ export default {
      return {
         offer: {
             price: {
-                discount: 82,
-                dollars: 8,
+                discount: 22,
+                dollars: 80,
                 cents: 6
             },
             days: 20,

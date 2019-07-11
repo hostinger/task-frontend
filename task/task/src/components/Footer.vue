@@ -42,11 +42,21 @@ export default {
     .flex {
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     .flex-item {
         margin: 5px 0; 
     }
     .icon {
         color: #7cc678;
+    }
+    @media only screen and(max-width: 991px) {
+        .footer {
+            position: relative !important;
+            margin-top: 150px;
+        }
+        .flex {
+            justify-content: center;
+        }
     }
 </style>

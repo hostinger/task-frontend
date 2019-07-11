@@ -66,7 +66,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
 }
 .bg-img {
   background: url("/src/assets/background.jpg");

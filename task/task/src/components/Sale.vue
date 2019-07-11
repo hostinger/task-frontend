@@ -1,5 +1,5 @@
 <template>
-    <div class="row padding sale">
+    <div class="row sale">
         <Offer v-bind:offer="offer" />
         <Pricing v-bind:offer="offer" />
     </div>
@@ -19,9 +19,9 @@ export default {
      return {
         offer: {
             price: {
-                discount: 69,
-                dollars: 3,
-                cents: 99
+                discount: 82,
+                dollars: 8,
+                cents: 6
             },
             days: 20,
             hours: 0,
@@ -32,7 +32,13 @@ export default {
  }
 }
 </script>
-
+    
 <style scoped lang="scss">
-
+    @media only screen and(max-width: 991px) {
+        .sale {
+            display: flex;
+            flex-flow: column-reverse;
+            align-items: center;
+        }
+    }
 </style>

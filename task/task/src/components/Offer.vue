@@ -1,6 +1,6 @@
 <template>
-    <div class="col-md-6 col-sm-12 offer">
-        <h1 class="padding center-text">New Year Offer <br><span style="color:#fd5052">{{offer.price.discount}}% OFF</span> Web Hosting</h1>
+    <div class="col-md-6 col-sm-12 offer padding">
+        <h1 class="center-text">New Year Offer <br><span style="color:#fd5052">{{offer.price.discount}}% OFF</span> Web Hosting</h1>
         <div class="countdown center-text">
             <div class="arrow-to-right"></div>
             <div class="days"><div>{{offer.days}}</div><div class="countdown-text">days</div></div>
@@ -9,7 +9,9 @@
             <div class="seconds"><div>{{offer.seconds}}</div><div class="countdown-text">seconds</div></div>
             <div class="arrow-to-left"></div>
         </div>
-        <b-button variant="primary" class="get-started">Get Started Now</b-button>
+        <div class="button">
+            <b-button variant="primary" class="get-started">Get Started Now</b-button>
+        </div>
     </div>
 </template>
 
@@ -89,5 +91,19 @@ h1 {
 .get-started:hover {
     background-color: #fd5052 !important;
     opacity: 0.8;
+}
+
+@media only screen and (max-width: 991px) {
+    .countdown {
+        width: 100%;
+    }
+    
+    .center-text {
+        text-align: center;
+    }
+    .button {
+        display: flex;
+        justify-content: center;
+    }
 }
 </style>

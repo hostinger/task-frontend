@@ -84,4 +84,7 @@ export default {
   height: 100%;
   width: auto;
 }
+.padding {
+        margin-top: 50px;
+    }
 </style>

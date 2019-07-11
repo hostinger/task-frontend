@@ -1,5 +1,11 @@
 # Frontend Developer Task
 
+## To run app
+
+- npm install
+- npm run serve
+- [link to live web example!](https://tst11.github.io/hst-build/)
+
 ## Few simple steps
 
 1. Fork this repo

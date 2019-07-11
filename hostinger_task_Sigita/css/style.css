@@ -1,0 +1,64 @@
+body{
+
+  font-family: "Nunito", sans-serif;
+}
+#mainNavbar{
+  font-size: 0.9rem;
+  font-weight: 100;
+}
+#mainNavbar .nav-link{
+  color: white;
+}
+#mainNavbar .nav-link:hover{
+  color: blue;
+}
+#mainNavbar .navbar-brand{
+  color: red;
+  font-size: 1.5rem;
+}
+.empty {
+  height: 90px;
+}
+.myButton {
+
+height: 50px;
+margin-top: 15px;
+}
+.big {
+  font-size: 100px;
+  font-weight: bold;
+
+}
+.big2 {
+  font-size: 300px;
+  font-weight: bold;
+
+}
+.big3{
+  font-size: 100px;
+  font-weight: bold;
+
+}
+.logo {
+  width: 12%;
+}
+.talkbubble {
+ width: 120px;
+ height: 80px;
+ background: #FF6666 ;
+ position: relative;
+ -moz-border-radius: 3px;
+ -webkit-border-radius: 3px;
+ border-radius: 3px;
+ padding: 9px;
+}
+.talkbubble:before {
+ content:"";
+ position: absolute;
+ right: 50%;
+ top: 29px;
+ width: 0;
+ height: 0;
+ border-top: 13px solid transparent;
+ border-right: 26px solid #FF6666 ;
+ border-bottom: 13px solid transparent; }

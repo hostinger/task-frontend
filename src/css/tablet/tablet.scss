@@ -1,0 +1,114 @@
+@media  (max-width: $tablet-max) {
+    .body {
+        &--overflow-hid {
+            overflow:hidden;
+        }
+    }
+    .main_container {
+        width: 90%;
+        margin: 0 5%;
+        padding:0px;
+    }
+    .header {
+        width: 100%;
+        margin:0px;
+        background-color:$nav-bg;
+        &__image {
+            padding-left:15px;
+        }
+        &__burger {
+            display: block !important;
+            padding-right: 15px;
+        }
+        .show_menu {
+            max-height: 100vh;
+            transition: max-height 0.25s ease-in;
+
+        }
+        &__nav {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            margin-top: 79px;
+            max-height: 0;
+            transition: max-height 0.15s ease-out;
+            overflow: hidden;
+            z-index: 9999;
+            ul {
+                display: flex;
+                list-style: none;
+                flex-direction: column;
+                align-items: center;
+                margin: 0;
+                background-color:$nav-bg;
+                height: 100vh;
+                overflow:scroll;
+
+                li {
+                    padding: 10px 0;
+                    width: 100%;
+                    text-align: center;
+                    margin: 0;
+                    a {
+                        text-decoration: none;
+                        background: rgba(0, 0, 0, 0);
+                        color: white;
+                        text-transform: uppercase;
+                        padding: 10px 0;
+                        border-radius: 20px;
+                        transition: background 400ms cubic-bezier(0.165, 0.84, 0.44, 1);
+                        width: 85%;
+                        display: inline-block;
+                        font-size: 21px;
+                    }
+                }
+            }
+        }
+    }
+    .header-nav-badge {
+        bottom: 45px;
+        left: calc(50% - 4vh);
+        font-size:12px;
+    }
+    .new_offer {
+        flex-direction: column-reverse;
+
+        &__countdown_wrapper {
+            width: 100%;
+        }
+        &__countdown_title {
+            text-align: center;
+        }
+        &__countdown_discount {
+            justify-content: center;
+        }
+        &__monthly_pay {
+            width: 100%;
+            padding-top:60px;
+        }
+
+        &__button {
+            margin-left:auto;
+            margin-right:auto;
+            display:block;
+        }
+    }
+    .countdown_timer {
+        justify-content: center;       
+    }
+    .price_block__wrapper {
+        padding-bottom: 50px;
+    }
+    .hostinger_benefits {
+     &__wrapper {
+        display:block;
+    } 
+    &__item_box {
+        width: 100%;
+        justify-content: center;
+        padding:10px 0px;
+    }
+}
+}
+
+

@@ -1,0 +1,22 @@
+{
+  "name": "hostinger",
+  "version": "1.0.0",
+  "description": "Task ",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JmediaLietuva/task-frontend.git"
+  },
+  "author": "Martynas Usas",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JmediaLietuva/task-frontend/issues"
+  },
+  "homepage": "https://github.com/JmediaLietuva/task-frontend#readme",
+  "devDependencies": {
+    "grunt": "^1.0.3"
+  }
+}

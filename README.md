@@ -1,22 +1,18 @@
-# Frontend Developer Task
+# hostinger
 
-## Few simple steps
+> A Vue.js project
 
-1. Fork this repo
-2. Prepare pull request and let us know that you are done
+## Build Setup
 
-## Few simple requirements
+``` bash
+# install dependencies
+npm install
 
-- Design should be recreated as closely as possible.
-- Design must be responsive. Because we live in our smartphones and we will check with them for sure.
-- Use CSS preprocessor (SCSS preferred).
-- Browser support must be great. All modern browsers plus IE9 and above.
-- Use a Javascript task-runner. Webpack, Grunt or Gulp - it doesn't matter.
-- Do not commit the build, because we are building things on deployment.
-- VueJS, AngularJS or ReactJS would be an advantage
+# serve with hot reload at localhost:8080
+npm run dev
 
-## Few tips
+# build for production with minification
+npm run build
+```
 
-- Structure!
-- Have fun!
-- Hosted DEMO would give some extra points
+For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).

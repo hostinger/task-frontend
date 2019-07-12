@@ -1,0 +1,126 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; }
+
+.bg {
+  height: 100%;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url("../../assets/background.jpg");
+  background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/background.jpg");
+  background-image: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/background.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../../assets/background.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-filter: FlipH;
+  filter: FlipH;
+  -ms-filter: "FlipH"; }
+
+.back {
+  height: 100%;
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -webkit-filter: FlipH;
+  filter: FlipH;
+  -ms-filter: "FlipH"; }
+
+.navbar {
+  height: 10vh; }
+
+/* Top left logo */
+.top-left {
+  position: absolute;
+  top: 2px;
+  left: 16px; }
+
+/* Top right menu */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px; }
+
+/* NavButton */
+.top-button {
+  position: absolute;
+  top: 15px;
+  right: 16px; }
+
+/* Centered banner */
+.centered {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 60vh; }
+
+/* Bottom list */
+.bottom {
+  position: absolute;
+  bottom: 22px;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+  -ms-transform: translate(-50%, 0);
+  transform: translate(-50%, 0);
+  font-size: 18px; }
+
+/* Countdown timer */
+.countdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px; }
+
+.countdown .day, .countdown .hour, .countdown .min, .countdown .sec {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center; }
+
+.countdown .day .num, .countdown .hour .num, .countdown .min .num, .countdown .sec .num {
+  display: block;
+  font-size: 30px; }
+
+.countdown .day .word, .countdown .hour .word, .countdown .min .word, .countdown .sec .word {
+  display: block;
+  font-size: 18px; }
+
+/* Banner text */
+.big-text {
+  font-size: 50vh;
+  margin-top: -12vh;
+  margin-left: -3vw; }
+
+.currency-text {
+  font-size: 17vh;
+  padding-top: 8vh;
+  margin-left: 2vw; }
+
+.cent-text {
+  font-size: 17vh;
+  padding-top: 8vh;
+  margin-left: -2vw; }
+
+.price-text {
+  font-size: 10vh;
+  padding-top: 3vh;
+  margin-left: -2vw; }
+
+@media only screen and (max-width: 992px) {
+  .hide {
+    visibility: hidden;
+    margin-top: -55px; } }

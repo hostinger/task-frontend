@@ -19,15 +19,15 @@
 </script>
 
 <style scoped lang="scss">
-	footer{
+	footer {
 		padding: 10px 0;
 		position: absolute;
 		bottom: 0;
 		@include font($font, 16px, $white);
 		width: 100%;
-		li{
+		li {
 			padding-right: 90px;
-			&:before{
+			&:before {
 				content: '';
 				display: inline-block;
 				width: 10px;
@@ -37,29 +37,32 @@
 				transform: rotate(45deg);
 				margin-right: 10px;
 			}
-			&:last-of-type{
+			&:last-of-type {
 				padding-right: 0;
 			}
 		}
 	}
-	@media only screen and (max-width: $tablet){
-		footer{
-			li{
+
+	@media only screen and (max-width: $tablet) {
+		footer {
+			li {
 				padding-right: 30px;
 			}
 		}
 	}
-	@media only screen and (max-width: $mobile){
-		footer{
-			li{
+
+	@media only screen and (max-width: $mobile) {
+		footer {
+			li {
 				width: 100%;
 				padding: 5px 0;
 				text-align: center;
 			}
 		}
 	}
-	@media only screen and (max-width: $mobile-md){
-		footer{
+
+	@media only screen and (max-width: $mobile-md) {
+		footer {
 			font-size: 14px;
 		}
 	}

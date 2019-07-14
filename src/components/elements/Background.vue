@@ -22,7 +22,7 @@
 		z-index: -1;
 	}
 
-	@media only screen and (max-width: $mobile-xs) {
+	@media only screen and (max-width: $mobile-md) {
 		.background {
 			height: 115vh;
 		}

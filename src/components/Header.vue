@@ -58,13 +58,16 @@
 <style scoped lang="scss">
 	header {
 		padding: 50px 0;
-		.container{
+		.container {
 			position: relative;
 		}
 	}
 
 	.logo {
 		display: inline-block;
+		a {
+			display: block;
+		}
 		img {
 			border: none;
 		}
@@ -72,7 +75,7 @@
 
 	nav {
 		float: right;
-
+		padding-top: 5px;
 	}
 
 	.menu-btn {
@@ -154,6 +157,4 @@
 			}
 		}
 	}
-
-
 </style>

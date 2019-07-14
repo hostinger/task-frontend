@@ -1,23 +1,27 @@
 <template>
-	<div class="timer">
-		<div class="item">
-			<p>{{this.days}}</p>
-			<span>days</span>
+	<div class="timer-container">
+		<div class="timer" v-if="!message">
+			<div class="item">
+				<p>{{this.days}}</p>
+				<span>days</span>
+			</div>
+			<div class="item">
+				<p>{{this.hours}}</p>
+				<span>hours</span>
+			</div>
+			<div class="item">
+				<p>{{this.minutes}}</p>
+				<span>minutes</span>
+			</div>
+			<div class="item">
+				<p>{{this.seconds}}</p>
+				<span>seconds</span>
+			</div>
 		</div>
-		<div class="item">
-			<p>{{this.hours}}</p>
-			<span>hours</span>
-		</div>
-		<div class="item">
-			<p>{{this.minutes}}</p>
-			<span>minutes</span>
-		</div>
-		<div class="item">
-			<p>{{this.seconds}}</p>
-			<span>seconds</span>
+		<div class="msg" v-else>
+			<p>{{message}}</p>
 		</div>
 	</div>
-
 </template>
 
 <script>
@@ -25,6 +29,7 @@
 		name: "CountDownTimer",
 		data() {
 			return {
+				currentTime: '',
 				diff: '',
 				deadlineInt: '',
 				days: "",
@@ -32,7 +37,7 @@
 				minutes: "",
 				seconds: "",
 				timer: "",
-				message: ""
+				message: "",
 			}
 
 		},
@@ -44,6 +49,7 @@
 
 		mounted() {
 			this.countDownCounter();
+
 		},
 		methods: {
 			countDays() {
@@ -64,9 +70,9 @@
 
 			countDownCounter() {
 				this.timer = setInterval(() => {
-					let now = new Date().getTime();
+					this.currentTime = new Date().getTime();
 					this.deadlineInt = new Date(this.timeEnds).getTime();
-					this.diff = this.deadlineInt - now;
+					this.diff = this.deadlineInt - this.currentTime;
 					this.countDays();
 					this.countHours();
 					this.countMinutes();
@@ -76,7 +82,8 @@
 		},
 		watch: {
 			seconds() {
-				if (this.seconds <= 0) {
+				if (this.currentTime >= this.deadlineInt) {
+					this.message = "promotion timer is over";
 					clearInterval(this.timer);
 				}
 			}
@@ -86,6 +93,7 @@
 </script>
 
 <style scoped lang="scss">
+
 	.timer {
 		position: relative;
 		.item {
@@ -119,6 +127,11 @@
 		}
 	}
 
+	.msg, .loader {
+		@include font($font, 20px, $white);
+		text-transform: uppercase;
+	}
+
 	@media only screen and (max-width: $mobile) {
 		.timer {
 			.item {
@@ -132,7 +145,7 @@
 	}
 
 	@media only screen and (max-width: $mobile-md) {
-		.timer {
+		.timer, .msg {
 			text-align: center;
 		}
 	}

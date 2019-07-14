@@ -2,32 +2,33 @@
 @import "fonts";
 @import "variables";
 @import "mixins";
-*{
+
+* {
   margin: 0;
   padding: 0;
 }
-.col-md-6{
 
-}
-ul{
+ul {
   padding-left: 0;
-  li{
+  li {
     list-style: none;
     display: inline-block;
   }
 }
-.show{
+
+.show {
   display: inline-block !important;
 }
-.hide{
+
+.hide {
   display: none;
 }
 
 @media only screen and (max-width: $mobile) {
-  .mobile-show{
+  .mobile-show {
     display: block;
   }
-  .mobile-hide{
+  .mobile-hide {
     display: none;
   }
 }

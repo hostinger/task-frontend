@@ -28,7 +28,7 @@
 		position: relative;
 	}
 
-	@media only screen and (max-width: $mobile-xs){
+	@media only screen and (max-width: $mobile-md){
 		#app{
 			height: 115vh;
 		}

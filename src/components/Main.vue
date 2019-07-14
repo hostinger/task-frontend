@@ -7,7 +7,7 @@
 						<h1>New Year Offer</h1>
 						<h1><span>82% off </span>web hosting</h1>
 					</div>
-					<app-count-down-timer timeEnds="July 11, 2019 21:00"></app-count-down-timer>
+					<app-count-down-timer timeEnds="September 1, 2019 00:00"></app-count-down-timer>
 					<button>Get started now</button>
 				</div>
 				<div class="col-md-6">
@@ -45,7 +45,7 @@
 
 <style scoped lang="scss">
 	main {
-		.container{
+		.container {
 			padding-top: 50px;
 		}
 	}
@@ -155,7 +155,7 @@
 
 	@media only screen and (max-width: $mobile-md) {
 		main {
-			.container{
+			.container {
 				padding-top: 15px;
 			}
 			.col-md-6 {
@@ -208,6 +208,4 @@
 			width: 49%;
 		}
 	}
-
-
 </style>

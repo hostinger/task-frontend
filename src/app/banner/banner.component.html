@@ -1,0 +1,80 @@
+<main>
+  <div class="banner">
+    <div class="container">
+      <div class="banner__wrapper-left">
+        <div class="slogan">
+          <h1>New Year Offer <br /><span>82% off</span> Web Hosting</h1>
+        </div>
+        <div class="countdown">
+          <div class="triangle">
+            <div class="countdown__wrapper">
+              <svg class="Play_l">
+                <use xlink:href="assets/images/sprite.svg#Play_l"></use>
+              </svg>
+            </div>
+            <div class="countdown__wrapper-box">
+              <div class="countdown__wrapper-box__time">
+                {{ makeTwoDigits(timeTillNYE.daysLeft) }}
+              </div>
+              <div class="countdown__wrapper-box__label">Days</div>
+            </div>
+            <div class="countdown__wrapper-box">
+              <div class="countdown__wrapper-box__time">
+                {{ makeTwoDigits(timeTillNYE.hoursLeft) }}
+              </div>
+              <div class="countdown__wrapper-box__label">Hours</div>
+            </div>
+            <div class="countdown__wrapper-box">
+              <div class="countdown__wrapper-box__time">
+                {{ makeTwoDigits(timeTillNYE.minutesLeft) }}
+              </div>
+              <div class="countdown__wrapper-box__label">Minutes</div>
+            </div>
+            <div class="countdown__wrapper-box">
+              <div class="countdown__wrapper-box__time">
+                {{makeTwoDigits(timeTillNYE.secondsLeft)}}
+              </div>
+              <div class="countdown__wrapper-box__label">Seconds</div>
+            </div>
+            <div class="triangle">
+              <svg class="Play_r">
+                <use xlink:href="assets/images/sprite.svg#Play_l"></use>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <a href="#"><button class="button">Get started now</button></a>
+      </div>
+
+      <div class="banner__wrapper-right">
+        <div class="price">
+          <div class="price__wrapper">
+            <div class="price__wrapper-left">
+              <div class="price__wrapper-left-currency">$</div>
+              <div class="price__wrapper-left-bignumber">
+                <p class="clip">Save 82%</p>
+                1
+              </div>
+            </div>
+
+            <div class="price__wrapper-right">
+              <div class="price__wrapper-right-cents">45</div>
+              <div class="price__wrapper-right-mo">/mo</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="container">
+      <ul>
+        <li><i class="fas fa-check"></i> Guaranteed 99.9% Uptime</li>
+        <li><i class="fas fa-check"></i> Superior Speed Performance</li>
+        <li><i class="fas fa-check"></i> 24/7 Support Chat</li>
+        <li><i class="fas fa-check"></i> 30-Day Money-Back Guarantee</li>
+      </ul>
+    </div>
+  </div>
+</main>

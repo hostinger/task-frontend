@@ -1,0 +1,113 @@
+@import "../../sass/mixins";
+@import "../../sass/typography";
+
+.toolbar {
+  width: 100%;
+  z-index: 999;
+  position: absolute;
+  font-size: 2rem;
+  @include mq("desktop-wide") {
+    font-size: 1.8rem;
+  }
+  @include mq("desktop-medium") {
+    font-size: 1.6rem;
+  }
+  @include mq("tablet-small") {
+    font-size: 1.4rem;
+  }
+
+  & .container {
+    @include mq("tablet-wide") {
+      flex-direction: column;
+    }
+  }
+
+  &__toggle-button{
+
+    @include mq("tablet") {
+      display: none;
+    
+      display: flex;
+      width: 100%;
+      padding-left: 3rem;
+    
+    }
+    
+  }
+
+  &__navigation {
+    &-items {
+      & ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+
+        & li {
+          padding: 0 1.5rem;
+
+          @include mq("desktop-medium") {
+            padding: 0 1rem;
+          }
+
+          & a {
+            display: block;
+
+            letter-spacing: 1.5px;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+            cursor: pointer;
+            z-index: 1000;
+            transition: all 0.1s ease-in;
+
+            &:hover,
+            &:active {
+              & span {
+                background: rgba(255, 255, 255, 0.1);
+                font-size: 1.3rem;
+                transform: translateY(-0.7rem);
+              }
+              background: rgba(255, 255, 255, 0.1);
+            }
+
+            & span {
+              color: #ffde27;
+              font-size: 1.1rem;
+              position: absolute;
+              font-weight: 700;
+              top: -1.2rem;
+            }
+          }
+
+          @include mq("tablet") {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  &__logo {
+    &-brand {
+      @include mq("tablet") {
+        text-align: center;
+        font-size: 5rem;
+      }
+
+      & img {
+        width: 20rem;
+        margin-left: 1.6rem;
+        @include mq("desktop-medium") {
+          width: 16rem;
+          margin-left: 1rem;
+        }
+        @include mq("tablet-wide") {
+          width: 20rem;
+        }
+      }
+    }
+  }
+}

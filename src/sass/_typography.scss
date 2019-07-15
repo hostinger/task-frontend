@@ -1,0 +1,45 @@
+@import "./mixins";
+
+.spacer {
+  flex: 1 1;
+}
+
+.container {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  padding: 0 15rem;
+  padding-top: 2.5rem;
+  justify-content: space-around;
+
+  @include mq("screen-wide") {
+    padding: 0 10rem;
+    padding-top: 2.5rem;
+    font-size: 95%;
+  }
+  @include mq("screen-medium") {
+    padding: 0 5rem;
+    padding-top: 2.5rem;
+  }
+  @include mq("screen") {
+    padding: 0 0rem;
+    padding-top: 2.5rem;
+  }
+  @include mq("desktop-wide") {
+    padding: 0 0rem;
+    padding-top: 2.5rem;
+  }
+  @include mq("desktop-medium") {
+    padding: 0 0rem;
+    padding-top: 2.5rem;
+  }
+  @include mq("tablet") {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 5rem;
+  }
+}
+
+.triangle {
+  display: flex;
+}

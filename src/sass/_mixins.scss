@@ -1,0 +1,41 @@
+$breakpoints: (
+  "iphone-small": 321px,
+  "iphone": 376px,
+  "IPhoneX": 400px,
+  "iphone-plus": 415px,
+  "phone-wide": 480px,
+  "phablet": 560px,
+  "tablet": 768px,
+  "tablet-small": 875px,
+  "tablet-medium": 950px,
+  "tablet-wide": 1024px,
+  "desktop-medium": 1200px,
+  "desktop-wide": 1300px,
+  "screen": 1400px,
+  "screen-medium": 1500px,
+  "screen-wide": 1633px
+);
+
+@mixin mq($width, $type: max) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}
+
+@mixin dq($width, $type: min) {
+  @if map_has_key($breakpoints, $width) {
+    $width: map_get($breakpoints, $width);
+    @if $type == max {
+      $width: $width - 1px;
+    }
+    @media only screen and (#{$type}-width: $width) {
+      @content;
+    }
+  }
+}

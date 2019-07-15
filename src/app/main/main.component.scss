@@ -1,0 +1,492 @@
+$margin: 10px;
+$padding: 10px;
+
+$mobile-s: 320px;
+$galaxy-s5: 360px;
+$mobile-m: 375px;
+$pixel-2: 411px;
+$iphone-6-plus: 414px;
+$mobile-l: 435px;
+$tablet-s: 769px;
+$tablet-l: 992px;
+$laptop-s: 1024px;
+$laptop-m: 1220px;
+$desktop: 1440px;
+
+@mixin mobile-s {
+    @media (max-width: #{$mobile-s}) {
+        @content;
+    }
+}
+
+@mixin galaxy-s5 {
+    @media (max-width: #{$galaxy-s5}) {
+        @content;
+    }
+}
+
+@mixin mobile-m {
+    @media (max-width: #{$mobile-m}) {
+        @content;
+    }
+}
+
+@mixin pixel-2 {
+    @media (max-width: #{$pixel-2}) {
+        @content;
+    }
+}
+
+@mixin iphone-6-plus {
+    @media (max-width: #{$iphone-6-plus}) {
+        @content;
+    }
+}
+
+@mixin mobile-l {
+    @media (max-width: #{$mobile-l}) {
+        @content;
+    }
+}  
+
+@mixin tablet-s {
+    @media (max-width: #{$tablet-s}) {
+        @content;
+    }
+} 
+
+@mixin tablet-l {
+    @media (max-width: #{$tablet-l}) {
+        @content;
+    }
+}
+
+@mixin laptop-s {
+    @media (max-width: #{$laptop-s}) {
+        @content;
+    }
+}
+
+@mixin laptop-m {
+    @media (max-width: #{$laptop-m}) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (max-width: #{$desktop}) {
+        @content;
+    }
+}
+
+#main-wrapper {
+    margin-top: 17.5rem;
+    margin-bottom: 19vh;
+    text-transform: capitalize;
+    font-family: 'Open Sans', sans-serif;
+
+    @include tablet-l {
+        margin-top: 35%;
+    }
+
+    #discount-wrapper {
+        display: flex;
+        justify-content: center;
+        font-weight: bold;
+
+        #discount-tag {
+            position: relative;
+            font-size: .8rem;
+            min-width: 10px;
+            padding: 5px;
+            top: -30px;
+            text-transform: uppercase;
+            height: 45px;
+            margin-left: 500px;
+            background: hsl(354, 88%, 73%);
+            justify-items: center;
+            text-align: center;
+
+            p {
+                padding: $padding;
+            }
+
+        }
+        #discount-tag:after {
+            top: 100%;
+            left: 50%;
+            border: solid transparent;
+            content: " ";
+            height: 0;
+            width: 0;
+            position: absolute;
+            pointer-events: none;
+            border-color: rgba(136, 183, 213, 0);
+            border-top-color: hsl(354, 88%, 73%);
+            border-width: 20px;
+            margin-left: -20px;
+
+        }
+
+        @include tablet-l {
+            position: absolute;
+            top: 190px;
+            left: 15px;
+        }
+
+        @include tablet-s {
+            position: absolute;
+            top: 190px;
+            left: 15px;
+        }
+
+        @include iphone-6-plus {
+            position: absolute;
+            top: 580px;
+            left: -310px;
+        }
+
+        @include pixel-2 {
+            position: absolute;
+            top: 580px;
+            left: -310px;
+        }
+
+        @include mobile-m {
+            position: absolute;
+            top: 560px;
+            left: -330px;
+        }
+
+         @include mobile-s {
+            position: absolute;
+            top: 530px;
+            left: -345px;
+        }
+    }
+
+    #offer-wrapper {
+        font-size: 38px;
+        font-weight: 900;
+        margin-bottom: 15vh;
+
+        #offer-title {
+            margin: 0 $margin;
+            padding: 0;
+        }
+
+        #offer-discount {
+            display: flex;
+            flex-direction: row;
+            margin: 0 $margin;
+            padding: 0;
+
+            #red-text {
+                margin-right: 10px;
+                color: hsl(354, 70%, 54%);
+            }
+        }
+
+        #offer-countdown {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            #time-block {
+                display: flex;
+                justify-content: space-evenly;
+                align-items: center;
+                font-weight: 700;
+            }
+        }
+
+        #offer-button {
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: $padding 4 * $padding;
+        }
+
+        #triangle-right {
+            width: 15px;
+            height: 15px;
+            border-top: 10px solid transparent;
+            border-left: 20px solid hsl(354, 70%, 54%);
+            border-bottom: 10px solid transparent;
+        }
+    
+        #triangle-left {
+            width: 15px;
+            height: 15px;
+            border-top: 10px solid transparent;
+            border-right: 20px solid hsl(354, 70%, 54%);
+            border-bottom: 10px solid transparent;
+        }
+
+        count-down {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        @include laptop-m {
+            #offer-title, #offer-discount {
+                font-size: 32px;
+            }
+
+            #offer-countdown {
+                max-width: 420px;
+            }
+        }
+
+        @include tablet-l {
+            #offer-title, #offer-discount {
+                font-size: 24px;
+            }
+
+            #offer-countdown {
+                max-width: 320px;
+            }
+
+            #triangle-right {
+                display: none;
+            }
+        
+            #triangle-left {
+                display: none;
+            }
+
+            #offer-button {
+                font-size: 10px;
+            }
+        }
+
+        @include tablet-s {
+            margin-top: 5vh;
+            margin-bottom: 20vh;
+
+            #offer-title {
+                min-width: 240px;
+            }
+
+            #offer-discount {
+                font-size: 16px;
+                min-width: 240px;
+            }
+
+            #offer-countdown {
+                max-width: 240px;
+                margin: 0 20px
+            }
+        }
+
+        @include mobile-l {
+            margin-left: 40px;
+            margin-bottom: 25vh;
+
+            #offer-title, #offer-discount {
+                margin-left: 30px;
+            }
+
+            #offer-button {
+                margin-left: 15px;
+            }
+        }
+
+        @include iphone-6-plus {
+            margin-top: 80px;
+            margin-left: 30px;
+
+            #offer-title {
+                margin-left: 45px;
+                max-width: 250px;
+            }
+
+            #offer-discount {
+                margin-left: 50px;
+                max-width: 250px;
+            }
+
+            #offer-button {
+                margin-left: 35px;
+            } 
+        }
+
+        @include pixel-2 {
+            margin-top: 80px;
+            margin-left: 30px;
+
+            #offer-title {
+                margin-left: 45px;
+                max-width: 250px;
+            }
+
+            #offer-discount {
+                margin-left: 50px;
+                max-width: 250px;
+            }
+
+            #offer-button {
+                margin-left: 35px;
+            } 
+        }
+
+        @include mobile-m {
+            margin-top: 100px;
+            margin-left: 20px;
+
+            #offer-title {
+                margin-left: 35px;
+                max-width: 250px;
+            }
+
+            #offer-discount {
+                margin-left: 40px;
+                max-width: 250px;
+            }
+
+            #offer-button {
+                margin-left: 25px;
+            } 
+        }
+
+        @include mobile-s {
+            margin-left: 10px;
+
+            #offer-title {
+                margin-left: 20px;
+                max-width: 250px;
+            }
+
+            #offer-discount {
+                margin-left: 25px;
+                max-width: 250px;
+            }
+
+            #offer-button {
+                margin-left: 10px;
+            } 
+        }
+    }
+
+    #price-wrapper {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 5vh;
+        
+
+        #price-currency {
+            font-size: 120px;
+            height: auto;
+            margin-top: 50px;
+        }
+
+        #price-unit__big-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            max-height: 400px;
+
+            #price-unit__big {
+                display: inline-block;
+                position: relative;
+                top: -80px;
+                max-height: 400px;
+                padding: 10px 10px;
+                text-align: center;
+                margin: 0 auto;
+                font-size: 400px;
+                font-weight: 600;
+            }
+        }
+
+        #price-unit__small {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            font-size: 100px;
+            height: auto;
+            margin-top: 30px;
+
+            #price-unit__month {
+                text-transform: none;
+                font-weight: 500;
+                font-size: 70px;
+            }
+        }
+
+        @include laptop-m {
+            #price-currency {
+                font-size: 100px;
+            }
+            #price-unit__big {
+                font-size: 330px !important;
+            }
+            #price-unit__small {
+                font-size: 70px;
+            }
+            #price-unit__month {
+                font-size: 50px;
+            }
+        }
+
+        @include tablet-l {
+            #price-currency {
+                font-size: 80px;
+            }
+            #price-unit__big {
+                font-size: 310px !important;
+            }
+            #price-unit__small {
+                font-size: 50px;
+            }
+            #price-unit__month {
+                font-size: 30px;
+            }
+        }
+
+        @include tablet-s {
+            #price-currency {
+                font-size: 70px;
+            }
+            #price-unit__big {
+                font-size: 300px !important;
+            }
+            #price-unit__small {
+                font-size: 40px;
+            }
+            #price-unit__month {
+                font-size: 30px !important;
+            }
+        }
+
+        @include mobile-l {
+            margin-left: 30px;
+
+            #price-unit__small {
+                font-size: 40px;
+            }
+            #price-unit__month {
+                font-size: 30px !important;
+            }
+        }
+
+        @include mobile-m {
+            margin-left: 30px;
+
+            #price-unit__small {
+                font-size: 40px;
+            }
+            #price-unit__month {
+                font-size: 30px !important;
+            }
+        }
+
+        @include mobile-s {
+            #price-currency {
+                margin-left: -20px;
+                font-size: 60px;
+            }
+        }
+    }
+}

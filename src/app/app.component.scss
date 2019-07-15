@@ -1,0 +1,16 @@
+#background-wrapper {
+    background: url('../assets/background-2-min.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    min-width: 100%;
+    min-height: 100%;
+    height: auto;
+    // position: fixed;
+
+    #content-wrapper {
+        color: hsl(0, 0%, 100%);
+        font-family: 'Open Sans', sans-serif;
+        font-weight: 600;
+    }
+}

@@ -1,0 +1,16 @@
+#background-wrapper {
+  background: url("../assets/background-2-min.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  min-width: 100%;
+  min-height: 100%;
+  height: auto;
+}
+
+#background-wrapper #content-wrapper {
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+}
+/*# sourceMappingURL=app.component.css.map */

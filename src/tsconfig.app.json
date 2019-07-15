@@ -1,0 +1,17 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "outDir": "../out-tsc/app",
+    "types": []
+  },
+  "exclude": [
+    "test.ts",
+    "**/*.spec.ts"
+  ],
+  "include": [
+    "../node_modules/angular2-simple-countdown/countdown.ts",
+    "../node_modules/angular2-simple-countdown/lib/countdown.ts",
+    "../src/main.ts",
+    "../src/polyfills.ts"
+  ]
+}

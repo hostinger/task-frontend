@@ -1,0 +1,16 @@
+@import "assets/styles/base.scss";
+
+#app{
+  height: 100vh;
+}
+
+
+.background{
+    background-image: url("assets/background.jpg");
+    background-size: cover;
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+    transform: scaleX(-1);
+}

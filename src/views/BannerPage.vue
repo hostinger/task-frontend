@@ -20,7 +20,3 @@
         components: {BannerPrice, BannerOffer}
     }
 </script>
-
-<style scoped lang="scss">
-    @import "../assets/styles/components/bannerPage";
-</style>

@@ -37,20 +37,13 @@
   }
 }
 
-
-
-
-
-
-
-
-
 .save-pointer{
   width: max-content;
   margin:auto;
   display: flex;
-  display: -ms-flex;
+  display: -ms-flexbox;
   justify-content: center;
+  -ms-justify-content: center;
   flex-direction: column;
   -ms-flex-direction: column;
 

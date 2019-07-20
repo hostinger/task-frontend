@@ -1,3 +1,4 @@
+@import "assets/styles/variables";
 html{
     height: 100%;
 }
@@ -6,4 +7,8 @@ body{
     height: 100%;
     margin: 0px;
     padding: 0px;
+}
+
+body, html {
+    font-family: 'H', 'Trebuchet MS', Helvetica, sans-serif;
 }

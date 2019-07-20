@@ -1,0 +1,76 @@
+@import '../variables';
+
+em {
+  text-transform: uppercase;
+  font-style: normal;
+  color: $color-dark-pink;
+}
+
+.offer{
+  padding-top: 110px;
+}
+
+.offer-text{
+  font-size: 40px;
+  font-weight: 800;
+  color: $color-white;
+  margin-bottom: 30px;
+}
+
+.timer{
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  width: 100%;
+  margin-left: 15px;
+  margin-right: 15px;
+  color: $color-white;
+  font-weight: 800;
+  font-size: 25px;
+}
+
+.count{
+  text-align: center;
+}
+.offer-timer{
+  display: flex;
+  display: -ms-flexbox;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+.arrow-right{
+  margin: auto;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-left: 20px solid $color-dark-pink
+}
+
+.arrow-left{
+  margin: auto;
+  display: inline-block;
+  vertical-align: middle;
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid $color-dark-pink;
+}
+
+.offer-button{
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 20px;
+  display: block;
+  margin-right: auto;
+  background: $color-dark-pink;
+  color: $color-white;
+  border: none;
+  padding: 15px 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}

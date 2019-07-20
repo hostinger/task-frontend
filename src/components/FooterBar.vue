@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container footer">
         <ul class="list-inline justify-items-center my-list-inline">
             <li class="list-inline-item"><span><font-awesome-icon icon="check" class="check-icon"/></span>Guaranteed 99.9% Uptime</li>
             <li class="list-inline-item"><span><font-awesome-icon icon="check" class="check-icon"/></span>Superior Speed Performance</li>

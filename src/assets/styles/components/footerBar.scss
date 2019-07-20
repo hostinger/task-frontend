@@ -1,0 +1,20 @@
+@import '../_variables.scss';
+
+.my-list-inline{
+  text-align: center;
+
+  li{
+    color: $color-white;
+    font-size: medium;
+    font-weight: 500;
+    margin-right: 30px;
+
+    span{
+      margin-right: 10px;
+
+      .check-icon{
+        color: #76C877;
+      }
+    }
+  }
+}

@@ -1,8 +1,6 @@
 @import "assets/styles/base.scss";
 
 
-
-
 .background{
     background-image:
             linear-gradient(
@@ -11,9 +9,8 @@
             url("assets/background.jpg");
     background-size: cover;
     position: absolute;
-    height: 100vh;
+    height: 100%;
     width: 100%;
     z-index: -1;
     transform: scaleX(-1);
-
 }

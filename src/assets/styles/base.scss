@@ -1,4 +1,5 @@
 @import "assets/styles/variables";
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 html{
     height: 100%;
 }
@@ -10,5 +11,5 @@ body{
 }
 
 body, html {
-    font-family: 'H', 'Trebuchet MS', Helvetica, sans-serif;
+    font-family: 'H', 'Open Sans', Helvetica, sans-serif;
 }

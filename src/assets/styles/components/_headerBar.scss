@@ -21,6 +21,15 @@ header{
   font-weight: 600;
   text-transform: uppercase;
   color: $color-white !important;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.my-nav-item:hover, .my-nav-item:hover :last-child{
+  opacity: 0.7;
 }
 
 .sale-note{
@@ -34,4 +43,10 @@ header{
   -ms-transform: translate(8px,-40px);
   -o-transform: translate(8px,-40px);
   transform: translate(8px,-40px);
+
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }

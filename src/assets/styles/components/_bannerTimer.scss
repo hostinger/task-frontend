@@ -51,4 +51,16 @@
 
 }
 
+@media screen and (max-width: 990px){
+  .offer-timer{
+    margin: auto auto 30px;
+  }
+}
+
+@media screen and (max-width: 760px){
+  *{
+    font-size: 95%;
+  }
+}
+
 

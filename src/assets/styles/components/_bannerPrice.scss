@@ -31,7 +31,6 @@
     //-ms-flex-direction: column;
 
     .price-period{
-      font-size: 80px;
       margin-top: 60px;
     }
   }
@@ -66,6 +65,30 @@
       border-left: 30px solid transparent;
       border-right: 30px solid transparent;
       border-top: 30px solid $color-pink;
+    }
+  }
+}
+
+@media screen and (max-width: 760px){
+
+  .price-details {
+    padding-left: 20px;
+  }
+
+  .price-block{
+    .currency-block{
+      font-size: 90px;
+    }
+
+    .big-price{
+      font-size: 450px;
+    }
+
+    .price-details{
+      .price-cents, .price-period{
+        font-size: 60px;
+      }
+
     }
   }
 }

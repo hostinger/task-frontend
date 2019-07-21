@@ -21,24 +21,36 @@ em {
   border-radius: 5px;
 }
 
-@media screen and (min-width: 990px){
-  .offer{
-    padding-top: 110px;
-  }
 
-  .offer-button{
-    margin-left: 0;
-    margin-right: auto;
-  }
-}
 
 
 .offer-text{
+  text-align: center;
   font-size: 40px;
   font-weight: 800;
   color: $color-white;
   margin-bottom: 30px;
 }
+
+@media screen and (min-width: 990px){
+  .offer{
+    padding-top: 110px;
+
+    .offer-text{
+      text-align: left;
+    }
+
+    .offer-button{
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+
+
+}
+
+
 
 
 

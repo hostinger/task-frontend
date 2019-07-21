@@ -5,9 +5,9 @@
 
 .offer-timer{
   display: flex;
-  //display: -ms-flexbox;
   justify-content: space-between;
   margin-bottom: 30px;
+  max-width: 350px;
 
   .arrow-right{
     margin: auto;
@@ -22,16 +22,16 @@
 
   .timer{
     display: flex;
-    //display: -ms-flexbox;
-    justify-content: space-between;
     width: 100%;
     margin-left: 15px;
     margin-right: 15px;
     color: $color-white;
     font-weight: 800;
-    font-size: 25px;
+    font-size: 20px;
 
     .time{
+      margin-left: 5px;
+      margin-right: 5px;
       .count{
         text-align: center;
       }

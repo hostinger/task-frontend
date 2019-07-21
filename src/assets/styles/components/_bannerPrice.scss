@@ -1,0 +1,102 @@
+@import '../variables';
+
+.price-block{
+  display: flex;
+  //display: -ms-flexbox;
+  color: $color-white;
+  justify-content: space-between;
+  margin-top: -70px;
+
+  .currency-block{
+    font-weight: 700;
+    font-size: 125px;
+    padding-top: 140px;
+  }
+
+  .big-price{
+    font-weight: 800;
+    font-size: 500px;
+    margin-top: -80px;
+    margin-left: -30px;
+  }
+
+  .price-details{
+    font-weight: 800;
+    padding-top: 100px;
+    font-size: 100px;
+    margin-left: -100px;
+    display: flex;
+    display: -ms-flexbox;
+    flex-direction: column;
+    //-ms-flex-direction: column;
+
+    .price-period{
+      margin-top: 60px;
+    }
+  }
+}
+
+.save-pointer{
+  max-width: 175px;
+  margin:auto;
+  display: flex;
+  //display: -ms-flexbox;
+  justify-content: center;
+  flex-direction: column;
+
+  .save-text{
+    width: max-content;
+    font-weight: 800;
+    font-size: 20px;
+    text-transform: uppercase;
+    background: $color-pink;
+    padding: 10px 40px;
+    color: $color-white;
+  }
+
+  .save-arrow{
+    margin-left: 34%;
+
+    .arrow-down {
+      display: inline-block;
+      vertical-align: middle;
+      width: 0;
+      height: 0;
+      border-left: 30px solid transparent;
+      border-right: 30px solid transparent;
+      border-top: 30px solid $color-pink;
+    }
+  }
+}
+
+@media screen and (max-width: 760px){
+
+  .price-details {
+    padding-left: 20px;
+  }
+
+  .price-block{
+    .currency-block{
+      font-size: 90px;
+    }
+
+    .big-price{
+      font-size: 450px;
+    }
+
+    .price-details{
+      .price-cents, .price-period{
+        font-size: 60px;
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+
+

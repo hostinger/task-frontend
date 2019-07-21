@@ -1,0 +1,52 @@
+@import '../_variables.scss';
+
+nav {
+  background: none;
+}
+
+header{
+  margin-bottom: 80px;
+}
+
+.my-toggler{
+  border-color: $color-white;
+}
+.my-toggler-icon{
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+.my-nav-link{
+  font-size: smaller;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $color-white !important;
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.my-nav-item:hover, .my-nav-item:hover :last-child{
+  opacity: 0.7;
+}
+
+.sale-note{
+  position: absolute;
+  color: $color-yellow;
+  font-weight: 600;
+  font-size: x-small;
+  text-transform: uppercase;
+  -webkit-transform: translate(8px,-40px);
+  -moz-transform: translate(8px,-40px);
+  -ms-transform: translate(8px,-40px);
+  -o-transform: translate(8px,-40px);
+  transform: translate(8px,-40px);
+
+  -webkit-transition-duration: 0.3s;
+  -moz-transition-duration: 0.3s;
+  -ms-transition-duration: 0.3s;
+  -o-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}

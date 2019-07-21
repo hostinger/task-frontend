@@ -1,0 +1,56 @@
+@import '../variables';
+
+em {
+  text-transform: uppercase;
+  font-style: normal;
+  color: $color-dark-pink;
+}
+
+.offer-button{
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 20px;
+  display: block;
+  margin: auto;
+  background: $color-dark-pink;
+  color: $color-white;
+  border: none;
+  padding: 15px 30px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+
+
+
+.offer-text{
+  text-align: center;
+  font-size: 40px;
+  font-weight: 800;
+  color: $color-white;
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 990px){
+  .offer{
+    padding-top: 110px;
+
+    .offer-text{
+      text-align: left;
+    }
+
+    .offer-button{
+      margin-left: 0;
+      margin-right: auto;
+    }
+  }
+
+
+
+}
+
+
+
+
+

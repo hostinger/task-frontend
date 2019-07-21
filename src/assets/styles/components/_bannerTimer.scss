@@ -5,7 +5,7 @@
 
 .offer-timer{
   display: flex;
-  display: -ms-flexbox;
+  //display: -ms-flexbox;
   justify-content: space-between;
   margin-bottom: 30px;
 
@@ -22,7 +22,7 @@
 
   .timer{
     display: flex;
-    display: -ms-flexbox;
+    //display: -ms-flexbox;
     justify-content: space-between;
     width: 100%;
     margin-left: 15px;
@@ -30,6 +30,12 @@
     color: $color-white;
     font-weight: 800;
     font-size: 25px;
+
+    .time{
+      .count{
+        text-align: center;
+      }
+    }
   }
 
   .arrow-left{

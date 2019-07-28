@@ -1,0 +1,369 @@
+@import 'media.scss';
+
+$yellow : rgb(247, 217, 43);
+$red : rgb(252, 80, 85);
+$sale-col : rgb(253, 156, 156);
+$tick-col : rgb(125, 197, 122);
+
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    // background-color: grey;
+    font-size: 12px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-weight: 500;
+    @include mobile {
+        font-size: 9px;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 80%;
+    @include desktop-l {
+        width: 90%;
+    }
+    &::before {
+        content: "";
+        background-image: url(../assets/background.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: brightness(0.6);
+        z-index: -200;
+        position: absolute;
+        top: -100px;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 130vh;
+    }
+}
+
+.on-sale {
+    &::before {
+        content: "on sale";
+        text-transform: uppercase;
+        color: $yellow;
+        position: absolute;
+        transform: translateY(-50%);
+        top: 0;
+        right: 0;
+        font-size: 0.8em;
+        @include desktop {
+            left: 0;
+        }
+    }
+
+}
+
+.top-nav {
+    margin-top: 50px;
+    position: relative;
+    @include desktop {
+        position: static;
+    }
+    @include mobile {
+        margin-top: 15px;
+    }
+    &__logo {
+        height: 30px;
+        @include mobile {
+            height: 20px;
+        }
+    }
+    .nav {
+        list-style: none;
+        display: inline-block;
+        float: right;
+        font-size: 1.2em;
+        line-height: 35px;
+        display: block;
+        width: 100%;
+        position: relative;
+        position: absolute;
+        border-radius: 7px;
+        @include desktop {
+            display: inline-block;
+            width: auto;
+            background-color: transparent;
+            position: static;
+        }
+        &__item {
+            position: relative;
+            display: block;
+            &_toggle {
+              display: none;
+              @include desktop {
+                display:block;
+            }  
+            }
+            @include desktop {
+                float: none;
+                display: inline-block;
+                // display: none;
+                &:not(:last-child) {
+                    padding-right: 20px; 
+                }
+            }
+            a {
+                text-decoration: none;  
+                color: white;
+                text-transform: uppercase;
+                text-align: right;
+                display: block;
+                @include desktop {
+                    text-align: left;
+                }
+            }
+            .close {
+                position: absolute;
+                top: 0;
+                right: 0;
+            }
+        }
+        &__menu-icon {
+            font-size: 1.5em;
+            line-height: 30px;
+            float: right;
+            @include mobile {
+                line-height: 20px;
+            }
+            @include desktop {
+                display: none;
+            }
+        }
+    }
+}
+
+.banner {
+    @include desktop {
+        height: 50vh;
+        width: 100%;
+        position: relative;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .left-text {
+        text-align: center;
+            @include desktop {
+                text-align: start; 
+                display: inline-block;
+                position: absolute;
+                width: 50%;
+                position: absolute;
+                transform: translateY(-50%);
+                top: 50%;
+                left: 0;
+            }
+            > * {
+                &:not(:first-child) {
+                    margin-top: 20px;
+                }
+                margin-bottom: 20px;
+                @include mobile {
+                    margin-top: 10px;
+                    margin-bottom: 5px;
+                }
+            }
+            &__cap {
+                font-size: 3.3em;
+                line-height: 1.5em;
+                letter-spacing: 2px;
+                text-transform: capitalize;
+                span {
+                    color: $red;
+                    text-transform: uppercase;
+                }
+            }
+            &__counter {
+                text-transform: uppercase;
+                
+                font-size: 1.5em;
+                > * {
+                display: inline-block;  
+                text-align: center;
+                }
+                .counter__days,
+                .counter__hours,
+                .counter__minutes,
+                .counter__seconds {
+                    padding: 10px 5px;
+                    @include desktop {
+                        padding: 10px 15px;
+                    }
+                }
+                .counter__left-arrow {
+                    width: 0;
+                    height: 0;
+                    border-top: 10px solid transparent;
+                    border-left: 15px solid $red;
+                    border-bottom: 10px solid transparent;
+                    box-sizing: border-box;
+                    transform: translateY(-50%);
+                }
+                .counter__right-arrow {
+                    width: 0;
+                    height: 0;
+                    border-top: 10px solid transparent;
+                    border-right: 15px solid $red;
+                    border-bottom: 10px solid transparent;
+                    box-sizing: border-box;
+                    transform: translateY(-50%);
+                }
+
+            }
+
+            button {
+                padding: 20px 40px;
+                text-transform: uppercase;
+                color: white;
+                font-size: 1.5em;
+                background-color: $red;
+                border-radius: 7px;
+                border: none;
+                cursor: pointer;
+            }
+        }
+
+        .price {
+            margin-top: 30px;
+            @include mobile {
+                margin-top: 20px;
+            }
+            @include desktop {
+                width: 40%;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+            .price-sale {
+                background-color: $sale-col;
+                color: white;
+                text-transform: uppercase;
+                font-size: 2rem;
+                display: inline-block;
+                transform: translateX(-50%);
+                margin-left: 50%;
+                margin-bottom: 15px;
+                h4 {
+                    padding: 8px 20px;
+                    font-size: 0.7em;
+                    font-weight: 500;
+                    white-space: nowrap;
+                    @include mobile {
+                        padding: 8px 15px;
+                        font-size: 0.4em;
+                    }
+                }
+                &__rect {
+                    position: relative;
+                    &:before {
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        background-color: $sale-col;
+                        position: absolute;
+                        transform: rotate(45deg);
+                        transform: translate(-50%, 50%) rotate(45deg);
+                        bottom: 0;
+                        left: 50%;
+                        z-index: -10;
+                        @include mobile {
+                            width: 10px;
+                            height: 10px;
+                        }
+                    }
+                }
+            }
+
+            .price-num {
+                color: white;
+                font-size: 3em;
+                display: flex;
+                justify-content: center;
+
+                @include desktop {
+                    justify-content: flex-end;
+                }
+                font-weight: 900;
+                
+                > * {
+                    // display: inline-block;
+                }
+                &-vertical {
+                    // border: 1px solid red;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    margin-bottom: 3em;
+                }
+                &__currency, 
+                &__cents,
+                &_dol,
+                &__per {
+                    font-size: 2.5em;
+                    @include mobile {
+                        font-size: 2em;
+                    }
+                }
+                &__dol {
+                    font-size: 10em;
+                    display: block;
+                    line-height: 85%;
+                    @include mobile {
+                        font-size: 7em;
+                        // line-height: 85%;
+                    }
+                }
+                &__per {
+                    font-weight: 400;
+                    font-size: 1.5em;
+                }
+                &__currency {
+                    margin-top: 0.5em;
+                }
+            }
+
+        }
+
+}
+
+.extra {
+    list-style: none;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    margin-top: 20px;
+    @include desktop {
+        display: flex;
+        justify-content: space-between;
+    }
+    li {
+        text-align: center;
+        padding: 5px;
+
+        @include desktop {
+            text-align: left;
+            padding: 0;
+        }
+    }
+    .fa-check {
+        padding-right: 10px;
+        color: $tick-col;
+    }
+}
+
+#hidden {
+    display: none;
+}
+.display-none-we {
+    display: none;
+}

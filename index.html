@@ -5,65 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
 </head>
 <body>
     <div class="container">
 
         <div class="top-nav">
-            <img id="top-nav__logo" src="" alt="">
+
+            <a href="#"><img class="top-nav__logo" src="assets/img/logo.svg" alt=""></a>
+
+            <i class="nav__menu-icon fas fa-bars"></i>
+            <i class="nav__menu-icon fas fa-times" id="hidden"></i>
 
             <ul class="nav">
-                <li class="nav__item"><a>web hosting</a></li>
-                <li class="nav__item on-sale"><a>cloud hosting</a></li>
-                <li class="nav__item"><a>vps hosting</a></li>
-                <li class="nav__item"><a>domain checker</a></li>
-                <li class="nav__item"><a>website builder</a></li>
+                <li class="nav__item nav__item_toggle"><a href="#">web hosting</a></li>
+                <li class="nav__item on-sale nav__item_toggle"><a href="#">cloud hosting</a></li>
+                <li class="nav__item nav__item_toggle"><a href="#">vps hosting</a></li>
+                <li class="nav__item nav__item_toggle"><a href="#">domain checker</a></li>
+                <li class="nav__item nav__item_toggle"><a href="#">website builder</a></li>
             </ul>
 
         </div>
 
         <div class="banner">
-
-                <div class="left-text">
-                    <h1 class="left-text__cap">New Year Offer </br>
-                        <span>82% off</span> Web hosting
-                    </h1>
-                    <div class="left-text__counter">
-                        <div class="counter__left-arrow"></div>
-                        <div class="counter__days">111</div>
-                        <div class="counter__hours">22</div>
-                        <div class="counter__minutes">33</div>
-                        <div class="counter__seconds">44</div>
-                        <div class="counter__right-arrow"></div>
-                    </div>
-                    <button>get started now</button>
-                </div>
-                
-
-                <div class="price">
+            
+            <div class="price">
                     <div class="price-sale">
                         <div class="price-sale__rect">
-                            <h3 class="price-sale__cap">save 82%</h3>
+                            <h4 class="price-sale__cap">save 82%</h4>
                         </div>
                     </div>
                     <div class="price-num">
                         <div class="price-num__currency">$</div>
                         <div class="price-num__dol">1</div>
-                        <div class="price-num__cents">45</div>
-                        <div class="price-num__per">/mo</div>
+                        <div class="price-num-vertical">
+                            <div class="price-num__cents">45</div>
+                            <div class="price-num__per">/mo</div>
+                        </div>
                     </div>
+                </div>
+
+                <div class="left-text">
+                    <h1 class="left-text__cap">New Year Offer <br>
+                        <span>82% off</span> Web hosting
+                    </h1>
+                    <div class="left-text__counter">
+                        <div class="counter__left-arrow"></div>
+                        <div class="counter__days"><h2>00</h2><h5>minutes</h5></div>
+                        <div class="counter__hours"><h2>16</h2><h5>minutes</h5></div>
+                        <div class="counter__minutes"><h2>18</h2><h5>minutes</h5></div>
+                        <div class="counter__seconds"><h2>29</h2><h5>minutes</h5></div>
+                        <div class="counter__right-arrow"></div>
+                    </div>
+                    <button>get started now</button>
                 </div>
             
         </div>
 
             <ul class="extra">
-                <li class="extra--item">Guaranteed 99.99% uptime</li>
-                <li class="extra--item">Superior speed performance</li>
-                <li class="extra--item">24/7 support chat</li>
-                <li class="extra--item">30-day money-back guarantee</li>
+                <li class="extra__item"><i class="fas fa-check"></i>Guaranteed 99.99% uptime</li>
+                <li class="extra__item"><i class="fas fa-check"></i>Superior speed performance</li>
+                <li class="extra__item"><i class="fas fa-check"></i>24/7 support chat</li>
+                <li class="extra__item"><i class="fas fa-check"></i>30-day money-back guarantee</li>
             </ul>
 
     </div>
 </body>
-<script src="assets/main.js"></script>
+<script src="js/main.js"></script>
+<!-- <script src="lib/main.js"></script> -->
 </html>

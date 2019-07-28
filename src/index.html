@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Histinger front-end developer task</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <script type="text/javascript">
+	( function(){
+		var days = 0;
+		var hours = 16;
+		var minutes = 18;
+		var seconds = 29;
+
+		function countDown() {
+			seconds--;
+			if( seconds < 0 ) {
+				seconds = 59;
+				minutes--;
+				if( minutes < 0 ) {
+					minutes = 59;
+					hours--;
+				}
+			}
+			document.getElementById( "seconds" ).innerHTML = seconds.toString() + "<span>SECONDS</span>";
+			document.getElementById( "minutes" ).innerHTML = minutes.toString() + "<span>MINUTES</span>";
+			document.getElementById( "hours" ).innerHTML = hours.toString() + "<span>HOURS</span>";
+			setTimeout( countDown, 1000 );
+		}
+		setTimeout( countDown, 1000 );
+	} )();
+  </script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+</html>

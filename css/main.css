@@ -8,6 +8,7 @@ body {
   font-family: "Roboto", sans-serif;
   color: white;
   font-weight: 500;
+  background-color: black;
 }
 @media (max-width: 550px) {
   body {
@@ -41,7 +42,12 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  height: 130vh;
+  height: 150vh;
+}
+@media (min-width: 980px) {
+  .container::before {
+    height: 130vh;
+  }
 }
 
 .on-sale::before {
@@ -265,7 +271,7 @@ body {
     width: 40%;
     position: absolute;
     right: 0;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
   }
 }

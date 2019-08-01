@@ -1,17 +1,21 @@
 <template>
   <div id="app" class="container">
     <Navbar />
-    <div class="main-content-container">Main content</div>
+    <div class="main-content-container">
+      <Timer />
+    </div>
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar";
+import Timer from "./components/Timer";
 
 export default {
   name: "app",
   components: {
-    Navbar
+    Navbar,
+    Timer
   }
 };
 </script>
@@ -24,17 +28,14 @@ export default {
 
 body
   font-family: "H", "Trebuchet MS", Helvetica
-  -webkit-font-smoothing: antialiased
-  -moz-osx-font-smoothing: grayscale
   background-color: gray
 
 /* Tablet Styles */
 @media only screen and (max-width: 961px)
   .container
-      height: 100%
-      width: 70%
-      margin: 0 auto
-
+    height: 100%
+    width: 70%
+    margin: 0 auto
 
 /* Desktop Styles */
 @media only screen and (min-width: 960px)  

@@ -37,6 +37,8 @@ $gray: #d1d1d1
 .dropdown-menu
   display: none
   list-style-type: none
+  z-index: 1
+  background-color: $gray
   position: absolute
   li
     text-transform: uppercase

@@ -2,7 +2,8 @@
   <div id="app" class="container">
     <Navbar />
     <div class="main-content-container">
-      <Promotion />
+      <Promotion class="flex-item"/>
+      <PriceTag class="flex-item" />
     </div>
   </div>
 </template>
@@ -10,12 +11,14 @@
 <script>
 import Navbar from "./components/Navbar";
 import Promotion from "./components/Promotion";
+import PriceTag from './components/PriceTag';
 
 export default {
   name: "app",
   components: {
     Navbar,
-    Promotion
+    Promotion,
+    PriceTag
   }
 };
 </script>
@@ -37,15 +40,28 @@ body
     width: 90%
     margin: 0 auto
 
+  .main-content-container
+    margin: 8rem 0
+    display: flex
+    flex-direction: column
+
+  .flex-item:nth-child(1)
+    order: 2
+
+  .flex-item:nth-child(2)
+    order: 0
+
 /* Desktop Styles */
 @media only screen and (min-width: 960px)  
   .container
     height: 100%
-    width: 70%
+    width: 80%
     margin: 0 auto
 
   .main-content-container
     margin: 8rem 0
+    display: flex
+    justify-content: space-between
 
 </style>
 

@@ -15,7 +15,6 @@
 <script>
 import Timer from './Timer';
 
-
 export default {
   name: "Promotion",
   components: {

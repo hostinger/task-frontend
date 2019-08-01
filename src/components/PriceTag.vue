@@ -34,7 +34,7 @@ export default {
     font-size: 7.5rem
     align-self: flex-start
 
-@media only screen and (max-width: 961px)
+@media only screen and (max-width: 1451px)
     .dollar-sign
         font-size: 7.5rem
     

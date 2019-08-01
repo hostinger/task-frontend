@@ -23,7 +23,7 @@ $gray: #d1d1d1
     display: inline-block
     padding: 0.7rem
     text-transform: uppercase
-    font-size: 0.9vw
+    font-size: 1rem
     transition: 1s
 
   li:hover

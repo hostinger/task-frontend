@@ -59,7 +59,7 @@ $dark-red: #ff4546
 .btn:hover
   background-color: $dark-red
 
-@media only screen and (max-width: 961px)
+@media only screen and (max-width: 1451px)
   .promo-text
     font-size: 1.5rem
   

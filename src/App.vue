@@ -5,6 +5,7 @@
       <Promotion class="flex-item"/>
       <PriceTag class="flex-item" />
     </div>
+    <Footer />
   </div>
 </template>
 
@@ -12,13 +13,15 @@
 import Navbar from "./components/Navbar";
 import Promotion from "./components/Promotion";
 import PriceTag from './components/PriceTag';
+import Footer from './components/Footer';
 
 export default {
   name: "app",
   components: {
     Navbar,
     Promotion,
-    PriceTag
+    PriceTag,
+    Footer
   }
 };
 </script>
@@ -31,13 +34,19 @@ export default {
 
 body
   font-family: "H", "Trebuchet MS", Helvetica
-  background-color: gray
+
+html
+  background: url(assets/background.jpg) repeat center center fixed
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
+  background-size: cover
 
 /* Tablet Styles */
-@media only screen and (max-width: 961px)
+@media only screen and (max-width: 1101px)
   .container
     height: 100%
-    width: 90%
+    width: 70%
     margin: 0 auto
 
   .main-content-container
@@ -52,10 +61,10 @@ body
     order: 0
 
 /* Desktop Styles */
-@media only screen and (min-width: 960px)  
+@media only screen and (min-width: 1100px)  
   .container
     height: 100%
-    width: 80%
+    width: 60%
     margin: 0 auto
 
   .main-content-container

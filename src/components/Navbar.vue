@@ -1,8 +1,8 @@
 <template>
   <header class="header-container">
     <img src="../assets/logo.svg" alt="Hostinger" />
-    <ListMenu v-bind:listItems="listItems" v-if="windowWidth > 1000" />
-    <DropDownMenu v-bind:listItems="listItems" v-if="windowWidth < 1000" />
+    <ListMenu v-bind:listItems="listItems" v-if="windowWidth > 1450" />
+    <DropDownMenu v-bind:listItems="listItems" v-if="windowWidth < 1450" />
   </header>
 </template>
 

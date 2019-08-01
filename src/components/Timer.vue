@@ -93,7 +93,7 @@ $white: #ffffff
     font-size: 1rem
     padding: 0.3rem 0
 
-@media only screen and (max-width: 961px)
+@media only screen and (max-width: 1451px)
   .timer-value-container
     font-size: 1rem
 

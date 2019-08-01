@@ -1,9 +1,9 @@
 <template>
   <div>
     <div @click="toggleMenu" class="dropdown-title">
-      menu
+      <span>menu </span>
       <i class="fas fa-angle-down" v-bind:class="{'rotate-arrow': isActive}" />
-    </div>
+    </div>  
     <ul class="dropdown-menu" v-bind:class="{'is-active': isActive}">
       <li v-for="(item, index) in listItems" :key="index">{{ item }}</li>
     </ul>
@@ -38,7 +38,6 @@ $gray: #d1d1d1
   display: none
   list-style-type: none
   z-index: 1
-  background-color: $gray
   position: absolute
   li
     text-transform: uppercase

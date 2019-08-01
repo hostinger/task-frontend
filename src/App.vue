@@ -2,20 +2,20 @@
   <div id="app" class="container">
     <Navbar />
     <div class="main-content-container">
-      <Timer />
+      <Promotion />
     </div>
   </div>
 </template>
 
 <script>
 import Navbar from "./components/Navbar";
-import Timer from "./components/Timer";
+import Promotion from "./components/Promotion";
 
 export default {
   name: "app",
   components: {
     Navbar,
-    Timer
+    Promotion
   }
 };
 </script>
@@ -34,7 +34,7 @@ body
 @media only screen and (max-width: 961px)
   .container
     height: 100%
-    width: 70%
+    width: 90%
     margin: 0 auto
 
 /* Desktop Styles */
@@ -45,7 +45,7 @@ body
     margin: 0 auto
 
   .main-content-container
-    margin: 3rem 0
+    margin: 8rem 0
 
 </style>
 

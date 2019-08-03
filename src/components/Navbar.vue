@@ -20,11 +20,11 @@ export default {
   data() {
     return {
       listItems: [
-        "Web hosting",
-        "Cloud hosting",
-        "Vps hosting",
-        "Domain checker",
-        "Website builder"
+        { title: "Web hosting", onSale: false },
+        { title: "Cloud hosting", onSale: true },
+        { title: "Vps hosting", onSale: false },
+        { title: "Domain checker", onSale: false },
+        { title: "Website builder", onSale: false }
       ],
       windowWidth: 0
     };

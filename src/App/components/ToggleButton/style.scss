@@ -1,0 +1,50 @@
+@import "../../../vars.scss";
+
+
+.burger-container {
+  padding-top: 13px;
+  float: right;
+}
+
+.toggle-button {
+  outline: blue;
+  padding-right: 20px;
+  height: 12px;
+  width: 35px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+  position: relative;
+  z-index: 1;
+  &:focus {
+    outline: none;
+  }
+  [class|="toggle-button-part"] {
+    height: 2px;
+    border-radius: 10px;
+    width: 20px;
+    background: white;
+    transition: all 500ms ease-in-out;
+    transform-origin: top left;
+  }
+  &.active {
+    .toggle-button-part-middle {
+      background-color: transparent;
+    }
+    .toggle-button-part-top {
+      transform: rotate(24deg);
+      background-color: black;
+    }
+    .toggle-button-part-bottom {
+      transform: rotate(-24deg);
+      background-color: black;
+    }
+  }
+  &:focus {
+    outline: 1px solid #e59700;
+  }
+}

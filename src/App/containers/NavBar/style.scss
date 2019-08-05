@@ -1,0 +1,19 @@
+@import "../../../vars.scss";
+
+.nav {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding-top: 1rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  .nav-logo {
+    a img {
+      padding-top: 5px;
+    }
+  }
+  .space {
+    flex: 1;
+  }
+}

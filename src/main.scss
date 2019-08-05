@@ -1,0 +1,283 @@
+//Vars
+@import "vars.scss";
+/*BASE STYLES*/
+//Defaults
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+
+//Main pattern
+body {
+  padding: 0 10% 0 10%;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+//Background image
+#bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url("./assets/background.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: $bgcolor;
+  position: fixed;
+  transform: scaleX(-1);
+  filter: flipH;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+
+//Managing to work with footer
+.App {
+  min-height: 100vh;
+  position: relative;
+  .content {
+    padding-bottom: $footerHeight;
+  }
+}
+
+/*DESKTOP STYLES*/
+@media (min-width: $minWidth) {
+  /*CONTAINERS*/
+  .footer {
+    height: $footerHeightDesktop;
+    .list {
+      letter-spacing: 0;
+      font-size: 1.3vw;
+      flex-direction: row;
+      justify-content: space-between;
+      li {
+        margin: 0;
+      }
+    }
+  }
+  .main {
+    flex-direction: row;
+    & > div {
+      margin: 30px 30px 0 0;
+    }
+    .main-col1 {
+      padding-top: 6vw;
+      .offer-text {
+        font-size: 3.6vw;
+        text-align: left;
+      }
+      .button-container {
+        justify-content: flex-start;
+        .offer-button {
+          font-size: 1.8vw;
+          padding: 2vw 4vw;
+        }
+      }
+      .timer-block {
+        display: flex;
+        .timer {
+          flex: 1;
+        }
+        .spacer {
+          flex: 0.2;
+        }
+      }
+    }
+    .main-col2 {
+      .balloon-container {
+        padding: 15px 35px;
+      }
+      .price {
+        .currency {
+          font-size: 8vw;
+        }
+        .big-num {
+          font-size: 25vw;
+        }
+        .price-right {
+          .small-num {
+            font-size: 6.5vw;
+          }
+          .monthly {
+            font-size: 5vw;
+          }
+        }
+      }
+    }
+  }
+  /*COMPONENTS*/
+  .timer .triangle-parent {
+    .triangle-left {
+      border-width: 1vw 0 1vw 2vw;
+    }
+    .triangle-right {
+      border-width: 1vw 2vw 1vw 0;
+    }
+  }
+  .timer-part {
+    .timer-part-number {
+      font-size: 2vw;
+    }
+    .timer-part-title {
+      font-size: 1.2vw;
+    }
+  }
+}
+
+@media (min-width: $minMenuWidth) {
+  .toggle-button {
+    display: none;
+  }
+  .drawer {
+    display: none;
+  }
+}
+
+@media (max-width: $maxMenuWidth) {
+  .nav-items {
+    display: none;
+  }
+}
+
+/*IE9 STYLES*/
+.ie9 {
+  body {
+    width: 80%;
+    background-image: url("./assets/background.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: $bgcolor;
+  }
+  /*CONTAINERS*/
+  .nav {
+    .nav-logo {
+      display: inline-block;
+    }
+    .space {
+      display: none;
+    }
+  }
+  .main {
+    display: table;
+    text-align: center;
+    .main-col1 {
+      display: table-footer-group;
+    }
+    .main-col2 {
+      .baloon-container {
+        width: 50%;
+        margin: 0 auto;
+      }
+      .price {
+        display: table;
+        .currency {
+          display: table-cell;
+          vertical-align: middle;
+        }
+        .big-num {
+          display: table-cell;
+        }
+        .price-right {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+  .footer .list {
+    text-align: center;
+  }
+  /*COMPONENTS*/
+  .burger-container .toggle-button.active {
+    .toggle-button-part-middle {
+      display: none;
+    }
+    .toggle-button-part-top {
+      transform-origin: top;
+      transform: rotate(50deg);
+    }
+    .toggle-button-part-bottom {
+      transform-origin: bottom;
+      transform: rotate(-40deg);
+    }
+  }
+
+  .timer-part {
+    display: inline-block;
+    margin: 0 20px;
+  }
+
+  .timer .triangle-parent {
+    display: inline-block;
+  }
+
+  .drawer {
+    .sale {
+      top: -7px;
+    }
+    ul {
+      display: block;
+      padding-top: 50%;
+    }
+    li {
+      display: block;
+    }
+  }
+
+  .nav-items {
+    display: inline-table;
+    float: right;
+    padding-top: 12px;
+    li {
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  /*RESPONSIVE IE9 STYLES*/
+  @media (min-width: $minWidth) {
+    .main {
+      display: table;
+      text-align: left;
+      width: 100%;
+      .main-col1 {
+        padding-top: 0;
+        display: table-cell;
+        text-align: left;
+      }
+      .main-col2 {
+        margin: 0;
+      }
+    }
+    .footer .list li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+    .burger-container .toggle-button {
+      &.active {
+        .toggle-button-part-middle {
+          display: none;
+        }
+        .toggle-button-part-top {
+          transform-origin: top;
+          transform: rotate(50deg);
+        }
+        .toggle-button-part-bottom {
+          transform-origin: bottom;
+          transform: rotate(-40deg);
+        }
+      }
+    }
+  }
+
+  @media (max-width: $maxMenuWidth) {
+    .nav-items {
+      display: none;
+    }
+  }
+}

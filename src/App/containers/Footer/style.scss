@@ -1,0 +1,33 @@
+@import "../../../vars.scss";
+
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footerHeight;
+  .list {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    color: white;
+    letter-spacing: 0.2vw;
+    font-size: 15px;
+    li {
+      margin: 1.5vw 0;
+      &::before {
+        content: "";
+        margin-right: 2vw;
+        display: inline-block;
+        transform: rotate(45deg);
+        height: 12px;
+        width: 5px;
+        border-bottom: 4px solid $green;
+        border-right: 4px solid $green;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@import "../../../vars.scss";
+
+
+.timer {
+  display: flex;
+  align-content: flex-start;
+  align-items: center;
+
+  .triangle-parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .triangle-left {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 1.5vw 0 1.5vw 3vw;
+      border-color: transparent transparent transparent $red;
+    }
+    .triangle-right {
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 1.5vw 3vw 1.5vw 0;
+      border-color: transparent $red transparent transparent;
+    }
+  }
+}

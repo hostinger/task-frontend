@@ -1,0 +1,79 @@
+@import "../../../vars.scss";
+
+//Side-drawer
+.drawer {
+  height: 100%;
+  background: $semiwhite;
+  box-shadow: $shadow;
+  position: fixed;
+  top: 0;
+  right: -400px;
+  transition: right 0.3s ease-out;
+  .sale {
+    text-align: right;
+  }
+  ul {
+    list-style: none;
+    display: flex;
+    text-align: right;
+    font-weight: bold;
+    height: 50%;
+    flex-direction: column;
+    justify-content: center;
+  }
+  li {
+    margin: 0.5rem 2rem;
+  }
+  a {
+    color: $blue;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover,
+    &:active {
+      color: $fadeblue;
+    }
+  }
+  &.active {
+    right: 0;
+  }
+}
+
+//Navbar menu
+.nav-items {
+  display: flex;
+  ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    padding: 0 1rem 0 1rem;
+  }
+  a {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+    &:hover,
+    &:active {
+      color: rgba(255, 255, 255, 0.6);
+    }
+  }
+}
+
+//Sale item hover
+.parent-sale:hover .sale {
+  color: $semiyellow;
+}
+
+//Sale tag
+.sale {
+  position: relative;
+  top: -13px;
+  margin-bottom: -13px;
+  text-transform: uppercase;
+  color: $yellow;
+  font-size: 70%;
+  text-align: left;
+  transition: 0.5s;
+}

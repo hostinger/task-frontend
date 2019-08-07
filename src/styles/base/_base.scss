@@ -2,6 +2,16 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  overflow-y: hidden;
+}
+
+@media screen and (max-width: 1026px) {
+  body {
+    overflow-y: unset;
+  }
+}
+
 *,
 *::before,
 *::after {

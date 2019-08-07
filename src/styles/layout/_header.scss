@@ -1,0 +1,96 @@
+ul {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 1rem 1rem 0 1rem;
+
+  .logo > img {
+    max-width: 9.5rem;
+  }
+  
+  li:first-child {
+    margin-right: auto;
+  }
+    
+  a {
+    display: block;
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    transition: 0.2s ease-in-out;
+  }
+    
+  a:hover {
+    color: $dark-white;
+    
+    span.highlight-yellow {
+      color: $dark-yellow;
+    }
+  }
+    
+  span.highlight-yellow {
+    position: absolute;
+    top: 1.5rem;
+    font-size: 0.7rem;
+    color: $yellow;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+// Normal nav dissapears if < 1024px
+.responsive-nav {
+  display: flex;
+}
+ 
+li.nav-toggle {
+  display: none;
+
+  a > i {
+    font-size: 2.8rem
+  }
+}
+  
+
+@media screen and (max-width: 1024px) {
+    ul {
+      position: relative;
+      margin: 0;
+      padding: 0 1rem;
+      background: $black;
+      transition: left 1s ease-in-out;
+      z-index: 1;
+
+      span.highlight-yellow {
+        top: 7.5rem;
+      }
+      
+      li.nav-toggle {
+        display: block;
+    }
+  }
+    
+  .responsive-nav {
+    display: none;
+  }
+    
+  .responsive-nav.openup {
+    width: 100%;
+    display: block;
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    background: $white;
+    border-top: solid 1px red;
+
+    li {
+    display: block;
+  }
+    
+    a {
+    color: $black;
+    padding: 2.8rem;
+  }   
+  }
+}
+  
+    
+  

@@ -1,0 +1,22 @@
+// Google fonts, default font size/color
+
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+    font-family: 'Lato', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+}
+
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p {
+    color: $white;
+}

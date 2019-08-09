@@ -1,0 +1,16 @@
+:root {
+  // 10px base font size for easy calculations
+  font-size: 62.5%;
+
+  body {
+    font-family: "Open Sans", sans-serif;
+    // 16px
+    font-size: 1.6rem;
+  }
+}
+
+.text {
+  &-primary {
+    color: $hostinger-accent;
+  }
+}

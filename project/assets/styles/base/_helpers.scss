@@ -1,0 +1,24 @@
+/** Helpers **/
+
+.container {
+  max-width: 115rem;
+  width: 100%;
+  margin: 0 auto;
+  padding-left: 1em;
+  padding-right: 1em;
+
+  @media screen and (max-width: map-get($breakpoints,"medium")) {
+    max-width: 70rem;
+  }
+
+  &-fixed {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    right: 0;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      max-width: 100vw;
+    }
+  }
+}

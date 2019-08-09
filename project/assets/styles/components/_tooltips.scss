@@ -1,0 +1,22 @@
+/** Tooltip **/
+
+.tooltip {
+  position: absolute;
+  text-align: center;
+  padding: 0.7em 1.5em;
+  white-space: nowrap;
+  background: lighten($hostinger-accent, 15);
+  font-weight: 600;
+
+  &::after {
+    content: "";
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    position: absolute;
+    border-left: 0.7em solid transparent;
+    border-right: 0.7em solid transparent;
+    border-top: 0.7em solid lighten($hostinger-accent, 15);
+  }
+}

@@ -1,0 +1,26 @@
+/** Variables **/
+
+/** COLORS **/
+
+// Light text
+$text-light: #FFF;
+// Success
+$text-success: #7cc576;
+// Accent
+$hostinger-accent: #ee545b;
+// Primary
+$hostinger-primary: #6747c7;
+/** MISC **/
+
+// Text hover darken amount
+$hover-darken-amount: 10;
+
+
+// Breakpoints
+// Base 1rem = 16px with breakpoints (:root doesn't affect these)
+$breakpoints: (
+  'tiny':   480px,
+  'small':  768px,
+  'medium': 992px,
+  'large':  1200px,
+);

@@ -1,0 +1,26 @@
+{
+  "name": "task-frontend",
+  "version": "1.0.0",
+  "description": "Hostinger frontend task",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel project/index.html",
+    "build": "parcel build project/index.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdvinasBa/task-frontend.git"
+  },
+  "keywords": [],
+  "author": "edvinasba",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/EdvinasBa/task-frontend/issues"
+  },
+  "homepage": "https://github.com/EdvinasBa/task-frontend#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.3",
+    "parcel-plugin-clean-dist": "0.0.6",
+    "sass": "^1.17.4"
+  }
+}

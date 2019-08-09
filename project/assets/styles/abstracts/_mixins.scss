@@ -1,0 +1,4 @@
+@mixin link-transition {
+    transition: all 0.3s ease-out;
+    transition-property: color, background;
+}

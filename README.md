@@ -1,9 +1,11 @@
 # Frontend Developer Task
 
-## Few simple steps
+## Build using parcel
 
-1. Fork this repo
-2. Prepare pull request and let us know that you are done
+1. cd to this projects folder
+2. npm install
+3. npm run build
+4. The build will be placed inside dist folder
 
 ## Few simple requirements
 

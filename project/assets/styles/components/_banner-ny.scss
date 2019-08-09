@@ -1,0 +1,152 @@
+/** New year banner **/
+
+.banner-ny {
+  &__background {
+    color: $text-light;
+    padding: 17rem 0 1rem;
+    background: url("/assets/images/background-edited.jpg") no-repeat center;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+      background: url("/assets/images/background-edited-2x.jpg") no-repeat
+        center;
+    }
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      padding: 15rem 0 1rem;
+    }
+
+    .benefit-list {
+      margin-top: 16rem;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        margin-top: 5rem;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      flex-direction: column;
+    }
+  }
+
+  &__offer {
+    flex: 0 0 48%;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      order: 2;
+    }
+
+    &-title {
+      font-size: 4rem;
+      font-weight: 700;
+      line-height: 1.5;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        text-align: center;
+        font-size: 3.5rem;
+      }
+    }
+
+    &-timer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      max-width: 27em;
+      font-weight: 700;
+
+      &-num {
+        font-size: 3rem;
+        margin-bottom: 0.2em;
+
+        @media screen and (max-width: map-get($breakpoints,"medium")) {
+          font-size: 2.5rem;
+        }
+      }
+
+      &-text {
+        font-size: 1.3rem;
+
+        @media screen and (max-width: map-get($breakpoints,"medium")) {
+          font-size: 1rem;
+        }
+      }
+
+      &-text,
+      &-num {
+        display: block;
+        text-align: center;
+      }
+    }
+
+    &-btn {
+      font-size: 2.2rem;
+      margin: 2em 0 0;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__price {
+    font-weight: 700;
+    flex: 0 0 48%;
+    display: flex;
+    line-height: 1;
+    position: relative;
+    font-size: 1rem;
+
+    @media screen and (max-width: map-get($breakpoints,"medium")) {
+      order: 1;
+      font-size: 0.7rem;
+    }
+
+    &-price {
+      font-size: 37em;
+      position: relative;
+
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        font-size: 35em;
+      }
+    }
+
+    &-save {
+      font-size: 2rem;
+      right: -1em;
+      bottom: calc(100% - 1em);
+      @media screen and (max-width: map-get($breakpoints,"medium")) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &-currency {
+      font-size: 14em;
+      margin-top: 0.6em;
+      margin-left: auto;
+    }
+
+    &-right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    &-cent {
+      margin-top: 0.8em;
+      font-size: 8.5em;
+    }
+
+    &-mo {
+      font-size: 6em;
+      margin-left: 0.2em;
+      margin-bottom: 1.2em;
+      font-weight: 600;
+    }
+  }
+}

@@ -24,7 +24,6 @@
 </template>
 
 <script>
-  
 export default {
   data() {
     return {
@@ -34,19 +33,27 @@ export default {
       seconds: 0,
       countDownDate: new Date("2019-08-18 23:37:00").getTime(),
       distance: 0
-    }
+    };
   },
   methods: {
     zeroFill(i) {
-      return (i < 10 ? '0' : '') + i
+      return (i < 10 ? "0" : "") + i;
     },
     setDiff() {
       const now = new Date().getTime();
       this.distance = this.countDownDate - now;
-      this.days = this.zeroFill(Math.floor(this.distance / (1000 * 60 * 60 * 24)));
-      this.hours = this.zeroFill(Math.floor((this.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
-      this.minutes = this.zeroFill(Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60)));
-      this.seconds = this.zeroFill(Math.floor((this.distance % (1000 * 60)) / 1000));
+      this.days = this.zeroFill(
+        Math.floor(this.distance / (1000 * 60 * 60 * 24))
+      );
+      this.hours = this.zeroFill(
+        Math.floor((this.distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      );
+      this.minutes = this.zeroFill(
+        Math.floor((this.distance % (1000 * 60 * 60)) / (1000 * 60))
+      );
+      this.seconds = this.zeroFill(
+        Math.floor((this.distance % (1000 * 60)) / 1000)
+      );
     }
   },
   mounted() {
@@ -54,10 +61,10 @@ export default {
     setInterval(() => {
       this.setDiff();
       if (this.distance < 0) {
-        this.days = '00';
-        this.hours = '00';
-        this.minutes = '00';
-        this.seconds = '00';
+        this.days = "00";
+        this.hours = "00";
+        this.minutes = "00";
+        this.seconds = "00";
       }
     }, 1000);
   }
@@ -74,7 +81,7 @@ export default {
 .counter {
   display: grid;
   text-align: center;
-  filter: drop-shadow( 3px 3px 5px rgba(0,0,0,1) );
+  filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 1));
 }
 .counter-label {
   font-size: 10px;

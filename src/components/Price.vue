@@ -1,28 +1,28 @@
-<template>  
-<div class="vertical-center" >
+<template>
+  <div class="vertical-center">
     <div class="flex">
-        <span class="vertical-center mid-size-font">$</span>
-        <div>
-            <div class="flex">
-                <div class="column-even vertical-center">
-                    <span class="bubble">SAVE 82%</span>
-                    <b class="large-size-font">1</b>
-                </div>
-                <div class="column-even vertical-center">
-                    <span class="mid-size-font">45</span>
-                    <span class="mid-size-font">/mo</span>
-                </div>
-            </div>
+      <span class="vertical-center mid-size-font">$</span>
+      <div>
+        <div class="flex">
+          <div class="column-even vertical-center">
+            <span class="bubble">SAVE 82%</span>
+            <b class="large-size-font">1</b>
+          </div>
+          <div class="column-even vertical-center">
+            <span class="mid-size-font">45</span>
+            <span class="mid-size-font">/mo</span>
+          </div>
         </div>
+      </div>
     </div>
-</div>
+  </div>
 </template>
 
 <script>
 export default {};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .vertical-center {
   display: flex;
   justify-items: unset;
@@ -33,10 +33,16 @@ export default {};
 }
 
 .mid-size-font {
- font-size: 10vh;
+  font-size: 10vh;
+  @include for-phone-only {
+    font-size: 10vh;
+  }
 }
 .large-size-font {
-    font-size: 40vh;
+  font-size: 40vh;
+  @include for-phone-only {
+    font-size: 20vh;
+  }
 }
 .messages {
   flex-grow: 2;
@@ -47,23 +53,23 @@ export default {};
 }
 
 .bubble {
-    width: 100px;
-    padding: 10px;
-    position: relative;
-    background: #FD9C9C;
-    color: white;
-    text-align: center;
-    font-weight: bold;
+  width: 100px;
+  padding: 10px;
+  position: relative;
+  background: #fd9c9c;
+  color: white;
+  text-align: center;
+  font-weight: bold;
 }
 .bubble:after {
-  content: '';
+  content: "";
   position: absolute;
   right: 40%;
   bottom: -10px;
   width: 0;
   height: 0;
-  border-top : 10px solid #FD9C9C;
-  border-right : 10px solid transparent;
+  border-top: 10px solid #fd9c9c;
+  border-right: 10px solid transparent;
   border-left: 10px solid transparent;
 }
 </style>

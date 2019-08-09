@@ -1,0 +1,9 @@
+@mixin desktop-l {
+    @media (max-width: 1050px) {@content}
+}
+@mixin desktop {
+    @media (min-width: 980px) {@content}
+}
+@mixin mobile {
+    @media (max-width: 550px) {@content}
+}

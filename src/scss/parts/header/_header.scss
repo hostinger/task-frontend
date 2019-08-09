@@ -1,0 +1,12 @@
+@import './nav.scss';
+@import './promotion.scss';
+@import './benefits.scss';
+@import './responsive-nav.scss';
+
+.header {
+  height: auto;
+  background: url('../.././assets/background.jpg') no-repeat center center fixed;
+  background-color: rgba( $black, .3);
+  background-blend-mode: color;
+  background-size: cover;
+}

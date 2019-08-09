@@ -1,0 +1,51 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.4em 0;
+  align-items: center;
+  width: 100%;
+
+  &__brand-logo {
+    max-width: 12em;
+
+    &:hover {
+      cursor: pointer;
+      opacity: 0.5;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+
+    &-item {
+      position: relative;
+      display: inline-block;
+      text-transform: uppercase;
+      text-align: center;
+      margin-left: 2em;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      .on-sale {
+        color: $yellow;
+        position: absolute;
+        top: -1.2em;
+        left: 0;
+        font-size: 0.7em;
+      }
+    }
+  }
+
+  &__link {
+    color: $white;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 0.05rem;
+    cursor: pointer;
+  }
+}

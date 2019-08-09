@@ -1,0 +1,75 @@
+.price {
+  width: 50%;
+  display: flex;
+  padding-left: 5em;
+
+  &__currency {
+    color: $white;
+    font-size: 12em;
+    font-weight: 700;
+    padding-top: 1em;
+  }
+
+  &__dollar {
+    color: $white;
+    font-size: 35em;
+    font-weight: 700;
+    position: relative;
+
+    .rectangle::before {
+      content: '';
+      position: absolute;
+      width: 0.4em;
+      height: 0.13em;
+      background: $red-pale;
+      bottom: 1.13em;
+      left: 0.19em;
+    }
+
+    &::before {
+      content: 'save 82%';
+      position: absolute;
+      font-size: .06em;
+      top: 2em;
+      z-index: 1;
+      left: 4em;
+      text-transform: uppercase;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-left: 0.04em solid transparent;
+      border-right: 0.04em solid transparent;
+      border-top: 0.06em solid $red-pale;
+      right: 0.13em;
+      bottom: 1.08em;
+    }
+  }
+
+  &__cents {
+    color: $white;
+    font-size: 10em;
+    font-weight: 700;
+    padding-top: 1em;
+  }
+
+  &__period {
+    color: $white;
+    font-size: 6em;
+    font-weight: 600;
+    padding-top: 0.8em;
+    padding-left: .2em;
+  }
+}
+
+.right-wrapper, .left-wrapper {
+  display: inline-block;
+}
+
+.left-wrapper {
+  white-space: nowrap;
+  display: flex;
+}

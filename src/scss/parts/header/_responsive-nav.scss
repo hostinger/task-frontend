@@ -1,0 +1,80 @@
+.nav__toggle, .nav__toggle-label {
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav {
+    background: $hostinger;
+    position: relative;
+    padding: 0.9em 2em;
+
+    &__list {
+      z-index: 3;
+      background: $hostinger;
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 100%;
+      right: 0;
+      transform: scale(1, 0);
+      transform-origin: top;
+      transition: transform 400ms ease-in-out;
+
+      &-item {
+        display: block;
+        padding: 0 1.2em;
+        margin: 0;
+        line-height: 4em;
+        font-size: 1.5em;
+        text-align: left;
+
+        &:hover {
+          cursor: pointer;
+          opacity: 0.5;
+        }
+
+        &--last {
+          padding-bottom: 2.5em;
+        }
+
+        .on-sale {
+          position: relative;
+          top: 0;
+        }
+    }
+  }
+
+  .nav__toggle {
+    &:checked ~ .nav__list {
+      display: block;
+      transform: scale(1, 1);
+    }
+
+    &:checked ~ .nav__list .nav__link {
+      opacity: 1;
+      transition: opacity 250ms ease-in-out 250ms;
+    }
+  }
+
+  .nav__toggle-label {
+    display: block;
+
+    .hamburger {
+      display: block;
+      background: $white;
+      border-radius: 2px;
+      margin: 5px 0;
+      width: 40px;
+      height: 5px;
+    }
+  }
+
+  .nav__toggle-label:hover {
+    cursor: pointer;
+  }
+
+  .nav__toggle-label:hover > .hamburger {
+    background: whitesmoke;
+  }
+}
+}

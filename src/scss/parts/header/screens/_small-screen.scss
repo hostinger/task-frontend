@@ -1,0 +1,31 @@
+@media only screen and (min-width: 551px) and (max-width: 768px) {
+  .header-container {
+    max-width: 100%;
+    margin: auto;
+
+    .promotion-container {
+      margin: 5em 0;
+    }
+
+    .offer, .price {
+      width: 90%;
+      margin: auto;
+      font-size: 0.5rem;
+    }
+
+    .price {
+      order: 1;
+      padding: 0 10em;
+      max-width: 500px;
+    }
+
+    .offer {
+      order: 2;
+      text-align: center;
+
+      &__countdown {
+        margin: 1em auto 3em;
+      }
+    }
+  }
+}

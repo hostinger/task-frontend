@@ -1,0 +1,27 @@
+// Grid-left container button
+
+.grid-left-button {
+    min-width: 260px;
+    max-width: 400px;
+    background-color: $red;
+    text-align: center;
+    font-size: 1.35rem;
+    margin-top: 2rem;
+    padding: 1.7rem 0;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.grid-left-button:hover {
+    background-color: $dark-red;
+}
+
+@media screen and (max-width: 1160px) {
+    .grid-left-button {
+        min-width: 200px;
+        max-width: 250px;
+        margin-top: 1rem;
+        font-size: 1rem;
+    }
+}

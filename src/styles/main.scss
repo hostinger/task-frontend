@@ -1,0 +1,31 @@
+// The main scss file to import all other scss files
+
+@charset 'UTF-8';
+
+// 1. Variables
+@import
+  'variables/variables';
+
+// 2. Tools
+@import
+  'tools/normalize';
+
+// 3. Base stuff
+@import
+  'base/base',
+  'base/typography';
+
+// 4. Layout
+@import
+  'layout/header',
+  'layout/footer';
+
+// 5. Components
+@import
+  'components/button',
+  'components/countdown-timer';
+
+// 6. Page
+@import
+  'pages/home',
+  'pages/responsive';

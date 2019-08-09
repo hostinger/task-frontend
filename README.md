@@ -1,3 +1,17 @@
+# Hostinger
+ Thanks Hostinger for providing me with this task!
+ 
+# Built With
+HTML5
+
+JS
+
+SCSS- CSS-Predecessor
+
+Babel - Write modern JS.
+
+Webpack - Task-runner. Bundle JS Files.
+
 # Frontend Developer Task
 
 ## Few simple steps

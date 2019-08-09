@@ -1,0 +1,129 @@
+// Responsivness for Mid section
+
+@media screen and (max-width: 1160px) {
+    #showcase {
+
+        .grid-container {
+            
+            // Left container
+            .grid-left {
+                line-height: 1rem;
+                padding-top: 3rem;
+
+                .grid-left-offer {
+
+                    p {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    #showcase {
+        height: 100%;
+
+        .grid-container {
+            grid-template-columns: 1fr;
+            grid-gap: 1rem;
+
+            .grid-left {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 0;
+                order: 2;
+            }
+
+            .grid-right {
+                order: 1;
+
+                .discount-box > .discount-box-text > p { 
+                    font-size: 1rem;
+                }
+
+                .price-div {
+                    margin: 2rem 0 0 0;
+                    justify-content: center;
+                
+                    .price-currency {
+                        font-size: 7rem;
+                    }
+
+                    .price-big-number {
+                        font-size: 20rem;
+                    }
+
+                    .price-block {
+
+                        .price-cents {
+                            font-size: 5rem;
+                        }
+
+                        .price-unit {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #showcase {
+
+        .grid-container {
+
+            .grid-left  {
+                
+                .grid-left-offer > p {
+                    font-size: 1.3rem;
+                }
+            }
+
+            .grid-right {
+
+                .discount-box {
+                    margin-bottom: 4rem;
+
+                    .discount-box-text {
+                        padding: 0.7rem 1.7rem;
+
+                        p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+
+                .price-div {
+
+                    .price-currency {
+                        margin: 0;
+                        font-size: 4rem;
+                    }
+
+                    .price-big-number {
+                        font-size: 10rem;
+                    }
+
+                    .price-block {
+
+                        .price-cents {
+                            margin: 0.2rem 0 0 0.5rem;
+                            font-size: 3rem;
+                        }
+
+                        .price-unit {
+                            margin: 1rem 0 0 1.5rem;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

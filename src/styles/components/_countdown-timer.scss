@@ -1,0 +1,77 @@
+// Countdown timer
+
+#countdown-end {
+    display: none;
+    font-size: 2.5rem;
+}
+
+.countdown-timer {
+    display: flex;
+
+    .triangle-right,
+    .triangle-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        i {
+            font-size: 2.5rem;
+            color: $red;
+        }
+    }
+
+    .countdown-div {
+        margin: 0.7rem 1.5rem;
+        font-size: 0.8rem;
+        text-align: center;
+
+        div>span {
+            font-size: 2rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1160px) {
+
+#countdown-end {
+    font-size: 2rem;
+}
+
+.countdown-timer {
+
+    .triangle-right,
+    .triangle-left {
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
+
+    .countdown-div {
+        margin: 0.4rem 0.7rem;
+        font-size: 0.6rem;
+
+        div>span {
+            font-size: 1.5rem;
+        }
+    }
+}
+}
+
+@media screen and (max-width: 400px) {
+    #countdown-end {
+            font-size: 1.3rem;
+        }
+
+    .countdown-timer {
+
+        .countdown-div {
+            margin: 0.4rem 0.7rem;
+            font-size: 0.4rem;
+
+            div>span {
+                font-size: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,34 @@
+@import "../../../node_modules/bootstrap-4-grid/scss/grid";
+@import "fonts";
+@import "variables";
+@import "mixins";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  padding-left: 0;
+  li {
+    list-style: none;
+    display: inline-block;
+  }
+}
+
+.show {
+  display: inline-block !important;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (max-width: $mobile) {
+  .mobile-show {
+    display: block;
+  }
+  .mobile-hide {
+    display: none;
+  }
+}

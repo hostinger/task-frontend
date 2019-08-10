@@ -1,0 +1,32 @@
+$primary-color: #fff;
+$onSale-primary-color: #FFC800;
+$menu-size: 1.3rem;
+$menu-leter-space: 0.2rem;
+$menu-line-height: 2.4rem;
+
+$font-width-bold: 600;
+
+.ButtonNavigation{
+    transition: all 300ms;
+    position: relative;
+    &:hover{
+        opacity: .6;
+        transition: all 300ms;
+    }
+    a{
+        color: $primary-color;
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: $menu-size;
+        letter-spacing: $menu-leter-space;
+        line-height: $menu-line-height;
+        cursor: pointer;
+    }
+    .onSale{
+        color: $onSale-primary-color;
+        position: absolute;
+        font-weight: $font-width-bold;
+        left: 0;
+        top: -10px;
+    }
+}

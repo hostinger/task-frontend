@@ -1,0 +1,21 @@
+.HeaderContent{
+    padding-top: 70px;
+    
+}
+.offer{
+    padding-top: 200px;
+}   
+.top_button{
+    margin-top: 20px!important;
+    text-transform: uppercase;
+}
+@media screen and (max-width: 1024px) {
+    .offer{
+        padding-top: 0px;
+        text-align: center;
+    } 
+    .HeaderContent{
+        text-align: center;
+        margin-top: 50px;
+    }
+}

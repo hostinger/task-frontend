@@ -1,0 +1,46 @@
+$nav-bg-color: #6747c7;
+
+.navigation{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: $nav-bg-color;
+    height: 70px;
+    transition: all 500ms;
+}
+
+.NavigationMenu{
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    .brand{
+
+    }
+    .menu{
+        padding-top: 0px;
+        margin-left: auto;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        
+        .list{
+            margin: auto 15px;
+            font-weight: 600;
+            
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .menu{
+        display: none!important;
+    }
+}

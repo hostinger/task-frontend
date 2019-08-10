@@ -1,0 +1,49 @@
+$red-color: #ff4546;
+$white-color: #fff;
+
+.xmd{
+    font-size: 2em;
+}
+.md{
+    font-size: 2em;
+    span{
+        color: $red-color;
+    }
+}
+.big{
+    color: $white-color;
+    font-size: 5em;
+    line-height: 1.3em;
+    span{
+        color: $red-color;
+    }
+}
+.xxsm{
+    font-size: 2em;
+}
+.sm{
+    font-size: 1.5em;
+    color: $white-color;
+    font-weight: 600;
+    letter-spacing: 1px;
+    display: inline-block;
+    margin: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+    .xmd{
+        font-size: 2em;
+    }
+    .md{
+        font-size: 2em;
+    }
+    .big{
+        font-size: 3em;
+    }
+    .xxsm{
+        font-size: 2em;
+    }
+    .sm{
+        font-size: 1.5em;
+    }
+}

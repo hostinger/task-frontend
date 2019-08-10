@@ -1,0 +1,44 @@
+.bg{
+    background: url('../../images/background.jpg') ;
+    background-size: cover;
+    background-position: center;
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    top: 0;
+    left: 0;
+}
+.reverse{
+   
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+    filter: FlipH;
+    -ms-filter: "FlipH";
+    width: 100%;
+    z-index: 1;
+    position: relative;
+}
+.content{
+    z-index: 2;
+    position: relative;
+    
+    .navigation{
+        position: fixed;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+@media screen and (max-width: 1024px) {
+    .bg{
+        background-position: 20%;
+    }
+}

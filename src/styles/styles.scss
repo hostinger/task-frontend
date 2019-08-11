@@ -1,1 +1,221 @@
 @import "mixins.scss";
+
+/*===== Variables =====*/
+//colors:
+$violet: rgb(92, 98, 156);
+$red: rgb(249, 82, 89);
+$green: rgb(124, 200, 128);
+$pink: rgb(251, 157, 158);
+$yellow: rgb(255, 224, 51) ;
+
+//breakpoints
+$small: 450px;
+$medium: 650px;
+$big: 850px;
+$extraBig: 1090px;
+$huge: 1200px;
+
+/*===== General rules =====*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.widget-container {
+    color: rgb(255, 255, 255);
+    font-family: ('Trebuchet MS', 'Helvetica', sans-serif);
+    min-width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    z-index: 50;
+    @media screen and (min-width: $huge) {
+        min-width: 60vw;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+}
+
+/*===== Background style =====*/
+.background-widget {
+    @include transform(scaleX(-1));
+    background: (
+        $violet 
+        url('../components/assets/background-medium.jpg') 
+        no-repeat 
+        center
+    );
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    //breakpoints
+    @media screen and (min-width: $big) {
+        background-image: url('../components/assets/background-big.jpg');
+    }
+}
+
+/*===== Navigation =====*/
+.navigation {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-flow(row wrap);
+    @include justify-content(space-around);
+    width: 100%;
+    padding-top: 10px;
+}
+
+//change background color when menu is open
+.navigation.open {
+    background-color: rgb(128, 0, 128);
+}
+
+.logo-container {
+    padding: 10px 0;
+}
+
+//hamburger button style
+.mobile-menu-button {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+    .hamburger {
+        display: inline-block;
+        margin: 5px;
+    }
+    
+    .bar1, .bar2, .bar3 {
+        @include transition(all 0.3s linear);
+        width: 35px;
+        height: 4px;
+        background-color: rgb(255, 255, 255);
+        margin: 5px 0;
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:hover .bar1, &:hover .bar2, &:hover .bar3,
+    &:focus .bar1, &:focus .bar2, &:focus .bar3 {
+        background-color: $yellow;
+    }
+}
+
+//hamburger button style when mobile menu is open
+.mobile-menu-button.close {
+    .hamburger .bar1 {
+      @include transform(rotate(-45deg) translate(-5px, 6px));
+    }
+    .hamburger .bar2 {
+      opacity: 0;
+    }
+    .hamburger .bar3 {
+      @include transform(rotate(45deg) translate(-6px, -8px));
+    }
+}
+
+//navigation buttons style
+.buttons-container {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-flow(column);
+    @include justify-content(center);
+    width: 100%;
+    height: calc(100% - 62px);
+    position: fixed;
+    top: 62px;
+    background-color: $violet;
+    display: none;
+
+    a {
+        @include flexbox;
+        @include align-items(center);
+        @include flex-flow(column);
+        @include justify-content(center);
+        @include transition(all 0.3s linear);
+        text-transform: uppercase;
+        text-decoration: none;
+        font-size: 20px;
+        color: rgb(255, 255, 255);
+        padding: 10px 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+        span {
+            @include transition(all 0.3s linear);
+            color: $yellow;
+            font-size: 15px;
+            font-weight: bold;
+            height: 17px;
+        }
+
+        &:hover,
+        &:focus {
+            color: $yellow;
+            outline: 0;
+            border-bottom: 1px solid $yellow;
+        }
+        &:hover span,
+        &:focus span {
+            color: $pink;
+        }
+    }
+}
+
+.buttons-container.open {
+    display: flex;
+}
+
+//breakpoints for wider screens
+@media screen and (min-width: $big) {
+    .navigation {
+        @include justify-content(center);
+        padding-top: 0;
+    }
+    .mobile-menu-button {
+        display: none;
+    }
+    .logo-container {
+        width: 20%;
+        padding: 22px 0 10px 10px;
+    }
+    .buttons-container {
+        width: 80%;
+        height: auto;
+        position: relative;
+        top: 0px;
+        background-color: transparent;
+        display: flex;
+        @include flex-flow(row);
+    
+        a {
+            @include align-items(flex-start);
+            font-size: 14px;
+            border: 0;
+    
+            span {
+                font-size: 12px;
+                height: 12px;
+            }
+    
+            &:hover,
+            &:focus {
+                border-bottom: 0;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: $extraBig) {
+    .logo-container {
+        padding: 24px 0 10px 10px;
+    }
+    .buttons-container a {
+        font-size: 17px;
+        letter-spacing: 1.1px;
+    }
+}

@@ -1,13 +1,15 @@
 <template>
-  <div id="main-container" class="column-between">
-    <div class="content">
+  <div class="container">
+    <header>
       <Toolbar />
-      <div class="flex-between">
-        <SalesTimerComponent id="timer" />
-        <Price id="price" />
-      </div>
+    </header>
+    <main class="main-content">
+      <SalesTimerComponent id="timer" />
+      <Price id="price" />
+    </main>
+    <footer>
       <Footer />
-    </div>
+    </footer>
   </div>
 </template>
 
@@ -29,71 +31,94 @@ export default {
 
 <style lang="scss">
 @import "./styles/_mixins.scss";
-body {
-  margin: 0;
-  height: 100vh;
-}
 
-#main-container {
-  color: white;
-  height: 100%;
-  font-family: Arial, Helvetica, sans-serif;
-  @include for-big-desktop-up {
-    background: url("./assets/compressed-images/bg-1800.jpg");
-    background-size: cover;
-  }
-  @include for-desktop-up {
-    background: url("./assets/compressed-images/bg-1190.jpg");
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  @include for-phone-only {
+    background: url("./assets/compressed-images/bg-600.jpg");
     background-size: cover;
   }
   @include for-tablet-portrait-up {
-    background: url("./assets/compressed-images/bg-880.jpg");
+    background: url("./assets/compressed-images/bg-900.jpg");
     background-size: cover;
   }
-  @include for-phone-only {
-    background: url("./assets/compressed-images/bg-590.jpg");
+  @include for-tablet-landscape-up {
+    background: url("./assets/compressed-images/bg-1200.jpg");
+    background-size: cover;
+  }
+  @include for-desktop-up {
+    background: url("./assets/compressed-images/bg-1800.jpg");
     background-size: cover;
   }
 }
-.content {
-  height: 98%;
-  max-width: 1400px;
-  margin: auto;
+header,
+footer {
+  position: sticky;
+  top: 0;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  width: 100vw;
+  height: 40px;
+  font-size: 1.1em;
+  width: 90vw;
+  @include for-phone-only {
+    width: 99vw;
+  }
+  margin: 0 auto;
+}
+header {
+  @include for-tablet-portrait-up {
+    height: 50px;
+  }
+}
+footer {
+  position: static;
+  bottom: 0;
+  @include for-phone-only {
+    height: 50px;
+  }
+}
+main {
+  flex: 1 0 0;
+  width: 90vw;
+  margin: 0 auto;
 }
 
-.flex {
-  display: flex;
+header *,
+footer * {
+  flex: 0 1 auto;
+  padding-right: 10px;
+  overflow: hidden;
 }
-.flex-between {
+.container {
+  display: contents;
+}
+.main-content {
   display: flex;
-  justify-content: space-around;
+  @include for-tablet-portrait-up {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
   @include for-phone-only {
     flex-direction: column-reverse;
-    align-items: center;
+    justify-content: center;
   }
-}
-.flex-around {
-  display: flex;
-  justify-content: space-around;
-}
-.flex-end {
-  display: flex;
-  align-items: flex-end;
 }
 #timer,
 #price {
   width: 50%;
-  @include for-phone-only {
-    width: 90%;
-    margin: auto;
+  @include for-tablet-portrait-up {
+    width: 100%;
   }
-}
-.column-even {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
+  @include for-phone-only {
+    width: 100%;
+  }
 }
 </style>

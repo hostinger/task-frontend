@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-between flex-end">
+  <div class="footer">
     <div>
       <span class="check">&#10004;</span>
       <span>Guaranteed 99.9% Uptime</span>
@@ -23,10 +23,27 @@
 export default {};
 </script>
 
-<style scoped>
+<style scoped lang="scss">
 .check {
   color: green;
   font-weight: bold;
   margin-right: 5px;
+}
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  @include for-phone-only {
+    font-size: 11px;
+    text-align: right;
+  }
+  @include for-tablet-portrait-up {
+    font-size: 10px;
+    text-align: right;
+  }
+  @include for-tablet-landscape-up {
+    font-size: 11px;
+  }
 }
 </style>

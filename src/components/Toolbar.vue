@@ -1,152 +1,210 @@
 <template>
-  <div class="flex-between nav">
-    <div id="logo">
-      <img src="../assets/logo.svg" />
-    </div>
-    <nav id="navigation-desktop" class="flex-around">
-      <a href="#">WEB HOSTING</a>
-      <div class="flex-end">
-        <div>
+  <div class="toolbar">
+    <img alt="hostinger logo" src="../assets/logo.svg" />
+    <nav class="navigation desktop">
+      <a class="item" href="#">WEB HOSTING</a>
+      <div class="item">
+        <div class="sales-item ">
           <span class="sales">ON SALE</span>
           <a href="#">CLOUD HOSTING</a>
         </div>
       </div>
-      <a href="#">VPS HOSTING</a>
-      <a href="#">DOMAIN CHECKER</a>
-      <a href="#">WEBSITE BUILDER</a>
+      <a class="item" href="#">VPS HOSTING</a>
+      <a class="item" href="#">DOMAIN CHECKER</a>
+      <a class="item" href="#">WEBSITE BUILDER</a>
     </nav>
-    <nav id="mobile-navigation">
-
+    <nav class="mobile">
+      <div class="content-area">
+        <nav class="main">
+          <div class="mobile-menu-btn" @click="toggleMobile">
+            <span></span>
+          </div>
+          <ul class="menu">
+            <li>WEB HOSTING</li>
+            <li>
+              <div class="sales-item ">
+                <span class="sales">ON SALE</span>
+                <a href="#">CLOUD HOSTING</a>
+              </div>
+            </li>
+            <li>VPS HOSTING</li>
+            <li>DOMAIN CHECKER</li>
+            <li>WEBSITE BUILDER</li>
+          </ul>
+        </nav>
+      </div>
     </nav>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    toggleMobile() {
+      const menuButton = document.querySelector(".mobile-menu-btn");
+      const menu = document.querySelector(".menu");
+      menuButton.classList.toggle("open");
+      menu.classList.toggle("visible");
+    }
+  }
+};
 </script>
 
-<style lang="scss">
-#menuToggle
-{
-  display: block;
-  position: relative;
-  -webkit-user-select: none;
-  user-select: none;
-
+<style lang="scss" scoped>
+img {
+  width: 20%;
+  @include for-phone-only {
+    width: 40%;
+  }
 }
-
-#menuToggle input
-{
-  display: block;
-  position: absolute;
-  cursor: pointer;
-  opacity: 0; /* hide this */
-  z-index: 2; /* and place it over the hamburger */
-  -webkit-touch-callout: none;
-}
-
-/*
- * Just a quick hamburger
- */
-#menuToggle span
-{
-  display: block;
-  width: 33px;
-  height: 4px;
-  margin-bottom: 5px;
-  position: relative;
-  background: #cdcdcd;
-  border-radius: 3px;
-  z-index: 1;
-  transform-origin: 4px 0px;
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-              opacity 0.55s ease;
-}
-
-#menuToggle span:first-child
-{
-  transform-origin: 0% 0%;
-}
-
-#menuToggle span:nth-last-child(2)
-{
-  transform-origin: 0% 100%;
-}
-
-#menuToggle input:checked ~ span
-{
-  opacity: 1;
-  transform: rotate(45deg) translate(-2px, -1px);
-  background: #232323;
-}
-
-#menuToggle input:checked ~ span:nth-last-child(3)
-{
-  opacity: 0;
-  transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-#menuToggle input:checked ~ span:nth-last-child(2)
-{
-  transform: rotate(-45deg) translate(0, -1px);
-}
-
-#menu
-{
-  position: absolute;
-  width: 300px;
-  margin: -100px 0 0 -100px;
-  padding-top: 100px;
-  background: black;
-  list-style-type: none;
-  -webkit-font-smoothing: antialiased;
-  /* to stop flickering of text in safari */
-  
-  transform-origin: 0% 0%;
-  transform: translate(50%, 0);
-  
-  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-}
-
-#menu li
-{
-  padding: 5px 0;
-  font-size: 20px;
-}
-
-#menuToggle input:checked ~ ul
-{
-  transform: none;
-}
-
-.nav {
+.toolbar {
   width: 100%;
+  height: 100%;
+  display: flex;
+  padding-top: 5px;
+  justify-content: space-between;
+}
+nav {
+  width: 70%;
+  display: flex;
+  justify-content: space-evenly;
+  @include for-phone-only {
+    width: 100%;
+    justify-content: flex-end;
+    padding-right: 0;
+  }
 }
 a {
-  text-decoration: none;
   color: white;
+  text-decoration: none;
+}
+.item {
   display: flex;
   align-items: flex-end;
-}
-#logo {
-  width: 30%;
-  display: flex;
-  align-items: flex-end;
-}
-#navigation-desktop {
-  width: 70%;
+  font-weight: bold;
+  font-size: 13px;
+  width: 200px;
   @include for-tablet-portrait-up {
-    display: none;
+    font-size: 11px;
   }
-  @include for-phone-only  {
-    display: none;
+  @include for-tablet-landscape-up {
+    font-size: 11px;
   }
+}
+.sales-item {
+  display: flex;
+  flex-direction: column;
 }
 .sales {
-  font-size: 10px;
   color: yellow;
+  font-size: 10px;
+  @include for-tablet-landscape-up {
+    font-size: 8px;
+  }
+}
+.desktop {
+  @include for-phone-only {
+    display: none;
+  }
+}
+.mobile {
+  display: none;
+  @include for-phone-only {
+    display: inline;
+  }
 }
 
+@include for-phone-only {
+  nav.main {
+    float: right;
+  }
+  .menu {
+    position: absolute;
+    right: 5%;
+    list-style: none;
+    font: {
+      family: "Open Sans", sans-serif;
+      weight: 600;
+    }
+    color: white;
+    background: rgba(145, 144, 212, 0.95);
+    text-transform: uppercase;
+    padding: 15px;
+    opacity: 0;
 
+    li {
+      padding: 5px;
+
+      &:not(:first-child) {
+        border-top: 1px solid white;
+      }
+    }
+
+    &.visible {
+      right: 5%;
+      opacity: 1;
+    }
+  }
+
+  .mobile-menu-btn {
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 14px;
+    cursor: pointer;
+
+    span {
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 18px;
+      height: 2px;
+      background-color: white;
+      opacity: 1;
+      transition: opacity 0.5s ease;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      display: inline-block;
+      width: 18px;
+      height: 2px;
+      background-color: white;
+      position: absolute;
+    }
+
+    &:before {
+      top: 0;
+      transform: rotate(0deg);
+      transition: transform 0.25s ease, top 0.25s ease 0.25s;
+    }
+
+    &:after {
+      bottom: 0;
+      transform: rotate(0deg);
+      transition: transform 0.25s ease, bottom 0.25s ease 0.25s;
+    }
+
+    &.open {
+      span {
+        opacity: 0;
+        transition: opacity 0.5s ease;
+      }
+
+      &:before {
+        top: 6px;
+        transform: rotate(45deg);
+        transition: transform 0.25s ease 0.25s, top 0.25s ease;
+      }
+
+      &:after {
+        bottom: 6px;
+        transform: rotate(-45deg);
+        transition: transform 0.25s ease 0.25s, bottom 0.25s ease;
+      }
+    }
+  }
+}
 </style>

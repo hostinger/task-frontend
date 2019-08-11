@@ -1,6 +1,7 @@
 {
-  "name": "test",
-  "short_name": "test",
+  "name": "Hostinger fron-end task",
+  "short_name": "hostinger task",
+  "description" : "Front-end task for hostinger",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

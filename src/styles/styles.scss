@@ -12,8 +12,11 @@ $yellow: rgb(255, 224, 51) ;
 $small: 450px;
 $medium: 650px;
 $big: 850px;
-$extraBig: 1090px;
+$extraBig: 1080px;
 $huge: 1200px;
+
+//sizes
+$main-margin: 5%;
 
 /*===== General rules =====*/
 * {
@@ -23,12 +26,16 @@ $huge: 1200px;
 }
 
 .widget-container {
+    @include flexbox;
+    @include flex-flow(row wrap);
+    @include align-items(flex-start);
     color: rgb(255, 255, 255);
     font-family: ('Trebuchet MS', 'Helvetica', sans-serif);
     min-width: 100vw;
     min-height: 100vh;
     position: relative;
     z-index: 50;
+    //breakpoints
     @media screen and (min-width: $huge) {
         min-width: 60vw;
         max-width: 1100px;
@@ -39,6 +46,7 @@ $huge: 1200px;
 /*===== Background style =====*/
 .background-widget {
     @include transform(scaleX(-1));
+    @include brightness(50%);
     background: (
         $violet 
         url('../components/assets/background-medium.jpg') 
@@ -71,6 +79,7 @@ $huge: 1200px;
 //change background color when menu is open
 .navigation.open {
     background-color: rgb(128, 0, 128);
+    position: fixed;
 }
 
 .logo-container {
@@ -82,12 +91,10 @@ $huge: 1200px;
     background-color: transparent;
     border: 0;
     cursor: pointer;
-
     .hamburger {
         display: inline-block;
         margin: 5px;
     }
-    
     .bar1, .bar2, .bar3 {
         @include transition(all 0.3s linear);
         width: 35px;
@@ -95,11 +102,9 @@ $huge: 1200px;
         background-color: rgb(255, 255, 255);
         margin: 5px 0;
     }
-
     &:focus {
         outline: 0;
     }
-
     &:hover .bar1, &:hover .bar2, &:hover .bar3,
     &:focus .bar1, &:focus .bar2, &:focus .bar3 {
         background-color: $yellow;
@@ -131,7 +136,6 @@ $huge: 1200px;
     top: 62px;
     background-color: $violet;
     display: none;
-
     a {
         @include flexbox;
         @include align-items(center);
@@ -144,7 +148,7 @@ $huge: 1200px;
         color: rgb(255, 255, 255);
         padding: 10px 15px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-
+        //on sale part
         span {
             @include transition(all 0.3s linear);
             color: $yellow;
@@ -152,7 +156,6 @@ $huge: 1200px;
             font-weight: bold;
             height: 17px;
         }
-
         &:hover,
         &:focus {
             color: $yellow;
@@ -181,7 +184,7 @@ $huge: 1200px;
     }
     .logo-container {
         width: 20%;
-        padding: 22px 0 10px 10px;
+        padding: 22px 0 10px 15px;
     }
     .buttons-container {
         width: 80%;
@@ -191,17 +194,15 @@ $huge: 1200px;
         background-color: transparent;
         display: flex;
         @include flex-flow(row);
-    
         a {
             @include align-items(flex-start);
-            font-size: 14px;
+            font-size: 15px;
             border: 0;
-    
+            //on sale part
             span {
                 font-size: 12px;
                 height: 12px;
             }
-    
             &:hover,
             &:focus {
                 border-bottom: 0;
@@ -212,10 +213,216 @@ $huge: 1200px;
 
 @media screen and (min-width: $extraBig) {
     .logo-container {
-        padding: 24px 0 10px 10px;
+        padding: 24px 0 10px 65px;
     }
     .buttons-container a {
         font-size: 17px;
         letter-spacing: 1.1px;
+    }
+}
+
+/*===== Order =====*/
+.offer-container {
+    width: 100%;
+    order: 2;
+    //breakpoints
+    @media screen and (min-width: $big) {
+        order: 1;
+        width: 50%;
+    }
+    @media screen and (min-width: $extraBig) {
+        padding-left: 50px;
+    }
+}
+
+//big price part
+.price-container {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-flow(column);
+    @include justify-content(center);
+    width: 100%;
+    order: 1;
+    font-size: 20px;
+    margin-top: $main-margin;
+    //breakpoints
+    @media screen and (min-width: $small) {
+        font-size: 25px;
+    }
+    @media screen and (min-width: $big) {
+        order: 2;
+        width: 50%;
+    }
+}
+
+.big-price-container {
+    @include flexbox;
+    @include align-items(center);
+    @include flex-flow(row);
+    @include justify-content(center);
+    padding: 0 10px; 
+    height: 210px;
+    .currency {
+        font-size: 3.5em;
+        font-family: ('Verdana', 'Helevtica', sans-serif);
+        font-weight: 800;
+        padding-bottom: 50px;
+    }
+    .dollars {
+        font-size: 11em;
+        font-weight: 800;
+    }
+    .cents {
+        @include flexbox;
+        @include align-items(flex-start);
+        @include flex-flow(column);
+        @include justify-content(space-evenly);
+        height: 100%;
+        p:first-child {
+            font-weight: 800;
+            font-size: 3.5em;
+        }       
+        p:last-child {
+            font-size: 2em;
+        }
+    }
+}
+
+//pink label
+.label p {
+    background-color: $pink;
+    padding: 10px 25px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+}
+
+.label .arrow {
+    @include arrow(15px 15px 0 15px, $pink transparent transparent transparent);
+    margin: 0 auto;
+}
+
+//New Year offer
+.offer-container {
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    margin-top: $main-margin;
+    font-size: 20px;
+    h1 {
+        font-size: 1.6em;
+        text-align: center;
+        letter-spacing: 1.5px;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+    //breakpoints
+    @media screen and (min-width: $small) {
+        font-size: 25px;
+    }
+    @media screen and (min-width: $big) {
+        @include align-items(flex-start);
+        font-size: 20px;
+    }
+}
+
+//emphasized red text
+.red {
+    color: $red;
+    text-transform: uppercase;
+}
+
+//timer style
+.timer-container {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    width: 100%;
+    max-width: 400px;
+    padding: 7% 15px;
+}
+.timer-holder {
+    @include flexbox;
+    @include justify-content(center);
+    @include align-items(center);
+    width: 100%;
+}
+
+//timer arrows
+.left-arrow-timer {
+    @include arrow(15px 0 15px 15px, transparent transparent transparent $red);
+}
+
+.right-arrow-timer {
+    @include arrow(15px 15px 15px, transparent $red transparent transparent);
+}
+
+//all children elements of timer container
+.timer-holder > * {
+    width: 25%;
+    @include flexbox;
+    @include flex-direction(column);
+    @include justify-content(center);
+    @include align-items(center);
+    p:first-child {
+        font-size: 40px;
+        font-weight: bold;
+    }
+    p:last-child {
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+}
+
+//big red button
+.call-to-action-button {
+    @include transition(all 0.3s linear);
+    color: rgb(255, 255, 255);
+    text-transform: uppercase;
+    font-size: 20px;
+    background-color: $red;
+    border: 0;
+    border-radius: 3px;
+    width: calc(100% - 30px);
+    max-width: 350px;
+    margin: $main-margin 15px 0 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    cursor: pointer;
+    &:hover,
+    &:focus {
+        background-color: $green;
+        outline: 0;
+    }
+}
+
+/*===== Footer =====*/
+.footer-container {
+    width: 100%;
+    padding: 25px 15px;
+    order: 3;
+}
+
+.footer-container ul {
+    @include flexbox;
+    @include flex-flow(row wrap);
+    @include justify-content(space-around);
+    @include align-items(center);
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+    list-style: none;
+    li {
+        padding-bottom: 6px;
+        padding-right: 10px;
+        &::before {
+            content: url('../components/assets/correct-symbol.svg');
+            padding-right: 12px;
+            color: $green;
+        }
+    }
+    //breakpoints
+    @media screen and (min-width: $big) {
+        max-width: 100%;
     }
 }

@@ -6,16 +6,20 @@ class Offer extends React.Component {
     return (
         <React.Fragment>
             <section className="offer-container">
-                <h1>New Year Offer <span className="red">82% off</span> Web Hosting</h1>
+                <h1>New Year Offer</h1>
+                <h1><span className="red">82% off</span> Web Hosting</h1>
                 <Timer />
                 <button className="call-to-action-button">Get started now</button>
             </section>
             <section className="price-container">
-                <p className="label">Save 82%</p>
+                <div className="label">
+                    <p>Save 82%</p>
+                    <div className="arrow"></div>
+                </div>
                 <div className="big-price-container">
-                    <p>$</p>
-                    <p>1</p>
-                    <div>
+                    <p className="currency">$</p>
+                    <p className="dollars">1</p>
+                    <div className="cents">
                         <p>45</p>
                         <p>/mo</p>
                     </div>

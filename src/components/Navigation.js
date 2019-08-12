@@ -1,5 +1,5 @@
 import React from 'react';
-import logoImage from './assets/logo.svg';
+import logoImage from '../styles/assets/logo.svg';
 import { camelCaseString } from '../helper';
 
 class Navigation extends React.Component {

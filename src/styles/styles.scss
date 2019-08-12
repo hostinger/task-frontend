@@ -49,7 +49,7 @@ $main-margin: 5%;
     @include brightness(50%);
     background: (
         $violet 
-        url('../components/assets/background-medium.jpg') 
+        url('./assets/background-medium.jpg') 
         no-repeat 
         center
     );
@@ -62,7 +62,7 @@ $main-margin: 5%;
     z-index: 10;
     //breakpoints
     @media screen and (min-width: $big) {
-        background-image: url('../components/assets/background-big.jpg');
+        background-image: url('./assets/background-big.jpg');
     }
 }
 
@@ -416,7 +416,7 @@ $main-margin: 5%;
         padding-bottom: 6px;
         padding-right: 10px;
         &::before {
-            content: url('../components/assets/correct-symbol.svg');
+            content: url('./assets/correct-symbol.svg');
             padding-right: 12px;
             color: $green;
         }

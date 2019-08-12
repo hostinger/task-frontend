@@ -23,7 +23,8 @@ class Widget extends React.Component {
         onSale: false
       }
     ],
-    mobileVisible: false //state for mobile menu visibility
+    mobileVisible: false, //state for mobile menu visibility
+    endDate: "2019/09/12/20/30" //date when timer ends format: year/month/day/hours/minutes, example: 2019/08/29/15/15
   }
 
   //makes mobile menu visible & invisible
@@ -36,10 +37,11 @@ class Widget extends React.Component {
       <React.Fragment>
         <div className="widget-container">
           <Navigation 
-            categories= { this.state.categories }
-            mobileVisible= { this.state.mobileVisible } 
-            toggleNavMenu= { this.toggleNavMenu } />
-          <Offer />
+            categories = { this.state.categories }
+            mobileVisible = { this.state.mobileVisible } 
+            toggleNavMenu = { this.toggleNavMenu } />
+          <Offer 
+            endDate = { this.state.endDate } />
           <Footer />
         </div>
         <div className="background-widget"></div>

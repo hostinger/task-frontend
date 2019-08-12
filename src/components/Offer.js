@@ -8,7 +8,7 @@ class Offer extends React.Component {
             <section className="offer-container">
                 <h1>New Year Offer</h1>
                 <h1><span className="red">82% off</span> Web Hosting</h1>
-                <Timer />
+                <Timer endDate = { this.props.endDate } />
                 <button className="call-to-action-button">Get started now</button>
             </section>
             <section className="price-container">

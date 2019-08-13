@@ -8,7 +8,7 @@ Implemented tasks: responsive design, timer countdown.
 The structure of the app:
 ```bash
 ├── README.md - This file.
-├── package.json 
+├── package.json
 ├── public
 │   ├── logo-small.png
 │   ├── logo192.png
@@ -37,11 +37,11 @@ The structure of the app:
 * To change the end date of the counter - update endDate state in Widget.js (takes in string, format year/month/day/hours/minutes)
 
 ## App preview
-[Online demo](https://myowlreads.herokuapp.com/)
-In the project directory, you can run:
+[Online demo](https://timer-widget-task.netlify.com/)
+
+* In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-

@@ -1,22 +1,47 @@
-# Frontend Developer Task
+#  Timer Widget
+## Project Overview:
+Page displays countdown timer. Project created as part of employment process to Hostinger.
 
-## Few simple steps
+## Project specifics
+Design mockup was provided by Hostinger. This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Implemented tasks: responsive design, timer countdown.
+The structure of the app:
+```bash
+├── README.md - This file.
+├── package.json
+├── public
+│   ├── logo-small.png
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   └── index.html
+└── src
+    ├── styles
+    │   ├── assets #helper images for the app
+    │   │   ├── background-big.jpg #background image of higher quality
+    │   │   ├── background-medium.jpg #background image of lower quality
+    │   │   ├── correct-symbol.svg #check mark icon (ref. flaticon.com)
+    │   │   └── logo.svg #hostinger logo    
+    │   ├── styles.scss #main styles for the app
+    │   └── mixins.scss #scss mixins, helper file for styles
+    ├── components #main components for the app
+    │   ├── Navigation.js #navigation menu component, menu categories are rendered based on state
+    │   ├── Offer.js #component containing main offer part
+    │   ├── Timer.js #timer component, rendered based on end date state
+    │   └── Footer.js #footer component
+    ├── Widget.js # This is the root of the app.
+    ├── helper.js # Contains JavaScript helper functions
+    └── index.js # Used for DOM rendering only.
+```
+* To change navigation menu categories - update categories state in Widget.js
+* To change the end date of the counter - update endDate state in Widget.js (takes in string, format year/month/day/hours/minutes)
 
-1. Fork this repo
-2. Prepare pull request and let us know that you are done
+## App preview
+[Online demo](https://timer-widget-task.netlify.com/)
 
-## Few simple requirements
+* In the project directory, you can run:
 
-- Design should be recreated as closely as possible.
-- Design must be responsive. Because we live in our smartphones and we will check with them for sure.
-- Use CSS preprocessor (SCSS preferred).
-- Support all modern browsers.
-- Use a Javascript task-runner. Webpack, Grunt or Gulp - it doesn't matter.
-- Do not commit the build, because we are building things on deployment.
-- VueJS, AngularJS or ReactJS would be an advantage
+### `npm start`
 
-## Few tips
-
-- Structure!
-- Have fun!
-- Hosted DEMO would give some extra points
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

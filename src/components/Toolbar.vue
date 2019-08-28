@@ -1,17 +1,17 @@
 <template>
   <div class="toolbar">
-    <img alt="hostinger logo" src="../assets/logo.svg" />
+    <img alt="hostinger logo" src="../assets/logo.svg"  width="50px" height="50px" />
     <nav class="navigation desktop">
-      <a class="item" href="#">WEB HOSTING</a>
+      <a class="item" href="#">Header 1</a>
       <div class="item">
         <div class="sales-item ">
           <span class="sales">ON SALE</span>
-          <a href="#">CLOUD HOSTING</a>
+          <a href="#">Header 2</a>
         </div>
       </div>
-      <a class="item" href="#">VPS HOSTING</a>
-      <a class="item" href="#">DOMAIN CHECKER</a>
-      <a class="item" href="#">WEBSITE BUILDER</a>
+      <a class="item" href="#">Header 3</a>
+      <a class="item" href="#">Header 4</a>
+      <a class="item" href="#">Header 5</a>
     </nav>
     <nav class="mobile">
       <div class="content-area">
@@ -20,16 +20,16 @@
             <span></span>
           </div>
           <ul class="menu">
-            <li>WEB HOSTING</li>
+            <li>Header 1</li>
             <li>
               <div class="sales-item ">
                 <span class="sales">ON SALE</span>
-                <a href="#">CLOUD HOSTING</a>
+                <a href="#">Header 2</a>
               </div>
             </li>
-            <li>VPS HOSTING</li>
-            <li>DOMAIN CHECKER</li>
-            <li>WEBSITE BUILDER</li>
+            <li>Header 3</li>
+            <li>Header 4</li>
+            <li>Header 5</li>
           </ul>
         </nav>
       </div>

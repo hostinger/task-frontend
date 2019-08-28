@@ -31,9 +31,15 @@ export default {
       hours: 0,
       minutes: 0,
       seconds: 0,
-      countDownDate: new Date("2019-08-18 23:37:00").getTime(),
       distance: 0
     };
+  },
+  computed: {
+    countDownDate() {
+      const date = new Date();
+      const yesterday = new Date(date.getTime() + 24*60*60*1000).getTime();
+      return yesterday
+    }
   },
   methods: {
     zeroFill(i) {

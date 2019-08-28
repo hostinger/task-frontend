@@ -5,7 +5,7 @@
       <div class="felx-layout">
         <div class="column align-center">
           <span class="bubble">SAVE 82%</span>
-          <b class="large-size-font">1</b>
+          <b class="large-size-font">5</b>
         </div>
         <div class="column center">
           <span class="mid-size-font">45</span>

@@ -65,7 +65,7 @@ footer {
   top: 0;
   display: flex;
   width: 100vw;
-  height: 40px;
+  height: 50px;
   font-size: 1.1em;
   width: 90vw;
   @include for-phone-only {

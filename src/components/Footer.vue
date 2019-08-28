@@ -2,19 +2,19 @@
   <div class="footer">
     <div>
       <span class="check">&#10004;</span>
-      <span>Guaranteed 99.9% Uptime</span>
+      <span>Footer 1</span>
     </div>
     <div>
       <span class="check">&#10004;</span>
-      <span>Super Speed Performance</span>
+      <span>Footer 2</span>
     </div>
     <div>
       <span class="check">&#10004;</span>
-      <span>24/7 Supprot Chat</span>
+      <span>Footer 3</span>
     </div>
     <div>
       <span class="check">&#10004;</span>
-      <span>30-Day Money-back Guarantee</span>
+      <span>Footer 4</span>
     </div>
   </div>
 </template>

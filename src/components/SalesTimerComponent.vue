@@ -2,7 +2,7 @@
   <div class="timer-container">
     <div class="column">
       <b>New Year Offer</b>
-      <b><span class="offPercent">82% OFF</span> Web Hosting</b>
+      <b><span class="offPercent">82% OFF</span> Your Service</b>
       <div class="timer">
         <countDownTimer />
       </div>

@@ -1,7 +1,7 @@
 {
-  "name": "Hostinger fron-end task",
-  "short_name": "hostinger task",
-  "description" : "Front-end task for hostinger",
+  "name": "PWA example with timer",
+  "short_name": "PWA example",
+  "description" : "PWA example with time",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",

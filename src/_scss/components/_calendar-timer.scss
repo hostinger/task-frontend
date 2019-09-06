@@ -1,0 +1,74 @@
+
+
+.calendar-timer{
+
+    &--hide{
+        display: none;
+    }
+    ul{
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+    }
+    li{
+        
+        margin-top: 1.25rem;
+        text-align: center;  
+        padding-right: 2.5rem;
+        float: none;
+        @include respond(phone){
+            float: left;
+        }
+        
+    }
+    &__triangle-right{
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-left: 15px solid $mainRed;
+        border-bottom: 10px solid transparent;
+        margin-right: 10px;
+        margin-top: 1rem;
+        display: none;
+
+        @include respond(phone){
+            display: inline-block;
+        }
+        
+    }
+    &__triangle-left{
+        width: 0;
+        height: 0;
+        border-top: 10px solid transparent;
+        border-right: 15px solid $mainRed;
+        border-bottom: 10px solid transparent;
+        display: none;
+
+        @include respond(phone){
+            display: inline-block;
+        }
+    }
+    &__holder{
+       font-size: 1.75rem;
+       font-weight: 700;
+       line-height: 2.5rem;
+       color: $mainWhite;
+        display: inline-block;
+       @include respond(laptop){
+           display: block;
+       }
+    }
+    &__clock{
+        font-size: 1.75rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+    }
+    &__text{
+        font-size: 12px;
+        line-height: 1.0625rem;
+        text-transform: uppercase;
+    }
+}
+
+

@@ -1,0 +1,131 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+
+.landing-section{
+        text-align: center;
+    @include respond(laptop){
+        text-align: left;
+    }
+
+    &__left-side{
+        margin-top: 6.625rem;
+   
+    }
+    &__right-side{
+         position: relative;
+        margin-top: 2.5rem;
+    }
+
+    &__main-title{
+           font-size: 32px;
+        
+        line-height: 2.875rem;
+        color: $mainWhite;
+        font-weight: 700;
+        
+        @include respond(phone){
+            font-size: 2.625rem;
+        }
+    }
+    &__save{
+        margin-right: auto;
+         width: 33%;
+        margin-left: auto;
+        text-align: center;
+    }
+    &__save-banner{
+       color: $mainWhite; 
+       font-weight: 700;
+       font-size: 1.25rem;
+       background-color: $salePink;
+        padding: 10px 1.875rem;
+       text-transform: uppercase;
+       
+
+
+    }
+    &__rectangular{
+        margin-right: auto;
+        margin-left: auto;
+        transform: rotate(45deg);
+        width: 1.25rem;
+        height: 1.25rem;
+        margin-top: -10px;
+        background-color: $salePink;  
+    }
+
+    &__currency{
+        font-size: 5rem;
+        font-weight: 700;
+        line-height: 12.875rem;
+        display: inline-block;
+        color: $mainWhite;
+
+        
+        @include respond(phone){
+            font-size: 9rem;
+        }
+    }
+    &__number{
+        font-size: 13rem;
+        font-weight: 700;
+        line-height: 21.625rem;
+        display: inline-block;
+        color: $mainWhite;
+
+        @include respond(phone){
+            font-size: 27rem;           
+        }
+    }
+    &__price-block{
+        text-align: center;
+    }
+
+    &__price-holder{
+        display: inline-block;
+        color: $mainWhite;
+    }
+    &__cents-holder{
+        font-size: 3.1875rem;
+        font-weight: 700;
+        line-height: 10.3125rem;
+        
+        @include respond(phone){
+            font-size: 7.1875rem;  
+        }
+    }
+    &__unit-holder{
+        font-size: 3.5rem;
+        line-height: 6.4375rem;
+        font-weight: 600;
+
+        @include respond(phone){
+            font-size: 4.5rem;
+        }
+    }
+    &__footer{
+        padding-top: 5.875rem;
+        padding-bottom: 14px;
+        font-size: 15px;
+        
+        @include respond(phone){
+                
+        }
+        ul{
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+        li{
+            float: left;
+            color: $mainWhite;
+            
+
+            &:not(:last-child){
+                margin-right: 1.875rem;
+            }
+        }
+    }
+}

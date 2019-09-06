@@ -1,0 +1,29 @@
+
+
+.row{
+
+    
+
+
+    &:after{
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    &--gutter-large {
+        margin-right: 0;
+        
+        @include respond(laptop){
+             margin-right: -80px;
+        }
+  }
+    @include respond(laptop){
+
+        &__col-6{
+            float: left;
+        width: 50%;
+        }
+    }
+    
+}

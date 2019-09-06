@@ -1,0 +1,59 @@
+
+.header-section{
+    padding-top: 2.125rem;
+    padding-bottom: 0;
+    text-align: center;
+    display: none;
+
+    @include respond(laptop){
+        padding-bottom: 6.25rem;
+        text-align: left;
+    }
+
+    @include respond(tablet){
+        display: block;
+    }
+
+    
+
+    &__logo{
+        max-width: 8.75rem;
+        display: inline-block;
+        
+        text-align: center;
+        margin-right: 1rem;
+
+    @include respond(laptop){
+        margin-right: 13rem;
+    }
+       
+    }
+    // For SEO
+    &__title{
+        display: none;
+    }
+
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+
+
+    li a {
+    display: block;
+    color: $mainWhite;
+    text-align: center;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.25rem;
+    text-decoration: none;
+    text-transform: uppercase;
+
+        &:hover{
+                color: $mainHover;
+                transition: color 0.2s ease-out;
+            }
+    }
+}

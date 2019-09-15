@@ -1,0 +1,18 @@
+// -- Layout
+.h-slip-under-page-header {
+    margin-top: -$page-header-height;
+    padding-top: $page-header-height;
+}
+
+// --- Alignment
+.h-text-align-left {
+    text-align: left;
+}
+
+.h-text-align-center {
+    text-align: center;
+}
+
+.h-text-align-right {
+    text-align: right;
+}

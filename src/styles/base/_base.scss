@@ -1,0 +1,129 @@
+//
+// Default element rules
+//
+// Elements, that needs to be styled globally, should be styled here.
+// Only native html elements/selectors should be here, if you have class styled in this file - consider separating it to another file.
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-width: $page-width-min;
+    color: $color-text-body;
+    font: normal normal $font-size-base $font-family-base;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: $line-height-base;
+
+    // To prevent the iPhone and iPad from inflating fonts
+    @include respond-to(1024, max) {
+        -webkit-text-size-adjust: 100%; // stylelint-disable-line property-no-vendor-prefix
+    }
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+[disabled],
+:disabled {
+    cursor: not-allowed;
+}
+
+::selection {
+    background: $color-selection;
+}
+
+// --- Images -----------------------------------------------------------------------------------------
+img {
+    max-width: 100%;
+}
+
+svg {
+    display: inline;
+    pointer-events: none; // svg should not be responsible for click events
+}
+
+// --- Typography -------------------------------------------------------------------------------------
+small {
+    font-size: 85%;
+}
+
+a {
+    color: $color-link;
+}
+
+p {
+    margin: 1em 0;
+}
+
+// --- Headings ---------------------------------------------------------------------------------------
+h1,
+.h1 {
+    margin: .75em 0;
+    font-family: $font-family-headings;
+    line-height: 1.3;
+
+    @include respond-to($media-md, max) {
+        font-size: 34px;
+    }
+
+    @include respond-to($media-xs, max) {
+        font-size: 30px;
+    }
+}
+
+h2,
+.h2 {
+    margin: .75em 0;
+    font-family: $font-family-headings;
+    font-size: $font-size-h2;
+    line-height: 1.3;
+
+    @include respond-to($media-md, max) {
+        font-size: 26px;
+    }
+
+    @include respond-to($media-xs, max) {
+        font-size: 22px;
+    }
+}
+
+h3,
+.h3 {
+    margin: .75em 0;
+    font-family: $font-family-headings;
+    font-size: $font-size-h3;
+    line-height: 1.3;
+
+    @include respond-to($media-md, max) {
+        font-size: 22px;
+    }
+
+    @include respond-to($media-xs, max) {
+        font-size: 20px;
+    }
+}
+
+// --- Table defaults ---------------------------------------------------------------------------------
+table {
+    border-collapse: collapse;
+}
+
+// --- Cursor pointers ---------------------------------------------------------------------------------
+// Pointers on buttons are arguable, but still chosen to show them as such,
+// since QA often reports missing pointer cursor it as a bug,
+// indicating that users already expect pointers on buttons
+button,
+input[type="checkbox"],
+input[type="radio"],
+label[for]:not(.base-input__suffix) {
+    cursor: pointer;
+}

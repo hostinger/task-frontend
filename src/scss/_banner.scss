@@ -1,0 +1,211 @@
+.banner {
+    color: #ffffff;
+    font-weight: 600;
+    min-height: 550px;
+    padding-top: 150px;
+    position: relative;
+    position: absolute;
+    top: 0;
+    width: 100%;
+
+    @media only screen and (max-width: 1150px) {
+        min-height: 450px;
+    }
+
+    &::before {
+        background: url('../images/background-fliped-1980.jpeg') center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        content: '';
+        height: 100%;
+        margin-top: -150px;
+        padding: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+    }
+
+    &__content-wrapper {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+
+        align-content: stretch;
+
+        @media only screen and (max-width: 1150px) {
+            justify-content: center;
+        }
+
+        @media only screen and (max-width: 845px) {
+            flex-direction: column;
+        }
+    }
+
+    &__offer {
+        flex: 0 0 52%;
+
+        @media only screen and (max-width: 1150px) {
+            flex: initial;
+        }
+    }
+
+    &__offer-title {
+        font-size: 42px;
+
+        &--red {
+            color: $main-red;
+            text-transform: uppercase;
+        }
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 30px;
+        }
+
+        @media only screen and (max-width: 845px) {
+            text-align: center;
+        }
+    }
+
+    &__timer {
+        align-items: center;
+        display: flex;
+        width: 100%;
+
+        @media only screen and (max-width: 845px) {
+            justify-content: center;
+        }
+    }
+
+    &__time-block {
+        padding-left: 35px;
+
+        @media only screen and (max-width: 1150px) {
+            padding-left: 18px;
+        }
+    }
+
+    &__timer-value {
+        display: block;
+        font-weight: 900;
+        text-align: center;
+
+        &--number {
+            font-size: 28px;
+
+            @media only screen and (max-width: 1150px) {
+                font-size: 18px;
+            }
+        }
+        &--word {
+            text-transform: uppercase;
+
+            @media only screen and (max-width: 1150px) {
+                font-size: 12px;
+            }
+        }
+    }
+
+    &__offer-price {
+        display: flex;
+        flex: 0 0 48%;
+        font-weight: 700;
+        justify-content: flex-end;
+        line-height: 1;
+
+        @media only screen and (max-width: 1150px) {
+            flex: initial;
+            padding-left: 120px;
+        }
+
+        @media only screen and (max-width: 845px) {
+            padding-left: 0;
+
+            order: -1;
+        }
+    }
+
+    &__offer-currency {
+        font-size: 12em;
+        margin-top: 100px;
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 8em;
+            margin-top: 60px;
+        }
+    }
+
+    &__offer-big-number {
+        font-size: 32em;
+        position: relative;
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 20em;
+        }
+    }
+
+    &__offer-price-right {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    &__offer-right-cent {
+        font-size: 9em;
+        margin-top: 55px;
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 7em;
+            margin-top: 45px;
+        }
+
+        @media only screen and (max-width: 845px) {
+            font-size: 6em;
+            margin-top: 50px;
+        }
+    }
+
+    &__offer-right-mo {
+        font-size: 6em;
+        margin-bottom: 55px;
+
+        @media only screen and (max-width: 1150px) {
+            font-size: 4em;
+            margin-top: 0;
+        }
+
+        @media only screen and (max-width: 845px) {
+            font-size: 3.5em;
+        }
+    }
+
+    &__advantages {
+        margin-top: 65px;
+
+        ul {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            list-style: none;
+            padding: 0;
+
+            @media only screen and (max-width: 1052px) {
+                flex-direction: column;
+            }
+
+            li {
+                font-size: 17px;
+
+                @media only screen and (max-width: 1052px) {
+                    padding: 5px 0;
+                }
+            }
+        }
+
+        @media only screen and (max-width: 1150px) {
+            margin-top: 130px;
+        }
+        @media only screen and (max-width: 1052px) {
+            margin-top: 50px;
+        }
+    }
+}

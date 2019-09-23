@@ -1,0 +1,75 @@
+.triangle {
+    border-color: transparent $main-red transparent $main-red;
+    border-style: solid;
+    height: 0;
+    width: 0;
+
+    &__left {
+        border-width: 10px 16px 10px 0;
+        padding-left: 35px;
+
+        @media only screen and (max-width: 1150px) {
+            padding-left: 18px;
+        }
+    }
+
+    &__right {
+        border-width: 10px 0 10px 16px;
+    }
+}
+
+.checkmark {
+    display: inline-block;
+    margin-right: 15px;
+
+    $green: #7cc576;
+
+    &:after {
+        border: solid $green;
+        border-radius: 2px;
+        border-width: 0 4px 4px 0;
+        content: '';
+        display: block;
+        height: 12px;
+        transform: rotate(45deg);
+        width: 5px;
+    }
+}
+
+.rectangle {
+    background: $black;
+    bottom: calc(100% - 1em);
+    font-size: 25px;
+    font-weight: 600;
+    padding: 14px 25px;
+    position: absolute;
+    right: -10px;
+    text-align: center;
+    text-transform: uppercase;
+    white-space: nowrap;
+
+    @media only screen and (max-width: 1150px) {
+        font-size: 16px;
+        right: -15px;
+    }
+
+    &:after {
+        border-left: .7em solid transparent;
+        border-right: .7em solid transparent;
+        border-top: .7em solid $black;
+        content: '';
+        display: block;
+        left: 50%;
+        position: absolute;
+        top: 100%;
+        transform: translateX(-50%);
+    }
+
+    &--light-red {
+        background: $light-red;
+
+        &:after {
+            border-top: .7em solid $light-red;
+        }
+    }
+}

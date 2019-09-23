@@ -1,0 +1,56 @@
+// big header button
+.big-button {
+    background: $black;
+    border: none;
+    border-radius: 6px;
+    color: $white;
+    cursor: pointer;
+    display: block;
+    font-size: 22px;
+    font-weight: 400;
+    margin: 50px 0 0;
+    padding: 21px 50px;
+    text-transform: uppercase;
+    transition: background .3s ease-in-out;
+    white-space: nowrap;
+
+    &:hover {
+        background: $grey;
+    }
+
+    // red button
+    &--red {
+        background: $main-red;
+        color: $white;
+
+        &:hover {
+            background: $main-red-hover;
+        }
+    }
+
+    @media only screen and (max-width: 1150px) {
+        font-size: 18px;
+        margin: 50px 0 0;
+        padding: 17px 30px;
+    }
+
+    @media only screen and (max-width: 845px) {
+        width: 100%;
+    }
+}
+
+// mobile nav small button
+.x-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 15px;
+
+    appearance: none;
+
+    &--black {
+        color: $black;
+    }
+}

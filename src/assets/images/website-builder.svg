@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="84px" height="84px" version="1.1" viewBox="0 0 84 84">
+<!--Generator: Sketch 53.2 (72643) - https://sketchapp.com-->
+    <title>
+        Website-Builder
+    </title>
+    <desc>
+        Created with Sketch.
+    </desc>
+    <g id="Page-1" fill="none" fill-rule="evenodd" stroke="none" stroke-width="1">
+        <g id="Homepage-NEW-NEW" fill-rule="nonzero" transform="translate(-1600.000000, -1028.000000)">
+            <g id="Group-79" transform="translate(0.000000, 880.000000)">
+                <g id="Take-Control-Block">
+                    <g id="Group-32" transform="translate(405.000000, 100.000000)">
+                        <g id="Domains" transform="translate(855.000000, 0.000000)">
+                            <g id="Website-Builder" transform="translate(340.000000, 48.000000)">
+                                <rect id="Rectangle-2" width="84" height="84" x="0" y="0" fill="#F8F8F8" rx="42"/>
+                                <path id="Shape" fill="#6747C7" d="M30.3333333,27 C28.511562,27 27,28.511562 27,30.3333333 L27,53.6666667 C27,55.4884383 28.511562,57 30.3333333,57 L53.6666667,57 C55.4884383,57 57,55.4884383 57,53.6666667 L57,30.3333333 C57,28.511562 55.4884383,27 53.6666667,27 L30.3333333,27 Z M30.3333333,30.3333333 L42,30.3333333 L42,53.6666667 L30.3333333,53.6666667 L30.3333333,30.3333333 Z M45.3333333,30.33 L53.6666667,30.33 L53.6666667,33.6633333 L45.3333333,33.6633333 L45.3333333,30.33 Z M45.3333333,35.33 L53.6666667,35.33 L53.6666667,38.6633333 L45.3333333,38.6633333 L45.3333333,35.33 Z M45.3333333,40.33 L53.6666667,40.33 L53.6666667,43.6633333 L45.3333333,43.6633333 L45.3333333,40.33 Z"/>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

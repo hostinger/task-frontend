@@ -1,0 +1,11 @@
+// global variables
+@import 'variables';
+
+// global rules
+@import 'main';
+
+// components
+@import 'header', 'banner', 'figures', 'buttons';
+
+// utility
+@import 'utility';

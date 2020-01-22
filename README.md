@@ -1,63 +1,35 @@
-This is a take-home challenge from a company named Hostinger (their task description below).
+A project imitating an AI Text Generator, similar to the one I built for [zyro.com](https://www.zyro.com).
+The project only imitates text creation (dummy texts are provided), as I coulnd't use the API.
 
-[Live Version](https://martynas-hostinger.000webhostapp.com)
+PS. What I really enjoyed with this task was manipulating the DOM!
 
-I also built a bonus desktop version with Flexbox for newer browsers: [this repo](https://github.com/mgalkus/task-frontend-flexbox).
+[Live Version is hosted here](https://martynas-hostinger.000webhostapp.com).
 
 ### Features
-- 3 breakpoints
-- Adapted to older browsers (IE9 compatible)
-- HTML and Scss files contain comments for information
-- Source assets are divided into components and then compiled into one file using Gulp
+- Text input valitation
+- Text count
+- Possibility to copy generated text
+- Modal window to generate text again
+- Responsive
+- Js code contains more comments and functionality and code decisions
 
 ### Down sides
-- Responsive layout works badly on landscape mobiles
-- Images not optimized, no lazy load
+It was agreed the original project wouldn't use BEM and there was no focus on accessibility. I have'nt corrected these downside yet in this project either.
 
 ### Prerequisites
 Node.js
 
 ### Installation
 ```
-npm install gulp
+npm i
 ```
 
 ```
-npm i 
+npm run start
 ```
 
-```
-gulp watch
-```
+
 ### Built With:
 - Vanilla Js
-- Sass
-- Gulp
-- gulp-clean-css
-- gulp-autoprefixer
-- gulp-babel
-
-----
-
-# Frontend Developer Task
-
-## Few simple steps
-
-1. Fork this repo
-2. Prepare pull request and let us know that you are done
-
-## Few simple requirements
-
-- Design should be recreated as closely as possible.
-- Design must be responsive. Because we live in our smartphones and we will check with them for sure.
-- Use CSS preprocessor (SCSS preferred).
-- Browser support must be great. All modern browsers plus IE9 and above.
-- Use a Javascript task-runner. Webpack, Grunt or Gulp - it doesn't matter.
-- Do not commit the build, because we are building things on deployment.
-- VueJS, AngularJS or ReactJS would be an advantage
-
-## Few tips
-
-- Structure!
-- Have fun!
-- Hosted DEMO would give some extra points
+- Parcel Js
+- SCSS

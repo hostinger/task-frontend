@@ -1,0 +1,72 @@
+@import "_variables";
+
+.subsciptionDiscount {
+}
+.subscriptionPrice {
+  color: #ffffff;
+  .subscriptionPrice-currency {
+  }
+}
+.tooltip-floater {
+  position: absolute;
+  width: 100%;
+}
+.tooltip-floater-center {
+  margin: 0 auto;
+  width: 170px;
+  margin-top: 3vw;
+  @media screen and (max-height: 600px) {
+    margin-top: 1vw;
+  }
+  @media screen and (min-height: 768px) {
+    margin-top: 6vw;
+  }
+  @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+    margin-top: 1vw;
+  }
+}
+.subscriptionPrice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  height: 100%;
+  &-currency {
+    line-height: normal;
+    font-size: 16vh;
+    font-weight: bold;
+    @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+      font-size: 10vh;
+    }
+  }
+  &-units {
+    line-height: normal;
+    font-size: 60vh;
+    font-weight: bold;
+    @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+      font-size: 24vh;
+    }
+  }
+  &--columnWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -7vh;
+    @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+      margin-top: -2vh;
+    }
+    .subscriptionPrice-decimals {
+      font-size: 10vh;
+      font-weight: bold;
+      @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+        font-size: 6vh;
+        font-weight: bold;
+      }
+    }
+    .subscriptionPrice-subscription {
+      font-size: 10vh;
+      @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+        font-size: 6vh;
+      }
+    }
+  }
+}

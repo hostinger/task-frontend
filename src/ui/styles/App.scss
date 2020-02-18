@@ -1,0 +1,82 @@
+@import "bootstrap";
+@import "_variables";
+body {
+  font-family: "Open Sans", sans-serif;
+  background-image: url("../../assets/bg-1920-2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+body,
+ul,
+li {
+  margin: 0;
+  padding: 0;
+}
+.App {
+  height: 100vh;
+}
+
+.navbar {
+  height: 47px;
+  @media screen and (max-width: 1200px) {
+    display: none;
+  }
+  ul {
+    display: flex;
+    align-items: flex-end;
+  }
+  li {
+    display: inline-block;
+    text-transform: uppercase;
+    color: #ffffff;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    letter-spacing: 1px;
+    div {
+      display: flex;
+      flex-direction: column;
+    }
+    .sale {
+      text-decoration: none;
+      font-size: 0.6rem;
+      color: #ffcc33;
+    }
+  }
+  li:hover {
+    opacity: 0.8;
+  }
+}
+
+.column {
+  height: 75vh;
+  margin: 5px;
+
+  @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+    height: 35vh;
+  }
+}
+
+.container {
+  @media screen and (min-width: 1400px) {
+    max-width: 1300px;
+  }
+}
+
+.row {
+  @media screen and (min-height: $MOBILE_WIDTH_BREAKPOINT) {
+    margin-bottom: 0;
+  }
+}
+
+.height7 {
+  height: 7vh;
+}
+.paddingTop10 {
+  padding-top: 10vh;
+}
+

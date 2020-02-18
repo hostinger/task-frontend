@@ -1,0 +1,26 @@
+@import "_variables";
+
+.overflow-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 22222;
+  overflow: hidden;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.overflow-center {
+  padding: 20px;
+  background: #000000;
+}
+
+.close-button {
+  position: absolute;
+  top: 3%;
+  right: 5%;
+  cursor: pointer;
+}

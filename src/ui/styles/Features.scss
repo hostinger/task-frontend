@@ -1,0 +1,19 @@
+@import "_variables";
+
+.features {
+  img {
+    margin-right: 10px;
+  }
+  .features-item {
+    margin: 5px;
+    color: #ffffff;
+    text-align: center;
+
+    @media screen and (max-width: 1400px) {
+      font-size: smaller;
+    }
+  }
+}
+.features-row {
+  margin-bottom: -40px;
+}

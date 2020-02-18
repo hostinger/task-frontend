@@ -1,0 +1,42 @@
+@import "_variables";
+
+.countdownOffer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  // @media screen and (max-height: $MOBILE_HEIGHT_BREAKPOINT) {
+  //   margin-top: -25px;
+  // }
+  &-text {
+    color: #ffffff;
+    h1 {
+      font-weight: bold;
+      @media screen and (max-height: $MOBILE_HEIGHT_BREAKPOINT) {
+        margin-top: 30px;
+        font-size: 1.5rem;
+      }
+      @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+        text-align: center;
+        font-size: 2rem;
+      }
+      .red {
+        color: #fc5155;
+      }
+    }
+  }
+  &-countdown {
+    @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+      margin: 0 auto;
+    }
+  }
+  &-button {
+    width: 100%;
+    &--center {
+      width: 230px;
+      @media screen and (max-width: $MOBILE_WIDTH_BREAKPOINT) {
+        margin: 0 auto;
+      }
+    }
+  }
+}

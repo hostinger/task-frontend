@@ -1,0 +1,22 @@
+@import "_variables";
+
+.button {
+  height: 50px;
+  width: 230px;
+  background-color: #fc5155;
+  border-radius: 6px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($color: #fa4548, $amount: 1);
+  }
+
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}

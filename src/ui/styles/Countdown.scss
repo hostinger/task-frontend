@@ -1,0 +1,46 @@
+@import "_variables";
+
+.countdown {
+  width: 400px;
+  height: 100px;
+  @media screen and (max-width: 1000px) {
+    width: 240px;
+    height: 100px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #ffffff;
+  .flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &-leftTriangle {
+    height: 20px;
+    width: 20px;
+    transform: rotate(90deg);
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #fc5155;
+  }
+  &-rightTriangle {
+    height: 20px;
+    width: 20px;
+    transform: rotate(-90deg);
+
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 15px solid #fc5155;
+  }
+  .label {
+    font-size: 0.5rem;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  .numbers {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+}

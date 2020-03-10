@@ -28,14 +28,11 @@ npm i
 npm run start
 ```
 
-```
-gulp watch
-```
 
 ### Built With:
 - Vanilla Js
 - Sass
-- Gul
+- Gulp
 
 ----
 

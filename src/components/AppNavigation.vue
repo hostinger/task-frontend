@@ -44,7 +44,7 @@ export default {
 
 <style lang="scss">
 .app-bar {
-    padding: 10px 30px;
+    padding: 16px 7%;
 }
 .menu-items {
     max-width: fit-content;

@@ -1,3 +1,41 @@
+This is a take-home challenge from a company named Hostinger (their task description below).
+
+[Live Version](https://martynas-hostinger.000webhostapp.com)
+
+I also built a bonus desktop version with Flexbox for newer browsers: [this repo](https://github.com/mgalkus/task-frontend-flexbox).
+
+### Features
+- 3 breakpoints
+- Adapted to older browsers (IE9 compatible)
+- HTML and Scss files contain comments for information
+- Source assets are divided into components and then compiled into one file using Gulp
+
+
+### Down sides
+- Responsive layout works badly on landscape mobiles
+- Images not optimized, no lazy load
+
+### Prerequisites
+Node.js
+
+### Installation
+```
+npm install gulp
+```
+
+```
+npm i 
+npm run start
+```
+
+
+### Built With:
+- Vanilla Js
+- Sass
+- Gulp
+
+----
+
 # Frontend Developer Task
 
 ## Few simple steps

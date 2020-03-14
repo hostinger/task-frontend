@@ -1,0 +1,17 @@
+$width__breakpoints: (
+    nul: 0,
+    xs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$width__container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+);
+
+$size__gutter: 1.5rem;

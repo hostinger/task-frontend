@@ -1,0 +1,37 @@
+
+// Font
+$font-family: 'Open Sans', 'Segoe UI', Helvetica, Arial, sans-serif;
+
+$font-size__html: 62.5%;
+$font-size__nav: 1.4rem;
+$font-size__banner: 1.8rem;
+
+// Colors
+$color__white: #fff;
+$color__red: #fb5259;
+$color__pink: #fb9d9e;
+$color__green: #84c873;
+$color__yellow: #f0ea3e;
+$color__pink-dark: #5033a8;
+$color__pink-light: #6747c7;
+
+
+// Layout
+
+$width__breakpoints: (
+    nul: 0,
+    xs: 320px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px
+);
+
+$width__container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px
+);
+
+$size__gutter: 1.5rem;

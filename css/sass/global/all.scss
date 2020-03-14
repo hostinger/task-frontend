@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+html {
+    font-size: $font-size__html;
+    font-family: $font-family;
+}
+body {
+    
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $color__white;
+}
+ul{
+    list-style: none;
+}
+
+#section-main{
+    position: relative;
+    background: url(../img/bg.jpg);
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.30),
+            rgba(0, 0, 0, 0.30)
+        ),
+        url(../img/bg.jpg);
+    background-size: cover;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    @media screen and (max-width: 768px){
+        padding-top: 0;
+    }
+}
+

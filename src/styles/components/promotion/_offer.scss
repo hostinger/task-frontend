@@ -1,0 +1,34 @@
+.offer {
+  &-type,
+  &-info-wrapper {
+    text-align: center;
+    text-transform: capitalize;
+    @include mq($from: ipad) {
+      text-align: left;
+    }
+  }
+
+  &-type {
+    font-size: 1.2em;
+    @include mq($from: ipad) {
+      font-size: 2em;
+    }
+  }
+
+  &-discount,
+  &-title {
+    display: inline-block;
+  }
+
+  &-title {
+    padding-left: 15px;
+    font-size: 0.9em;
+    @include mq($from: ipad) {
+      font-size: 1.5em;
+    }
+  }
+
+  &-discount {
+    color: $color--red;
+  }
+}

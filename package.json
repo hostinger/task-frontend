@@ -1,0 +1,47 @@
+{
+  "name": "task-frontend",
+  "version": "1.0.0",
+  "description": "A frontend task.",
+  "main": "index.js",
+  "engines": {
+    "node": "10.15.3"
+  },
+  "scripts": {
+    "heroku-prebuild": "npm install --dev",
+    "dev": "node_modules/.bin/webpack-dev-server --mode development --open --hot",
+    "build": "node_modules/.bin/webpack --config webpack.config.js --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ViktorMeduneckij/task-frontend.git"
+  },
+  "author": "Viktor Meduneckij",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ViktorMeduneckij/task-frontend/issues"
+  },
+  "homepage": "https://github.com/ViktorMeduneckij/task-frontend#readme",
+  "dependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "core-js": "^3.0.1",
+    "css-loader": "^2.1.1",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.6",
+    "react-countdown-now": "^2.1.0",
+    "react-dom": "^16.8.6",
+    "sass-loader": "^7.1.0",
+    "sass-mq": "^5.0.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^1.1.2",
+    "webpack": "4.19.1",
+    "webpack-cli": "2.1.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-object-assign": "^7.2.0",
+    "webpack-dev-server": "^3.3.1"
+  }
+}

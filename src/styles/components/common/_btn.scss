@@ -1,0 +1,11 @@
+.btn {
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 20px 35px;
+  text-transform: uppercase;
+  max-width: 310px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

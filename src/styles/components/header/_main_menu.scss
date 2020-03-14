@@ -1,0 +1,55 @@
+.main-menu-wrapper {
+  margin-left: auto;
+  
+  &.mobile {
+    .main-menu.hidden {
+      display: none;
+    }
+  }
+}
+
+.main-menu {
+  @include mq($from: tablet) {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: auto;
+  }
+
+  li {
+    color: $color--white;
+    cursor: pointer;
+    font-size: 0.7em;
+    font-weight: 600;
+    padding: 10px 0;
+    position: relative;
+    text-transform: uppercase;
+
+    @include mq($from: tablet) {
+      display: inline-block;
+      padding: 0 10px;
+    }
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &.on-sale {
+      &::after {
+        content: "on sale";
+        color: $color--yellow;
+        display: inline-block;
+        font-size: 0.7em;
+        font-weight: 700;
+        position: absolute;
+        bottom: 12px;
+        padding-left: 5px;
+
+        @include mq($from: tablet) {
+          left: 10px;
+          top: -10px;
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,657 @@
+$colors: (
+  overlay: black,
+  text: white,
+  button-hover: #fb1f24,
+  main-accent: #fc5055,
+  second-accent: #fd9c9c,
+  yellow-accent: #fce500,
+  checkmark: #80c772,
+  phone-navbar: #6747c7,
+  phone-menu: #5033a8
+);
+@function color($color-name) {
+  @return map-get($colors, $color-name);
+}
+
+$breakpoints: (
+  small-desktop: 1250px,
+  large-tablet: 1050px,
+  tablet: 768px,
+  small-tablet: 576px,
+  phone: 480px
+);
+
+@function breakpoint($breakpoint) {
+  @return map-get($breakpoints, $breakpoint);
+}
+
+@mixin yellow-text {
+    text-transform: uppercase;
+    display: inline;
+    color: color(yellow-accent);
+    font-size: 11px;
+    font-weight: 700px;
+};
+@mixin hover-nav {
+  opacity: 0.5;
+  transition: ease-in-out 250ms;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  color: color(text);
+}
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+.background {
+  min-width: 100%;
+  position: absolute;
+  &:before {
+    background-image: url('../img/background.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;  
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }
+  &:after {
+    background-color: color(overlay);
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.35;
+  }
+}
+.content {
+  width: 1200px;
+  margin: 0 auto;
+  margin-top: -15px;
+  .phone-navbar {
+    display: none;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    top: 18px;
+    font-weight: 600;
+    ul {
+      display: flex;
+      align-items: flex-end;
+      margin-top: -25px;
+    }
+    li {
+      text-transform: uppercase;
+      font-size: 16px;
+      &:hover {
+        @include hover-nav;
+      }
+    }
+    a {
+      display: block;
+      padding: 20px 0 15px 30px;
+      
+    }
+    .on-sale {
+      @include yellow-text;
+      position: relative;
+      top: 25px;
+      left: 30px;
+    }
+    .cloud-hosting:hover {
+      .on-sale {
+        font-size: 12.5px;
+        transition: ease-in-out 500ms;
+        opacity: 0.5;
+      }
+    }
+    .logo {
+      display: inline-block;
+      width: 140px;
+      margin-left: -30px;
+    }
+  }
+  .banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8% 0;
+    margin-bottom: 11%;
+    .banner-left {
+      margin-top: 35px;
+      h1, h2 {
+        font-size: 45px;
+        margin-bottom: 9px;
+      }
+      strong {
+        color: color(main-accent);
+      }
+      .timer {
+        display: flex;
+      }
+      .arrow-right {
+        width: 0; 
+        height: 0; 
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-right: 15px solid color(main-accent);
+        margin-top: 23px;
+        margin-left: 0;
+      }
+      table {
+        margin-bottom: 45px;
+        td {
+          min-width: 82px;
+        }
+        #days, #hours, #minutes, #seconds {
+          padding: 8px;
+          font-weight: 700;
+          text-align: center;
+          font-size: 34px;
+          line-height: 0.9;
+        }
+        .count-text {
+          padding: 10px;
+          text-transform: uppercase;
+          font-size: 14px;
+          font-weight: 700;
+          text-align: center;
+        }
+        }
+        button {
+          border: none;
+          background: color(main-accent);
+          transition: 250ms ease-in-out;
+          width: 350px;
+          height: 80px;
+          border-radius: 6px;
+          text-transform: uppercase;
+          font-size: 20px;
+          line-height: 0.8;
+          font-weight: 600;
+          &:hover {
+            background: color(button-hover);
+        }
+      }
+      .arrow-left {
+        width: 0; 
+        height: 0; 
+        border-top: 11px solid transparent;
+        border-bottom: 11px solid transparent;
+        border-left: 15px solid color(main-accent);
+        margin-top: 23px;
+        margin-right: 0;
+      }
+    }
+    .banner-right {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-weight: 700;
+      .speech-box {
+        background: color(second-accent);
+        margin: 0 auto;
+        width: 160px;
+        padding: 13px 0;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 22px;
+        position: relative;
+        left: 6px;
+        font-weight: 600;
+        &:before {
+          content: " ";
+          width: 0;
+          height: 0;
+          position: absolute;
+          border: 15px solid color(second-accent);
+          border-top: 15px solid transparent;
+          border-right: 15px solid transparent;
+          left: 66.5px;
+          bottom: -9px;
+          transform: rotate(-45deg);
+        }
+      }
+      .price-container {
+        display: flex;
+        .currency {
+          font-size: 10em;
+          line-height: 0.8;
+          margin-top: 90px;
+        }
+        .whole {
+          font-size: 30em;
+          line-height: 0.8;
+          font-weight: 700;
+        }
+        .cent-month-container {
+          margin-top: 10%;
+          .cents {
+            font-size: 8em;
+            line-height: 0.8;
+          }
+          .monthly {
+            font-weight: 600;
+            font-size: 5em;
+            margin-left: 20px;
+            margin-top: 85px;
+          }
+        }
+      }
+    }
+  }
+  .assets {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: 10px;
+    font-size: 18px;
+    li {
+      text-align: center;
+    }
+    .checkmark {
+      display: inline-block;
+      transform: rotate(45deg);
+      height: 10px;
+      width: 5px;
+      border-bottom: 4px solid color(checkmark);
+      border-right: 4px solid color(checkmark);
+      margin-right: 15px;
+      margin-left: 5px;
+    }
+  }
+}
+
+
+// responsiveness
+@media (max-width: breakpoint(small-desktop)) {
+  .content {
+    width: 1000px;
+    nav li {
+      font-size: 14px;
+    }
+    .banner {
+      .banner-left {
+        h1, h2 {
+          font-size: 40px;
+        }
+        .arrow-right {
+          border-top: 9px solid transparent;
+          border-bottom: 9px solid transparent;
+          border-right: 13px solid color(main-accent);
+        }
+        table {
+          td {
+            min-width: 70px;
+          }
+          #days, #hours, #minutes, #seconds {
+            font-size: 28px;
+            }
+        }
+        .arrow-left {
+          border-top: 9px solid transparent;
+          border-bottom: 9px solid transparent;
+          border-left: 13px solid color(main-accent);
+        }
+        button {
+          width: 340px;
+        }
+      }
+      .banner-right {
+        .speech-box {
+          width: 140px;
+          padding: 11px 0;
+          font-size: 18px;
+          left: 28px;
+          &:before {
+            border: 13px solid color(second-accent);
+            border-top: 13px solid transparent;
+            border-right: 13px solid transparent;
+            left: 58px;
+          }
+        }
+        .price-container {
+          .currency {
+            font-size: 8em;
+          }
+          .whole {
+            font-size: 28em;
+          }
+          .cent-month-container {
+            .cents {
+              font-size: 6em;
+            }
+            .monthly {
+              font-size: 3em;
+            }
+          }
+        }
+      }
+    }
+    .assets {
+      li {
+        max-width: 200px;
+      }
+    }
+  }
+}
+@media (max-width: breakpoint(large-tablet)) {
+  .content {
+    width: 700px;
+    nav li {
+      font-size: 14px;
+      text-align: center;
+      .on-sale {
+        left: 15px;
+      }
+    }
+    
+    .banner {
+      .banner-left {
+        h1, h2 {
+          font-size: 35px;
+        }
+        table {
+          td {
+            min-width: 50px;
+          }
+          #days, #hours, #minutes, #seconds {
+            font-size: 25px;
+            }
+          .count-text {
+            font-size: 12px;
+            font-weight: 600;
+          }
+        }
+        button {
+          width: 330px;
+          font-size: 18px;
+          line-height: 0.8;
+          font-weight: 600;
+        }
+      }
+      .banner-right {
+        .speech-box {
+          width: 120px;
+          padding: 9px 0;
+          font-size: 15px;
+          left: 15px;
+          &:before {
+            border: 10px solid color(second-accent);
+            border-top: 10px solid transparent;
+            border-right: 10px solid transparent;
+            left: 50px;
+          }
+        }
+        .price-container {
+          .currency {
+            font-size: 6em;
+            margin-top: 70px;
+          }
+          .whole {
+            font-size: 22em;
+          }
+          .cent-month-container {
+            .cents {
+              font-size: 4em;
+            }
+            .monthly {
+              font-size: 3em;
+              margin-left: 15px;
+            }
+          }
+        }
+      }
+    }
+    .assets {
+      font-size: 16px;
+      li {
+        max-width: 180px;
+      }
+      .checkmark {
+        display: inline-block;
+        transform: rotate(45deg);
+        height: 10px;
+        width: 5px;
+        border-bottom: 4px solid color(checkmark);
+        border-right: 4px solid color(checkmark);
+        margin-right: 15px;
+        margin-left: 5px;
+      }
+    }
+  }
+}
+@media (max-width: breakpoint(tablet)) {
+  .content {
+    margin-top: 0;
+    width: 100%;
+    .phone-navbar {
+      display: block;
+      background: color(phone-navbar);
+      width: 100%;
+      height: 50px;
+      transition: ease-in-out 250ms;
+      div {
+        display: flex;
+        align-items: center;
+        margin-left: calc(100% - 110px);
+      }
+      .logo {
+        width: 110px;
+        display: block;
+        margin-left: 10px;
+        float: left;
+        padding: 14px 0;
+      }
+      p {
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+      #menu-img {
+        width: 50px;
+        margin-left: 10px;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      #menu-list {
+        display: none;
+        flex-direction: column;
+        height: calc(100vh - 50px);
+        overflow-x: hidden;
+        background: color(phone-menu);
+        text-transform: uppercase;
+        position: relative;
+        z-index: 6;
+        font-weight: 600;
+        &.active {
+          display: block;
+        }
+        li {
+          display: block;
+          width: 100%;
+          line-height: 2.3;
+          a {
+            display: block;
+            width: 100%;
+            padding: 10px 10px 10px 20px;
+            strong {
+              @include yellow-text
+            }
+            &:hover {
+              @include hover-nav;
+            }
+          }
+        }
+        .cloud-hosting {
+          display: flex;
+          .on-sale {
+            @include yellow-text;
+          }
+        }
+      }
+    }
+    nav {
+      display: none;
+      }
+      .banner {
+        flex-direction: column;
+        .banner-left {
+          order: 2;
+          max-width: 600px;
+          margin-bottom: 0;
+          margin-top: 50px;
+          h1, h2 {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 20px;
+          }
+          table {
+            margin-bottom: 35px;
+            td {
+              min-width: 78px;
+            }
+            #days, #hours, #minutes, #seconds {
+              padding: 6px;
+              font-size: 34px;
+            }
+            .count-text {
+              font-size: 14px;
+            }
+          }
+          button {
+            display: block;
+            margin: 0 auto;
+            width: 300px;
+            font-size: 18px;
+            margin-left: 0 auto;
+          }
+        }
+        .banner-right {
+          margin-top: 30px;
+          .price-container {
+            display: flex;
+            .currency {
+              font-size: 8em;
+            }
+            .whole {
+              font-size: 22.5em;
+            }
+            .cent-month-container {
+              .cents {
+                font-size: 6em;
+              }
+              .monthly {
+                font-size: 3.5em;
+              }
+            }
+          }
+        }
+      }
+      .assets {
+        width: 460px;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 auto;
+        font-size: 17px;
+        li {
+          display: block;
+          max-width: 60%;
+          text-align: center;
+          margin: 6px;
+        }
+      }
+    } 
+  }
+  @media (max-width: breakpoint(small-tablet)) {
+    .content .banner .banner-left table {
+      display: block;
+      margin: 0 auto;
+      margin-bottom: 35px;
+      td {
+        min-width: 50px;
+      }
+      #days, #hours, #minutes, #seconds {
+        font-size: 22px;
+      }
+      .count-text {
+        font-size: 10px;
+      }
+    }
+  }
+  @media (max-width: breakpoint(phone)) {
+    .content {
+      width: 100%;
+        .banner {
+          flex-direction: column;
+          .banner-left {
+            h1, h2 {
+              font-size: 30px;
+            }
+            button {
+              margin-bottom: 30px;
+            }
+          }
+          .banner-right {
+            .speech-box {
+              width: 100px;
+              padding: 7px 0;
+              font-size: 12px;
+              left: 8px;
+              &:before {
+                border: 6px solid color(second-accent);
+                border-top: 6px solid transparent;
+                border-right: 6px solid transparent;
+                left: 45px;
+                bottom: -6px;
+              }
+            }
+            .price-container {
+              .currency {
+                font-size: 5em;
+              }
+              .whole {
+                font-size: 15em;
+              }
+              .cent-month-container {
+                .cents {
+                  font-size: 4em;
+                }
+                .monthly {
+                  margin-top: 30px;
+                  font-size: 2.3em;
+                }
+              }
+            }
+          }
+        }
+        .assets {
+          width: 100%;
+          flex-direction: column;
+          font-size: 17px;
+          li {
+            max-width: 100%;
+            margin-left: 0;
+
+          }
+        }
+      } 
+    }

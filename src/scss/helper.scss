@@ -1,0 +1,68 @@
+@mixin flipX {
+  -webkit-transform: scaleX(-1);
+  -moz-transform: scaleX(-1);
+  -ms-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+@mixin tooltip-triangle-rotate {
+  -webkit-transform: translateX(-50%) rotate(-90deg);
+  -moz-transform: translateX(-50%) rotate(-90deg);
+  -ms-transform: translateX(-50%) rotate(-90deg);
+  -o-transform: translateX(-50%) rotate(-90deg);
+  transform: translateX(-50%) rotate(-90deg);
+}
+
+@mixin triangle {
+  -webkit-clip-path: polygon(100% 0, 100% 1%, 100% 100%, 100% 100%, 0% 50%);
+  clip-path: polygon(100% 0, 100% 1%, 100% 100%, 100% 100%, 0% 50%);
+}
+
+@mixin tooltip-triangle {
+  -webkit-clip-path: polygon(100% 0, 100% 1%, 100% 100%, 100% 100%, 50% 50%);
+  clip-path: polygon(100% 0, 100% 1%, 100% 100%, 100% 100%, 50% 50%);
+}
+
+@mixin edgeSupport {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+  @supports (-ms-accelerator:true) {
+    @content;
+  }
+  @supports (-ms-ime-align:auto) {
+    @content;
+  }
+}
+
+@mixin responsive($media) {
+  @if $media == mobile {
+    @media only screen and (max-width: $mobile) { @content; }
+  }
+  @else if $media == tablet-port {
+    @media only screen and (min-width: $mobile + 1) and (max-width: $tablet-port - 1) { @content; }
+  }
+  @else if $media == tablet-land {
+    @media only screen and (min-width: $tablet-port + 1) and (max-width: $tablet-land - 1) { @content; }
+  }
+  @else if $media == small-desktop {
+    @media only screen and (min-width: $tablet-land + 1) and (max-width: $small-desktop - 1) { @content; }
+  }
+}
+
+$mobile: 651px;
+$tablet-port: 769px;
+$tablet-land: 992px;
+$small-desktop: 1169px;
+
+$color-black: #000;
+$color-white: #fff;
+$color-darkred: #f75457;
+$color-red: #f95259;
+$color-lightred: #fb9d9e;
+$color-yellow: #ffe443;
+$color-green: #7bc97d;
+$color-violet: #6747c7;
+$color-darkviolet: #5435b0;
+$color-lightviolet: #957fd5;

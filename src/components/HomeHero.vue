@@ -1,97 +1,234 @@
 <template>
-    <v-layout fluid fill-width fill-height align-center absolute>
-        <div :style="{ backgroundImage: `url(${heroImg})` }" class="home-hero"></div>
-        <v-layout class="contents">
-            <v-row align="center" justify="center">
-                <v-col sm="12" class="hidden-lg-and-up mobile">
-                    <v-row class="price font-weight-black white--text">
-                        <v-col class="first-word pl-0 pr-0">$</v-col>
-                        <v-col class="second-word pl-0 pr-0">1</v-col>
-                        <v-col class="column pl-0 pr-0">
-                            <v-col class="third-word pl-0 pr-0">45</v-col>
-                            <v-col class="fourth-word pl-0 pr-0">/mo</v-col>
-                        </v-col>
-                    </v-row>
-                </v-col>
-                <v-col md="6" class="column">
-                    <div
-                        class="display-2 font-weight-black white--text text-xs-center mb-4"
-                    >New Year Offer</div>
-                    <div class="display-2 font-weight-black white--text text-xs-center mb-6">
-                        <span class="error--text">82% OFF</span> Web Hosting
-                    </div>
-                    <div
-                        class="display-1 font-weight-bold white--text text-xs-center mb-8"
-                    >days hours minutes seconds</div>
-                    <div>
-                        <v-btn x-large color="error" height="55" width="260">Get Started Now</v-btn>
-                    </div>
-                </v-col>
-                <v-spacer></v-spacer>
-                <v-col md="5" class="hidden-md-and-down">
-                    <v-row class="price font-weight-black white--text">
-                        <v-col class="first-word pl-0 pr-0">$</v-col>
-                        <v-col class="second-word pl-0 pr-0">1</v-col>
-                        <v-col class="column pl-0 pr-0">
-                            <v-col class="third-word pl-0 pr-0">45</v-col>
-                            <v-col class="fourth-word pl-0 pr-0">/mo</v-col>
-                        </v-col>
-                    </v-row>
-                </v-col>
-            </v-row>
-        </v-layout>
-    </v-layout>
+  <v-layout fluid fill-width fill-height align-center justify-center absolute>
+    <div :style="{ backgroundImage: `url(${heroImg})` }" class="hero-img"></div>
+    <div id="hero-contents" class="white--text">
+      <v-row align="center" justify="center" class="ma-0">
+        <v-col cols="12" sm="6" class="getstarted-block d-flex order-sm-1 order-2">
+          <div>
+            <h1 class="mb-4">
+              New Year Offer
+              <br />
+              <span class="accent--text">82% OFF</span> Web
+              Hosting
+            </h1>
+            <div class="time-block mb-8">
+              <timer></timer>
+            </div>
+            <div>
+              <v-btn x-large color="accent" height="55" width="260">Get Started Now</v-btn>
+            </div>
+          </div>
+        </v-col>
+        <v-spacer></v-spacer>
+
+        <v-col cols="12" sm="6" class="price-block d-flex order-sm-2 order-1">
+          <div>
+            <div class="price__save-holder">
+              <div class="price__save-holder__rect">Save 82%</div>
+              <div class="price__save-holder__arrow"></div>
+            </div>
+            <div class="price-block-wrapper">
+              <price></price>
+            </div>
+          </div>
+        </v-col>
+      </v-row>
+      <v-row align="center" justify="center" class="ma-0 perks-block">
+        <ul class="perks-block-wrapper">
+          <li class="perks-block__item">
+            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>Guaranteed 99.9% Uptime
+          </li>
+          <li class="perks-block__item">
+            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>Superior Speed Performance
+          </li>
+          <li class="perks-block__item">
+            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>24/7 Support Chat
+          </li>
+          <li class="perks-block__item">
+            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>30-Day Money-Back Guarantee
+          </li>
+        </ul>
+      </v-row>
+    </div>
+  </v-layout>
 </template>
 
 <script>
-import heroImg from '@/assets/background.jpg';
+import Price from "@/components/Price";
+import Timer from "@/components/Timer";
+import heroImg from "@/assets/background.jpg";
+
 export default {
-    name: 'HomeHero',
-    data() {
-        return {
-            heroImg
-        };
-    }
+  name: "HomeHero",
+  components: {
+    Price,
+    Timer
+  },
+  data() {
+    return {
+      heroImg
+    };
+  }
 };
 </script>
 
 <style lang="scss">
-.home-hero {
-    background-size: cover;
-    filter: brightness(0.6);
-    width: 100%;
-    height: 100%;
-    position: relative;
+.hero-img {
+  background-size: cover;
+  transform: rotateY(180deg);
+  filter: brightness(0.65);
+  width: 100%;
+  height: 100%;
+  position: relative;
 }
-.contents {
-    padding: 0 8%;
-    width: fill-available;
-    position: absolute;
-    .price {
-        min-width: fit-content;
-        max-width: fit-content;
 
-        .first-word {
-            font-size: 6em;
-            padding-top: 190px;
-        }
-        .second-word {
-            font-size: 24em;
-        }
-        .column {
-            padding-top: 170px;
-            .third-word {
-                font-size: 5em;
-            }
-            .fourth-word {
-                font-size: 4em;
-                font-weight: 400;
-            }
-        }
+#hero-contents {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding-right: 30px;
+  padding-left: 24px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1000px;
+
+  .price-block {
+    font-size: 48px;
+
+    .price__save-holder {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      .price__save-holder__rect {
+        background: #fb9d9e;
+        font-size: 20px;
+        padding: 10px 30px;
+        font-weight: 600;
+        text-transform: uppercase;
+      }
+
+      .price__save-holder__arrow {
+        background: #fb9d9e;
+        transform: rotate(45deg);
+        width: 20px;
+        height: 20px;
+        margin-top: -10px;
+      }
     }
+
+    .price-block-wrapper {
+      display: flex;
+      -webkit-box-pack: center;
+      justify-content: center;
+    }
+  }
+
+  .perks-block {
+    max-height: fit-content;
+    padding-bottom: 24px;
+
+    .perks-block-wrapper {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .perks-block__item {
+        display: inline-block;
+        display: flex;
+        flex-direction: row;
+        margin: 0 18px;
+        .perks-block__icon {
+          margin-right: 6px;
+        }
+      }
+    }
+  }
+
+  .time-block {
+    max-width: 360px;
+  }
 }
-.mobile {
-    transform: scale(0.8);
-    max-height: 460px;
+
+@media (min-width: 1201px) {
+  #hero-contents {
+    max-width: 1300px;
+    .getstarted-block {
+      h1 {
+        font-size: 2.6rem;
+      }
+    }
+    .price-block-wrapper {
+      font-size: 2.9em;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  #hero-contents {
+    max-width: 1180px;
+  }
+}
+
+@media (min-width: 1051px) and (max-width: 1200px) {
+  .getstarted-block {
+    h1 {
+      font-size: 2.5rem;
+    }
+  }
+  .price-block-wrapper {
+    font-size: 2.6em;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1050px) {
+  .getstarted-block {
+    h1 {
+      font-size: 2.2rem;
+    }
+  }
+  .price-block-wrapper {
+    font-size: 2.1em;
+  }
+}
+
+@media (max-width: 900px) {
+  .getstarted-block {
+    h1 {
+      font-size: 1.9rem;
+    }
+  }
+  .price-block-wrapper {
+    font-size: 1.7em;
+  }
+}
+
+@media (min-width: 767px) {
+  .getstarted-block {
+    justify-content: flex-start;
+    padding-bottom: 0;
+  }
+
+  .price-block {
+    justify-content: flex-end;
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 766px) {
+  .getstarted-block {
+    justify-content: center;
+    padding-bottom: 50px;
+    text-align: center;
+  }
+
+  .price-block {
+    justify-content: center;
+    padding-top: 80px;
+    text-align: center;
+  }
 }
 </style>

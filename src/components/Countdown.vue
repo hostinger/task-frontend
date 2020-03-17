@@ -53,7 +53,7 @@ export default {
       const now = new Date().getTime();
       // Find the distance between now an the count down date
       const passTime = end - now;
-      this.calcTime(passTime);
+      passTime > 0 ? this.calcTime(passTime) : this.setZero();
     },
     calcTime: function(dist) {
       // Time calculations for days, hours, minutes and seconds
@@ -63,6 +63,11 @@ export default {
       );
       this.minutes = Math.floor((dist % (1000 * 60 * 60)) / (1000 * 60));
       this.seconds = Math.floor((dist % (1000 * 60)) / 1000);
+    },
+    setZero: function() {
+      // Sets all values to 00
+      this.seconds = this.minutes = this.hours = this.days = '00';
+      clearInterval(this.interval);
     }
   }
 };

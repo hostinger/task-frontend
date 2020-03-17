@@ -3,19 +3,24 @@
     <div :style="{ backgroundImage: `url(${heroImg})` }" class="hero-img"></div>
     <div id="hero-contents" class="white--text">
       <v-row align="center" justify="center" class="ma-0">
-        <v-col cols="12" sm="6" class="getstarted-block d-flex order-sm-1 order-2">
+        <v-col
+          cols="12"
+          sm="6"
+          class="getstarted-block d-flex order-sm-1 order-2"
+        >
           <div>
             <h1 class="mb-4">
               New Year Offer
               <br />
-              <span class="accent--text">82% OFF</span> Web
-              Hosting
+              <span class="accent--text">82% OFF</span> Web Hosting
             </h1>
             <div class="time-block mb-8">
-              <timer></timer>
+              <Countdown endtime="Jan 1, 2021"></Countdown>
             </div>
             <div>
-              <v-btn x-large color="accent" height="55" width="260">Get Started Now</v-btn>
+              <v-btn x-large color="accent" height="55" width="260"
+                >Get Started Now</v-btn
+              >
             </div>
           </div>
         </v-col>
@@ -28,7 +33,7 @@
               <div class="price__save-holder__arrow"></div>
             </div>
             <div class="price-block-wrapper">
-              <price></price>
+              <Price></Price>
             </div>
           </div>
         </v-col>
@@ -36,16 +41,24 @@
       <v-row align="center" justify="center" class="ma-0 perks-block">
         <ul class="perks-block-wrapper">
           <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>Guaranteed 99.9% Uptime
+            <v-icon color="green" size="16px" class="perks-block__icon"
+              >fas fa-check</v-icon
+            >Guaranteed 99.9% Uptime
           </li>
           <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>Superior Speed Performance
+            <v-icon color="green" size="16px" class="perks-block__icon"
+              >fas fa-check</v-icon
+            >Superior Speed Performance
           </li>
           <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>24/7 Support Chat
+            <v-icon color="green" size="16px" class="perks-block__icon"
+              >fas fa-check</v-icon
+            >24/7 Support Chat
           </li>
           <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>30-Day Money-Back Guarantee
+            <v-icon color="green" size="16px" class="perks-block__icon"
+              >fas fa-check</v-icon
+            >30-Day Money-Back Guarantee
           </li>
         </ul>
       </v-row>
@@ -54,15 +67,15 @@
 </template>
 
 <script>
-import Price from "@/components/Price";
-import Timer from "@/components/Timer";
-import heroImg from "@/assets/background.jpg";
+import Price from '@/components/Price';
+import Countdown from '@/components/Countdown';
+import heroImg from '@/assets/background.jpg';
 
 export default {
-  name: "HomeHero",
+  name: 'HomeHero',
   components: {
     Price,
-    Timer
+    Countdown
   },
   data() {
     return {

@@ -117,7 +117,7 @@ export default {
 
       .price__save-holder__rect {
         background: #fb9d9e;
-        font-size: 20px;
+        font-size: auto;
         padding: 10px 30px;
         font-weight: 600;
         text-transform: uppercase;
@@ -208,6 +208,12 @@ export default {
   }
 }
 
+@media (min-width: 901px) {
+  .price__save-holder__rect {
+    font-size: 20px;
+  }
+}
+
 @media (max-width: 900px) {
   .getstarted-block {
     h1 {
@@ -215,7 +221,10 @@ export default {
     }
   }
   .price-block-wrapper {
-    font-size: 1.7em;
+    font-size: 1.5em;
+  }
+  .price__save-holder__rect {
+    font-size: 14px;
   }
 }
 
@@ -234,13 +243,12 @@ export default {
 @media (max-width: 766px) {
   .getstarted-block {
     justify-content: center;
-    padding-bottom: 50px;
     text-align: center;
   }
 
   .price-block {
     justify-content: center;
-    padding-top: 80px;
+    padding-top: 100px;
     text-align: center;
   }
 }

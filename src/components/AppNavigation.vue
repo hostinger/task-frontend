@@ -1,13 +1,17 @@
 <template>
   <span>
-    <v-navigation-drawer app v-model="drawer" light disable-resize-watcher right>
+    <v-navigation-drawer
+      app
+      v-model="drawer"
+      light
+      disable-resize-watcher
+      right
+    >
       <v-list>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
             <v-list-item-content>
-              {{
-              item.title
-              }}
+              {{ item.title }}
             </v-list-item-content>
           </v-list-item>
         </template>
@@ -16,13 +20,14 @@
     <v-app-bar app color="transparent" id="app-bar" dark flat>
       <v-img :src="appLogo" max-width="170" />
       <v-spacer></v-spacer>
-      <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon
+        class="hidden-md-and-up"
+        @click="drawer = !drawer"
+      ></v-app-bar-nav-icon>
       <div class="hidden-sm-and-down">
         <template v-for="(item, index) in items">
           <v-btn text id="button" :key="index">
-            {{
-            item.title
-            }}
+            {{ item.title }}
           </v-btn>
         </template>
       </div>
@@ -31,21 +36,33 @@
 </template>
 
 <script>
-import logo from "@/assets/logo.png";
+import logo from '@/assets/logo.png';
 export default {
-  name: "AppNavigation",
+  name: 'AppNavigation',
   data() {
     return {
       appLogo: logo,
       drawer: false,
       items: [
-        { title: "Web Hosting" },
-        { title: "Cloud Hosting" },
-        { title: "VPS Hosting" },
-        { title: "Domain Checker" },
-        { title: "Website Builder" }
-      ]
+        { title: 'Web Hosting' },
+        { title: 'Cloud Hosting' },
+        { title: 'VPS Hosting' },
+        { title: 'Domain Checker' },
+        { title: 'Website Builder' }
+      ],
+      windowWidth: window.innerWidth
     };
+  },
+  mounted() {
+    window.addEventListener('resize', () => {
+      this.windowWidth = window.innerWidth;
+      this.isDesktop ? (this.drawer = false) : null;
+    });
+  },
+  computed: {
+    isDesktop() {
+      return this.windowWidth >= 960;
+    }
   }
 };
 </script>
@@ -53,7 +70,7 @@ export default {
 <style lang="scss">
 #app-bar {
   width: 100%;
-  padding: 20px;
+  padding: 12px 18px;
   margin-right: auto;
   margin-left: auto;
 }

@@ -2,63 +2,56 @@
   <v-layout fluid fill-width fill-height align-center justify-center absolute>
     <div :style="{ backgroundImage: `url(${heroImg})` }" class="hero-img"></div>
     <div id="hero-contents" class="white--text">
-      <v-row align="center" justify="center" class="ma-0">
-        <v-col
-          cols="12"
-          sm="6"
-          class="getstarted-block d-flex order-sm-1 order-2"
-        >
-          <div>
-            <h1 class="mb-4">
-              New Year Offer
-              <br />
-              <span class="accent--text">82% OFF</span> Web Hosting
-            </h1>
-            <div class="time-block mb-8">
-              <Countdown endtime="Jan 1, 2021"></Countdown>
-            </div>
+      <v-row align="end" align-content="center" justify="center" class="ma-0">
+        <v-col cols="12" sm="6" class="getstarted-block order-sm-1 order-2">
+          <v-row justify="center" justify-sm="start" class="ma-0">
             <div>
-              <v-btn x-large color="accent" height="55" width="260"
-                >Get Started Now</v-btn
-              >
+              <h1 class="mb-4">
+                New Year Offer
+                <br />
+                <span class="accent--text">82% OFF</span> Web Hosting
+              </h1>
+              <div class="time-block mb-8">
+                <Countdown endtime="Jan 1, 2021"></Countdown>
+              </div>
+              <div>
+                <v-btn x-large color="accent" class="getstarted__button">Get Started Now</v-btn>
+              </div>
             </div>
-          </div>
+          </v-row>
         </v-col>
-        <v-spacer></v-spacer>
 
-        <v-col cols="12" sm="6" class="price-block d-flex order-sm-2 order-1">
-          <div>
-            <div class="price__save-holder">
-              <div class="price__save-holder__rect">Save 82%</div>
-              <div class="price__save-holder__arrow"></div>
+        <v-col cols="12" sm="6" class="price-block order-sm-2 order-1">
+          <v-row justify="center" justify-sm="end" class="ma-0">
+            <div>
+              <div class="price__save-holder">
+                <div class="price__save-holder__rect">Save 82%</div>
+                <div class="price__save-holder__arrow"></div>
+              </div>
+              <div class="price-block-wrapper">
+                <Price></Price>
+              </div>
             </div>
-            <div class="price-block-wrapper">
-              <Price></Price>
-            </div>
-          </div>
+          </v-row>
         </v-col>
       </v-row>
-      <v-row align="center" justify="center" class="ma-0 perks-block">
-        <ul class="perks-block-wrapper">
+      <v-row align="center" justify="center" class="perks-block ma-0">
+        <ul class="perks-block-wrapper pa-0">
           <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon"
-              >fas fa-check</v-icon
-            >Guaranteed 99.9% Uptime
+            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>
+            <span class="perks-block__text">Guaranteed 99.9% Uptime</span>
           </li>
           <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon"
-              >fas fa-check</v-icon
-            >Superior Speed Performance
+            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>
+            <span class="perks-block__text">Superior Speed Performance</span>
           </li>
           <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon"
-              >fas fa-check</v-icon
-            >24/7 Support Chat
+            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>
+            <span class="perks-block__text">24/7 Support Chat</span>
           </li>
           <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon"
-              >fas fa-check</v-icon
-            >30-Day Money-Back Guarantee
+            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>
+            <span class="perks-block__text">30-Day Money-Back Guarantee</span>
           </li>
         </ul>
       </v-row>
@@ -101,11 +94,16 @@ export default {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding-right: 30px;
-  padding-left: 24px;
+  padding-right: 72px;
+  padding-left: 66px;
   margin-right: auto;
   margin-left: auto;
-  max-width: 1000px;
+  max-width: 1200px;
+
+  .getstarted__button {
+    height: 55px;
+    width: 260px;
+  }
 
   .price-block {
     font-size: 48px;
@@ -153,9 +151,12 @@ export default {
         display: inline-block;
         display: flex;
         flex-direction: row;
-        margin: 0 18px;
+        margin: 0 14px;
         .perks-block__icon {
           margin-right: 6px;
+        }
+        .perks-block__text {
+          font-size: 15px;
         }
       }
     }
@@ -166,27 +167,7 @@ export default {
   }
 }
 
-@media (min-width: 1201px) {
-  #hero-contents {
-    max-width: 1300px;
-    .getstarted-block {
-      h1 {
-        font-size: 2.6rem;
-      }
-    }
-    .price-block-wrapper {
-      font-size: 2.9em;
-    }
-  }
-}
-
-@media (max-width: 1200px) {
-  #hero-contents {
-    max-width: 1180px;
-  }
-}
-
-@media (min-width: 1051px) and (max-width: 1200px) {
+@media (min-width: 1061px) {
   .getstarted-block {
     h1 {
       font-size: 2.5rem;
@@ -197,59 +178,45 @@ export default {
   }
 }
 
-@media (min-width: 901px) and (max-width: 1050px) {
-  .getstarted-block {
-    h1 {
-      font-size: 2.2rem;
-    }
-  }
-  .price-block-wrapper {
-    font-size: 2.1em;
+@media (max-width: 960px) {
+  #hero-contents {
+    padding-right: 30px;
+    padding-left: 24px;
   }
 }
 
-@media (min-width: 901px) {
+@media (min-width: 767px) and (max-width: 1060px) {
+  .getstarted-block {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+  .price-block-wrapper {
+    font-size: 2.2em;
+  }
+}
+
+@media (min-width: 767px) {
   .price__save-holder__rect {
     font-size: 20px;
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 766px) {
+  .getstarted-block,
+  .price-block {
+    text-align: center;
+  }
   .getstarted-block {
     h1 {
-      font-size: 1.9rem;
+      font-size: 1.8rem;
     }
   }
   .price-block-wrapper {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
   .price__save-holder__rect {
     font-size: 14px;
-  }
-}
-
-@media (min-width: 767px) {
-  .getstarted-block {
-    justify-content: flex-start;
-    padding-bottom: 0;
-  }
-
-  .price-block {
-    justify-content: flex-end;
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 766px) {
-  .getstarted-block {
-    justify-content: center;
-    text-align: center;
-  }
-
-  .price-block {
-    justify-content: center;
-    padding-top: 100px;
-    text-align: center;
   }
 }
 </style>

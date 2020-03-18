@@ -1,34 +1,21 @@
 <template>
   <span>
-    <v-navigation-drawer
-      app
-      v-model="drawer"
-      light
-      disable-resize-watcher
-      right
-    >
+    <v-navigation-drawer app v-model="drawer" disable-resize-watcher light right>
       <v-list>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
-            <v-list-item-content>
-              {{ item.title }}
-            </v-list-item-content>
+            <v-list-item-content>{{ item.title }}</v-list-item-content>
           </v-list-item>
         </template>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar app color="transparent" id="app-bar" dark flat>
-      <v-img :src="appLogo" max-width="170" />
+      <v-img :src="appLogo" id="app-bar-logo" />
       <v-spacer></v-spacer>
-      <v-app-bar-nav-icon
-        class="hidden-md-and-up"
-        @click="drawer = !drawer"
-      ></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <div class="hidden-sm-and-down">
         <template v-for="(item, index) in items">
-          <v-btn text id="button" :key="index">
-            {{ item.title }}
-          </v-btn>
+          <v-btn text id="button" :key="index">{{ item.title }}</v-btn>
         </template>
       </div>
     </v-app-bar>
@@ -53,6 +40,8 @@ export default {
       windowWidth: window.innerWidth
     };
   },
+  // Closes drawer on larger screens
+  // vuetify prop disable-resize-watcher (and enable-resize-watcher) doesn't work properly
   mounted() {
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth;
@@ -69,26 +58,33 @@ export default {
 
 <style lang="scss">
 #app-bar {
-  width: 100%;
   padding: 12px 18px;
   margin-right: auto;
   margin-left: auto;
-}
+  max-width: 1200px;
 
-@media (min-width: 1201px) {
-  #app-bar {
-    max-width: 1300px;
+  #app-bar-logo {
+    max-width: 145px;
   }
 }
 
-@media (max-width: 1200px) {
-  #app-bar {
-    max-width: 1180px;
+@media (min-width: 1101px) {
+  #button {
+    padding: 0 16px;
+    font-size: 0.85rem;
+  }
+}
 
-    #button {
-      transform: scale(0.94);
-      padding: 0 9px;
-    }
+@media (max-width: 1100px) {
+  #button {
+    padding: 0 12px;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 961px) {
+  #app-bar {
+    padding: 12px 60px;
   }
 }
 </style>

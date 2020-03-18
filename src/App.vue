@@ -18,8 +18,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-// .content-wrapper {
-//   max-height: 500px;
-// }
-</style>
+<style lang="scss"></style>

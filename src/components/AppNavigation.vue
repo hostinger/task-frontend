@@ -9,13 +9,13 @@
         </template>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app color="transparent" id="app-bar" dark flat>
-      <v-img :src="appLogo" id="app-bar-logo" />
+    <v-app-bar app id="app-bar" color="transparent" dark flat>
+      <v-img :src="appLogo" id="app-bar__logo" />
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <div class="hidden-sm-and-down">
         <template v-for="(item, index) in items">
-          <v-btn text id="button" :key="index">{{ item.title }}</v-btn>
+          <v-btn text id="app-bar__button" :key="index">{{ item.title }}</v-btn>
         </template>
       </div>
     </v-app-bar>
@@ -63,26 +63,26 @@ export default {
   margin-left: auto;
   max-width: 1200px;
 
-  #app-bar-logo {
+  #app-bar__logo {
     max-width: 145px;
   }
 }
 
-@media (min-width: 1101px) {
-  #button {
+@media (min-width: $breakpoint-laptop + 1) {
+  #app-bar__button {
     padding: 0 16px;
     font-size: 0.85rem;
   }
 }
 
-@media (max-width: 1100px) {
-  #button {
+@media (max-width: $breakpoint-laptop) {
+  #app-bar__button {
     padding: 0 12px;
     font-size: 0.75rem;
   }
 }
 
-@media (min-width: 961px) {
+@media (min-width: $breakpoint-lg-tablet + 1) {
   #app-bar {
     padding: 12px 60px;
   }

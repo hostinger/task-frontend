@@ -1,8 +1,8 @@
 <template>
-  <v-layout fluid fill-width fill-height align-center justify-center absolute>
-    <div :style="{ backgroundImage: `url(${heroImg})` }" class="hero-img"></div>
-    <div id="hero-contents" class="white--text">
-      <v-row align="end" align-content="center" justify="center" class="ma-0">
+  <v-layout class="hero-img" fluid align-center justify-center>
+    <div class="hero-overlay"></div>
+    <div class="hero-contents white--text">
+      <v-row align="end" align-content="center" justify="center" class="ma-0 pt-12 pb-12">
         <v-col cols="12" sm="6" class="getstarted-block order-sm-1 order-2">
           <v-row justify="center" justify-sm="start" class="ma-0">
             <div>
@@ -35,7 +35,7 @@
           </v-row>
         </v-col>
       </v-row>
-      <v-row align="center" justify="center" class="perks-block ma-0">
+      <v-row align="center" justify="center" class="perks-block ma-0 pt-4 pb-4">
         <ul class="perks-block-wrapper pa-0">
           <li class="perks-block__item">
             <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>
@@ -62,38 +62,42 @@
 <script>
 import Price from '@/components/Price';
 import Countdown from '@/components/Countdown';
-import heroImg from '@/assets/background.jpg';
 
 export default {
   name: 'HomeHero',
   components: {
     Price,
     Countdown
-  },
-  data() {
-    return {
-      heroImg
-    };
   }
 };
 </script>
 
 <style lang="scss">
 .hero-img {
+  background-image: url('../assets/background.jpg');
+  background-position: 0 47%;
   background-size: cover;
-  transform: rotateY(180deg);
-  filter: brightness(0.65);
-  width: 100%;
-  height: 100%;
   position: relative;
+  color: #fff;
 }
 
-#hero-contents {
+.hero-overlay {
+  opacity: 0.3;
+  background-color: #000;
   position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.hero-contents {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 100%;
+  padding-top: 50px;
   padding-right: 72px;
   padding-left: 66px;
   margin-right: auto;
@@ -139,7 +143,6 @@ export default {
 
   .perks-block {
     max-height: fit-content;
-    padding-bottom: 24px;
 
     .perks-block-wrapper {
       width: 100%;
@@ -168,6 +171,9 @@ export default {
 }
 
 @media (min-width: 1061px) {
+  .hero-contents {
+    height: 700px;
+  }
   .getstarted-block {
     h1 {
       font-size: 2.5rem;
@@ -179,7 +185,7 @@ export default {
 }
 
 @media (max-width: 960px) {
-  #hero-contents {
+  .hero-contents {
     padding-right: 30px;
     padding-left: 24px;
   }
@@ -213,7 +219,7 @@ export default {
     }
   }
   .price-block-wrapper {
-    font-size: 1.4em;
+    font-size: 1.3em;
   }
   .price__save-holder__rect {
     font-size: 14px;

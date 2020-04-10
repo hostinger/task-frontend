@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import '@/sass/variables.scss';
 import AppNavigation from '@/components/AppNavigation';
 export default {
   name: 'App',
@@ -18,4 +17,6 @@ export default {
 };
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import '@/sass/variables.scss';
+</style>

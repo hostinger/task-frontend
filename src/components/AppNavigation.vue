@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <div>
     <v-navigation-drawer app v-model="drawer" disable-resize-watcher light right>
       <v-list>
         <template v-for="(item, index) in items">
@@ -9,17 +9,28 @@
         </template>
       </v-list>
     </v-navigation-drawer>
-    <v-app-bar app id="app-bar" color="transparent" dark flat>
-      <v-img :src="appLogo" id="app-bar__logo" />
+    <v-app-bar
+      app
+      class="px-8 px-lg-12 py-4 mx-auto"
+      color="transparent"
+      max-width="1250px"
+      dark
+      flat
+    >
+      <v-img :src="logo" :style="{maxWidth: '155px'}" class="logo" />
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <div class="hidden-sm-and-down">
         <template v-for="(item, index) in items">
-          <v-btn text id="app-bar__button" :key="index">{{ item.title }}</v-btn>
+          <v-btn
+            text
+            :key="index"
+            :style="$vuetify.breakpoint.md ? {fontSize: '12px' } : {fontSize: '13px' }"
+          >{{ item.title }}</v-btn>
         </template>
       </div>
     </v-app-bar>
-  </span>
+  </div>
 </template>
 
 <script>
@@ -28,7 +39,7 @@ export default {
   name: 'AppNavigation',
   data() {
     return {
-      appLogo: logo,
+      logo: logo,
       drawer: false,
       items: [
         { title: 'Web Hosting' },
@@ -40,8 +51,6 @@ export default {
       windowWidth: window.innerWidth
     };
   },
-  // Closes drawer on larger screens
-  // vuetify prop disable-resize-watcher (and enable-resize-watcher) doesn't work properly
   mounted() {
     window.addEventListener('resize', () => {
       this.windowWidth = window.innerWidth;
@@ -56,35 +65,4 @@ export default {
 };
 </script>
 
-<style lang="scss">
-#app-bar {
-  padding: 12px 18px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1200px;
-
-  #app-bar__logo {
-    max-width: 145px;
-  }
-}
-
-@media (min-width: $breakpoint-laptop + 1) {
-  #app-bar__button {
-    padding: 0 16px;
-    font-size: 0.85rem;
-  }
-}
-
-@media (max-width: $breakpoint-laptop) {
-  #app-bar__button {
-    padding: 0 12px;
-    font-size: 0.75rem;
-  }
-}
-
-@media (min-width: $breakpoint-lg-tablet + 1) {
-  #app-bar {
-    padding: 12px 60px;
-  }
-}
-</style>
+<style lang="scss"></style>

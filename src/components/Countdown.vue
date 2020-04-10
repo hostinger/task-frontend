@@ -1,8 +1,6 @@
 <template>
   <v-layout>
-    <v-icon color="accent" size="30px" class="perks-block__icon"
-      >fas fa-caret-right</v-icon
-    >
+    <v-icon color="accent" size="30px" class="perks-block__icon">fas fa-caret-right</v-icon>
     <div class="time-block__item">
       <span class="time-block__item-value">{{ days }}</span>
       <span class="time-block__item-label">Days</span>
@@ -19,9 +17,7 @@
       <span class="time-block__item-value">{{ seconds }}</span>
       <span class="time-block__item-label">Seconds</span>
     </div>
-    <v-icon color="accent" size="30px" class="perks-block__icon"
-      >fas fa-caret-left</v-icon
-    >
+    <v-icon color="accent" size="30px" class="perks-block__icon">fas fa-caret-left</v-icon>
   </v-layout>
 </template>
 
@@ -49,14 +45,11 @@ export default {
   },
   methods: {
     timerCount: function(end) {
-      // Get todays date and time
       const now = new Date().getTime();
-      // Find the distance between now an the count down date
       const passTime = end - now;
       passTime > 0 ? this.calcTime(passTime) : this.setZero();
     },
     calcTime: function(dist) {
-      // Time calculations for days, hours, minutes and seconds
       this.days = Math.floor(dist / (1000 * 60 * 60 * 24));
       this.hours = Math.floor(
         (dist % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -65,7 +58,6 @@ export default {
       this.seconds = Math.floor((dist % (1000 * 60)) / 1000);
     },
     setZero: function() {
-      // Sets all values to 00
       this.seconds = this.minutes = this.hours = this.days = '00';
       clearInterval(this.interval);
     }

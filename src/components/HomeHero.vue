@@ -11,8 +11,8 @@
         align-content="center"
         class="mt-6 mt-sm-12 mx-0 mb-sm-6 pt-12 px-0 pb-10 pb-sm-12"
       >
-        <v-col cols="12" sm="6" class="order-sm-1 order-2">
-          <v-container justify="center" justify-sm="start" class="ma-0 px-2">
+        <v-col cols="12" sm="6" class="px-1 order-sm-1 order-2">
+          <v-container justify="center" justify-sm="start" class="ma-0 px-0">
             <div class="text-center text-sm-left">
               <h1
                 :style="$vuetify.breakpoint.mdAndUp ? {fontSize: '2.4rem' } : {fontSize: '1.9rem' }"

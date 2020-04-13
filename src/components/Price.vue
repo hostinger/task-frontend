@@ -1,21 +1,19 @@
 <template>
-  <v-col cols="12" sm="6" class="price-block order-sm-2 order-1">
+  <v-col cols="12" sm="6" class="pt-0 pb-6 pb-sm-12 order-sm-2 order-1 price-block">
     <v-row justify="center" justify-sm="end" class="ma-0">
       <div>
-        <div class="price__save-holder">
-          <div class="price__save-holder__rect">Save 82%</div>
-          <div class="price__save-holder__arrow"></div>
+        <div class="price-block__save-holder">
+          <div class="price-block__save-holder__rect">Save 82%</div>
+          <div class="price-block__save-holder__arrow"></div>
         </div>
-        <div class="price-block-wrapper">
+        <v-row :style="$vuetify.breakpoint.mdAndUp ? {fontSize: '2.4em' } : {fontSize: '1.8em' }">
           <div class="price-block__currency">$</div>
           <div class="price-block__bigno">1</div>
           <div class="price-block__right-holder">
-            <div class="price-block-right-holder__cents">45</div>
-            <div class="price-block-right-holder__unit">
-              <div class="price-block-right-holder-unit__unit">/mo</div>
-            </div>
+            <div class="price-block__right-holder__cents">45</div>
+            <div class="price-block__right-holder__unit">/mo</div>
           </div>
-        </div>
+        </v-row>
       </div>
     </v-row>
   </v-col>
@@ -31,20 +29,30 @@ export default {
 .price-block {
   font-size: 48px;
 
-  .price__save-holder {
+  &__save-holder {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
 
-    .price__save-holder__rect {
+    &__rect {
       background: #fb9d9e;
       padding: 10px 30px;
+      font-size: 16px;
       font-weight: 600;
       text-transform: uppercase;
     }
 
-    .price__save-holder__arrow {
+    &__arrow {
       background: #fb9d9e;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
       transform: rotate(45deg);
       width: 20px;
       height: 20px;
@@ -52,62 +60,32 @@ export default {
     }
   }
 
-  .price-block-wrapper {
+  &__currency {
+    font-size: 1em;
+    font-weight: 700;
+    margin-top: 0.2em;
+  }
+
+  &__bigno {
+    font-size: 3em;
+    font-weight: 700;
+    line-height: 0.8em;
+  }
+
+  &__right-holder__cents {
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+
+  &__right-holder__unit {
+    font-size: 0.5em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-
-    .price-block__currency {
-      font-size: 1em;
-      font-weight: 700;
-      margin-top: 0.2em;
-    }
-    .price-block__bigno {
-      font-size: 3em;
-      font-weight: 700;
-      line-height: 0.8em;
-    }
-    .price-block-right-holder__cents {
-      font-size: 0.8em;
-      font-weight: 700;
-    }
-    .price-block-right-holder__unit {
-      display: flex;
-
-      .price-block-right-holder-unit__unit {
-        font-size: 0.5em;
-        display: flex;
-        -webkit-box-align: end;
-        align-items: flex-end;
-        margin: 12px;
-      }
-    }
-  }
-}
-
-@media (min-width: $breakpoint-laptop + 1) {
-  .price__save-holder__rect {
-    font-size: 20px;
-  }
-  .price-block-wrapper {
-    font-size: 2.6em;
-  }
-}
-
-@media (max-width: $breakpoint-laptop) {
-  .price__save-holder__rect {
-    font-size: 14px;
-  }
-}
-
-@media (min-width: $breakpoint-sm-tablet) and (max-width: $breakpoint-laptop) {
-  .price-block-wrapper {
-    font-size: 2.2em;
-  }
-}
-
-@media (max-width: $breakpoint-sm-tablet - 1) {
-  .price-block-wrapper {
-    font-size: 1.3em;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+    margin: 12px;
   }
 }
 </style>

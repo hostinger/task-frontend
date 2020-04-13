@@ -1,49 +1,47 @@
 <template>
-  <v-layout class="hero-img">
+  <v-container fluid class="hero-img">
     <div class="hero-overlay"></div>
-    <div class="hero-contents white--text">
-      <v-row align="end" align-content="center" class="ma-0 pt-12 pb-12">
-        <v-col cols="12" sm="6" class="getstarted-block order-sm-1 order-2">
-          <v-row justify="center" justify-sm="start" class="ma-0">
-            <div>
-              <h1 class="mb-3">
+    <v-container
+      style="max-width: 1114px"
+      class="mx-auto mt-10 px-8 px-lg-12 pt-4 white--text hero-contents"
+    >
+      <v-row
+        align="center"
+        justify="center"
+        align-content="center"
+        class="mt-6 mt-sm-12 mx-0 mb-sm-6 pt-12 px-0 pb-10 pb-sm-12"
+      >
+        <v-col cols="12" sm="6" class="order-sm-1 order-2">
+          <v-container justify="center" justify-sm="start" class="ma-0 px-2">
+            <div class="text-center text-sm-left">
+              <h1
+                :style="$vuetify.breakpoint.mdAndUp ? {fontSize: '2.4rem' } : {fontSize: '1.9rem' }"
+              >
                 New Year Offer
                 <br />
                 <span class="accent--text">82% OFF</span> Web Hosting
               </h1>
-              <div class="time-block mb-8">
+              <v-container style="min-width: 200px; max-width: 310px" class="mb-5 ml-sm-0 pl-sm-0">
                 <Countdown endtime="Jan 1, 2021"></Countdown>
-              </div>
-              <div>
-                <v-btn x-large color="accent" class="getstarted__button">Get Started Now</v-btn>
-              </div>
+              </v-container>
+              <v-btn x-large color="accent" width="240px">Get Started Now</v-btn>
             </div>
-          </v-row>
+          </v-container>
         </v-col>
         <Price></Price>
       </v-row>
-      <v-row justify="center" class="perks-block pt-4 pb-5">
-        <ul class="perks-block-wrapper pa-0">
-          <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>
-            <span class="perks-block__text">Guaranteed 99.9% Uptime</span>
-          </li>
-          <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>
-            <span class="perks-block__text">Superior Speed Performance</span>
-          </li>
-          <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>
-            <span class="perks-block__text">24/7 Support Chat</span>
-          </li>
-          <li class="perks-block__item">
-            <v-icon color="green" size="16px" class="perks-block__icon">fas fa-check</v-icon>
-            <span class="perks-block__text">30-Day Money-Back Guarantee</span>
-          </li>
+      <v-row justify="center">
+        <ul class="mx-n3 perks-block">
+          <template v-for="(perk, index) in perks">
+            <li :key="index" class="mx-3">
+              <v-icon color="green" size="16px" class="mr-1 mb-1">fas fa-check</v-icon>
+              <span style="font-size: 0.9rem">{{ perk.text }}</span>
+            </li>
+          </template>
         </ul>
       </v-row>
-    </div>
-  </v-layout>
+    </v-container>
+  </v-container>
 </template>
 
 <script>
@@ -55,6 +53,16 @@ export default {
   components: {
     Price,
     Countdown
+  },
+  data() {
+    return {
+      perks: [
+        { text: 'Guaranteed 99.9% Uptime' },
+        { text: 'Superior Speed Performance' },
+        { text: '24/7 Support Chat' },
+        { text: '30-Day Money-Back Guarantee' }
+      ]
+    };
   }
 };
 </script>
@@ -79,80 +87,17 @@ export default {
 
 .hero-contents {
   position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  padding: 30px 72px 0 66px;
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 1200px;
-
-  .getstarted__button {
-    height: 55px;
-    width: 260px;
-  }
 
   .perks-block {
-    max-height: fit-content;
-
-    .perks-block-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style-type: none;
-
-      .perks-block__item {
-        margin: 0 14px;
-        .perks-block__icon {
-          margin-right: 6px;
-        }
-        .perks-block__text {
-          font-size: 15px;
-        }
-      }
-    }
-  }
-
-  .time-block {
-    max-width: 360px;
-  }
-}
-
-@media (min-width: $breakpoint-laptop + 1) {
-  .hero-contents {
-    height: 700px;
-  }
-  .getstarted-block {
-    h1 {
-      font-size: 2.5rem;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-laptop) {
-  .getstarted-block {
-    h1 {
-      font-size: 1.8rem;
-    }
-  }
-}
-
-@media (max-width: $breakpoint-lg-tablet) {
-  .hero-contents {
-    padding-right: 30px;
-    padding-left: 24px;
-  }
-}
-
-@media (min-width: $breakpoint-sm-tablet) and (max-width: $breakpoint-laptop) {
-  .hero-contents {
-    height: 600px;
-  }
-}
-
-@media (max-width: $breakpoint-sm-tablet - 1) {
-  .getstarted-block {
-    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    list-style-type: none;
   }
 }
 </style>

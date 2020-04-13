@@ -4,20 +4,22 @@
       <v-list>
         <template v-for="(item, index) in items">
           <v-list-item :key="index">
-            <v-list-item-content>{{ item.title }}</v-list-item-content>
+            <v-btn text>
+              <v-list-item-content>{{ item.title }}</v-list-item-content>
+            </v-btn>
           </v-list-item>
         </template>
       </v-list>
     </v-navigation-drawer>
     <v-app-bar
       app
-      class="px-8 px-lg-12 py-4 mx-auto"
-      color="transparent"
-      max-width="1250px"
       dark
       flat
+      color="transparent"
+      max-width="1140px"
+      class="mx-auto px-8 px-lg-12 py-4"
     >
-      <v-img :src="logo" :style="{maxWidth: '155px'}" class="logo" />
+      <v-img :src="logo" max-width="155px" />
       <v-spacer></v-spacer>
       <v-app-bar-nav-icon class="hidden-md-and-up" @click="drawer = !drawer"></v-app-bar-nav-icon>
       <div class="hidden-sm-and-down">

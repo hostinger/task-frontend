@@ -1,23 +1,23 @@
 <template>
   <v-layout>
-    <v-icon color="accent" size="30px" class="perks-block__icon">fas fa-caret-right</v-icon>
-    <div class="time-block__item">
-      <span class="time-block__item-value">{{ days }}</span>
-      <span class="time-block__item-label">Days</span>
+    <v-icon color="accent" size="30px" class="pr-3">fas fa-caret-right</v-icon>
+    <div class="countdown-item">
+      <span class="countdown-item__value">{{ days }}</span>
+      <span class="countdown-item__label">Days</span>
     </div>
-    <div class="time-block__item">
-      <span class="time-block__item-value">{{ hours }}</span>
-      <span class="time-block__item-label">Hours</span>
+    <div class="countdown-item">
+      <span class="countdown-item__value">{{ hours }}</span>
+      <span class="countdown-item__label">Hours</span>
     </div>
-    <div class="time-block__item">
-      <span class="time-block__item-value">{{ minutes }}</span>
-      <span class="time-block__item-label">Minutes</span>
+    <div class="countdown-item">
+      <span class="countdown-item__value">{{ minutes }}</span>
+      <span class="countdown-item__label">Minutes</span>
     </div>
-    <div class="time-block__item">
-      <span class="time-block__item-value">{{ seconds }}</span>
-      <span class="time-block__item-label">Seconds</span>
+    <div class="countdown-item">
+      <span class="countdown-item__value">{{ seconds }}</span>
+      <span class="countdown-item__label">Seconds</span>
     </div>
-    <v-icon color="accent" size="30px" class="perks-block__icon">fas fa-caret-left</v-icon>
+    <v-icon color="accent" size="30px" class="pl-3">fas fa-caret-left</v-icon>
   </v-layout>
 </template>
 
@@ -25,7 +25,7 @@
 export default {
   name: 'Countdown',
   props: ['endtime'],
-  data: function() {
+  data() {
     return {
       end: '',
       interval: '',
@@ -66,16 +66,19 @@ export default {
 </script>
 
 <style lang="scss">
-.time-block__item {
+.countdown-item {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
   flex: 1;
   font-weight: 700;
   text-align: center;
 
-  .time-block__item-value {
-    font-size: 30px;
+  &__value {
+    font-size: 32px;
     display: block;
   }
-  .time-block__item-label {
+
+  &__label {
     font-size: 12px;
     display: block;
     text-transform: uppercase;

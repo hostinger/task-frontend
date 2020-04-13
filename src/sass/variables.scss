@@ -1,9 +1,5 @@
 @import '~vuetify/src/styles/styles.sass';
 
-$breakpoint-sm-tablet: 768px;
-$breakpoint-lg-tablet: 960px;
-$breakpoint-laptop: 1100px;
-
 $grid-breakpoints: map-merge(
   $grid-breakpoints,
   (

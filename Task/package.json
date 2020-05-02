@@ -1,0 +1,19 @@
+{
+  "name": "task-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "grunt-express": "^1.4.1",
+    "gulp": "^4.0.0",
+    "gulp-connect": "^5.7.0",
+    "gulp-livereload": "^4.0.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1"
+  }
+}

@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+body {
+  font-family: 'Roboto', sans-serif; }
+
+html, body {
+  height: 100%; }
+
+body, html, ul, li, div, span, a, h1 {
+  margin: 0;
+  padding: 0; }
+
+h1, h3, a, li, .time-block, span {
+  color: #FFF; }
+
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.wrapper {
+  width: 80%;
+  margin: 1em auto;
+  display: flex;
+  justify-content: space-between; }
+
+.hide-mobile, .cta-btn-mobile {
+  display: none; }
+
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100%;
+  overflow: hidden;
+  background-image: url("../assets/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+  z-index: -1; }
+
+.arrow-right, .arrow-left {
+  margin-top: 45px; }
+
+.arrow-right, .arrow-left, .arrow-down {
+  width: 0;
+  height: 0;
+  border-style: solid; }
+
+.arrow-right {
+  border-width: 10px 0 10px 15px;
+  border-color: transparent transparent transparent #ff4e57; }
+
+.arrow-left {
+  border-width: 10px 15px 10px 0;
+  border-color: transparent #ff4e57 transparent transparent; }
+
+.arrow-down {
+  margin: 0 auto;
+  border-width: 15px 15px 0 15px;
+  border-color: #fd9c9c transparent transparent transparent; }
+
+header {
+  width: 100%;
+  padding-top: 1em; }
+  header .wrapper {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    z-index: 9999;
+    margin: 2em auto; }
+  header .menu {
+    width: 25px;
+    margin-top: 45%; }
+  header nav ul {
+    position: fixed;
+    width: 60%;
+    top: 0;
+    right: 0;
+    text-align: left;
+    background-color: #ff4e57;
+    height: 100%;
+    padding-top: 3em; }
+    header nav ul a {
+      display: block;
+      width: 100%;
+      padding: 2em 2em;
+      position: relative;
+      font-weight: 700;
+      transition: .3s linear; }
+      header nav ul a:hover {
+        background-color: #fd9c9c; }
+      header nav ul a span {
+        color: #FBDB44;
+        position: absolute;
+        top: 15px;
+        font-size: 12px; }
+  header .close-btn {
+    margin-bottom: 1em; }
+  @media screen and (min-width: 1230px) {
+    header .show-desktop {
+      display: block; }
+    header .hide-desktop {
+      display: none; }
+    header .wrapper {
+      margin: 0 auto; }
+      header .wrapper ul {
+        position: inherit;
+        width: auto;
+        background: none;
+        height: auto;
+        display: flex;
+        padding-top: 0; }
+        header .wrapper ul a:hover {
+          background-color: transparent; } }
+
+.content-body {
+  min-height: calc(100vh - 10em); }
+  .content-body .offer-time {
+    width: 40%;
+    padding-top: 15vh; }
+    .content-body .offer-time h1 {
+      font-size: 48px;
+      letter-spacing: 1px;
+      text-transform: capitalize; }
+      .content-body .offer-time h1 span {
+        color: #FF4E57;
+        text-transform: uppercase;
+        letter-spacing: -1px; }
+    @media screen and (max-width: 1200px) {
+      .content-body .offer-time {
+        width: 50%; } }
+  .content-body .counter {
+    display: flex;
+    justify-content: space-between;
+    max-width: 80%; }
+    .content-body .counter .time-block {
+      display: flex;
+      flex-direction: column;
+      font-size: 36px;
+      font-weight: 700;
+      margin-top: 25px; }
+      .content-body .counter .time-block #days, .content-body .counter .time-block #hours, .content-body .counter .time-block #minutes, .content-body .counter .time-block #seconds {
+        text-align: center;
+        padding: 0;
+        margin: 0; }
+      .content-body .counter .time-block .text {
+        font-size: 16px;
+        text-transform: uppercase;
+        letter-spacing: 1.4px; }
+    @media screen and (max-width: 1200px) {
+      .content-body .counter {
+        max-width: 100%; } }
+  .content-body .cta-btn, .content-body .cta-btn-mobile {
+    display: block;
+    margin-top: 10%;
+    background-color: #ff4e57;
+    width: 300px;
+    padding: 25px 0;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 20px;
+    letter-spacing: -0.5px;
+    transition: .3s linear; }
+    .content-body .cta-btn:hover, .content-body .cta-btn-mobile:hover {
+      background-color: #fd9c9c; }
+  .content-body .offer-price {
+    width: 40%;
+    padding-top: 5vh; }
+    .content-body .offer-price span {
+      background-color: #fd9c9c;
+      padding: 15px 20px;
+      text-align: center;
+      display: block;
+      width: 100px;
+      margin: 0 auto;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-size: 18px; }
+    .content-body .offer-price .price-tag {
+      display: flex;
+      justify-content: space-around; }
+      .content-body .offer-price .price-tag .spacing {
+        margin-top: 120px; }
+      .content-body .offer-price .price-tag h1 {
+        font-size: 32em;
+        line-height: 0.8; }
+      .content-body .offer-price .price-tag h3 {
+        font-size: 8em;
+        line-height: 0.8;
+        margin: 0; }
+      .content-body .offer-price .price-tag ul {
+        margin-top: 60px; }
+        .content-body .offer-price .price-tag ul .month {
+          font-size: 5em;
+          margin-top: 90px; }
+      @media screen and (max-width: 1200px) {
+        .content-body .offer-price .price-tag h1 {
+          font-size: 28em; }
+        .content-body .offer-price .price-tag h3 {
+          font-size: 5em; } }
+  @media screen and (max-width: 1000px) {
+    .content-body {
+      height: auto;
+      display: block;
+      text-align: center; }
+      .content-body .offer-time {
+        padding-top: 8vh;
+        margin: 0 auto; }
+      .content-body .offer-price {
+        margin: 100px auto 0; }
+      .content-body .cta-btn {
+        display: none; }
+      .content-body .cta-btn-mobile {
+        display: block;
+        margin: 2em auto 8em; } }
+  @media screen and (max-width: 860px) {
+    .content-body .offer-time, .content-body .offer-price {
+      width: 100%; } }
+
+footer {
+  width: 100%;
+  height: 50px;
+  margin-top: -50px; }
+  footer ul {
+    display: flex;
+    justify-content: space-between; }
+  footer li {
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    padding: 0 20px;
+    text-align: center; }
+    footer li b {
+      color: #7CC777;
+      padding-right: 10px; }
+  @media screen and (max-width: 680px) {
+    footer ul {
+      display: block; }
+      footer ul li {
+        text-align: center;
+        padding: 20px 0; } }

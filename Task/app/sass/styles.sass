@@ -1,0 +1,298 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700')
+
+body
+	font-family: 'Roboto', sans-serif
+
+html, body
+	height: 100%
+
+body, html, ul, li, div, span, a, h1
+	margin: 0
+	padding: 0
+
+h1, h3, a, li, .time-block, span
+	color: #FFF
+
+ul
+	list-style-type: none
+
+a
+	text-decoration: none
+	text-transform: uppercase
+
+.wrapper
+	width: 80%
+	margin: 1em auto
+	display: flex
+	justify-content: space-between
+
+.hide-mobile, .cta-btn-mobile,
+	display: none
+
+//Background Image Inverted
+.background-image
+	position: fixed
+	top: 0
+	left: 0 
+	right: 0
+	bottom: 0
+	width: 100vw
+	height: 100%
+	overflow: hidden
+	background:
+		image: url('../assets/background.jpg')
+		size: cover
+		repeat: no-repeat
+	transform: scaleX(-1)
+	z-index: -1
+
+//Arrows
+.arrow-right, .arrow-left
+	margin-top: 45px
+
+.arrow-right, .arrow-left, .arrow-down
+	width: 0
+	height: 0
+	border-style: solid
+
+.arrow-right
+	border-width: 10px 0 10px 15px
+	border-color: transparent transparent transparent #ff4e57
+
+.arrow-left
+	border-width: 10px 15px 10px 0
+	border-color: transparent #ff4e57 transparent transparent
+
+.arrow-down
+	margin: 0 auto
+	border-width: 15px 15px 0 15px
+	border-color: #fd9c9c transparent transparent transparent
+
+// Navigation
+header 
+	width: 100%
+	padding-top: 1em
+		
+	.wrapper 
+		text-align: center
+		display: flex
+		justify-content: space-between
+		z-index: 9999
+		margin: 2em auto
+
+	.menu 
+		width: 25px
+		margin-top: 45%
+
+	nav
+		ul 
+			position: fixed
+			width: 60%
+			top: 0 
+			right: 0
+			text-align: left
+			background-color: #ff4e57
+			height: 100%
+			padding-top: 3em
+
+			a
+				display: block
+				width: 100%
+				padding: 2em 2em
+				position: relative
+				font-weight: 700
+				transition: .3s linear
+				
+				&:hover
+					background-color: #fd9c9c
+
+				span
+					color: #FBDB44
+					position: absolute
+					top: 15px
+					font-size: 12px
+
+	.close-btn
+		margin-bottom: 1em
+
+	@media screen and(min-width: 1230px)
+		.show-desktop
+			display: block
+
+		.hide-desktop
+			display: none
+
+		.wrapper 
+			margin: 0 auto
+
+			ul 
+				position: inherit
+				width: auto
+				background: none
+				height: auto
+				display: flex
+				padding-top: 0
+
+				a
+					&:hover
+						background-color: transparent
+
+//Content
+.content-body
+	min-height: calc(100vh - 10em)
+
+	.offer-time
+		width: 40%
+		padding-top: 15vh
+
+		h1 
+			font-size: 48px
+			letter-spacing: 1px
+			text-transform: capitalize
+
+			span 
+				color: #FF4E57
+				text-transform: uppercase
+				letter-spacing: -1px
+
+		@media screen and(max-width: 1200px)
+			width: 50%
+
+	.counter
+		display: flex
+		justify-content: space-between
+		max-width: 80%
+
+		.time-block
+			display: flex
+			flex-direction: column
+			font-size: 36px
+			font-weight: 700
+			margin-top: 25px
+
+			#days, #hours, #minutes, #seconds
+				text-align: center
+				padding: 0 
+				margin: 0
+
+			.text
+				font-size: 16px
+				text-transform: uppercase
+				letter-spacing: 1.4px
+
+		@media screen and(max-width: 1200px)
+			max-width: 100%
+
+	.cta-btn, .cta-btn-mobile
+		display: block
+		margin-top: 10% 
+		background:
+			color: #ff4e57
+		width: 300px
+		padding: 25px 0
+		text-align: center
+		border-radius: 5px
+		font-size: 20px
+		letter-spacing: -0.5px
+		transition: .3s linear
+
+		&:hover
+			background-color: #fd9c9c
+
+	.offer-price
+		width: 40%
+		padding-top: 5vh
+
+		span 
+			background:
+				color: #fd9c9c
+			padding: 15px 20px
+			text-align: center
+			display: block
+			width: 100px
+			margin: 0 auto
+			text-transform: uppercase
+			font-weight: 700
+			font-size: 18px
+
+		.price-tag
+			display: flex
+			justify-content: space-around
+
+			.spacing
+				margin-top: 120px
+
+			h1
+				font-size: 32em
+				line-height: 0.8
+
+			h3
+				font-size: 8em
+				line-height: 0.8
+				margin: 0
+
+			ul
+				margin-top: 60px
+
+				.month
+					font-size: 5em
+					margin-top: 90px
+
+			@media screen and (max-width: 1200px)
+				h1
+					font-size: 28em
+
+				h3
+					font-size: 5em
+
+	@media screen and(max-width: 1000px)
+		height: auto
+		display: block
+		text-align: center
+
+		.offer-time
+			padding-top: 8vh
+			margin: 0 auto
+
+		.offer-price
+			margin: 100px auto 0
+
+		.cta-btn
+			display: none
+
+		.cta-btn-mobile
+			display: block
+			margin: 2em auto 8em
+
+	@media screen and(max-width: 860px)
+		.offer-time, .offer-price
+			width: 100%
+
+// Footer
+footer 
+	width: 100%
+	height: 50px
+	margin-top: -50px
+
+	ul
+		display: flex
+		justify-content: space-between
+
+	li 
+		font-weight: 400
+		font-size: 14px
+		letter-spacing: 1.2px
+		padding: 0 20px
+		text-align: center
+
+		b
+			color: #7CC777
+			padding-right: 10px
+
+	@media screen and(max-width:680px)
+		ul 
+			display: block
+
+			li
+				text-align: center
+				padding: 20px 0

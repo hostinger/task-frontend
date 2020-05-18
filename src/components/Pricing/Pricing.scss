@@ -1,0 +1,112 @@
+$bgcolor: #fff;
+.pricing {
+    color: #fff;
+    position: relative;
+}
+.pricing-badge {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    margin-bottom: -100px;
+}
+
+.pricing-badge__body {
+    background: #fd9c9e;
+    text-transform: uppercase;
+    font-size: 20px;
+    padding: 10px 30px;
+    height: 30px;
+}
+
+.pricing-badge__arrow {
+    background: #fd9c9e;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+}
+
+.pricing-currency,
+.pricing-number,
+.pricing-cents,
+.pricing-occurance {
+    display: inline-block;
+}
+
+.pricing-currency {
+    font-weight: 700;
+    font-size: 144px;
+    line-height: 206px;
+    position: absolute;
+    bottom: 20vh;
+    left: -5vh;
+    font-size: 0.3em;
+}
+
+.pricing-number {
+    font-weight: 700;
+    font-size: 432px;
+    position: relative;
+}
+
+.pricing-cents {
+    position: absolute;
+    font-size: 115px;
+    line-height: 82px;
+    top: 15vh;
+    left: 25vh;
+}
+
+.pricing-occurance {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 103px;
+    position: absolute;
+    left: 25vh;
+    bottom: 130px;
+}
+
+@media (max-width: 768px) {
+    .pricing {
+      height: 80%;
+      padding-top: 50px;
+      margin-right: auto;
+      margin-left: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .pricing-badge {
+        margin-bottom: -50px;
+    }
+    .pricing-number {
+        font-size: 230px;
+    }
+    .pricing-currency {
+        font-size: 77px;
+        line-height: 109px;
+        top: 10vh;
+    }
+    .pricing-cents {
+        font-size: 61px;
+        line-height: 82px;
+        top: 10vh;
+        left: 15vh;
+    }
+    .pricing-occurance {
+        font-size: 38px;
+        line-height: 55px;
+        top: 20vh;
+        left: 15vh;
+    }
+  }

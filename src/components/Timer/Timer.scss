@@ -1,0 +1,47 @@
+.countdown-timer {
+    position: relative;
+    display: flex;
+}
+
+.countdown-timer__item {
+    display: inline-block;
+    color: #fff;
+    margin-right: 20px;
+    margin-left: 20px;
+    span {
+        font-size: 28px;
+        line-height: 40px;
+        font-weight: 700;
+        padding-right: 5px;
+        padding-left: 0px;
+    }
+    p {
+        font-size: 12px;
+        
+        margin-right: auto;
+        margin-left: auto;
+        font-weight: 700;
+        line-height: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .countdown-timer__item {
+        display: inline-block;
+        color: #fff;
+        margin-right: 10px;
+        margin-left: 10px;
+        span {
+            font-size: 28px;
+            line-height: 40px;
+            font-weight: 700;
+    
+        }
+        p {
+            font-size: 12px;
+            margin: 3px 0 0;
+            font-weight: 700;
+            line-height: 17px;
+        }
+    }
+  }

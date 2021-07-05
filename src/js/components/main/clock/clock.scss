@@ -1,0 +1,55 @@
+$arrow: #ff7678;
+$counter: #fff;
+
+.counter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $counter;
+    font-weight: 700;
+    width: 70%;
+
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        padding: 0 40px;
+     }
+
+     @media screen and (max-width: 518px) {
+        padding: 0 20px;
+     }
+
+     @media screen and (max-width: 400px) {
+        padding: 0;
+     }
+}
+
+.counter__block {
+   text-align: center;
+
+   &--number {
+       font-size: 30px;
+       font-weight: 800;
+   }
+
+   &--text {
+        font-size: 10px;
+        font-weight: 800;
+        text-transform: uppercase; 
+    }
+}
+
+.arrow-right {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid $arrow;
+  }
+
+  .arrow-left {
+    width: 0; 
+    height: 0; 
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent; 
+    border-right: 10px solid $arrow; 
+  }

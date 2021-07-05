@@ -1,0 +1,28 @@
+$button:#fc5155;
+$button-text: #fff;
+$button-hover: #cc0000;
+
+@mixin button($color, $background, $hover-background) {
+    color: $color!important;
+    background: $background;
+
+    &:hover {
+        background: $hover-background;
+        text-decoration: none;
+    }
+}
+
+.button-container {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+}
+
+.button {
+    @include button($button-text, $button, $button-hover);
+    padding: 15px 40px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    text-align: center;
+    cursor: pointer;
+}

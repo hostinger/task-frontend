@@ -1,0 +1,14 @@
+$background: #2e2c40;
+
+.main-container {
+    align-items: center;    
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+
+    @media screen and (max-width: 768px) {
+        background: transparentize($background, 0.3);
+        flex-direction: column;
+        justify-content: center;
+    }
+}

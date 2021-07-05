@@ -20,3 +20,5 @@
 - Structure!
 - Have fun!
 - Hosted DEMO would give some extra points
+
+Starting fun...

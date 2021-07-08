@@ -1,0 +1,487 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.benefits-list {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+
+    i {
+        color: @checked-green;
+        font-size: 16px;
+        margin-right: 16px;
+    }
+
+    li {
+        .font-size(18px);
+        display: inline-block;
+        font-weight: 400;
+    }
+}
+
+.centered {
+    min-height: 100vh;
+    margin: auto;
+    max-width: 1144px;
+    padding: 0 22px;
+}
+
+.left-bracket {
+    margin-left: -8px;
+}
+
+.logo {
+    border: none;
+}
+
+.nav-menu {
+    margin-top: 4px;
+
+    li {
+        display: inline-block;
+        margin-left: 24px;
+
+        a {
+            .uppercase(16px);
+            font-weight: 700;
+            text-decoration: none;
+        }
+        
+        a:hover {
+            color: @grey-hover;
+        }
+    }
+}
+
+.nav-menu-btn {
+    display: none;
+}
+
+.nav-menu-btn:checked ~ .nav-menu {
+    display: block;
+}
+
+.nav-menu-btn-label {
+    color: @main-white;
+    cursor: pointer;
+    display: none;
+    font-size: 24px;
+}
+
+.nav-menu-btn-label:hover {
+    color: @grey-hover;
+}
+
+.on-sale::before {
+    .uppercase(12px);
+    color: @sale-yellow;
+    content: 'on sale';
+    display: flex;
+    display: run-in;
+    margin-bottom: -4px;
+    margin-top: -12px;
+}
+
+.price-cents {
+    .font-size(116px);
+    display: inline-flex;
+    margin-left: 6px;
+    margin-top: 146px;
+    vertical-align: top;
+}
+
+.price-cents::after {
+    .font-size(72px);
+    content: '/mo';
+    display: inline-table;
+    font-weight: 600;
+    margin-left: -104px;
+    margin-top: 200px;
+}
+    
+.price-dollar {
+    .font-size(444px);
+}
+
+.price-dollar::before {
+    .font-size(144px);
+    content: '$';
+    display: inline-table;
+    margin-right: -4px;
+    margin-top: 168px;
+    vertical-align: top;
+}
+
+.price-section {
+    display: inline-flex;
+    float: right;
+    margin-left: 80px;
+    text-align: center;
+}
+
+.right-bracket {
+    margin-left: 8px;
+}
+
+.sale-bubble {
+    .uppercase(20px);
+    background: @sale-red;
+    content: 'save 82%';
+    display: inline-flex;
+    font-weight: 600;
+    height: 32px;
+    margin: 74px -340px 40px 40px;
+    padding: 8px 32px;
+    position: relative;
+    vertical-align: top;
+    z-index: 1;
+}
+
+.sale-bubble::after {
+    background: @sale-red;
+    bottom: -10px;
+    content: '';
+    display: flex;
+    height: 20px;
+    left: 68px;
+    position: absolute;
+    transform: rotate(45deg);
+    width: 20px;
+    z-index: -1;
+}
+
+.sale-btn {
+    .button-size(72px, 328px);
+    .uppercase(22px);
+    display: inline;
+    font-weight: 600;
+    margin-top: 36px;
+}
+
+.special-offer {
+    .font-size(44px);
+    margin-bottom: 8px;
+
+    span {
+        .uppercase(44px);
+        color: @theme-red;
+    }
+}
+
+.timer {
+    display: inline-block;
+    margin: 4px 12px;
+
+    li {
+        display: inline-block;
+        margin-left: 44px;
+        text-align: center;
+
+        span {
+            display: block;
+        }
+    }
+
+    li:first-child {
+        margin-left: 24px;
+    }
+}
+
+.timer-bracket {
+    color: @theme-red;
+    display: inline-block;
+    font-size: 32px;
+    height: 20px;
+    margin-top: -40px;
+    vertical-align: middle;
+}
+
+.timer-dimention {
+    .uppercase(12px);
+}
+
+.timer-section {
+    display: inline-block;
+    margin-top: 124px;
+    max-width: 480px;
+    padding: 16px 0;
+    vertical-align: top;
+}
+
+.timer-value {
+    .font-size(32px);
+    line-height: 40px;
+}
+
+.wrapper {
+    margin-bottom: -50px;
+    min-height: 100vh;
+}
+
+body {
+    background-image: url("/assets/background\ -\ Inverted.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.3), 
+    rgba(0, 0, 0, 0.3) ), 
+    url("/assets/background\ -\ Inverted.jpg");
+    background-position: center center;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#55000000, endColorstr=#55000000
+);
+}
+
+header {
+    display: inline-block;
+    padding: 24px 0;
+}
+
+nav {
+    float: right;
+    padding: 24px 0;
+}
+
+@media all and (max-width: @screen_xxl) {
+    .benefits-list {
+        li {
+            font-size: 12px;
+
+            i {
+                font-size: 12px;
+                margin-right: 8px;
+            }
+        }
+    }
+
+    .nav-menu {
+        li {
+            a {
+                font-size: 12px;
+            }
+        }
+    }
+
+    .price-cents {
+        font-size: 80px;
+        margin-left: -16px;
+    }
+
+    .price-cents::after {
+        font-size: 56px;
+        margin-left: -80px;
+        margin-top: 136px;
+    }
+
+    .price-dollar {
+        font-size: 368px;
+    }
+
+    .price-dollar::before {
+        font-size: 116px;
+        margin-top: 136px;
+    }
+
+    .price-section {
+        margin-top: 40px;
+    }
+
+    .sale-bubble {
+        margin-right: -286px;
+        margin-top: 60px;
+        padding: 4px 24px;
+    }
+
+    .sale-bubble::after {
+        left: 60px;
+    }
+
+    .wrapper {
+        margin-bottom: -25px;
+    }
+}
+
+@media all and (max-width: @screen_xl) {
+    .price-cents::after {
+        margin-left: -84px;
+    }
+
+    .timer-section {
+        max-width: 432px;
+    }
+}
+
+@media all and (max-width: @screen_l) {
+    .centered {
+        min-height: 0;
+        padding-bottom: 8px;
+    }
+
+    .nav-menu {
+        li {
+            max-width: 56px;
+            text-align: center
+        }
+
+        li::before {
+            text-align: center;
+            width:  56px;
+        }
+    }
+
+    .price-section {
+        display: block;
+        float: none;
+        margin-left: 40px;
+        margin-top: 0;
+    }
+
+    .sale-btn {
+        display: inline;
+    }
+
+    .timer-section {
+        display: block;
+        margin-top: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .wrapper {
+        margin-bottom: 0;
+    }
+}
+
+@media all and (max-width: @screen_m) {
+    .benefits-list {
+        display: inline;
+        justify-content: unset;
+
+        li {
+            display: inline-block;
+            font-size: 16px;
+            margin-left: 16px;
+            text-align: left;
+            width: 256px;
+        }
+    }
+    
+    .benefits-section {
+        text-align: center;
+    }
+}
+
+@media all and (max-width: @screen_s) {
+    .nav-menu {
+        background-color: @main-white;
+        display: none;
+        margin-top: 0;
+        min-width: 132px;
+        padding: 8px;
+        position: absolute;
+        right: 0;
+        z-index: 1;
+
+        li {
+            margin: 6px;
+            max-width: 100%;
+
+            a {
+                color: @theme-red;
+            }
+        }
+    }
+
+    .nav-menu-btn-label {
+        display: inline;
+    }
+
+    .on-sale::before {
+        font-size: 8px;
+    }
+    
+    nav {
+        position: relative;
+    }
+}
+
+@media all and (max-width: @screen_xs) {
+    .left-bracket {
+        margin-left: 0;
+    }
+
+    .price-cents {
+        font-size: 56px;
+        margin-top: 64px;
+    }
+
+    .price-cents::after {
+        font-size: 48px;
+        margin-left: -56px;
+        margin-top: 88px;
+    }
+    
+    .price-dollar {
+        font-size: 212px;
+    }
+
+    .price-dollar::before {
+        font-size: 72px;
+        margin-top: 76px;
+    }
+
+    .price-section {
+        margin-left: 48px;
+    }
+
+    .sale-btn {
+        width: 240px;
+    }
+
+    .sale-bubble {
+        font-size: 12px;
+        height: 20px;
+        margin-right: -180px;
+        margin-top: 28px;
+        padding: 4px 20px;
+    }
+
+    .sale-bubble::after {
+        bottom: -6px;
+        height: 12px;
+        left: 44px;
+        width: 12px;
+    }
+
+    .special-offer {
+        font-size: 32px;
+
+        span {
+            font-size: 32px;
+        }
+    }
+
+    .timer {
+        margin: 0;
+
+        li {
+            margin-left: 8px;
+        }
+
+        li:first-child {
+            margin-left: 8px;
+        }
+    }
+
+    .timer-dimention {
+        font-size: 10px;
+    }
+
+    .timer-value {
+        font-size: 24px;
+    }
+
+    .wrapper {
+        min-height: 0;
+    }
+}

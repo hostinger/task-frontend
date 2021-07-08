@@ -1,0 +1,24 @@
+.button-size(@height, @width) {
+    background: @theme-red;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: @height;
+    width: @width;
+
+    &:hover {
+        background: @theme-red-hover;
+    }
+}
+
+.font-size(@size) {
+    color: @main-white;
+    font-family: @theme-font-family;
+    font-size: @size;
+    font-weight: 700;
+}
+
+.uppercase(@size) {
+    .font-size(@size);
+    text-transform: uppercase;
+}
